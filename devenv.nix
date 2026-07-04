@@ -1,45 +1,38 @@
 { pkgs, lib, config, inputs, ... }:
 
 {
-  # https://devenv.sh/basics/
-  env.GREET = "devenv";
+  env.GREET = "Fishdex";
 
-  # https://devenv.sh/packages/
-  packages = [ pkgs.git ];
+  packages = [
+    pkgs.git
+    pkgs.bun
+    pkgs.nodejs_22
+  ];
 
-  # https://devenv.sh/languages/
-  # languages.rust.enable = true;
+  languages.javascript = {
+    enable = true;
+    bun.enable = true;
+    bun.install.enable = true;
+  };
 
-  # https://devenv.sh/processes/
-  # processes.dev.exec = "${lib.getExe pkgs.watchexec} -n -- ls -la";
+  scripts.dev.exec = "bun run dev";
+  scripts.build.exec = "bun run build";
+  scripts.lint.exec = "bun run lint";
+  scripts.format.exec = "bun run format";
 
-  # https://devenv.sh/services/
-  # services.postgres.enable = true;
-
-  # https://devenv.sh/scripts/
-  scripts.hello.exec = ''
-    echo hello from $GREET
-  '';
-
-  # https://devenv.sh/basics/
   enterShell = ''
-    hello         # Run scripts directly
-    git --version # Use packages
+    echo "🐠 Reef Recall (Fishdex) development environment"
+    echo "  bun  $(bun --version)"
+    echo "  node $(node --version)"
+    echo "  git  $(git --version | cut -d' ' -f3)"
+    echo ""
+    echo "Available scripts:"
+    echo "  dev     - Start dev server"
+    echo "  build   - Build for production"
+    echo "  lint    - Run ESLint"
+    echo "  format  - Run Prettier"
   '';
 
-  # https://devenv.sh/tasks/
-  # tasks = {
-  #   "myproj:setup".exec = "mytool build";
-  #   "devenv:enterShell".after = [ "myproj:setup" ];
-  # };
-
-  # https://devenv.sh/tests/
-  enterTest = ''
-    echo "Running tests"
-    git --version | grep --color=auto "${pkgs.git.version}"
-  '';
-
-  # https://devenv.sh/git-hooks/
   # git-hooks.hooks.shellcheck.enable = true;
 
   # See full reference at https://devenv.sh/reference/options/
