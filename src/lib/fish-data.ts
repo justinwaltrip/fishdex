@@ -12,8 +12,6 @@ export interface FishSpecies {
   regions: string[];
   diet: string;
   description: string;
-  // iNaturalist taxon ID — used when wiring up real API integration later
-  iNaturalistTaxonId?: number;
 }
 
 export const FISH_SPECIES: FishSpecies[] = [
@@ -29,7 +27,6 @@ export const FISH_SPECIES: FishSpecies[] = [
     diet: "Insects, crustaceans, small fish",
     description:
       "Iridescent pink stripe along the flank. A staple of cold mountain streams and stocked lakes.",
-    iNaturalistTaxonId: 47762,
   },
   {
     id: "largemouth-bass",
@@ -42,7 +39,6 @@ export const FISH_SPECIES: FishSpecies[] = [
     regions: ["North America"],
     diet: "Fish, frogs, crayfish",
     description: "Ambush predator lurking in weed beds and under docks.",
-    iNaturalistTaxonId: 50292,
   },
   {
     id: "bluegill",
@@ -55,7 +51,6 @@ export const FISH_SPECIES: FishSpecies[] = [
     regions: ["North America"],
     diet: "Insects, zooplankton",
     description: "Small panfish with a dark ear flap and orange breast.",
-    iNaturalistTaxonId: 50288,
   },
   {
     id: "brook-trout",
@@ -68,7 +63,6 @@ export const FISH_SPECIES: FishSpecies[] = [
     regions: ["North America"],
     diet: "Insects, small fish",
     description: "Marbled back with red spots ringed in blue haloes.",
-    iNaturalistTaxonId: 47763,
   },
   {
     id: "northern-pike",
@@ -81,7 +75,6 @@ export const FISH_SPECIES: FishSpecies[] = [
     regions: ["North America", "Europe", "Asia"],
     diet: "Fish, waterfowl, amphibians",
     description: "Torpedo-shaped predator with a duckbill snout and rows of teeth.",
-    iNaturalistTaxonId: 50067,
   },
   {
     id: "clownfish",
@@ -94,7 +87,6 @@ export const FISH_SPECIES: FishSpecies[] = [
     regions: ["Indo-Pacific"],
     diet: "Algae, zooplankton",
     description: "Lives in mutualistic symbiosis with sea anemones.",
-    iNaturalistTaxonId: 104223,
   },
   {
     id: "mahi-mahi",
@@ -107,7 +99,6 @@ export const FISH_SPECIES: FishSpecies[] = [
     regions: ["Tropical oceans worldwide"],
     diet: "Flying fish, squid, crustaceans",
     description: "Electric blue-green-gold. Fades to silver moments after capture.",
-    iNaturalistTaxonId: 49001,
   },
   {
     id: "bluefin-tuna",
@@ -120,7 +111,6 @@ export const FISH_SPECIES: FishSpecies[] = [
     regions: ["Atlantic Ocean", "Mediterranean"],
     diet: "Herring, mackerel, squid",
     description: "Warm-blooded giant capable of transoceanic migrations.",
-    iNaturalistTaxonId: 49325,
   },
   {
     id: "great-white",
@@ -133,7 +123,6 @@ export const FISH_SPECIES: FishSpecies[] = [
     regions: ["Coastal temperate seas"],
     diet: "Seals, sea lions, fish",
     description: "Apex predator. Countershaded gray above, white below.",
-    iNaturalistTaxonId: 51713,
   },
   {
     id: "oarfish",
@@ -146,7 +135,6 @@ export const FISH_SPECIES: FishSpecies[] = [
     regions: ["Global deep waters"],
     diet: "Krill, small squid",
     description: "Ribbon-like body with a scarlet dorsal crest. Origin of sea serpent lore.",
-    iNaturalistTaxonId: 116947,
   },
   {
     id: "anglerfish",
@@ -159,7 +147,6 @@ export const FISH_SPECIES: FishSpecies[] = [
     regions: ["Global deep waters"],
     diet: "Small fish, crustaceans",
     description: "Bioluminescent esca dangles above needle-like teeth.",
-    iNaturalistTaxonId: 116512,
   },
   {
     id: "coelacanth",
@@ -172,7 +159,6 @@ export const FISH_SPECIES: FishSpecies[] = [
     regions: ["Western Indian Ocean"],
     diet: "Fish, cephalopods",
     description: "Lobe-finned living fossil once thought extinct for 66 million years.",
-    iNaturalistTaxonId: 116850,
   },
   {
     id: "yellowfin-tuna",
@@ -185,7 +171,6 @@ export const FISH_SPECIES: FishSpecies[] = [
     regions: ["Tropical & subtropical oceans"],
     diet: "Fish, squid, crustaceans",
     description: "Long yellow finlets and sickle-shaped second dorsal fin.",
-    iNaturalistTaxonId: 49326,
   },
   {
     id: "atlantic-salmon",
@@ -198,7 +183,6 @@ export const FISH_SPECIES: FishSpecies[] = [
     regions: ["North Atlantic"],
     diet: "Insects, crustaceans, small fish",
     description: "Anadromous — returns from sea to natal rivers to spawn.",
-    iNaturalistTaxonId: 47761,
   },
   {
     id: "striped-bass",
@@ -211,7 +195,6 @@ export const FISH_SPECIES: FishSpecies[] = [
     regions: ["Atlantic coast of North America"],
     diet: "Herring, menhaden, eels",
     description: "Seven to eight dark horizontal stripes down each flank.",
-    iNaturalistTaxonId: 94103,
   },
   {
     id: "parrotfish",
@@ -224,7 +207,6 @@ export const FISH_SPECIES: FishSpecies[] = [
     regions: ["Caribbean"],
     diet: "Algae, coral polyps",
     description: "Fused beak scrapes algae from coral. Sleeps in a mucus cocoon.",
-    iNaturalistTaxonId: 105899,
   },
   {
     id: "lionfish",
@@ -237,7 +219,6 @@ export const FISH_SPECIES: FishSpecies[] = [
     regions: ["Indo-Pacific", "Invasive: Caribbean"],
     diet: "Small fish, crustaceans",
     description: "Fan-like pectorals and 18 venomous spines. Beautiful and dangerous.",
-    iNaturalistTaxonId: 104487,
   },
   {
     id: "arapaima",
@@ -250,7 +231,6 @@ export const FISH_SPECIES: FishSpecies[] = [
     regions: ["Amazon Basin"],
     diet: "Fish, small mammals, birds",
     description: "Air-breathing giant of the Amazon. Surfaces every 20 minutes.",
-    iNaturalistTaxonId: 47927,
   },
 ];
 
