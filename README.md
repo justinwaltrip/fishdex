@@ -8,7 +8,7 @@ Only **one live API call** per page load: fetching `jwaltrip`'s observations. Al
 
 | File | Source | Live API? |
 |---|---|---|
-| `src/data/caribbean-species.json` | iNaturalist species_counts (all 1,703 Caribbean fish species) | No |
+| `src/data/caribbean-species.json` | iNaturalist species_counts (research-grade, all 1,306 Caribbean fish species) | No |
 | User observations | `GET /v1/observations?user_login=jwaltrip` | Yes |
 
 ## Rarity

@@ -43,6 +43,7 @@ def main():
             "nelat": CARIBBEAN_BBOX["nelat"], "nelng": CARIBBEAN_BBOX["nelng"],
             "swlat": CARIBBEAN_BBOX["swlat"], "swlng": CARIBBEAN_BBOX["swlng"],
             "taxon_id": TAXON_ID, "per_page": PER_PAGE, "page": page,
+            "quality_grade": "research",
         })
         url = f"https://api.inaturalist.org/v1/observations/species_counts?{params}"
         req = urllib.request.Request(url, headers={"User-Agent": "Fishdex/1.0"})
