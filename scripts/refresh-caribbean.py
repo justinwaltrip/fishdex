@@ -10,10 +10,10 @@ avoiding Pacific spillover through the narrow Central American isthmus:
 
 Rarity thresholds are based on raw observation frequency:
 
-  Common:     obs >= 125
-  Uncommon:   obs >= 15
-  Rare:       obs >= 3
-  Legendary:  obs < 3
+  Common:     obs >= 500
+  Uncommon:   obs >= 50
+  Rare:       obs >= 5
+  Legendary:  obs < 5
 """
 import json, urllib.request, urllib.parse, time, os
 
@@ -75,11 +75,11 @@ def fetch_box(taxon_id, bbox):
 def assign_rarity(species_list):
     for s in species_list:
         c = s["caribbeanObsCount"]
-        if c >= 125:
+        if c >= 500:
             s["rarity"] = "common"
-        elif c >= 15:
+        elif c >= 50:
             s["rarity"] = "uncommon"
-        elif c >= 3:
+        elif c >= 5:
             s["rarity"] = "rare"
         else:
             s["rarity"] = "legendary"
