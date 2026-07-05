@@ -168,11 +168,25 @@ function FishdexPage() {
     const total = pokedex.length;
     const seen = pokedex.filter((s) => s.seen).length;
     const byRarity: Record<string, { seen: number; total: number }> = {};
+    const matrix: Record<string, Record<string, { seen: number; total: number }>> = {};
     for (const r of Object.keys(RARITY_META)) {
       const all = pokedex.filter((s) => s.rarity === r);
       byRarity[r] = { seen: all.filter((s) => s.seen).length, total: all.length };
+      matrix[r] = {};
+      for (const g of Object.keys(GROUP_LABELS)) {
+        const allRG = all.filter((s) => s.group === g);
+        matrix[r][g] = {
+          seen: allRG.filter((s) => s.seen).length,
+          total: allRG.length,
+        };
+      }
     }
-    return { total, seen, byRarity };
+    const byGroup: Record<string, { seen: number; total: number }> = {};
+    for (const g of Object.keys(GROUP_LABELS)) {
+      const all = pokedex.filter((s) => s.group === g);
+      byGroup[g] = { seen: all.filter((s) => s.seen).length, total: all.length };
+    }
+    return { total, seen, byRarity, byGroup, matrix };
   }, [pokedex]);
 
   const handleOpen = useCallback(
@@ -253,10 +267,27 @@ function PokedexHeader({
   stats,
   isLoading,
 }: {
-  stats: { total: number; seen: number; byRarity: Record<string, { seen: number; total: number }> };
+  stats: {
+    total: number;
+    seen: number;
+    byRarity: Record<string, { seen: number; total: number }>;
+    byGroup: Record<string, { seen: number; total: number }>;
+    matrix: Record<string, Record<string, { seen: number; total: number }>>;
+  };
   isLoading: boolean;
 }) {
   const rarityOrder = ["common", "uncommon", "rare", "legendary"];
+  const groupOrder = Object.keys(GROUP_LABELS);
+  const [expanded, setExpanded] = useState(false);
+
+  const groupAbbr: Record<string, string> = {
+    fish: "Fish",
+    crustacean: "Crust.",
+    elasmobranch: "Sharks",
+    turtle: "Turtles",
+    cephalopod: "Ceph.",
+    gastropod: "Gastro.",
+  };
 
   return (
     <header className="border-b border-border/50 bg-[oklch(0.14_0.06_245)]/60 backdrop-blur-xl">
@@ -294,10 +325,7 @@ function PokedexHeader({
 
             <div className="mt-3 space-y-2">
               {rarityOrder.map((r) => {
-                const { seen, total } = stats.byRarity[r] ?? {
-                  seen: 0,
-                  total: 0,
-                };
+                const { seen, total } = stats.byRarity[r] ?? { seen: 0, total: 0 };
                 const pct = total > 0 ? (seen / total) * 100 : 0;
                 const meta = RARITY_META[r];
                 return (
@@ -328,6 +356,77 @@ function PokedexHeader({
                 );
               })}
             </div>
+
+            <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1 border-t border-border/30 pt-3">
+              {groupOrder.map((g) => {
+                const { seen, total } = stats.byGroup[g] ?? { seen: 0, total: 0 };
+                return (
+                  <span
+                    key={g}
+                    className="font-mono text-[10px] tabular-nums text-muted-foreground"
+                  >
+                    <span className="text-foreground/70">{GROUP_LABELS[g]}</span> {seen}/{total}
+                  </span>
+                );
+              })}
+            </div>
+
+            <button
+              onClick={() => setExpanded(!expanded)}
+              className="mt-3 flex w-full items-center justify-center gap-1 rounded-lg border border-border/30 py-1.5 font-mono text-[10px] uppercase tracking-wider text-muted-foreground transition-colors hover:border-border/60 hover:text-foreground"
+            >
+              {expanded ? "Collapse" : "Detail Matrix"}
+            </button>
+
+            {expanded && (
+              <div className="mt-3 overflow-x-auto">
+                <table className="w-full font-mono text-[10px] tabular-nums">
+                  <thead>
+                    <tr className="border-b border-border/30">
+                      <th className="pr-2 text-left font-normal text-muted-foreground" />
+                      {groupOrder.map((g) => (
+                        <th
+                          key={g}
+                          className="px-1.5 text-center font-normal text-muted-foreground"
+                        >
+                          {groupAbbr[g]}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {rarityOrder.map((r) => (
+                      <tr key={r} className="border-b border-border/10">
+                        <td className="pr-2 py-1 text-left text-muted-foreground">
+                          {RARITY_META[r].label}
+                        </td>
+                        {groupOrder.map((g) => {
+                          const cell = stats.matrix[r]?.[g] ?? { seen: 0, total: 0 };
+                          const highlight = cell.seen > 0 && cell.total > 0;
+                          return (
+                            <td
+                              key={g}
+                              className={cn(
+                                "px-1.5 py-1 text-center",
+                                highlight
+                                  ? "font-semibold text-accent"
+                                  : "text-muted-foreground/50",
+                              )}
+                            >
+                              {highlight
+                                ? `${cell.seen}/${cell.total}`
+                                : cell.total > 0
+                                  ? `0/${cell.total}`
+                                  : "—"}
+                            </td>
+                          );
+                        })}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
           </div>
         </div>
       </div>
