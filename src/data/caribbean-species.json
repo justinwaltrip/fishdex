@@ -1476,6 +1476,15 @@
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/64537126/square.jpeg"
   },
   {
+    "taxonId": 196626,
+    "scientificName": "Coenobita compressus",
+    "commonName": "Ecuadorian Hermit Crab",
+    "caribbeanObsCount": 301,
+    "rarity": "common",
+    "group": "crustacean",
+    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/67152669/square.jpg"
+  },
+  {
     "taxonId": 318109,
     "scientificName": "Trachemys grayi",
     "commonName": "Nicaraguan Slider",
@@ -1483,15 +1492,6 @@
     "rarity": "common",
     "group": "turtle",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/63464361/square.jpg"
-  },
-  {
-    "taxonId": 196626,
-    "scientificName": "Coenobita compressus",
-    "commonName": "Ecuadorian Hermit Crab",
-    "caribbeanObsCount": 298,
-    "rarity": "common",
-    "group": "crustacean",
-    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/67152669/square.jpg"
   },
   {
     "taxonId": 1297283,
@@ -2281,7 +2281,7 @@
     "scientificName": "Gobiomorus dormitor",
     "commonName": "Bigmouth Sleeper",
     "caribbeanObsCount": 124,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/30030729/square.jpg"
   },
@@ -2290,7 +2290,7 @@
     "scientificName": "Kyphosus cinerascens",
     "commonName": "Highfin Chub",
     "caribbeanObsCount": 122,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/400333391/square.jpg"
   },
@@ -2299,7 +2299,7 @@
     "scientificName": "Gymnothorax vicinus",
     "commonName": "Purplemouth Moray",
     "caribbeanObsCount": 121,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/413946986/square.jpg"
   },
@@ -2308,7 +2308,7 @@
     "scientificName": "Balistes capriscus",
     "commonName": "Grey Triggerfish",
     "caribbeanObsCount": 119,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/54970656/square.jpeg"
   },
@@ -2317,7 +2317,7 @@
     "scientificName": "Portunus sayi",
     "commonName": "Sargassum Swimming Crab",
     "caribbeanObsCount": 119,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "crustacean",
     "photoUrl": "https://static.inaturalist.org/photos/172416356/square.png"
   },
@@ -2326,7 +2326,7 @@
     "scientificName": "Epinephelus adscensionis",
     "commonName": "Rock Hind",
     "caribbeanObsCount": 116,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/165399184/square.jpg"
   },
@@ -2335,7 +2335,7 @@
     "scientificName": "Archosargus rhomboidalis",
     "commonName": "Western Atlantic Seabream",
     "caribbeanObsCount": 115,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/397842253/square.jpg"
   },
@@ -2344,7 +2344,7 @@
     "scientificName": "Haemulon macrostoma",
     "commonName": "Spanish Grunt",
     "caribbeanObsCount": 114,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/959917/square.JPG"
   },
@@ -2353,7 +2353,7 @@
     "scientificName": "Chilomycterus antennatus",
     "commonName": "Bridled Burrfish",
     "caribbeanObsCount": 111,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/305255045/square.jpeg"
   },
@@ -2362,7 +2362,7 @@
     "scientificName": "Kinosternon creaseri",
     "commonName": "Creaser's Mud Turtle",
     "caribbeanObsCount": 110,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "turtle",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/4662439/square.jpeg"
   },
@@ -2371,7 +2371,7 @@
     "scientificName": "Xiphocaris elongata",
     "commonName": "Yellow Nose Shrimp",
     "caribbeanObsCount": 107,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/478059178/square.jpeg"
   },
@@ -2380,7 +2380,7 @@
     "scientificName": "Bothus ocellatus",
     "commonName": "Eyed Flounder",
     "caribbeanObsCount": 106,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/11554933/square.jpg"
   },
@@ -2389,7 +2389,7 @@
     "scientificName": "Acanthemblemaria maria",
     "commonName": "Secretary Blenny",
     "caribbeanObsCount": 105,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/172218852/square.png"
   },
@@ -2398,7 +2398,7 @@
     "scientificName": "Callinectes larvatus",
     "commonName": "Masked Swimming Crab",
     "caribbeanObsCount": 105,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/611955577/square.jpg"
   },
@@ -2407,7 +2407,7 @@
     "scientificName": "Coryphaena hippurus",
     "commonName": "Common Dolphinfish",
     "caribbeanObsCount": 103,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/361046671/square.jpg"
   },
@@ -2416,7 +2416,7 @@
     "scientificName": "Chromis insolata",
     "commonName": "Sunshinefish",
     "caribbeanObsCount": 103,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/42514451/square.jpg"
   },
@@ -2425,7 +2425,7 @@
     "scientificName": "Xanthichthys ringens",
     "commonName": "Sargassum Triggerfish",
     "caribbeanObsCount": 102,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/137674/square.jpg"
   },
@@ -2434,7 +2434,7 @@
     "scientificName": "Calamus calamus",
     "commonName": "Saucereye Porgy",
     "caribbeanObsCount": 101,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/439077274/square.jpg"
   },
@@ -2443,7 +2443,7 @@
     "scientificName": "Eriphia gonagra",
     "commonName": "Redfinger Rubble Crab",
     "caribbeanObsCount": 100,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "crustacean",
     "photoUrl": "https://static.inaturalist.org/photos/98017723/square.jpg"
   },
@@ -2452,7 +2452,7 @@
     "scientificName": "Serranus baldwini",
     "commonName": "Lantern Bass",
     "caribbeanObsCount": 97,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/352230026/square.jpg"
   },
@@ -2461,7 +2461,7 @@
     "scientificName": "Ocypode gaudichaudii",
     "commonName": "Painted Ghost Crab",
     "caribbeanObsCount": 97,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/62683532/square.jpg"
   },
@@ -2470,7 +2470,7 @@
     "scientificName": "Periclimenes rathbunae",
     "commonName": "Sun Anemone Shrimp",
     "caribbeanObsCount": 96,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/568715853/square.jpg"
   },
@@ -2479,7 +2479,7 @@
     "scientificName": "Hypoplectrus guttavarius",
     "commonName": "Shy Hamlet",
     "caribbeanObsCount": 94,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/59026654/square.jpeg"
   },
@@ -2488,7 +2488,7 @@
     "scientificName": "Lophogobius cyprinoides",
     "commonName": "Crested Goby",
     "caribbeanObsCount": 93,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/443384683/square.jpeg"
   },
@@ -2497,7 +2497,7 @@
     "scientificName": "Haemulon vittatum",
     "commonName": "Boga",
     "caribbeanObsCount": 93,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/74436718/square.jpg"
   },
@@ -2506,7 +2506,7 @@
     "scientificName": "Gambusia yucatana",
     "commonName": "Yucatan Gambusia",
     "caribbeanObsCount": 92,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/173541801/square.jpg"
   },
@@ -2515,7 +2515,7 @@
     "scientificName": "Chaenopsis limbaughi",
     "commonName": "Yellowface Pikeblenny",
     "caribbeanObsCount": 92,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/402188492/square.jpg"
   },
@@ -2524,7 +2524,7 @@
     "scientificName": "Calappa ocellata",
     "commonName": "Ocellated Box Crab",
     "caribbeanObsCount": 92,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/30309582/square.jpg"
   },
@@ -2533,7 +2533,7 @@
     "scientificName": "Parachromis managuensis",
     "commonName": "Jaguar Guapote",
     "caribbeanObsCount": 91,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/564111878/square.jpg"
   },
@@ -2542,7 +2542,7 @@
     "scientificName": "Kinosternon albogulare",
     "commonName": "White-throated Mud Turtle",
     "caribbeanObsCount": 91,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "turtle",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/68132877/square.jpeg"
   },
@@ -2551,7 +2551,7 @@
     "scientificName": "Halichoeres pictus",
     "commonName": "Rainbow Wrasse",
     "caribbeanObsCount": 89,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/54616627/square.jpg"
   },
@@ -2560,7 +2560,7 @@
     "scientificName": "Callinectes ornatus",
     "commonName": "Ornate Blue Crab",
     "caribbeanObsCount": 89,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/1094477/square.jpg"
   },
@@ -2569,7 +2569,7 @@
     "scientificName": "Dardanus venosus",
     "commonName": "Stareye Hermit",
     "caribbeanObsCount": 87,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/120451062/square.jpg"
   },
@@ -2578,7 +2578,7 @@
     "scientificName": "Synodus synodus",
     "commonName": "Red Lizardfish",
     "caribbeanObsCount": 85,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/30929109/square.jpg"
   },
@@ -2587,7 +2587,7 @@
     "scientificName": "Neoniphon coruscus",
     "commonName": "Reef Squirrelfish",
     "caribbeanObsCount": 84,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/292922650/square.jpg"
   },
@@ -2596,7 +2596,7 @@
     "scientificName": "Creaseria morleyi",
     "commonName": "Cenote Shrimp",
     "caribbeanObsCount": 84,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/6300985/square.jpg"
   },
@@ -2605,7 +2605,7 @@
     "scientificName": "Achelous sebae",
     "commonName": "Ocellate Swimming Crab",
     "caribbeanObsCount": 84,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/88432033/square.jpg"
   },
@@ -2614,7 +2614,7 @@
     "scientificName": "Sparisoma radians",
     "commonName": "Bucktooth Parrotfish",
     "caribbeanObsCount": 83,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/137456/square.jpg"
   },
@@ -2623,7 +2623,7 @@
     "scientificName": "Elacatinus horsti",
     "commonName": "Yellowline Goby",
     "caribbeanObsCount": 83,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/484468733/square.jpg"
   },
@@ -2632,7 +2632,7 @@
     "scientificName": "Andinoacara pulcher",
     "commonName": "Blue Acara",
     "caribbeanObsCount": 83,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/11297959/square.jpg"
   },
@@ -2641,7 +2641,7 @@
     "scientificName": "Gobioclinus bucciferus",
     "commonName": "Puffcheek Blenny",
     "caribbeanObsCount": 82,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/402454643/square.jpg"
   },
@@ -2650,7 +2650,7 @@
     "scientificName": "Cosmocampus elucens",
     "commonName": "Shortfin Pipefish",
     "caribbeanObsCount": 81,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/155802088/square.jpg"
   },
@@ -2659,7 +2659,7 @@
     "scientificName": "Poecilia orri",
     "commonName": "Mangrove Molly",
     "caribbeanObsCount": 80,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/17828623/square.jpeg"
   },
@@ -2668,7 +2668,7 @@
     "scientificName": "Holacanthus bermudensis",
     "commonName": "Blue Angelfish",
     "caribbeanObsCount": 79,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/161724830/square.jpg"
   },
@@ -2677,7 +2677,7 @@
     "scientificName": "Amatitlania nigrofasciata",
     "commonName": "Convict Cichlid",
     "caribbeanObsCount": 78,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/81863630/square.jpg"
   },
@@ -2686,7 +2686,7 @@
     "scientificName": "Sphyraena borealis",
     "commonName": "Northern Sennet",
     "caribbeanObsCount": 78,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/430958094/square.jpeg"
   },
@@ -2695,7 +2695,7 @@
     "scientificName": "Odontoscion dentex",
     "commonName": "Reef Croaker",
     "caribbeanObsCount": 76,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/443517840/square.jpg"
   },
@@ -2704,7 +2704,7 @@
     "scientificName": "Geograpsus lividus",
     "commonName": "American Nipper",
     "caribbeanObsCount": 76,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/111393742/square.png"
   },
@@ -2713,7 +2713,7 @@
     "scientificName": "Coryphopterus glaucofraenum",
     "commonName": "Bridled Goby",
     "caribbeanObsCount": 75,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/477839291/square.jpg"
   },
@@ -2722,7 +2722,7 @@
     "scientificName": "Scartella cristata",
     "commonName": "Molly Miller",
     "caribbeanObsCount": 75,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/135139272/square.jpeg"
   },
@@ -2731,7 +2731,7 @@
     "scientificName": "Rhinoclemmys punctularia",
     "commonName": "Spotted-legged Turtle",
     "caribbeanObsCount": 75,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "turtle",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/17373735/square.jpeg"
   },
@@ -2740,7 +2740,7 @@
     "scientificName": "Centropyge argi",
     "commonName": "Cherubfish",
     "caribbeanObsCount": 74,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/207555101/square.jpg"
   },
@@ -2749,7 +2749,7 @@
     "scientificName": "Apogon binotatus",
     "commonName": "Barred Cardinalfish",
     "caribbeanObsCount": 74,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/614391353/square.jpg"
   },
@@ -2758,7 +2758,7 @@
     "scientificName": "Mycteroperca interstitialis",
     "commonName": "Yellowmouth Grouper",
     "caribbeanObsCount": 73,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/519610917/square.jpg"
   },
@@ -2767,7 +2767,7 @@
     "scientificName": "Elacatinus cayman",
     "commonName": "Cayman Cleaner Goby",
     "caribbeanObsCount": 72,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/570208907/square.jpg"
   },
@@ -2776,7 +2776,7 @@
     "scientificName": "Cyprinus rubrofuscus",
     "commonName": "Amur Carp",
     "caribbeanObsCount": 72,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/332542785/square.jpg"
   },
@@ -2785,7 +2785,7 @@
     "scientificName": "Labrisomus conditus",
     "commonName": "Masquerader Hairy Blenny",
     "caribbeanObsCount": 71,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/605737829/square.jpg"
   },
@@ -2794,7 +2794,7 @@
     "scientificName": "Eques lanceolatus",
     "commonName": "Jackknife Fish",
     "caribbeanObsCount": 71,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/86747186/square.jpg"
   },
@@ -2803,7 +2803,7 @@
     "scientificName": "Cinetorhynchus manningi",
     "commonName": "Red Night Shrimp",
     "caribbeanObsCount": 71,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/31182563/square.jpg"
   },
@@ -2812,7 +2812,7 @@
     "scientificName": "Lutjanus buccanella",
     "commonName": "Blackfin Snapper",
     "caribbeanObsCount": 70,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/28343941/square.jpg"
   },
@@ -2821,7 +2821,7 @@
     "scientificName": "Elagatis bipinnulata",
     "commonName": "Rainbow Runner",
     "caribbeanObsCount": 70,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/226375296/square.jpg"
   },
@@ -2830,7 +2830,7 @@
     "scientificName": "Mithraculus coryphe",
     "commonName": "Nodose Clinging Crab",
     "caribbeanObsCount": 70,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/3159411/square.jpg"
   },
@@ -2839,7 +2839,7 @@
     "scientificName": "Epilobocera haytensis",
     "commonName": "",
     "caribbeanObsCount": 69,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/98950650/square.jpeg"
   },
@@ -2848,7 +2848,7 @@
     "scientificName": "Hartnollius quadratus",
     "commonName": "Halloween Crab",
     "caribbeanObsCount": 69,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/39828885/square.jpg"
   },
@@ -2857,7 +2857,7 @@
     "scientificName": "Hypoplectrus aberrans",
     "commonName": "Yellowbelly Hamlet",
     "caribbeanObsCount": 68,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/146921040/square.jpg"
   },
@@ -2866,7 +2866,7 @@
     "scientificName": "Tigrigobius dilepis",
     "commonName": "Orangesided Goby",
     "caribbeanObsCount": 68,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/679857251/square.jpg"
   },
@@ -2875,7 +2875,7 @@
     "scientificName": "Mithraculus forceps",
     "commonName": "Red Ridged Clinging Crab",
     "caribbeanObsCount": 67,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/107677526/square.jpg"
   },
@@ -2884,7 +2884,7 @@
     "scientificName": "Typhlias pearsei",
     "commonName": "Mexican Blind Brotula",
     "caribbeanObsCount": 66,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/70007300/square.jpeg"
   },
@@ -2893,7 +2893,7 @@
     "scientificName": "Parablennius marmoreus",
     "commonName": "Seaweed Blenny",
     "caribbeanObsCount": 66,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/110715540/square.jpg"
   },
@@ -2902,7 +2902,7 @@
     "scientificName": "Platybelone argalus",
     "commonName": "Keeltail Needlefish",
     "caribbeanObsCount": 65,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/20428637/square.jpg"
   },
@@ -2911,7 +2911,7 @@
     "scientificName": "Pagurus brevidactylus",
     "commonName": "Shortfinger Hermit",
     "caribbeanObsCount": 65,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/160551717/square.jpg"
   },
@@ -2920,7 +2920,7 @@
     "scientificName": "Arenaeus cribrarius",
     "commonName": "Speckled Swimming Crab",
     "caribbeanObsCount": 65,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/33590925/square.jpeg"
   },
@@ -2929,7 +2929,7 @@
     "scientificName": "Clibanarius antillensis",
     "commonName": "Antillean Hermit Crab",
     "caribbeanObsCount": 64,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/159922058/square.jpg"
   },
@@ -2938,7 +2938,7 @@
     "scientificName": "Cardisoma crassum",
     "commonName": "mouthless crab",
     "caribbeanObsCount": 63,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/10215726/square.jpeg"
   },
@@ -2947,7 +2947,7 @@
     "scientificName": "Sparisoma atomarium",
     "commonName": "Greenblotch Parrotfish",
     "caribbeanObsCount": 62,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/149996903/square.jpg"
   },
@@ -2956,7 +2956,7 @@
     "scientificName": "Enchelycore nigricans",
     "commonName": "Viper Moray",
     "caribbeanObsCount": 62,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/588096190/square.jpg"
   },
@@ -2965,7 +2965,7 @@
     "scientificName": "Oreochromis niloticus",
     "commonName": "Nile Tilapia",
     "caribbeanObsCount": 62,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/104437442/square.jpg"
   },
@@ -2974,7 +2974,7 @@
     "scientificName": "Selar crumenophthalmus",
     "commonName": "Bigeye Scad",
     "caribbeanObsCount": 62,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/89918827/square.jpg"
   },
@@ -2983,7 +2983,7 @@
     "scientificName": "Atherinomorus stipes",
     "commonName": "Hardhead Silverside",
     "caribbeanObsCount": 61,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/665428969/square.jpg"
   },
@@ -2992,7 +2992,7 @@
     "scientificName": "Lepidochelys olivacea",
     "commonName": "Olive Ridley Sea Turtle",
     "caribbeanObsCount": 61,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "turtle",
     "photoUrl": "https://static.inaturalist.org/photos/154666409/square.jpeg"
   },
@@ -3001,7 +3001,7 @@
     "scientificName": "Lobotes surinamensis",
     "commonName": "Atlantic Tripletail",
     "caribbeanObsCount": 60,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/9645532/square.jpg"
   },
@@ -3010,7 +3010,7 @@
     "scientificName": "Hoplias malabaricus",
     "commonName": "Common Wolffish",
     "caribbeanObsCount": 60,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/313660985/square.jpeg"
   },
@@ -3019,7 +3019,7 @@
     "scientificName": "Mobula yarae",
     "commonName": "Atlantic manta ray",
     "caribbeanObsCount": 60,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "elasmobranch",
     "photoUrl": "https://static.inaturalist.org/photos/322063455/square.jpeg"
   },
@@ -3028,7 +3028,7 @@
     "scientificName": "Gambusia puncticulata",
     "commonName": "Caribbean Gambusia",
     "caribbeanObsCount": 59,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/666833/square.jpg"
   },
@@ -3037,7 +3037,7 @@
     "scientificName": "Omalacantha bicornuta",
     "commonName": "Speck-claw Decorator Crab",
     "caribbeanObsCount": 59,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/3045979/square.jpg"
   },
@@ -3046,7 +3046,7 @@
     "scientificName": "Cryptoheros cutteri",
     "commonName": "Cutter's Cichlid",
     "caribbeanObsCount": 58,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/905844/square.jpg"
   },
@@ -3055,7 +3055,7 @@
     "scientificName": "Lucayablennius zingaro",
     "commonName": "Arrow Blenny",
     "caribbeanObsCount": 58,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/30924648/square.jpg"
   },
@@ -3064,7 +3064,7 @@
     "scientificName": "Euthynnus alletteratus",
     "commonName": "Little Tunny",
     "caribbeanObsCount": 58,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/29909093/square.jpg"
   },
@@ -3073,7 +3073,7 @@
     "scientificName": "Apogon lachneri",
     "commonName": "Whitestar Cardinalfish",
     "caribbeanObsCount": 58,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/54512844/square.jpg"
   },
@@ -3082,7 +3082,7 @@
     "scientificName": "Hippa testudinaria",
     "commonName": "",
     "caribbeanObsCount": 58,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/84652442/square.jpeg"
   },
@@ -3091,7 +3091,7 @@
     "scientificName": "Goniopsis pulchra",
     "commonName": "Racer Mangrove Crab",
     "caribbeanObsCount": 58,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/10251394/square.jpg"
   },
@@ -3100,7 +3100,7 @@
     "scientificName": "Nes longus",
     "commonName": "Orangespotted Goby",
     "caribbeanObsCount": 57,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/469565395/square.jpg"
   },
@@ -3109,7 +3109,7 @@
     "scientificName": "Gramma melacara",
     "commonName": "Blackcap Basslet",
     "caribbeanObsCount": 57,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/454767721/square.jpg"
   },
@@ -3118,7 +3118,7 @@
     "scientificName": "Xyrichtys novacula",
     "commonName": "Pearly Razorfish",
     "caribbeanObsCount": 57,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/160906095/square.jpg"
   },
@@ -3127,7 +3127,7 @@
     "scientificName": "Epinephelus itajara",
     "commonName": "Atlantic Goliath Grouper",
     "caribbeanObsCount": 55,
-    "rarity": "common",
+    "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/98481122/square.jpg"
   },
@@ -5566,7 +5566,7 @@
     "scientificName": "Nandopsis tetracanthus",
     "commonName": "Cuban Cichlid",
     "caribbeanObsCount": 14,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/56341379/square.jpg"
   },
@@ -5575,7 +5575,7 @@
     "scientificName": "Micropterus nigricans",
     "commonName": "Largemouth Bass",
     "caribbeanObsCount": 14,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/32058892/square.jpeg"
   },
@@ -5584,7 +5584,7 @@
     "scientificName": "Polydactylus virginicus",
     "commonName": "Sevenfingered Threadfin",
     "caribbeanObsCount": 14,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/280926958/square.jpeg"
   },
@@ -5593,7 +5593,7 @@
     "scientificName": "Antennarius scaber",
     "commonName": "Splitlure Frogfish",
     "caribbeanObsCount": 14,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/119284361/square.jpg"
   },
@@ -5602,7 +5602,7 @@
     "scientificName": "Atherina harringtonensis",
     "commonName": "Reef Silverside",
     "caribbeanObsCount": 14,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/605812212/square.jpg"
   },
@@ -5611,7 +5611,7 @@
     "scientificName": "Piaractus brachypomus",
     "commonName": "Red-bellied Pacu",
     "caribbeanObsCount": 14,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/220284652/square.jpg"
   },
@@ -5620,7 +5620,7 @@
     "scientificName": "Dormitator latifrons",
     "commonName": "Pacific Fat Sleeper",
     "caribbeanObsCount": 14,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/1705357/square.jpg"
   },
@@ -5629,7 +5629,7 @@
     "scientificName": "Mycteroperca acutirostris",
     "commonName": "Comb Grouper",
     "caribbeanObsCount": 14,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/110707938/square.jpg"
   },
@@ -5638,7 +5638,7 @@
     "scientificName": "Caranx caninus",
     "commonName": "Pacific Crevalle Jack",
     "caribbeanObsCount": 14,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/256100254/square.jpeg"
   },
@@ -5647,7 +5647,7 @@
     "scientificName": "Scarus perrico",
     "commonName": "Bumphead Parrotfish",
     "caribbeanObsCount": 14,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/114545763/square.jpg"
   },
@@ -5656,7 +5656,7 @@
     "scientificName": "Prochilodus magdalenae",
     "commonName": "",
     "caribbeanObsCount": 14,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/245218807/square.jpeg"
   },
@@ -5665,7 +5665,7 @@
     "scientificName": "Podocnemis lewyana",
     "commonName": "Magdalena River Turtle",
     "caribbeanObsCount": 14,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "turtle",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/36875585/square.jpeg"
   },
@@ -5674,7 +5674,7 @@
     "scientificName": "Mithrax hispidus",
     "commonName": "Coral Clinging Crab",
     "caribbeanObsCount": 14,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/120453390/square.jpg"
   },
@@ -5683,7 +5683,7 @@
     "scientificName": "Amphithrax aculeatus",
     "commonName": "Granulated Spider Crab",
     "caribbeanObsCount": 14,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://static.inaturalist.org/photos/172394895/square.png"
   },
@@ -5692,7 +5692,7 @@
     "scientificName": "Calcinus obscurus",
     "commonName": "",
     "caribbeanObsCount": 14,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/249843920/square.jpg"
   },
@@ -5701,7 +5701,7 @@
     "scientificName": "Lutjanus vivanus",
     "commonName": "Silk Snapper",
     "caribbeanObsCount": 13,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/172297158/square.png"
   },
@@ -5710,7 +5710,7 @@
     "scientificName": "Malacoctenus versicolor",
     "commonName": "Barfin Blenny",
     "caribbeanObsCount": 13,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/172220017/square.png"
   },
@@ -5719,7 +5719,7 @@
     "scientificName": "Cribroheros longimanus",
     "commonName": "Red-breasted Cichlid",
     "caribbeanObsCount": 13,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/1626507/square.jpg"
   },
@@ -5728,7 +5728,7 @@
     "scientificName": "Chloroscombrus chrysurus",
     "commonName": "Atlantic Bumper",
     "caribbeanObsCount": 13,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/195431/square.jpg"
   },
@@ -5737,7 +5737,7 @@
     "scientificName": "Selene setapinnis",
     "commonName": "Atlantic Moonfish",
     "caribbeanObsCount": 13,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/314582646/square.jpg"
   },
@@ -5746,7 +5746,7 @@
     "scientificName": "Ctenolucius hujeta",
     "commonName": "Gar Characin",
     "caribbeanObsCount": 13,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/517183962/square.jpg"
   },
@@ -5755,7 +5755,7 @@
     "scientificName": "Brachyrhaphis episcopi",
     "commonName": "Bishop Toothcarp",
     "caribbeanObsCount": 13,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/34922962/square.jpg"
   },
@@ -5764,7 +5764,7 @@
     "scientificName": "Hypanus longus",
     "commonName": "Longtail Stingray",
     "caribbeanObsCount": 13,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "elasmobranch",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/60043556/square.jpg"
   },
@@ -5773,7 +5773,7 @@
     "scientificName": "Metapenaeopsis goodei",
     "commonName": "Caribbean velvet shrimp",
     "caribbeanObsCount": 13,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/59017195/square.jpeg"
   },
@@ -5782,7 +5782,7 @@
     "scientificName": "Emerita rathbunae",
     "commonName": "Tropical Mole Crab",
     "caribbeanObsCount": 13,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/208291841/square.jpeg"
   },
@@ -5791,7 +5791,7 @@
     "scientificName": "Chilomycterus reticulatus",
     "commonName": "Spotfin Burrfish",
     "caribbeanObsCount": 12,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/319081317/square.jpg"
   },
@@ -5800,7 +5800,7 @@
     "scientificName": "Scorpaena grandicornis",
     "commonName": "Plumed Scorpionfish",
     "caribbeanObsCount": 12,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/167733994/square.jpg"
   },
@@ -5809,7 +5809,7 @@
     "scientificName": "Ictalurus punctatus",
     "commonName": "Channel Catfish",
     "caribbeanObsCount": 12,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/455557089/square.jpeg"
   },
@@ -5818,7 +5818,7 @@
     "scientificName": "Clarias gariepinus",
     "commonName": "Sharptooth Catfish",
     "caribbeanObsCount": 12,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/243667852/square.jpg"
   },
@@ -5827,7 +5827,7 @@
     "scientificName": "Diapterus auratus",
     "commonName": "Irish Pompano",
     "caribbeanObsCount": 12,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/461035137/square.jpg"
   },
@@ -5836,7 +5836,7 @@
     "scientificName": "Emblemariopsis bahamensis",
     "commonName": "Smoothhead Glass Blenny",
     "caribbeanObsCount": 12,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/196635/square.jpg"
   },
@@ -5845,7 +5845,7 @@
     "scientificName": "Eucinostomus havana",
     "commonName": "Bigeye Mojarra",
     "caribbeanObsCount": 12,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/172236675/square.png"
   },
@@ -5854,7 +5854,7 @@
     "scientificName": "Gambusia sexradiata",
     "commonName": "Stippled Gambusia",
     "caribbeanObsCount": 12,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/661393/square.JPG"
   },
@@ -5863,7 +5863,7 @@
     "scientificName": "Parachromis dovii",
     "commonName": "Guapote",
     "caribbeanObsCount": 12,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/58074517/square.jpeg"
   },
@@ -5872,7 +5872,7 @@
     "scientificName": "Atractosteus tristoechus",
     "commonName": "Cuban Gar",
     "caribbeanObsCount": 12,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/110354790/square.jpg"
   },
@@ -5881,7 +5881,7 @@
     "scientificName": "Eleotris perniger",
     "commonName": "Smallscaled Spinycheek Sleeper",
     "caribbeanObsCount": 12,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/51473213/square.jpg"
   },
@@ -5890,7 +5890,7 @@
     "scientificName": "Canthigaster punctatissima",
     "commonName": "Spotted Sharpnose Puffer",
     "caribbeanObsCount": 12,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/113744593/square.jpg"
   },
@@ -5899,7 +5899,7 @@
     "scientificName": "Mesoclemmys dahli",
     "commonName": "Dahl's Toad-headed Turtle",
     "caribbeanObsCount": 12,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "turtle",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/54679968/square.jpg"
   },
@@ -5908,7 +5908,7 @@
     "scientificName": "Achelous ordwayi",
     "commonName": "Redhair Swimming Crab",
     "caribbeanObsCount": 12,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/107677098/square.jpg"
   },
@@ -5917,7 +5917,7 @@
     "scientificName": "Atya innocous",
     "commonName": "Basket shrimp",
     "caribbeanObsCount": 12,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://static.inaturalist.org/photos/38487331/square.jpg"
   },
@@ -5926,7 +5926,7 @@
     "scientificName": "Phyllamphion gundlachi",
     "commonName": "Copper Lobster",
     "caribbeanObsCount": 12,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://static.inaturalist.org/photos/5139947/square.jpeg"
   },
@@ -5935,7 +5935,7 @@
     "scientificName": "Ucides occidentalis",
     "commonName": "Pacific Mangrove Ghost Crab",
     "caribbeanObsCount": 12,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/13901077/square.jpg"
   },
@@ -5944,7 +5944,7 @@
     "scientificName": "Armases americanum",
     "commonName": "",
     "caribbeanObsCount": 12,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/210991159/square.jpg"
   },
@@ -5953,7 +5953,7 @@
     "scientificName": "Octopus joubini",
     "commonName": "Atlantic Pygmy Octopus",
     "caribbeanObsCount": 12,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "cephalopod",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/63722017/square.jpeg"
   },
@@ -5962,7 +5962,7 @@
     "scientificName": "Plectrypops retrospinis",
     "commonName": "Cardinal Soldierfish",
     "caribbeanObsCount": 11,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/209997114/square.jpg"
   },
@@ -5971,7 +5971,7 @@
     "scientificName": "Prionotus punctatus",
     "commonName": "Bluewing Searobin",
     "caribbeanObsCount": 11,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/172272472/square.png"
   },
@@ -5980,7 +5980,7 @@
     "scientificName": "Coryphopterus kuna",
     "commonName": "Kuna Goby",
     "caribbeanObsCount": 11,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/172228118/square.png"
   },
@@ -5989,7 +5989,7 @@
     "scientificName": "Gramma dejongi",
     "commonName": "Golden Basslet",
     "caribbeanObsCount": 11,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/191152831/square.jpeg"
   },
@@ -5998,7 +5998,7 @@
     "scientificName": "Mugil cephalus",
     "commonName": "Sea Mullet",
     "caribbeanObsCount": 11,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/11976021/square.jpeg"
   },
@@ -6007,7 +6007,7 @@
     "scientificName": "Tigrigobius saucrus",
     "commonName": "Leopard Goby",
     "caribbeanObsCount": 11,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/159436664/square.jpg"
   },
@@ -6016,7 +6016,7 @@
     "scientificName": "Haemulon striatum",
     "commonName": "Striped Grunt",
     "caribbeanObsCount": 11,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/3094002/square.jpg"
   },
@@ -6025,7 +6025,7 @@
     "scientificName": "Aluterus monoceros",
     "commonName": "Unicorn Leatherjacket",
     "caribbeanObsCount": 11,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/161120119/square.jpg"
   },
@@ -6034,7 +6034,7 @@
     "scientificName": "Sphoeroides rosenblatti",
     "commonName": "Oval Puffer",
     "caribbeanObsCount": 11,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/58198670/square.jpg"
   },
@@ -6043,7 +6043,7 @@
     "scientificName": "Scomberomorus sierra",
     "commonName": "Sierra Mackerel",
     "caribbeanObsCount": 11,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/384548363/square.jpg"
   },
@@ -6052,7 +6052,7 @@
     "scientificName": "Bodianus diplotaenia",
     "commonName": "Mexican Hogfish",
     "caribbeanObsCount": 11,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/75783552/square.jpg"
   },
@@ -6061,7 +6061,7 @@
     "scientificName": "Trichopodus pectoralis",
     "commonName": "Snakeskin Gourami",
     "caribbeanObsCount": 11,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/107236383/square.jpg"
   },
@@ -6070,7 +6070,7 @@
     "scientificName": "Cyprinodon dearborni",
     "commonName": "Willemstad Pupfish",
     "caribbeanObsCount": 11,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/346480585/square.jpeg"
   },
@@ -6079,7 +6079,7 @@
     "scientificName": "Chaetostoma fischeri",
     "commonName": "",
     "caribbeanObsCount": 11,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/11424797/square.jpg"
   },
@@ -6088,7 +6088,7 @@
     "scientificName": "Gephyrocharax atracaudatus",
     "commonName": "Platinum Tetra",
     "caribbeanObsCount": 11,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/8443967/square.jpeg"
   },
@@ -6097,7 +6097,7 @@
     "scientificName": "Hemibrycon taeniurus",
     "commonName": "",
     "caribbeanObsCount": 11,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/265402892/square.jpg"
   },
@@ -6106,7 +6106,7 @@
     "scientificName": "Panamius panamensis",
     "commonName": "Panama Cichlid",
     "caribbeanObsCount": 11,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/183069570/square.jpg"
   },
@@ -6115,7 +6115,7 @@
     "scientificName": "Rhinoptera steindachneri",
     "commonName": "Golden Cownose Ray",
     "caribbeanObsCount": 11,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "elasmobranch",
     "photoUrl": "https://static.inaturalist.org/photos/28921833/square.jpg"
   },
@@ -6124,7 +6124,7 @@
     "scientificName": "Terrapene yucatana",
     "commonName": "Yucat\u00e1n Box Turtle",
     "caribbeanObsCount": 11,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "turtle",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/24069708/square.jpeg"
   },
@@ -6133,7 +6133,7 @@
     "scientificName": "Typhlatya pearsei",
     "commonName": "",
     "caribbeanObsCount": 11,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/119248136/square.jpg"
   },
@@ -6142,7 +6142,7 @@
     "scientificName": "Emblemariopsis pricei",
     "commonName": "Western Smoothhead Glass Blenny",
     "caribbeanObsCount": 10,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/468444875/square.jpg"
   },
@@ -6151,7 +6151,7 @@
     "scientificName": "Makaira nigricans",
     "commonName": "Blue Marlin",
     "caribbeanObsCount": 10,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/161629363/square.jpg"
   },
@@ -6160,7 +6160,7 @@
     "scientificName": "Cynoscion nebulosus",
     "commonName": "Spotted Seatrout",
     "caribbeanObsCount": 10,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/459242604/square.jpeg"
   },
@@ -6169,7 +6169,7 @@
     "scientificName": "Jordanella pulchra",
     "commonName": "Progreso Flagfish",
     "caribbeanObsCount": 10,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/55056302/square.jpeg"
   },
@@ -6178,7 +6178,7 @@
     "scientificName": "Gobioclinus filamentosus",
     "commonName": "Quillfin Blenny",
     "caribbeanObsCount": 10,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/204056/square.jpg"
   },
@@ -6187,7 +6187,7 @@
     "scientificName": "Gambusia hispaniolae",
     "commonName": "Hispaniolan gambusia",
     "caribbeanObsCount": 10,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/660217/square.JPG"
   },
@@ -6196,7 +6196,7 @@
     "scientificName": "Hirundichthys speculiger",
     "commonName": "Mirrorwing Flyingfish",
     "caribbeanObsCount": 10,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/417421107/square.jpg"
   },
@@ -6205,7 +6205,7 @@
     "scientificName": "Enneanectes altivelis",
     "commonName": "Lofty Triplefin",
     "caribbeanObsCount": 10,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/20051335/square.jpg"
   },
@@ -6214,7 +6214,7 @@
     "scientificName": "Etelis oculatus",
     "commonName": "Queen Snapper",
     "caribbeanObsCount": 10,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/678642237/square.jpg"
   },
@@ -6223,7 +6223,7 @@
     "scientificName": "Stephanolepis hispida",
     "commonName": "Planehead Filefish",
     "caribbeanObsCount": 10,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/403168785/square.jpg"
   },
@@ -6232,7 +6232,7 @@
     "scientificName": "Poecilia mexicana",
     "commonName": "Shortfin Molly",
     "caribbeanObsCount": 10,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/660644/square.JPG"
   },
@@ -6241,7 +6241,7 @@
     "scientificName": "Acanthemblemaria betinensis",
     "commonName": "Speckled Blenny",
     "caribbeanObsCount": 10,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/361016792/square.jpeg"
   },
@@ -6250,7 +6250,7 @@
     "scientificName": "Pomacanthus zonipectus",
     "commonName": "Cortez Angelfish",
     "caribbeanObsCount": 10,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/299040798/square.jpg"
   },
@@ -6259,7 +6259,7 @@
     "scientificName": "Amphichthys cryptocentrus",
     "commonName": "Bocon Toadfish",
     "caribbeanObsCount": 10,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/44972712/square.jpeg"
   },
@@ -6268,7 +6268,7 @@
     "scientificName": "Bathygobius ramosus",
     "commonName": "Panamic Frillfin",
     "caribbeanObsCount": 10,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/470414237/square.jpeg"
   },
@@ -6277,7 +6277,7 @@
     "scientificName": "Ophioblennius steindachneri",
     "commonName": "Panamic Fanged Blenny",
     "caribbeanObsCount": 10,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/94691198/square.jpg"
   },
@@ -6286,7 +6286,7 @@
     "scientificName": "Pseudobalistes naufragium",
     "commonName": "Stone Triggerfish",
     "caribbeanObsCount": 10,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/245358083/square.jpg"
   },
@@ -6295,7 +6295,7 @@
     "scientificName": "Cichla monoculus",
     "commonName": "Tucanare Peacock Bass",
     "caribbeanObsCount": 10,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/30333216/square.jpg"
   },
@@ -6304,7 +6304,7 @@
     "scientificName": "Roeboides dientonito",
     "commonName": "",
     "caribbeanObsCount": 10,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/105296846/square.jpeg"
   },
@@ -6313,7 +6313,7 @@
     "scientificName": "Prochilodus reticulatus",
     "commonName": "",
     "caribbeanObsCount": 10,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/57718252/square.jpg"
   },
@@ -6322,7 +6322,7 @@
     "scientificName": "Saxatilia saxatilis",
     "commonName": "Ringtail Pike Cichlid",
     "caribbeanObsCount": 10,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/11223046/square.jpg"
   },
@@ -6331,7 +6331,7 @@
     "scientificName": "Pseudobatos leucorhynchus",
     "commonName": "Whitesnout Guitarfish",
     "caribbeanObsCount": 10,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "elasmobranch",
     "photoUrl": "https://static.inaturalist.org/photos/5425599/square.jpeg"
   },
@@ -6340,7 +6340,7 @@
     "scientificName": "Leander tenuicornis",
     "commonName": "Brown Grass Shrimp",
     "caribbeanObsCount": 10,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://static.inaturalist.org/photos/29929128/square.png"
   },
@@ -6349,7 +6349,7 @@
     "scientificName": "Paguristes erythrops",
     "commonName": "",
     "caribbeanObsCount": 10,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/27453204/square.jpg"
   },
@@ -6358,7 +6358,7 @@
     "scientificName": "Ocypode occidentalis",
     "commonName": "Gulf Ghost Crab",
     "caribbeanObsCount": 10,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://static.inaturalist.org/photos/8433483/square.jpg"
   },
@@ -6367,7 +6367,7 @@
     "scientificName": "Periclimenes antipathophilus",
     "commonName": "Black Coral Shrimp",
     "caribbeanObsCount": 10,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://static.inaturalist.org/photos/32932247/square.jpg"
   },
@@ -6376,7 +6376,7 @@
     "scientificName": "Porcellana sayana",
     "commonName": "Spotted Porcelain Crab",
     "caribbeanObsCount": 10,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/1094575/square.jpg"
   },
@@ -6385,7 +6385,7 @@
     "scientificName": "Chorinus heros",
     "commonName": "Shorthorn Decorator Crab",
     "caribbeanObsCount": 10,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/103736146/square.jpeg"
   },
@@ -6394,7 +6394,7 @@
     "scientificName": "Dardanus fucosus",
     "commonName": "Bareye Hermit",
     "caribbeanObsCount": 10,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/161552559/square.jpg"
   },
@@ -6403,7 +6403,7 @@
     "scientificName": "Armases roberti",
     "commonName": "",
     "caribbeanObsCount": 10,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://static.inaturalist.org/photos/172427295/square.png"
   },
@@ -6412,7 +6412,7 @@
     "scientificName": "Hoplometopus antillensis",
     "commonName": "flaming reef lobster",
     "caribbeanObsCount": 10,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/293346322/square.jpeg"
   },
@@ -6421,7 +6421,7 @@
     "scientificName": "Uca ornata",
     "commonName": "Ornate Fiddler Crab",
     "caribbeanObsCount": 10,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/21524/square.jpg"
   },
@@ -6430,7 +6430,7 @@
     "scientificName": "Hemichromis fasciatus",
     "commonName": "Banded Jewelfish",
     "caribbeanObsCount": 9,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/118781954/square.jpg"
   },
@@ -6439,7 +6439,7 @@
     "scientificName": "Chaenopsis ocellata",
     "commonName": "Bluethroat Pikeblenny",
     "caribbeanObsCount": 9,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/161286894/square.jpg"
   },
@@ -6448,7 +6448,7 @@
     "scientificName": "Gymnachirus nudus",
     "commonName": "Zebra Sole",
     "caribbeanObsCount": 9,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/172272354/square.png"
   },
@@ -6457,7 +6457,7 @@
     "scientificName": "Emblemariopsis ruetzleri",
     "commonName": "Bluegold Glass Blenny",
     "caribbeanObsCount": 9,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/237381399/square.png"
   },
@@ -6466,7 +6466,7 @@
     "scientificName": "Carassius auratus",
     "commonName": "Goldfish",
     "caribbeanObsCount": 9,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/203973907/square.jpg"
   },
@@ -6475,7 +6475,7 @@
     "scientificName": "Enneanectes boehlkei",
     "commonName": "Roughhead Triplefin",
     "caribbeanObsCount": 9,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/56547645/square.jpg"
   },
@@ -6484,7 +6484,7 @@
     "scientificName": "Bathygobius soporator",
     "commonName": "Frillfin Goby",
     "caribbeanObsCount": 9,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/433947260/square.jpeg"
   },
@@ -6493,7 +6493,7 @@
     "scientificName": "Brockius nigricinctus",
     "commonName": "Spotcheek Blenny",
     "caribbeanObsCount": 9,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/172220309/square.png"
   },
@@ -6502,7 +6502,7 @@
     "scientificName": "Coryphopterus thrix",
     "commonName": "Bartail Goby",
     "caribbeanObsCount": 9,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/493654932/square.jpg"
   },
@@ -6511,7 +6511,7 @@
     "scientificName": "Poecilia sphenops",
     "commonName": "Common Molly",
     "caribbeanObsCount": 9,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/208075679/square.jpg"
   },
@@ -6520,7 +6520,7 @@
     "scientificName": "Hoplosternum littorale",
     "commonName": "Brown Hoplo",
     "caribbeanObsCount": 9,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/608228555/square.jpg"
   },
@@ -6529,7 +6529,7 @@
     "scientificName": "Pempheris poeyi",
     "commonName": "Shortfin Sweeper",
     "caribbeanObsCount": 9,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/467213843/square.jpeg"
   },
@@ -6538,7 +6538,7 @@
     "scientificName": "Hypoplectrus gummigutta",
     "commonName": "Golden Hamlet",
     "caribbeanObsCount": 9,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/179740131/square.jpg"
   },
@@ -6547,7 +6547,7 @@
     "scientificName": "Trinectes inscriptus",
     "commonName": "Scrawled Sole",
     "caribbeanObsCount": 9,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/665460201/square.jpg"
   },
@@ -6556,7 +6556,7 @@
     "scientificName": "Cephalopholis panamensis",
     "commonName": "Pacific Graysby",
     "caribbeanObsCount": 9,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/59033839/square.jpeg"
   },
@@ -6565,7 +6565,7 @@
     "scientificName": "Callichthys callichthys",
     "commonName": "Cascarudo",
     "caribbeanObsCount": 9,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/332980499/square.jpeg"
   },
@@ -6574,7 +6574,7 @@
     "scientificName": "Pseudobatos percellens",
     "commonName": "Chola Guitarfish",
     "caribbeanObsCount": 9,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "elasmobranch",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/107542319/square.jpg"
   },
@@ -6583,7 +6583,7 @@
     "scientificName": "Uca major",
     "commonName": "Greater Fiddler Crab",
     "caribbeanObsCount": 9,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/24041101/square.jpg"
   },
@@ -6592,7 +6592,7 @@
     "scientificName": "Persephona mediterranea",
     "commonName": "Mottled Purse Crab",
     "caribbeanObsCount": 9,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/6015114/square.jpg"
   },
@@ -6601,7 +6601,7 @@
     "scientificName": "Dromia erythropus",
     "commonName": "Redeye Sponge Crab",
     "caribbeanObsCount": 9,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/253641429/square.jpeg"
   },
@@ -6610,7 +6610,7 @@
     "scientificName": "Macrobrachium heterochirus",
     "commonName": "Cascade river prawn",
     "caribbeanObsCount": 9,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/25703018/square.jpg"
   },
@@ -6619,7 +6619,7 @@
     "scientificName": "Pachygrapsus gracilis",
     "commonName": "",
     "caribbeanObsCount": 9,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/180183250/square.jpg"
   },
@@ -6628,7 +6628,7 @@
     "scientificName": "Clibanarius albidigitus",
     "commonName": "",
     "caribbeanObsCount": 9,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/224429321/square.jpg"
   },
@@ -6637,7 +6637,7 @@
     "scientificName": "Panulirus gracilis",
     "commonName": "Green Spiny Lobster",
     "caribbeanObsCount": 9,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/217770270/square.jpg"
   },
@@ -6646,7 +6646,7 @@
     "scientificName": "Uca maracoani",
     "commonName": "Brazilian Fiddler Crab",
     "caribbeanObsCount": 9,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://static.inaturalist.org/photos/355313462/square.jpeg"
   },
@@ -6655,7 +6655,7 @@
     "scientificName": "Ornithoteuthis antillarum",
     "commonName": "Atlantic bird squid",
     "caribbeanObsCount": 9,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "cephalopod",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/245172081/square.jpg"
   },
@@ -6664,7 +6664,7 @@
     "scientificName": "Stephanolepis setifer",
     "commonName": "Pygmy Filefish",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/100413551/square.jpg"
   },
@@ -6673,7 +6673,7 @@
     "scientificName": "Umbrina broussonnetii",
     "commonName": "Striped drum",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/365706339/square.jpg"
   },
@@ -6682,7 +6682,7 @@
     "scientificName": "Bairdiella ronchus",
     "commonName": "Ground Croaker",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/129670082/square.jpg"
   },
@@ -6691,7 +6691,7 @@
     "scientificName": "Ahlia egmontis",
     "commonName": "Key Worm Eel",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/184707335/square.jpeg"
   },
@@ -6700,7 +6700,7 @@
     "scientificName": "Enneanectes jordani",
     "commonName": "Mimic Triplefin",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/585781777/square.jpg"
   },
@@ -6709,7 +6709,7 @@
     "scientificName": "Lythrypnus elasson",
     "commonName": "Dwarf Goby",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/512531713/square.jpg"
   },
@@ -6718,7 +6718,7 @@
     "scientificName": "Poecilia elegans",
     "commonName": "elegant molly",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/660230/square.JPG"
   },
@@ -6727,7 +6727,7 @@
     "scientificName": "Alfaro huberi",
     "commonName": "Hubers Knife Livebearer",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/63974231/square.jpeg"
   },
@@ -6736,7 +6736,7 @@
     "scientificName": "Gambusia xanthosoma",
     "commonName": "Cayman gambusia",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/341683922/square.jpeg"
   },
@@ -6745,7 +6745,7 @@
     "scientificName": "Liopropoma mowbrayi",
     "commonName": "cave bass",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/442831999/square.jpg"
   },
@@ -6754,7 +6754,7 @@
     "scientificName": "Cyprinus carpio",
     "commonName": "European Carp",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/2754663/square.JPG"
   },
@@ -6763,7 +6763,7 @@
     "scientificName": "Callechelys guineensis",
     "commonName": "Shorttail Snake Eel",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/68706727/square.jpg"
   },
@@ -6772,7 +6772,7 @@
     "scientificName": "Cheilopogon melanurus",
     "commonName": "Atlantic Flyingfish",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/617283017/square.jpg"
   },
@@ -6781,7 +6781,7 @@
     "scientificName": "Harengula jaguana",
     "commonName": "Scaled Sardine",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/569320295/square.jpg"
   },
@@ -6790,7 +6790,7 @@
     "scientificName": "Geophagus steindachneri",
     "commonName": "Redhump Eartheater",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/111207877/square.jpg"
   },
@@ -6799,7 +6799,7 @@
     "scientificName": "Cetengraulis edentulus",
     "commonName": "Atlantic Anchoveta",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/59387225/square.jpeg"
   },
@@ -6808,7 +6808,7 @@
     "scientificName": "Kyphosus bigibbus",
     "commonName": "Grey Drummer",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/14159809/square.jpg"
   },
@@ -6817,7 +6817,7 @@
     "scientificName": "Sufflamen verres",
     "commonName": "Orangeside Triggerfish",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/34514824/square.jpg"
   },
@@ -6826,7 +6826,7 @@
     "scientificName": "Arothron meleagris",
     "commonName": "Guineafowl Puffer",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/126081673/square.jpeg"
   },
@@ -6835,7 +6835,7 @@
     "scientificName": "Acanthemblemaria hancocki",
     "commonName": "Hancock's Blenny",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/355839446/square.jpg"
   },
@@ -6844,7 +6844,7 @@
     "scientificName": "Dialommus macrocephalus",
     "commonName": "Foureye Rockskipper",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/206070323/square.jpg"
   },
@@ -6853,7 +6853,7 @@
     "scientificName": "Emblemariopsis tayrona",
     "commonName": "Highfin Red Banner Blenny",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/389698869/square.jpeg"
   },
@@ -6862,7 +6862,7 @@
     "scientificName": "Serranus psittacinus",
     "commonName": "Barred Serrano",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/203280/square.jpg"
   },
@@ -6871,7 +6871,7 @@
     "scientificName": "Sternopygus aequilabiatus",
     "commonName": "",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/17882511/square.jpeg"
   },
@@ -6880,7 +6880,7 @@
     "scientificName": "Hemigrammus unilineatus",
     "commonName": "featherfin tetra",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/322509282/square.jpeg"
   },
@@ -6889,7 +6889,7 @@
     "scientificName": "Polycentrus schomburgkii",
     "commonName": "Guyana Leaffish",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/32045429/square.jpg"
   },
@@ -6898,7 +6898,7 @@
     "scientificName": "Cynodonichthys hildebrandi",
     "commonName": "",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/87679733/square.jpeg"
   },
@@ -6907,7 +6907,7 @@
     "scientificName": "Hiatirhaphis cascajalensis",
     "commonName": "Cascajal Toothcarp",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/14333340/square.jpg"
   },
@@ -6916,7 +6916,7 @@
     "scientificName": "Styracura pacifica",
     "commonName": "Pacific chupare whipray",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "elasmobranch",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/26563926/square.jpeg"
   },
@@ -6925,7 +6925,7 @@
     "scientificName": "Procambarus clarkii",
     "commonName": "Red Swamp Crayfish",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://static.inaturalist.org/photos/31412659/square.jpg"
   },
@@ -6934,7 +6934,7 @@
     "scientificName": "Planes minutus",
     "commonName": "Gulfweed Crab",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/11619365/square.jpeg"
   },
@@ -6943,7 +6943,7 @@
     "scientificName": "Micratya poeyi",
     "commonName": "Caribbean dwarf filter shrimp",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/363618197/square.jpg"
   },
@@ -6952,7 +6952,7 @@
     "scientificName": "Periclimenes crinoidalis",
     "commonName": "Orange Featherstar Shrimp",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/565002594/square.jpg"
   },
@@ -6961,7 +6961,7 @@
     "scientificName": "Tuleariocaris neglecta",
     "commonName": "Black urchin shrimp",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/132664512/square.jpeg"
   },
@@ -6970,7 +6970,7 @@
     "scientificName": "Leptuca stenodactylus",
     "commonName": "Narrow-fingered Fiddler Crab",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/7707321/square.jpg"
   },
@@ -6979,7 +6979,7 @@
     "scientificName": "Phimochirus operculatus",
     "commonName": "Polkadotted Hermit",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/115588/square.JPG"
   },
@@ -6988,7 +6988,7 @@
     "scientificName": "Macrobrachium hancocki",
     "commonName": "Hancock's River Prawn",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://static.inaturalist.org/photos/222580388/square.jpg"
   },
@@ -6997,7 +6997,7 @@
     "scientificName": "Thysanoteuthis rhombus",
     "commonName": "Diamondback Squid",
     "caribbeanObsCount": 8,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "cephalopod",
     "photoUrl": "https://static.inaturalist.org/photos/172552795/square.png"
   },
@@ -7006,7 +7006,7 @@
     "scientificName": "Larimus breviceps",
     "commonName": "Shorthead Drum",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/43512922/square.jpg"
   },
@@ -7015,7 +7015,7 @@
     "scientificName": "Eucinostomus jonesii",
     "commonName": "Slender Mojarra",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/59024925/square.jpeg"
   },
@@ -7024,7 +7024,7 @@
     "scientificName": "Syacium micrurum",
     "commonName": "Channel Flounder",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/463706279/square.jpg"
   },
@@ -7033,7 +7033,7 @@
     "scientificName": "Cyprinodon nichollsi",
     "commonName": "Jaragua Pupfish",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/660229/square.JPG"
   },
@@ -7042,7 +7042,7 @@
     "scientificName": "Cribroheros alfari",
     "commonName": "Pastel Cichlid",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/1651613/square.jpg"
   },
@@ -7051,7 +7051,7 @@
     "scientificName": "Tomicodon cryptus",
     "commonName": "Cryptic Clingfish",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/172217407/square.png"
   },
@@ -7060,7 +7060,7 @@
     "scientificName": "Poecilia vittata",
     "commonName": "Cuban Lima",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/155610969/square.jpg"
   },
@@ -7069,7 +7069,7 @@
     "scientificName": "Oligoplites altus",
     "commonName": "Longjaw Leather Jack",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/512257562/square.jpg"
   },
@@ -7078,7 +7078,7 @@
     "scientificName": "Ablennes hians",
     "commonName": "Flat Needlefish",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/5407045/square.jpeg"
   },
@@ -7087,7 +7087,7 @@
     "scientificName": "Parasphyraenops incisus",
     "commonName": "Bantam Bass",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/209463874/square.jpg"
   },
@@ -7096,7 +7096,7 @@
     "scientificName": "Echiophis punctifer",
     "commonName": "Stippled Spoon-nose Eel",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/73288301/square.jpg"
   },
@@ -7105,7 +7105,7 @@
     "scientificName": "Stegastes otophorus",
     "commonName": "Freshwater gregory",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/23811864/square.jpeg"
   },
@@ -7114,7 +7114,7 @@
     "scientificName": "Rhonciscus approximans",
     "commonName": "",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/558053522/square.jpg"
   },
@@ -7123,7 +7123,7 @@
     "scientificName": "Lutjanus colorado",
     "commonName": "Colorado Snapper",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/322565728/square.jpeg"
   },
@@ -7132,7 +7132,7 @@
     "scientificName": "Microspathodon dorsalis",
     "commonName": "Giant Damselfish",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/59036362/square.jpeg"
   },
@@ -7141,7 +7141,7 @@
     "scientificName": "Lythrypnus spilus",
     "commonName": "Bluegold goby",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/440000228/square.jpg"
   },
@@ -7150,7 +7150,7 @@
     "scientificName": "Echidna nebulosa",
     "commonName": "Snowflake Moray",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/84610411/square.jpg"
   },
@@ -7159,7 +7159,7 @@
     "scientificName": "Prionurus laticlavius",
     "commonName": "Razor Surgeonfish",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/166030/square.jpg"
   },
@@ -7168,7 +7168,7 @@
     "scientificName": "Lutjanus aratus",
     "commonName": "Mullet Snapper",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/203277/square.jpg"
   },
@@ -7177,7 +7177,7 @@
     "scientificName": "Euthynnus lineatus",
     "commonName": "Black Skipjack",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/259187681/square.jpeg"
   },
@@ -7186,7 +7186,7 @@
     "scientificName": "Colossoma macropomum",
     "commonName": "Tambaqui",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/53592234/square.jpg"
   },
@@ -7195,7 +7195,7 @@
     "scientificName": "Trichomycterus striatus",
     "commonName": "Brook Pencil Catfish",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/388314009/square.jpg"
   },
@@ -7204,7 +7204,7 @@
     "scientificName": "Gasteropelecus maculatus",
     "commonName": "Spotted Hatchetfish",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/32408095/square.jpg"
   },
@@ -7213,7 +7213,7 @@
     "scientificName": "Megaleporinus muyscorum",
     "commonName": "",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/10853079/square.jpg"
   },
@@ -7222,7 +7222,7 @@
     "scientificName": "Hypostomus aspidolepis",
     "commonName": "",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/137965743/square.jpg"
   },
@@ -7231,7 +7231,7 @@
     "scientificName": "Isurus oxyrinchus",
     "commonName": "Shortfin Mako",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "elasmobranch",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/70551905/square.jpg"
   },
@@ -7240,7 +7240,7 @@
     "scientificName": "Rhinoclemmys funerea",
     "commonName": "Black River Turtle",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "turtle",
     "photoUrl": "https://static.inaturalist.org/photos/63356176/square.jpg"
   },
@@ -7249,7 +7249,7 @@
     "scientificName": "Achelous anceps",
     "commonName": "Delicate Swimming Crab",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/30929791/square.jpg"
   },
@@ -7258,7 +7258,7 @@
     "scientificName": "Petrolisthes galathinus",
     "commonName": "banded porcelain crab",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://static.inaturalist.org/photos/368980328/square.jpeg"
   },
@@ -7267,7 +7267,7 @@
     "scientificName": "Uca princeps",
     "commonName": "Large Mexican Fiddler Crab",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/9343952/square.jpeg"
   },
@@ -7276,7 +7276,7 @@
     "scientificName": "Periclimenes perryae",
     "commonName": "basketstar shrimp",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/465396904/square.jpg"
   },
@@ -7285,7 +7285,7 @@
     "scientificName": "Thor manningi",
     "commonName": "",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/286731415/square.jpg"
   },
@@ -7294,7 +7294,7 @@
     "scientificName": "Clibanarius lineatus",
     "commonName": "Mangrove Hermit Crab",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://static.inaturalist.org/photos/31365471/square.jpg"
   },
@@ -7303,7 +7303,7 @@
     "scientificName": "Minuca vocator",
     "commonName": "Atlantic Hairback Fiddler Crab",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://static.inaturalist.org/photos/447022748/square.jpeg"
   },
@@ -7312,7 +7312,7 @@
     "scientificName": "Pagurus maclaughlinae",
     "commonName": "",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/168427972/square.jpg"
   },
@@ -7321,7 +7321,7 @@
     "scientificName": "Petruca panamensis",
     "commonName": "Rock Fiddler Crab",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/138201599/square.jpg"
   },
@@ -7330,7 +7330,7 @@
     "scientificName": "Clibanarius symmetricus",
     "commonName": "",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/344333130/square.jpeg"
   },
@@ -7339,7 +7339,7 @@
     "scientificName": "Johngarthia planata",
     "commonName": "East Pacific Land Crab",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/48068955/square.jpeg"
   },
@@ -7348,7 +7348,7 @@
     "scientificName": "Lobatus peruvianus",
     "commonName": "Peruvian conch",
     "caribbeanObsCount": 7,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "gastropod",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/27482461/square.jpg"
   },
@@ -7357,7 +7357,7 @@
     "scientificName": "Lepomis auritus",
     "commonName": "Redbreast Sunfish",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/207601243/square.jpeg"
   },
@@ -7366,7 +7366,7 @@
     "scientificName": "Gambusia holbrooki",
     "commonName": "Eastern Mosquitofish",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/242594722/square.jpeg"
   },
@@ -7375,7 +7375,7 @@
     "scientificName": "Xiphophorus maculatus",
     "commonName": "Southern Platyfish",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/246740667/square.jpg"
   },
@@ -7384,7 +7384,7 @@
     "scientificName": "Bagre marinus",
     "commonName": "Gafftopsail Catfish",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/15194428/square.jpeg"
   },
@@ -7393,7 +7393,7 @@
     "scientificName": "Centropomus parallelus",
     "commonName": "Smallscale Fat Snook",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/42140753/square.jpg"
   },
@@ -7402,7 +7402,7 @@
     "scientificName": "Sanopus johnsoni",
     "commonName": "Cozumel Toadfish",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/58656899/square.jpg"
   },
@@ -7411,7 +7411,7 @@
     "scientificName": "Selene brownii",
     "commonName": "Brown's Caribbean Moonfish",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/172234667/square.png"
   },
@@ -7420,7 +7420,7 @@
     "scientificName": "Ogcocephalus vespertilio",
     "commonName": "Brazilian Batfish",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/343536096/square.jpeg"
   },
@@ -7429,7 +7429,7 @@
     "scientificName": "Poecilia salvatoris",
     "commonName": "Liberty Molly",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/537041477/square.jpg"
   },
@@ -7438,7 +7438,7 @@
     "scientificName": "Poecilia hondurensis",
     "commonName": "Honduran Molly",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/905812/square.jpg"
   },
@@ -7447,7 +7447,7 @@
     "scientificName": "Doratonotus megalepis",
     "commonName": "Dwarf Wrasse",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/481796842/square.jpg"
   },
@@ -7456,7 +7456,7 @@
     "scientificName": "Conger triporiceps",
     "commonName": "Manytooth Conger",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/73061528/square.jpg"
   },
@@ -7465,7 +7465,7 @@
     "scientificName": "Apogon robinsi",
     "commonName": "Roughlip Cardinalfish",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/128138284/square.jpeg"
   },
@@ -7474,7 +7474,7 @@
     "scientificName": "Serranus flaviventris",
     "commonName": "Twinspot Bass",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/350875835/square.jpg"
   },
@@ -7483,7 +7483,7 @@
     "scientificName": "Centropyge aurantonotus",
     "commonName": "Flameback Angelfish",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/151597270/square.jpg"
   },
@@ -7492,7 +7492,7 @@
     "scientificName": "Hippocampus ingens",
     "commonName": "Giant Seahorse",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/5354006/square.jpg"
   },
@@ -7501,7 +7501,7 @@
     "scientificName": "Achirus lineatus",
     "commonName": "Lined Sole",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/181614985/square.jpeg"
   },
@@ -7510,7 +7510,7 @@
     "scientificName": "Menticirrhus martinicensis",
     "commonName": "",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/225018082/square.jpeg"
   },
@@ -7519,7 +7519,7 @@
     "scientificName": "Chaetodipterus zonatus",
     "commonName": "Pacific Spadefish",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/92066198/square.jpg"
   },
@@ -7528,7 +7528,7 @@
     "scientificName": "Cheilopogon cyanopterus",
     "commonName": "Margined Flyingfish",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/301186760/square.jpeg"
   },
@@ -7537,7 +7537,7 @@
     "scientificName": "Anisotremus taeniatus",
     "commonName": "Panamic Porkfish",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/29179174/square.jpg"
   },
@@ -7546,7 +7546,7 @@
     "scientificName": "Gobionellus oceanicus",
     "commonName": "Highfin Goby",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/562000657/square.jpg"
   },
@@ -7555,7 +7555,7 @@
     "scientificName": "Lutjanus argentiventris",
     "commonName": "Yellow Snapper",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/54948027/square.jpg"
   },
@@ -7564,7 +7564,7 @@
     "scientificName": "Kyphosus elegans",
     "commonName": "Cortez Sea Chub",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/58070862/square.jpg"
   },
@@ -7573,7 +7573,7 @@
     "scientificName": "Microspathodon bairdii",
     "commonName": "Bumphead Damselfish",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/59036445/square.jpeg"
   },
@@ -7582,7 +7582,7 @@
     "scientificName": "Corynopoma riisei",
     "commonName": "Swordtail Characin",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/105293918/square.jpg"
   },
@@ -7591,7 +7591,7 @@
     "scientificName": "Hyphessobrycon panamensis",
     "commonName": "Panama Tetra",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/1809323/square.JPG"
   },
@@ -7600,7 +7600,7 @@
     "scientificName": "Hypostomus hondae",
     "commonName": "Magdalena Stream Pleco",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/106841433/square.jpg"
   },
@@ -7609,7 +7609,7 @@
     "scientificName": "Trachelyopterus insignis",
     "commonName": "",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/30279831/square.jpg"
   },
@@ -7618,7 +7618,7 @@
     "scientificName": "Crenicichla geayi",
     "commonName": "Half-banded Pike Cichlid",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/51481079/square.jpg"
   },
@@ -7627,7 +7627,7 @@
     "scientificName": "Kyphosus ocyurus",
     "commonName": "Bluestriped Chub",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/111011822/square.jpg"
   },
@@ -7636,7 +7636,7 @@
     "scientificName": "Azurina atrilobata",
     "commonName": "Scissortail Chromis",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/417606036/square.jpg"
   },
@@ -7645,7 +7645,7 @@
     "scientificName": "Neoniphon suborbitalis",
     "commonName": "Tinsel Squirrelfish",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/59014994/square.jpeg"
   },
@@ -7654,7 +7654,7 @@
     "scientificName": "Sphoeroides psittacus",
     "commonName": "Banded Puffer",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/61955110/square.jpg"
   },
@@ -7663,7 +7663,7 @@
     "scientificName": "Carcharhinus plumbeus",
     "commonName": "Sandbar Shark",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "elasmobranch",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/182239485/square.jpg"
   },
@@ -7672,7 +7672,7 @@
     "scientificName": "Triaenodon obesus",
     "commonName": "Whitetip Reef Shark",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "elasmobranch",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/29230134/square.jpg"
   },
@@ -7681,7 +7681,7 @@
     "scientificName": "Lepidochelys kempii",
     "commonName": "Kemp's Ridley Sea Turtle",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "turtle",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/422850824/square.jpeg"
   },
@@ -7690,7 +7690,7 @@
     "scientificName": "Clibanarius vittatus",
     "commonName": "Thinstripe Hermit Crab",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://static.inaturalist.org/photos/1753961/square.jpg"
   },
@@ -7699,7 +7699,7 @@
     "scientificName": "Epilobocera wetherbeei",
     "commonName": "",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/130097159/square.jpg"
   },
@@ -7708,7 +7708,7 @@
     "scientificName": "Potamocarcinus roatensis",
     "commonName": "",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://static.inaturalist.org/photos/57102915/square.jpg"
   },
@@ -7717,7 +7717,7 @@
     "scientificName": "Typhlatya mitchelli",
     "commonName": "",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/2317224/square.jpg"
   },
@@ -7726,7 +7726,7 @@
     "scientificName": "Hippolyte zostericola",
     "commonName": "Zostera Shrimp",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/172998948/square.jpg"
   },
@@ -7735,7 +7735,7 @@
     "scientificName": "Eurytium limosum",
     "commonName": "Broadback Mud Crab",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/7873448/square.jpg"
   },
@@ -7744,7 +7744,7 @@
     "scientificName": "Gastroptychus spinifer",
     "commonName": "",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/340703844/square.jpeg"
   },
@@ -7753,7 +7753,7 @@
     "scientificName": "Alpheus floridanus",
     "commonName": "Floridian Sand Snapping Shrimp",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/4691619/square.jpeg"
   },
@@ -7762,7 +7762,7 @@
     "scientificName": "Callinectes danae",
     "commonName": "Dana swimming crab",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/66992/square.jpg"
   },
@@ -7771,7 +7771,7 @@
     "scientificName": "Eumunida picta",
     "commonName": "",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/28031287/square.jpeg"
   },
@@ -7780,7 +7780,7 @@
     "scientificName": "Ericerodes gracilipes",
     "commonName": "unicorn neck crab",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/290866274/square.jpg"
   },
@@ -7789,7 +7789,7 @@
     "scientificName": "Iridonida pusilla",
     "commonName": "Common Squat Lobster",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/59015280/square.jpeg"
   },
@@ -7798,7 +7798,7 @@
     "scientificName": "Tozeuma carolinense",
     "commonName": "Arrow Shrimp",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://static.inaturalist.org/photos/26980030/square.jpg"
   },
@@ -7807,7 +7807,7 @@
     "scientificName": "Albunea paretii",
     "commonName": "Beach Mole Crab",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/49374458/square.png"
   },
@@ -7816,7 +7816,7 @@
     "scientificName": "Microprosthema semilaeve",
     "commonName": "Lima shrimp",
     "caribbeanObsCount": 6,
-    "rarity": "uncommon",
+    "rarity": "rare",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/306178929/square.jpg"
   },
@@ -10129,7 +10129,7 @@
     "scientificName": "Gobioides broussonnetii",
     "commonName": "Violet Goby",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/87842194/square.jpg"
   },
@@ -10138,7 +10138,7 @@
     "scientificName": "Elacatinus oceanops",
     "commonName": "Neon Goby",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/478963366/square.jpg"
   },
@@ -10147,7 +10147,7 @@
     "scientificName": "Orthopristis chrysoptera",
     "commonName": "Pigfish",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/320937053/square.jpeg"
   },
@@ -10156,7 +10156,7 @@
     "scientificName": "Micropterus salmoides",
     "commonName": "Florida Bass",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/126577823/square.jpg"
   },
@@ -10165,7 +10165,7 @@
     "scientificName": "Pomatomus saltatrix",
     "commonName": "Bluefish",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/437666426/square.jpeg"
   },
@@ -10174,7 +10174,7 @@
     "scientificName": "Uraspis helvola",
     "commonName": "Whitetongue Jack",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/236926742/square.jpg"
   },
@@ -10183,7 +10183,7 @@
     "scientificName": "Lepomis microlophus",
     "commonName": "Redear Sunfish",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/481688747/square.jpeg"
   },
@@ -10192,7 +10192,7 @@
     "scientificName": "Remora albescens",
     "commonName": "White Suckerfish",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/111862164/square.jpeg"
   },
@@ -10201,7 +10201,7 @@
     "scientificName": "Xiphias gladius",
     "commonName": "Broadbill Swordfish",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/11989857/square.jpg"
   },
@@ -10210,7 +10210,7 @@
     "scientificName": "Nezumia aequalis",
     "commonName": "Common Atlantic Grenadier",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/340692005/square.jpg"
   },
@@ -10219,7 +10219,7 @@
     "scientificName": "Seriola fasciata",
     "commonName": "Lesser Amberjack",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/326348866/square.jpeg"
   },
@@ -10228,7 +10228,7 @@
     "scientificName": "Starksia williamsi",
     "commonName": "Williams\u2019s blenny",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/31386341/square.jpg"
   },
@@ -10237,7 +10237,7 @@
     "scientificName": "Paracanthurus hepatus",
     "commonName": "Palette Tang",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/30261643/square.jpg"
   },
@@ -10246,7 +10246,7 @@
     "scientificName": "Parophidion schmidti",
     "commonName": "Dusky Cusk-eel",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/175630216/square.jpg"
   },
@@ -10255,7 +10255,7 @@
     "scientificName": "Halieutichthys aculeatus",
     "commonName": "Pancake Batfish",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/138089/square.jpg"
   },
@@ -10264,7 +10264,7 @@
     "scientificName": "Opistognathus whitehursti",
     "commonName": "Dusky Jawfish",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/227886104/square.jpg"
   },
@@ -10273,7 +10273,7 @@
     "scientificName": "Pristipomoides aquilonaris",
     "commonName": "Wenchman",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/463023680/square.jpg"
   },
@@ -10282,7 +10282,7 @@
     "scientificName": "Lagodon rhomboides",
     "commonName": "Pinfish",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/23327498/square.jpg"
   },
@@ -10291,7 +10291,7 @@
     "scientificName": "Acanthemblemaria chaplini",
     "commonName": "Papillose Blenny",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/242396971/square.jpg"
   },
@@ -10300,7 +10300,7 @@
     "scientificName": "Emblemariopsis occidentalis",
     "commonName": "Redspine Blenny",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/438710158/square.jpg"
   },
@@ -10309,7 +10309,7 @@
     "scientificName": "Serranus annularis",
     "commonName": "Orangeback Bass",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/166594187/square.jpeg"
   },
@@ -10318,7 +10318,7 @@
     "scientificName": "Ogcocephalus corniger",
     "commonName": "Longnose Batfish",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/119282137/square.jpg"
   },
@@ -10327,7 +10327,7 @@
     "scientificName": "Kathetostoma albigutta",
     "commonName": "Lancer Stargazer",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/17618939/square.jpg"
   },
@@ -10336,7 +10336,7 @@
     "scientificName": "Gymnachirus texae",
     "commonName": "Fringed Sole",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/17619508/square.jpg"
   },
@@ -10345,7 +10345,7 @@
     "scientificName": "Evorthodus lyricus",
     "commonName": "Lyre Goby",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/556301920/square.jpg"
   },
@@ -10354,7 +10354,7 @@
     "scientificName": "Regalecus glesne",
     "commonName": "Giant Oarfish",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/606948704/square.jpg"
   },
@@ -10363,7 +10363,7 @@
     "scientificName": "Ctenogobius stigmaturus",
     "commonName": "spottail goby",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/161278164/square.jpg"
   },
@@ -10372,7 +10372,7 @@
     "scientificName": "Atractosteus tropicus",
     "commonName": "Tropical Gar",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/599974778/square.jpg"
   },
@@ -10381,7 +10381,7 @@
     "scientificName": "Gambusia rhizophorae",
     "commonName": "Mangrove Gambusia",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/344159127/square.jpeg"
   },
@@ -10390,7 +10390,7 @@
     "scientificName": "Acanthemblemaria greenfieldi",
     "commonName": "False Papillose Blenny",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/565136836/square.jpg"
   },
@@ -10399,7 +10399,7 @@
     "scientificName": "Brycon guatemalensis",
     "commonName": "Macabi Tetra",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/61849992/square.jpg"
   },
@@ -10408,7 +10408,7 @@
     "scientificName": "Carapus bermudensis",
     "commonName": "Pearlfish",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/467913906/square.jpeg"
   },
@@ -10417,7 +10417,7 @@
     "scientificName": "Centropomus mexicanus",
     "commonName": "Largescale Fat Snook",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/362957832/square.jpg"
   },
@@ -10426,7 +10426,7 @@
     "scientificName": "Grammicolepis brachiusculus",
     "commonName": "Thorny Tinselfish",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/408991927/square.jpeg"
   },
@@ -10435,7 +10435,7 @@
     "scientificName": "Prionotus roseus",
     "commonName": "Blue-spotted Searobin",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/160703425/square.jpg"
   },
@@ -10444,7 +10444,7 @@
     "scientificName": "Sicydium gymnogaster",
     "commonName": "Smoothbelly Goby",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/903914/square.jpg"
   },
@@ -10453,7 +10453,7 @@
     "scientificName": "Phractocephalus hemioliopterus",
     "commonName": "Redtail Catfish",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/517126638/square.jpg"
   },
@@ -10462,7 +10462,7 @@
     "scientificName": "Cyprinodon higuey",
     "commonName": "Black-and-blue Pupfish",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/318058226/square.jpeg"
   },
@@ -10471,7 +10471,7 @@
     "scientificName": "Rivulus roloffi",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/21465139/square.jpg"
   },
@@ -10480,7 +10480,7 @@
     "scientificName": "Girardinus microdactylus",
     "commonName": "Smallfinger topminnow",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/663019/square.jpg"
   },
@@ -10489,7 +10489,7 @@
     "scientificName": "Emblemaria caldwelli",
     "commonName": "Caribbean Blenny",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/440000244/square.jpg"
   },
@@ -10498,7 +10498,7 @@
     "scientificName": "Gobioclinus haitiensis",
     "commonName": "Longfin Blenny",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/138041/square.jpeg"
   },
@@ -10507,7 +10507,7 @@
     "scientificName": "Malacoctenus delalandii",
     "commonName": "Delaland Blenny",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/110860813/square.jpg"
   },
@@ -10516,7 +10516,7 @@
     "scientificName": "Starksia smithvanizi",
     "commonName": "Brokenbar Blenny",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/172219967/square.png"
   },
@@ -10525,7 +10525,7 @@
     "scientificName": "Starksia weigti",
     "commonName": "Weigt's Blenny",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/389777917/square.jpg"
   },
@@ -10534,7 +10534,7 @@
     "scientificName": "Stathmonotus hemphillii",
     "commonName": "Blackbelly Blenny",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/337214174/square.jpg"
   },
@@ -10543,7 +10543,7 @@
     "scientificName": "Eleotris pisonis",
     "commonName": "Spinycheek Sleeper",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/381170009/square.jpeg"
   },
@@ -10552,7 +10552,7 @@
     "scientificName": "Oligoplites palometa",
     "commonName": "Maracaibo Leather Jack",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/110994003/square.jpeg"
   },
@@ -10561,7 +10561,7 @@
     "scientificName": "Coptodon zillii",
     "commonName": "Redbelly Tilapia",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/54490637/square.jpg"
   },
@@ -10570,7 +10570,7 @@
     "scientificName": "Heteroconger camelopardalis",
     "commonName": "Giraffe Garden Eel",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/613258894/square.jpg"
   },
@@ -10579,7 +10579,7 @@
     "scientificName": "Puntigrus tetrazona",
     "commonName": "Tiger Barb",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/208072283/square.jpeg"
   },
@@ -10588,7 +10588,7 @@
     "scientificName": "Barbulifer ceuthoecus",
     "commonName": "Bearded goby",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/366220791/square.jpg"
   },
@@ -10597,7 +10597,7 @@
     "scientificName": "Bollmannia boqueronensis",
     "commonName": "White-eye goby",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/68342035/square.jpg"
   },
@@ -10606,7 +10606,7 @@
     "scientificName": "Sicydium buscki",
     "commonName": "Busck\u2019s stone-biting goby",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/349861092/square.jpg"
   },
@@ -10615,7 +10615,7 @@
     "scientificName": "Vomerogobius flavus",
     "commonName": "Lemon Goby",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/440308777/square.jpg"
   },
@@ -10624,7 +10624,7 @@
     "scientificName": "Lipogramma trilineata",
     "commonName": "Threeline basslet",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/454012089/square.jpg"
   },
@@ -10633,7 +10633,7 @@
     "scientificName": "Gambusia beebei",
     "commonName": "Miragoane Gambusia",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/250462173/square.jpg"
   },
@@ -10642,7 +10642,7 @@
     "scientificName": "Gambusia wrayi",
     "commonName": "Wray's Gambusia",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/593465405/square.jpg"
   },
@@ -10651,7 +10651,7 @@
     "scientificName": "Girardinus uninotatus",
     "commonName": "Singlespot topminnow",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/342224395/square.jpeg"
   },
@@ -10660,7 +10660,7 @@
     "scientificName": "Corvula sanctaeluciae",
     "commonName": "Striped Croaker",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/81976645/square.jpg"
   },
@@ -10669,7 +10669,7 @@
     "scientificName": "Stellifer colonensis",
     "commonName": "Colon Stardrum",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/440175942/square.jpeg"
   },
@@ -10678,7 +10678,7 @@
     "scientificName": "Tigrigobius rubrigenis",
     "commonName": "Redcheek goby",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/294277399/square.jpg"
   },
@@ -10687,7 +10687,7 @@
     "scientificName": "Mycteroperca phenax",
     "commonName": "Scamp Grouper",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/439727547/square.jpg"
   },
@@ -10696,7 +10696,7 @@
     "scientificName": "Thunnus thynnus",
     "commonName": "Atlantic Bluefin Tuna",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/419453953/square.jpeg"
   },
@@ -10705,7 +10705,7 @@
     "scientificName": "Zu cristatus",
     "commonName": "Scalloped Ribbonfish",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/80464689/square.jpg"
   },
@@ -10714,7 +10714,7 @@
     "scientificName": "Opsanus beta",
     "commonName": "Gulf Toadfish",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/225040204/square.jpeg"
   },
@@ -10723,7 +10723,7 @@
     "scientificName": "Echiophis intertinctus",
     "commonName": "Spotted Spoon-nose Eel",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/107447583/square.jpg"
   },
@@ -10732,7 +10732,7 @@
     "scientificName": "Emmelichthyops atlanticus",
     "commonName": "Bonnetmouth",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/158382532/square.jpg"
   },
@@ -10741,7 +10741,7 @@
     "scientificName": "Nematistius pectoralis",
     "commonName": "Roosterfish",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/378756334/square.jpeg"
   },
@@ -10750,7 +10750,7 @@
     "scientificName": "Lopholatilus chamaeleonticeps",
     "commonName": "Great Northern Tilefish",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/82896436/square.jpg"
   },
@@ -10759,7 +10759,7 @@
     "scientificName": "Callechelys bilinearis",
     "commonName": "Twostripe Snake Eel",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/65188016/square.jpg"
   },
@@ -10768,7 +10768,7 @@
     "scientificName": "Sphoeroides dorsalis",
     "commonName": "Marbled Puffer",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/483524543/square.jpeg"
   },
@@ -10777,7 +10777,7 @@
     "scientificName": "Astrapogon stellatus",
     "commonName": "Conchfish",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/59037051/square.jpeg"
   },
@@ -10786,7 +10786,7 @@
     "scientificName": "Argyropelecus aculeatus",
     "commonName": "Atlantic Silver Hatchetfish",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/75492508/square.jpg"
   },
@@ -10795,7 +10795,7 @@
     "scientificName": "Peristedion brevirostre",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/28951579/square.jpg"
   },
@@ -10804,7 +10804,7 @@
     "scientificName": "Enneanectes flavus",
     "commonName": "Yellow Triplefin",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/478478191/square.jpeg"
   },
@@ -10813,7 +10813,7 @@
     "scientificName": "Gymnomuraena zebra",
     "commonName": "Zebra Moray",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/73521761/square.jpg"
   },
@@ -10822,7 +10822,7 @@
     "scientificName": "Opsanus tau",
     "commonName": "Oyster Toadfish",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/156065863/square.jpeg"
   },
@@ -10831,7 +10831,7 @@
     "scientificName": "Anisotremus interruptus",
     "commonName": "Burrito Grunt",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/174041911/square.jpeg"
   },
@@ -10840,7 +10840,7 @@
     "scientificName": "Bagre pinnimaculatus",
     "commonName": "Red Sea Catfish",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/151730269/square.jpeg"
   },
@@ -10849,7 +10849,7 @@
     "scientificName": "Batrachoides pacifici",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/95602966/square.jpg"
   },
@@ -10858,7 +10858,7 @@
     "scientificName": "Coryphopterus urospilus",
     "commonName": "Redlight Goby",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/463580260/square.jpg"
   },
@@ -10867,7 +10867,7 @@
     "scientificName": "Curimata mivartii",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/5202851/square.jpg"
   },
@@ -10876,7 +10876,7 @@
     "scientificName": "Daector reticulata",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/432936446/square.jpeg"
   },
@@ -10885,7 +10885,7 @@
     "scientificName": "Haemulon steindachneri",
     "commonName": "Pacific Latin Grunt",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/111043257/square.jpg"
   },
@@ -10894,7 +10894,7 @@
     "scientificName": "Halichoeres chierchiae",
     "commonName": "Wounded Wrasse",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/479271895/square.jpg"
   },
@@ -10903,7 +10903,7 @@
     "scientificName": "Mugil setosus",
     "commonName": "Liseta Mullet",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/52816711/square.jpeg"
   },
@@ -10912,7 +10912,7 @@
     "scientificName": "Nebris occidentalis",
     "commonName": "Pacific Small-eye Croaker",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/85484099/square.jpg"
   },
@@ -10921,7 +10921,7 @@
     "scientificName": "Poeciliopsis turrubarensis",
     "commonName": "Barred Livebearer",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/1838725/square.JPG"
   },
@@ -10930,7 +10930,7 @@
     "scientificName": "Scorpaena mystes",
     "commonName": "Stone Scorpionfish",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/108901632/square.jpeg"
   },
@@ -10939,7 +10939,7 @@
     "scientificName": "Sarda orientalis",
     "commonName": "Oriental Bonito",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/64051557/square.jpg"
   },
@@ -10948,7 +10948,7 @@
     "scientificName": "Gymnothorax nigromarginatus",
     "commonName": "Blackedge Moray",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/184393615/square.jpeg"
   },
@@ -10957,7 +10957,7 @@
     "scientificName": "Mulloidichthys dentatus",
     "commonName": "Mexican Goatfish",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/34512882/square.jpg"
   },
@@ -10966,7 +10966,7 @@
     "scientificName": "Pimelodus blochii",
     "commonName": "Four-Lined Pimelodus",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/640245446/square.jpg"
   },
@@ -10975,7 +10975,7 @@
     "scientificName": "Pimelodus grosskopfii",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/39965166/square.jpg"
   },
@@ -10984,7 +10984,7 @@
     "scientificName": "Characidium marshi",
     "commonName": "Marsh's Darter",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/6195092/square.jpeg"
   },
@@ -10993,7 +10993,7 @@
     "scientificName": "Saccodon dariensis",
     "commonName": "Leopard Characin",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/6195351/square.jpeg"
   },
@@ -11002,7 +11002,7 @@
     "scientificName": "Hoplosternum punctatum",
     "commonName": "Spotted Hoplo",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/397983716/square.jpg"
   },
@@ -11011,7 +11011,7 @@
     "scientificName": "Neoheterandria cana",
     "commonName": "Cana Toothcarp",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/32408524/square.jpg"
   },
@@ -11020,7 +11020,7 @@
     "scientificName": "Mugil liza",
     "commonName": "Lebranche Mullet",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/125839464/square.jpg"
   },
@@ -11029,7 +11029,7 @@
     "scientificName": "Darienheros calobrensis",
     "commonName": "Redspot Cichlid",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/11569634/square.jpg"
   },
@@ -11038,7 +11038,7 @@
     "scientificName": "Bunocephalus colombianus",
     "commonName": "Colombian Banjo",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/118219502/square.jpg"
   },
@@ -11047,7 +11047,7 @@
     "scientificName": "Creagrutus bolivari",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/597288739/square.jpg"
   },
@@ -11056,7 +11056,7 @@
     "scientificName": "Gephyrocharax valencia",
     "commonName": "Valencia Tetra",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/104503767/square.jpeg"
   },
@@ -11065,7 +11065,7 @@
     "scientificName": "Nanocheirodon insignis",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/30815897/square.jpg"
   },
@@ -11074,7 +11074,7 @@
     "scientificName": "Phenagoniates macrolepis",
     "commonName": "Slender Tetra",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/117979817/square.jpeg"
   },
@@ -11083,7 +11083,7 @@
     "scientificName": "Oxydoras sifontesi",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/203995968/square.jpg"
   },
@@ -11092,7 +11092,7 @@
     "scientificName": "Parodon alfonsoi",
     "commonName": "Torpedo Characin",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/267327420/square.jpeg"
   },
@@ -11101,7 +11101,7 @@
     "scientificName": "Cynodonichthys monikae",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/97021047/square.jpg"
   },
@@ -11110,7 +11110,7 @@
     "scientificName": "Rypticus randalli",
     "commonName": "Randall's Soapfish",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/547602196/square.jpg"
   },
@@ -11119,7 +11119,7 @@
     "scientificName": "Mesoheros atromaculatus",
     "commonName": "Dark-spotted Cichlid",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/11820651/square.jpg"
   },
@@ -11128,7 +11128,7 @@
     "scientificName": "Cynodonichthys pivijay",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/249886465/square.jpg"
   },
@@ -11137,7 +11137,7 @@
     "scientificName": "Sturisomatichthys aureus",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/58164866/square.jpeg"
   },
@@ -11146,7 +11146,7 @@
     "scientificName": "Lebiasina erythrinoides",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/120799679/square.jpg"
   },
@@ -11155,7 +11155,7 @@
     "scientificName": "Psalidodon fasciatus",
     "commonName": "Banded Astyanax",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/71727612/square.jpg"
   },
@@ -11164,7 +11164,7 @@
     "scientificName": "Lebiasina festae",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/6221309/square.jpeg"
   },
@@ -11173,7 +11173,7 @@
     "scientificName": "Tigrigobius zebrellus",
     "commonName": "Zebrette Goby",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/622051008/square.jpg"
   },
@@ -11182,7 +11182,7 @@
     "scientificName": "Elacatinus puncticulatus",
     "commonName": "Redhead Goby",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/463580285/square.jpg"
   },
@@ -11191,7 +11191,7 @@
     "scientificName": "Kronoheros umbrifer",
     "commonName": "Turquoise Cichlid",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/11223725/square.jpg"
   },
@@ -11200,7 +11200,7 @@
     "scientificName": "Rhencus macracanthus",
     "commonName": "Longspine Grunt",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/144536764/square.jpeg"
   },
@@ -11209,7 +11209,7 @@
     "scientificName": "Lasiancistrus mayoloi",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/6195199/square.jpeg"
   },
@@ -11218,7 +11218,7 @@
     "scientificName": "Ctenobrycon magdalenae",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/30815599/square.jpg"
   },
@@ -11227,7 +11227,7 @@
     "scientificName": "Mustelus canis",
     "commonName": "Dusky Smooth-hound",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "elasmobranch",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/217211066/square.jpg"
   },
@@ -11236,7 +11236,7 @@
     "scientificName": "Etmopterus schultzi",
     "commonName": "Fringefin Lantern Shark",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "elasmobranch",
     "photoUrl": "https://static.inaturalist.org/photos/172306450/square.png"
   },
@@ -11245,7 +11245,7 @@
     "scientificName": "Isurus paucus",
     "commonName": "Longfin Mako",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "elasmobranch",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/28758924/square.jpg"
   },
@@ -11254,7 +11254,7 @@
     "scientificName": "Odontaspis ferox",
     "commonName": "Smalltooth Sand Tiger",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "elasmobranch",
     "photoUrl": "https://static.inaturalist.org/photos/108063662/square.png"
   },
@@ -11263,7 +11263,7 @@
     "scientificName": "Oxynotus caribbaeus",
     "commonName": "Caribbean Roughshark",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "elasmobranch",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/116380769/square.jpg"
   },
@@ -11272,7 +11272,7 @@
     "scientificName": "Rhinoptera brasiliensis",
     "commonName": "Brazilian Cownose Ray",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "elasmobranch",
     "photoUrl": "https://static.inaturalist.org/photos/23121601/square.jpg"
   },
@@ -11281,7 +11281,7 @@
     "scientificName": "Scyliorhinus hesperius",
     "commonName": "White-saddled catshark",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "elasmobranch",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/116380766/square.jpg"
   },
@@ -11290,7 +11290,7 @@
     "scientificName": "Sphyrna tiburo",
     "commonName": "Bonnethead",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "elasmobranch",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/30458297/square.jpg"
   },
@@ -11299,7 +11299,7 @@
     "scientificName": "Pseudobatos lentiginosus",
     "commonName": "Atlantic Guitarfish",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "elasmobranch",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/609513314/square.jpg"
   },
@@ -11308,7 +11308,7 @@
     "scientificName": "Hypanus say",
     "commonName": "Bluntnose Stingray",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "elasmobranch",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/195281/square.jpg"
   },
@@ -11317,7 +11317,7 @@
     "scientificName": "Rostroraja texana",
     "commonName": "Roundel Skate",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "elasmobranch",
     "photoUrl": "https://static.inaturalist.org/photos/121167333/square.jpg"
   },
@@ -11326,7 +11326,7 @@
     "scientificName": "Hexanchus vitulus",
     "commonName": "Atlantic sixgill shark",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "elasmobranch",
     "photoUrl": "https://static.inaturalist.org/photos/172306430/square.png"
   },
@@ -11335,7 +11335,7 @@
     "scientificName": "Carcharhinus porosus",
     "commonName": "Smalltail Shark",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "elasmobranch",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/12471112/square.jpg"
   },
@@ -11344,7 +11344,7 @@
     "scientificName": "Prionace glauca",
     "commonName": "Blue Shark",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "elasmobranch",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/358688436/square.jpg"
   },
@@ -11353,7 +11353,7 @@
     "scientificName": "Potamotrygon yepezi",
     "commonName": "Maracaibo River Stingray",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "elasmobranch",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/14744286/square.jpeg"
   },
@@ -11362,7 +11362,7 @@
     "scientificName": "Rhizoprionodon lalandii",
     "commonName": "Brazilian Sharpnose Shark",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "elasmobranch",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/206634231/square.jpg"
   },
@@ -11371,7 +11371,7 @@
     "scientificName": "Sphyrna tudes",
     "commonName": "Smalleye Hammerhead",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "elasmobranch",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/315122544/square.jpeg"
   },
@@ -11380,7 +11380,7 @@
     "scientificName": "Urotrygon aspidura",
     "commonName": "Spiny-tail Round Ray",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "elasmobranch",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/105351008/square.jpeg"
   },
@@ -11389,7 +11389,7 @@
     "scientificName": "Urobatis pardalis",
     "commonName": "Leopard Round Stingray",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "elasmobranch",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/42724093/square.jpg"
   },
@@ -11398,7 +11398,7 @@
     "scientificName": "Mesoclemmys zuliae",
     "commonName": "Zulia Toad Headed Sideneck",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "turtle",
     "photoUrl": "https://static.inaturalist.org/photos/174151677/square.jpeg"
   },
@@ -11407,7 +11407,7 @@
     "scientificName": "Chelonoidis denticulatus",
     "commonName": "Brazilian Giant Tortoise",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "turtle",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/252369969/square.jpeg"
   },
@@ -11416,7 +11416,7 @@
     "scientificName": "Trachemys medemi",
     "commonName": "Atrato Slider",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "turtle",
     "photoUrl": "https://static.inaturalist.org/photos/474858890/square.jpg"
   },
@@ -11425,7 +11425,7 @@
     "scientificName": "Procambarus niveus",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/11872200/square.jpeg"
   },
@@ -11434,7 +11434,7 @@
     "scientificName": "Potimirim potimirim",
     "commonName": "potimirim",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://static.inaturalist.org/photos/209581280/square.jpeg"
   },
@@ -11443,7 +11443,7 @@
     "scientificName": "Hippolyte nicholsoni",
     "commonName": "Nicholson's Shrimp",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/166013454/square.jpg"
   },
@@ -11452,7 +11452,7 @@
     "scientificName": "Panopeus herbstii",
     "commonName": "Atlantic Mud Crab",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/212550817/square.jpeg"
   },
@@ -11461,7 +11461,7 @@
     "scientificName": "Sesarma sulcatum",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/85767392/square.jpeg"
   },
@@ -11470,7 +11470,7 @@
     "scientificName": "Pontonia mexicana",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/260861948/square.jpeg"
   },
@@ -11479,7 +11479,7 @@
     "scientificName": "Glyphocrangon longleyi",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/482601113/square.png"
   },
@@ -11488,7 +11488,7 @@
     "scientificName": "Callinectes similis",
     "commonName": "Lesser Blue Crab",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/136280617/square.jpeg"
   },
@@ -11497,7 +11497,7 @@
     "scientificName": "Panopeus occidentalis",
     "commonName": "Furrowed Mud Crab",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/1098789/square.jpg"
   },
@@ -11506,7 +11506,7 @@
     "scientificName": "Paguristes tortugae",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://static.inaturalist.org/photos/350835391/square.jpg"
   },
@@ -11515,7 +11515,7 @@
     "scientificName": "Chaceon quinquedens",
     "commonName": "Red Deepsea Crab",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/243655826/square.jpg"
   },
@@ -11524,7 +11524,7 @@
     "scientificName": "Leptuca thayeri",
     "commonName": "Atlantic Mangrove Fiddler Crab",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/322853495/square.jpg"
   },
@@ -11533,7 +11533,7 @@
     "scientificName": "Paguristes wassi",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/426900369/square.png"
   },
@@ -11542,7 +11542,7 @@
     "scientificName": "Typhlatya dzilamensis",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/57404934/square.jpeg"
   },
@@ -11551,7 +11551,7 @@
     "scientificName": "Penaeus notialis",
     "commonName": "Southern pink shrimp",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://static.inaturalist.org/photos/142230313/square.jpg"
   },
@@ -11560,7 +11560,7 @@
     "scientificName": "Belzebub faxoni",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/60110769/square.jpg"
   },
@@ -11569,7 +11569,7 @@
     "scientificName": "Clypeasterophilus rugatus",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/120451316/square.jpg"
   },
@@ -11578,7 +11578,7 @@
     "scientificName": "Epilobocera gilmanii",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/34384652/square.jpeg"
   },
@@ -11587,7 +11587,7 @@
     "scientificName": "Eugonatonotus crassus",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/13563335/square.jpg"
   },
@@ -11596,7 +11596,7 @@
     "scientificName": "Eriphides hispida",
     "commonName": "purple bristle crab",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/32359254/square.jpg"
   },
@@ -11605,7 +11605,7 @@
     "scientificName": "Epialtus bituberculatus",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/120451477/square.jpg"
   },
@@ -11614,7 +11614,7 @@
     "scientificName": "Panopeus lacustris",
     "commonName": "Knotfinger Mud Crab",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://static.inaturalist.org/photos/220378618/square.jpg"
   },
@@ -11623,7 +11623,7 @@
     "scientificName": "Armases angustipes",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/344525592/square.jpeg"
   },
@@ -11632,7 +11632,7 @@
     "scientificName": "Moreiradromia antillensis",
     "commonName": "Hairy Sponge Crab",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://static.inaturalist.org/photos/122106448/square.jpg"
   },
@@ -11641,7 +11641,7 @@
     "scientificName": "Pitho laevigata",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/189729244/square.jpg"
   },
@@ -11650,7 +11650,7 @@
     "scientificName": "Leptuca saltitanta",
     "commonName": "Energetic Fiddler Crab",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/427119496/square.jpeg"
   },
@@ -11659,7 +11659,7 @@
     "scientificName": "Uca heteropleura",
     "commonName": "American Red Fiddler Crab",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/255639879/square.jpeg"
   },
@@ -11668,7 +11668,7 @@
     "scientificName": "Uca intermedia",
     "commonName": "Intermediate Fiddler Crab",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/21370/square.jpg"
   },
@@ -11677,7 +11677,7 @@
     "scientificName": "Hypolobocera bouvieri",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://static.inaturalist.org/photos/61238048/square.jpg"
   },
@@ -11686,7 +11686,7 @@
     "scientificName": "Microthelphusa odaelkae",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/276257764/square.jpeg"
   },
@@ -11695,7 +11695,7 @@
     "scientificName": "Sylviocarcinus piriformis",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/71861219/square.jpeg"
   },
@@ -11704,7 +11704,7 @@
     "scientificName": "Menippe frontalis",
     "commonName": "Stridulating Stone Crab",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://static.inaturalist.org/photos/105298881/square.jpeg"
   },
@@ -11713,7 +11713,7 @@
     "scientificName": "Palaemon ritteri",
     "commonName": "Tidepool Shrimp",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/27595921/square.jpg"
   },
@@ -11722,7 +11722,7 @@
     "scientificName": "Macrobrachium olfersii",
     "commonName": "Buchura river prawn",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/108813186/square.jpeg"
   },
@@ -11731,7 +11731,7 @@
     "scientificName": "Macrobrachium tenellum",
     "commonName": "Longarm river prawn",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/106041521/square.jpeg"
   },
@@ -11740,7 +11740,7 @@
     "scientificName": "Gnathophyllum panamense",
     "commonName": "Cortez Barrel Shrimp",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/6063399/square.jpg"
   },
@@ -11749,7 +11749,7 @@
     "scientificName": "Macrobrachium panamense",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://static.inaturalist.org/photos/183647814/square.jpeg"
   },
@@ -11758,7 +11758,7 @@
     "scientificName": "Leptuca beebei",
     "commonName": "Beebe's Fiddler Crab",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/414408213/square.jpeg"
   },
@@ -11767,7 +11767,7 @@
     "scientificName": "Minuca ecuadoriensis",
     "commonName": "Pacific Hairback Fiddler Crab",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/2598952/square.JPG"
   },
@@ -11776,7 +11776,7 @@
     "scientificName": "Armases rubripes",
     "commonName": "",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/349777830/square.jpeg"
   },
@@ -11785,7 +11785,7 @@
     "scientificName": "Illex coindetii",
     "commonName": "Southern Shortfin Squid",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "cephalopod",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/51186583/square.jpg"
   },
@@ -11794,7 +11794,7 @@
     "scientificName": "Muusoctopus januarii",
     "commonName": "January Octopus",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "cephalopod",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/14173913/square.jpg"
   },
@@ -11803,7 +11803,7 @@
     "scientificName": "Lolliguncula brevis",
     "commonName": "Atlantic brief squid",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "cephalopod",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/191649406/square.jpg"
   },
@@ -11812,7 +11812,7 @@
     "scientificName": "Argonauta argo",
     "commonName": "Greater Argonaut",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "cephalopod",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/65093771/square.jpg"
   },
@@ -11821,7 +11821,7 @@
     "scientificName": "Lolliguncula panamensis",
     "commonName": "Panama Thumbstall Squid",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "cephalopod",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/34779458/square.jpeg"
   },
@@ -11830,7 +11830,7 @@
     "scientificName": "Octopus alecto",
     "commonName": "Snakearm Octopus",
     "caribbeanObsCount": 2,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "cephalopod",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/596381018/square.jpg"
   },
@@ -11839,7 +11839,7 @@
     "scientificName": "Sphyraena argentea",
     "commonName": "Pacific Barracuda",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/431738093/square.jpeg"
   },
@@ -11848,7 +11848,7 @@
     "scientificName": "Calamus arctifrons",
     "commonName": "Shad Porgy",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/5971221/square.jpg"
   },
@@ -11857,7 +11857,7 @@
     "scientificName": "Sphoeroides pachygaster",
     "commonName": "Blunthead Puffer",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/13823040/square.jpg"
   },
@@ -11866,7 +11866,7 @@
     "scientificName": "Diplectrum formosum",
     "commonName": "Sand Perch",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/173002120/square.jpg"
   },
@@ -11875,7 +11875,7 @@
     "scientificName": "Pomoxis nigromaculatus",
     "commonName": "Black Crappie",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/441025140/square.jpg"
   },
@@ -11884,7 +11884,7 @@
     "scientificName": "Prionotus scitulus",
     "commonName": "Leopard Searobin",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/59018526/square.jpeg"
   },
@@ -11893,7 +11893,7 @@
     "scientificName": "Trinectes maculatus",
     "commonName": "Hogchoker",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/6467350/square.jpeg"
   },
@@ -11902,7 +11902,7 @@
     "scientificName": "Ambloplites rupestris",
     "commonName": "Rock Bass",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/144553630/square.jpeg"
   },
@@ -11911,7 +11911,7 @@
     "scientificName": "Scomber colias",
     "commonName": "Atlantic Chub Mackerel",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/263003420/square.jpeg"
   },
@@ -11920,7 +11920,7 @@
     "scientificName": "Gastropsetta frontalis",
     "commonName": "shrimp flounder",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/48193424/square.jpeg"
   },
@@ -11929,7 +11929,7 @@
     "scientificName": "Acyrtops amplicirrus",
     "commonName": "Flarenostril Clingfish",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/624438451/square.jpg"
   },
@@ -11938,7 +11938,7 @@
     "scientificName": "Alepisaurus ferox",
     "commonName": "Longnose Lancetfish",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/541148969/square.jpg"
   },
@@ -11947,7 +11947,7 @@
     "scientificName": "Astyanax mexicanus",
     "commonName": "Mexican Tetra",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/346131926/square.jpeg"
   },
@@ -11956,7 +11956,7 @@
     "scientificName": "Batrachoides waltersi",
     "commonName": "Multipored Toadfish",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/171349117/square.jpeg"
   },
@@ -11965,7 +11965,7 @@
     "scientificName": "Bothus mancus",
     "commonName": "Pacific Peacock Flounder",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/59034671/square.jpeg"
   },
@@ -11974,7 +11974,7 @@
     "scientificName": "Centropomus nigrescens",
     "commonName": "Pacific Black Snook",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/643714016/square.jpg"
   },
@@ -11983,7 +11983,7 @@
     "scientificName": "Chirocentrodon bleekerianus",
     "commonName": "Dogtooth Herring",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/224314527/square.jpeg"
   },
@@ -11992,7 +11992,7 @@
     "scientificName": "Dorosoma petenense",
     "commonName": "Threadfin Shad",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/620423255/square.jpg"
   },
@@ -12001,7 +12001,7 @@
     "scientificName": "Hyporthodus flavolimbatus",
     "commonName": "Yellow-edge Grouper",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/94061295/square.jpg"
   },
@@ -12010,7 +12010,7 @@
     "scientificName": "Hyporthodus mystacinus",
     "commonName": "Misty Grouper",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/463023738/square.jpg"
   },
@@ -12019,7 +12019,7 @@
     "scientificName": "Lates niloticus",
     "commonName": "Nile Perch",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/31621005/square.jpg"
   },
@@ -12028,7 +12028,7 @@
     "scientificName": "Liopropoma aberrans",
     "commonName": "Golden Bass",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/181028556/square.jpg"
   },
@@ -12037,7 +12037,7 @@
     "scientificName": "Lophius gastrophysus",
     "commonName": "Blackfin Goosefish",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/133521169/square.jpeg"
   },
@@ -12046,7 +12046,7 @@
     "scientificName": "Lucifuga dentata",
     "commonName": "Toothed Cuban cusk-eel",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/17899503/square.jpg"
   },
@@ -12055,7 +12055,7 @@
     "scientificName": "Microphis brachyurus",
     "commonName": "Short-tailed Pipefish",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/456968187/square.jpeg"
   },
@@ -12064,7 +12064,7 @@
     "scientificName": "Mycteroperca microlepis",
     "commonName": "Gag Grouper",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/423220135/square.jpeg"
   },
@@ -12073,7 +12073,7 @@
     "scientificName": "Pagrus pagrus",
     "commonName": "Red Porgy",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/54968915/square.jpeg"
   },
@@ -12082,7 +12082,7 @@
     "scientificName": "Pangasianodon hypophthalmus",
     "commonName": "Iridescent Shark",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/30360875/square.jpeg"
   },
@@ -12091,7 +12091,7 @@
     "scientificName": "Peprilus paru",
     "commonName": "Harvestfish",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/175939080/square.jpg"
   },
@@ -12100,7 +12100,7 @@
     "scientificName": "Tomicodon rhabdotus",
     "commonName": "Antillean Clingfish",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/399072741/square.jpg"
   },
@@ -12109,7 +12109,7 @@
     "scientificName": "Chlorophthalmus agassizi",
     "commonName": "Shortnose Greeneye",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/13571770/square.jpg"
   },
@@ -12118,7 +12118,7 @@
     "scientificName": "Lagocephalus lagocephalus",
     "commonName": "Ocean Puffer",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/102228829/square.jpg"
   },
@@ -12127,7 +12127,7 @@
     "scientificName": "Chaunax suttkusi",
     "commonName": "Suttkus Sea Toad",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/37823008/square.jpeg"
   },
@@ -12136,7 +12136,7 @@
     "scientificName": "Decapterus tabl",
     "commonName": "Rough-ear Scad",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/266103242/square.jpg"
   },
@@ -12145,7 +12145,7 @@
     "scientificName": "Ctenopharyngodon idella",
     "commonName": "Grass Carp",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/350305483/square.jpg"
   },
@@ -12154,7 +12154,7 @@
     "scientificName": "Gymnothorax conspersus",
     "commonName": "Saddled Moray",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/164088910/square.jpeg"
   },
@@ -12163,7 +12163,7 @@
     "scientificName": "Conger esculentus",
     "commonName": "Grey Conger",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/446077961/square.jpeg"
   },
@@ -12172,7 +12172,7 @@
     "scientificName": "Rhynchoconger flavus",
     "commonName": "Yellow Conger",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/103072634/square.jpg"
   },
@@ -12181,7 +12181,7 @@
     "scientificName": "Conger oceanicus",
     "commonName": "American Conger",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/170990091/square.jpg"
   },
@@ -12190,7 +12190,7 @@
     "scientificName": "Saurida normani",
     "commonName": "Shortjaw Lizardfish",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/395300912/square.jpg"
   },
@@ -12199,7 +12199,7 @@
     "scientificName": "Synodus poeyi",
     "commonName": "Offshore Lizardfish",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/137478/square.jpg"
   },
@@ -12208,7 +12208,7 @@
     "scientificName": "Anarchopterus tectus",
     "commonName": "Insular Pipefish",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/269500357/square.jpg"
   },
@@ -12217,7 +12217,7 @@
     "scientificName": "Platygillellus rubrocinctus",
     "commonName": "Saddle Stargazer",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/1584951/square.jpg"
   },
@@ -12226,7 +12226,7 @@
     "scientificName": "Dactyloscopus tridigitatus",
     "commonName": "Sand Stargazer",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/133923732/square.jpg"
   },
@@ -12235,7 +12235,7 @@
     "scientificName": "Serranus notospilus",
     "commonName": "Saddle Bass",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/418302320/square.jpeg"
   },
@@ -12244,7 +12244,7 @@
     "scientificName": "Schultzea beta",
     "commonName": "School Bass",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/414936087/square.jpg"
   },
@@ -12253,7 +12253,7 @@
     "scientificName": "Symphurus ommaspilus",
     "commonName": "Ocellated Tonguefish",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/569146287/square.jpg"
   },
@@ -12262,7 +12262,7 @@
     "scientificName": "Rypticus bistrispinus",
     "commonName": "Freckled Soapfish",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/110864662/square.jpg"
   },
@@ -12271,7 +12271,7 @@
     "scientificName": "Macolor niger",
     "commonName": "Black-and-white Snapper",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/671028764/square.jpg"
   },
@@ -12280,7 +12280,7 @@
     "scientificName": "Micropogonias undulatus",
     "commonName": "Atlantic Croaker",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/159827621/square.jpeg"
   },
@@ -12289,7 +12289,7 @@
     "scientificName": "Emblemaria hyltoni",
     "commonName": "Filament Blenny",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/402848123/square.jpg"
   },
@@ -12298,7 +12298,7 @@
     "scientificName": "Gobiosoma grosvenori",
     "commonName": "Rock-cut Goby",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/230313285/square.jpg"
   },
@@ -12307,7 +12307,7 @@
     "scientificName": "Sargocentron bullisi",
     "commonName": "Deepwater Squirrelfish",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/16566970/square.jpg"
   },
@@ -12316,7 +12316,7 @@
     "scientificName": "Microgobius carri",
     "commonName": "Seminole Goby",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/17621406/square.jpg"
   },
@@ -12325,7 +12325,7 @@
     "scientificName": "Syngnathus pelagicus",
     "commonName": "Sargassum Pipefish",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/204474103/square.jpg"
   },
@@ -12334,7 +12334,7 @@
     "scientificName": "Serranus atrobranchus",
     "commonName": "Blackear Bass",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/433202055/square.jpeg"
   },
@@ -12343,7 +12343,7 @@
     "scientificName": "Symphurus plagiusa",
     "commonName": "Blackcheek Tonguefish",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/453223717/square.jpeg"
   },
@@ -12352,7 +12352,7 @@
     "scientificName": "Rypticus maculatus",
     "commonName": "Whitespotted Soapfish",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/3098897/square.jpg"
   },
@@ -12361,7 +12361,7 @@
     "scientificName": "Scorpaena brasiliensis",
     "commonName": "Barbfish",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/159648983/square.jpg"
   },
@@ -12370,7 +12370,7 @@
     "scientificName": "Prionotus tribulus",
     "commonName": "Bighead Searobin",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/8417380/square.jpeg"
   },
@@ -12379,7 +12379,7 @@
     "scientificName": "Pontinus longispinis",
     "commonName": "Longspine Scorpionfish",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/678642596/square.jpg"
   },
@@ -12388,7 +12388,7 @@
     "scientificName": "Pareques umbrosus",
     "commonName": "Cubbyu",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/66812900/square.jpg"
   },
@@ -12397,7 +12397,7 @@
     "scientificName": "Bascanichthys bascanium",
     "commonName": "Sooty Eel",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/179861725/square.jpg"
   },
@@ -12406,7 +12406,7 @@
     "scientificName": "Polydactylus octonemus",
     "commonName": "Atlantic Threadfin",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/344874878/square.jpg"
   },
@@ -12415,7 +12415,7 @@
     "scientificName": "Bothus robinsi",
     "commonName": "Twospot Flounder",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/59034657/square.jpeg"
   },
@@ -12424,7 +12424,7 @@
     "scientificName": "Hemiramphus balao",
     "commonName": "Balao Halfbeak",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/231861707/square.jpeg"
   },
@@ -12433,7 +12433,7 @@
     "scientificName": "Eucinostomus harengulus",
     "commonName": "Tidewater Mojarra",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/455604829/square.jpg"
   },
@@ -12442,7 +12442,7 @@
     "scientificName": "Diapterus rhombeus",
     "commonName": "Rhombic Mojarra",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/441548381/square.jpeg"
   },
@@ -12451,7 +12451,7 @@
     "scientificName": "Cyclopsetta fimbriata",
     "commonName": "Spotfin Flounder",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/59034681/square.jpeg"
   },
@@ -12460,7 +12460,7 @@
     "scientificName": "Albula nemoptera",
     "commonName": "Threadfin Bonefish",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/383407398/square.jpg"
   },
@@ -12469,7 +12469,7 @@
     "scientificName": "Astyanax altior",
     "commonName": "Yucat\u00e1n Tetra",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/1835131/square.JPG"
   },
@@ -12478,7 +12478,7 @@
     "scientificName": "Lepidocybium flavobrunneum",
     "commonName": "Escolar",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/213456/square.jpg"
   },
@@ -12487,7 +12487,7 @@
     "scientificName": "Cheilopogon furcatus",
     "commonName": "Spotfin Flyingfish",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/340858978/square.jpeg"
   },
@@ -12496,7 +12496,7 @@
     "scientificName": "Cookeolus japonicus",
     "commonName": "Longfin Bigeye",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/594377758/square.jpg"
   },
@@ -12505,7 +12505,7 @@
     "scientificName": "Coryphopterus alloides",
     "commonName": "Barfin Goby",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/438710127/square.jpg"
   },
@@ -12514,7 +12514,7 @@
     "scientificName": "Pterophyllum scalare",
     "commonName": "Freshwater Angelfish",
     "caribbeanObsCount": 1,
-    "rarity": "rare",
+    "rarity": "legendary",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/138657562/square.jpeg"
   },

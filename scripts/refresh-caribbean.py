@@ -8,7 +8,12 @@ avoiding Pacific spillover through the narrow Central American isthmus:
   Box North: 23.5°N–13°N, -88°W–-60°W  (Cozumel, Belize, Roatán, Caymans, Greater Antilles)
   Box South: 13°N–8°N,  -82°W–-60°W  (Panama, Colombia, Venezuela, ABC islands)
 
-Rarity is percentile-based on Caribbean observation counts across all groups.
+Rarity thresholds are based on raw observation frequency:
+
+  Common:     obs >= 125
+  Uncommon:   obs >= 15
+  Rare:       obs >= 3
+  Legendary:  obs < 3
 """
 import json, urllib.request, urllib.parse, time, os
 
@@ -68,16 +73,13 @@ def fetch_box(taxon_id, bbox):
 
 
 def assign_rarity(species_list):
-    n = len(species_list)
-    p20 = n * 0.20
-    p50 = n * 0.50
-    p80 = n * 0.80
-    for i, s in enumerate(species_list):
-        if i < p20:
+    for s in species_list:
+        c = s["caribbeanObsCount"]
+        if c >= 125:
             s["rarity"] = "common"
-        elif i < p50:
+        elif c >= 15:
             s["rarity"] = "uncommon"
-        elif i < p80:
+        elif c >= 3:
             s["rarity"] = "rare"
         else:
             s["rarity"] = "legendary"
@@ -119,7 +121,7 @@ def main():
         json.dump(all_species, f, indent=2)
 
     print(f"\nDone. Wrote {len(all_species)} species to {OUT}")
-    print("Rarity (percentile-based across all groups):")
+    print("Rarity (obs-count thresholds):")
     for g_label, g_key in [("fish", "fish"), ("elasmobranch", "elasmobranch"),
                             ("turtle", "turtle"), ("crustacean", "crustacean"),
                             ("cephalopod", "cephalopod"), ("gastropod", "gastropod")]:
