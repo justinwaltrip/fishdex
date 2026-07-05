@@ -282,7 +282,7 @@ function PokedexHeader({
           <div className="rounded-xl border border-border/60 bg-card/60 p-4 card-glow sm:min-w-[320px]">
             <div className="flex items-baseline justify-between">
               <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-                Caught
+                Seen
               </span>
               <span className="text-2xl font-bold tabular-nums text-glow">
                 {isLoading ? "—" : stats.seen}
@@ -364,7 +364,7 @@ function FilterBar(props: {
           onChange={props.onSeen}
           options={[
             { value: "all", label: "All" },
-            { value: "seen", label: "Caught" },
+            { value: "seen", label: "Seen" },
             { value: "unseen", label: "Unseen" },
           ]}
         />
@@ -473,7 +473,7 @@ function PokedexCard({ entry, onOpen }: { entry: PokedexEntry; onOpen: () => voi
               "h-full w-full object-cover transition-all",
               entry.seen
                 ? "group-hover:scale-105"
-                : "opacity-25 grayscale group-hover:opacity-40 group-hover:scale-105",
+                : "opacity-25 grayscale group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-105",
             )}
             loading="lazy"
           />
@@ -559,7 +559,7 @@ function ObservedDetailDialog({
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent/80">
-                    #{String(dexNumber).padStart(3, "0")} · Caught ·{" "}
+                    #{String(dexNumber).padStart(3, "0")} · Seen ·{" "}
                     {species.caribbeanObsCount.toLocaleString()} Caribbean sightings
                   </p>
                   <DialogHeader className="mt-2">
@@ -702,12 +702,12 @@ function MissingDetailDialog({
               </p>
 
               <a
-                href={`https://www.inaturalist.org/observations?taxon_id=${species.taxonId}&place_id=155104`}
+                href={`https://www.inaturalist.org/taxa/${species.taxonId}/browse_photos`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 font-mono text-[11px] text-primary/70 hover:text-primary"
               >
-                <ExternalLink className="h-3 w-3" /> View Caribbean sightings on iNaturalist
+                <ExternalLink className="h-3 w-3" /> Browse photos on iNaturalist
               </a>
             </div>
           </>
