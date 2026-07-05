@@ -9,7 +9,6 @@ import {
 } from "@/lib/inaturalist";
 
 const USER_LOGIN = "jwaltrip";
-const FISH_ICONIC_TAXON_ID = 47178;
 
 function groupObservations(
   obs: UserObservation[],
@@ -17,8 +16,6 @@ function groupObservations(
   const groups = new Map<number, { obs: UserObservation[]; name: string; commonName: string; rank: string; bestPhoto: string | null }>();
 
   for (const o of obs) {
-    if (o.iconicTaxonId !== FISH_ICONIC_TAXON_ID) continue;
-
     const existing = groups.get(o.taxonId);
     if (existing) {
       existing.obs.push(o);
@@ -39,19 +36,21 @@ function groupObservations(
   return groups;
 }
 
-async function loadSpeciesLookup(): Promise<Map<number, { caribbeanObsCount: number; rarity: string }>> {
-  const map = new Map<number, { caribbeanObsCount: number; rarity: string }>();
+async function loadSpeciesLookup(): Promise<Map<number, { caribbeanObsCount: number; rarity: string; group: string }>> {
+  const map = new Map<number, { caribbeanObsCount: number; rarity: string; group: string }>();
   try {
     const mod = await import("@/data/caribbean-species.json");
     const raw = mod.default as {
       taxonId: number;
       caribbeanObsCount: number;
       rarity: string;
+      group: string;
     }[];
     for (const s of raw) {
       map.set(s.taxonId, {
         caribbeanObsCount: s.caribbeanObsCount,
         rarity: s.rarity,
+        group: s.group,
       });
     }
   } catch { /* JSON not found */ }
@@ -67,6 +66,7 @@ async function loadCaribbeanSpecies(): Promise<CaribbeanSpecies[]> {
       commonName: string;
       caribbeanObsCount: number;
       rarity: string;
+      group: string;
       photoUrl: string | null;
     }[];
     return raw.map((r) => ({
@@ -76,6 +76,7 @@ async function loadCaribbeanSpecies(): Promise<CaribbeanSpecies[]> {
       photoUrl: r.photoUrl,
       caribbeanObsCount: r.caribbeanObsCount,
       rarity: r.rarity as CaribbeanSpecies["rarity"],
+      group: r.group,
     }));
   } catch {
     return [];
@@ -110,6 +111,7 @@ export function useObservedSpecies() {
             latestObservationId: latest.id,
           };
         })
+        .filter((s) => s.rarity !== "unknown")
         .sort((a, b) => b.userObsCount - a.userObsCount || b.caribbeanObsCount - a.caribbeanObsCount);
     },
     staleTime: 1000 * 60 * 5,
@@ -125,11 +127,7 @@ export function useMissingSpecies() {
         loadCaribbeanSpecies(),
       ]);
 
-      const observedIds = new Set(
-        allObs
-          .filter((o) => o.iconicTaxonId === FISH_ICONIC_TAXON_ID)
-          .map((o) => o.taxonId),
-      );
+      const observedIds = new Set(allObs.map((o) => o.taxonId));
 
       return caribbeanSpecies
         .filter((s) => !observedIds.has(s.taxonId))

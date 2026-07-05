@@ -94,6 +94,7 @@ export interface CaribbeanSpecies {
   photoUrl: string | null;
   caribbeanObsCount: number;
   rarity: "common" | "uncommon" | "rare" | "legendary";
+  group: string;
 }
 
 export interface INaturalistTaxonPhoto {
