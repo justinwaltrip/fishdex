@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
-import { Fish, MapPin, Search, ExternalLink, Compass, Eye, Layers } from "lucide-react";
+import { useMemo, useState, useCallback } from "react";
+import { Fish, MapPin, Search, ExternalLink, Eye, EyeOff } from "lucide-react";
 
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
@@ -41,8 +41,6 @@ export const Route = createFileRoute("/")({
   component: FishdexPage,
 });
 
-type TabMode = "observed" | "missing";
-
 const RARITY_META: Record<string, { label: string; className: string }> = {
   common: { label: "Common", className: "bg-muted text-muted-foreground" },
   uncommon: {
@@ -50,7 +48,10 @@ const RARITY_META: Record<string, { label: string; className: string }> = {
     className: "bg-[oklch(0.65_0.15_155)] text-[oklch(0.15_0.05_240)]",
   },
   rare: { label: "Rare", className: "bg-primary text-primary-foreground" },
-  legendary: { label: "Legendary", className: "bg-accent text-accent-foreground" },
+  legendary: {
+    label: "Legendary",
+    className: "bg-accent text-accent-foreground",
+  },
 };
 
 const GROUP_LABELS: Record<string, string> = {
@@ -62,41 +63,141 @@ const GROUP_LABELS: Record<string, string> = {
   gastropod: "Gastropods",
 };
 
+const RARITY_ORDER: Record<string, number> = {
+  legendary: 0,
+  rare: 1,
+  uncommon: 2,
+  common: 3,
+};
+
+interface PokedexEntry {
+  taxonId: number;
+  dexNumber: number;
+  scientificName: string;
+  commonName: string;
+  photoUrl: string | null;
+  caribbeanObsCount: number;
+  rarity: string;
+  group: string;
+  seen: boolean;
+  userObsCount: number;
+  latestPlaceGuess: string;
+}
+
 function FishdexPage() {
   const { data: observed = [], isLoading: obsLoading } = useObservedSpecies();
   const { data: missing = [], isLoading: missLoading } = useMissingSpecies();
-  const [tab, setTab] = useState<TabMode>("observed");
   const [query, setQuery] = useState("");
   const [rarityFilter, setRarityFilter] = useState<string>("all");
   const [groupFilter, setGroupFilter] = useState<string>("all");
+  const [seenFilter, setSeenFilter] = useState<string>("all");
   const [selectedObserved, setSelectedObserved] = useState<ObservedSpecies | null>(null);
   const [selectedMissing, setSelectedMissing] = useState<CaribbeanSpecies | null>(null);
+  const [selectedDexNumber, setSelectedDexNumber] = useState<number>(0);
 
-  const display = tab === "observed" ? observed : missing;
-  const isLoading = tab === "observed" ? obsLoading : missLoading;
+  const isLoading = obsLoading || missLoading;
+
+  const pokedex = useMemo(() => {
+    const seenMap = new Map<number, ObservedSpecies>();
+    for (const o of observed) {
+      if (o.rarity !== "unknown") seenMap.set(o.taxonId, o);
+    }
+
+    const entries: PokedexEntry[] = [];
+
+    for (const s of observed) {
+      if (s.rarity === "unknown") continue;
+      entries.push({
+        taxonId: s.taxonId,
+        dexNumber: 0,
+        scientificName: s.scientificName,
+        commonName: s.commonName,
+        photoUrl: s.photoUrl,
+        caribbeanObsCount: s.caribbeanObsCount,
+        rarity: s.rarity,
+        group: s.group,
+        seen: true,
+        userObsCount: s.userObsCount,
+        latestPlaceGuess: s.latestPlaceGuess,
+      });
+    }
+
+    for (const s of missing) {
+      if (seenMap.has(s.taxonId)) continue;
+      entries.push({
+        taxonId: s.taxonId,
+        dexNumber: 0,
+        scientificName: s.scientificName,
+        commonName: s.commonName,
+        photoUrl: s.photoUrl,
+        caribbeanObsCount: s.caribbeanObsCount,
+        rarity: s.rarity,
+        group: s.group,
+        seen: false,
+        userObsCount: 0,
+        latestPlaceGuess: "",
+      });
+    }
+
+    entries.sort((a, b) => {
+      if (a.rarity !== b.rarity) return RARITY_ORDER[a.rarity] - RARITY_ORDER[b.rarity];
+      if (a.seen !== b.seen) return a.seen ? -1 : 1;
+      return b.caribbeanObsCount - a.caribbeanObsCount;
+    });
+
+    entries.forEach((e, i) => {
+      e.dexNumber = i + 1;
+    });
+
+    return entries;
+  }, [observed, missing]);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return display.filter((s) => {
+    return pokedex.filter((s) => {
       if (rarityFilter !== "all" && s.rarity !== rarityFilter) return false;
       if (groupFilter !== "all" && s.group !== groupFilter) return false;
+      if (seenFilter === "seen" && !s.seen) return false;
+      if (seenFilter === "unseen" && s.seen) return false;
       if (!q) return true;
       return s.commonName.toLowerCase().includes(q) || s.scientificName.toLowerCase().includes(q);
     });
-  }, [query, rarityFilter, groupFilter, display]);
+  }, [query, rarityFilter, groupFilter, seenFilter, pokedex]);
 
-  const observedCount = observed.length;
-  const missingCount = missing.length;
+  const stats = useMemo(() => {
+    const total = pokedex.length;
+    const seen = pokedex.filter((s) => s.seen).length;
+    const byRarity: Record<string, { seen: number; total: number }> = {};
+    for (const r of Object.keys(RARITY_META)) {
+      const all = pokedex.filter((s) => s.rarity === r);
+      byRarity[r] = { seen: all.filter((s) => s.seen).length, total: all.length };
+    }
+    return { total, seen, byRarity };
+  }, [pokedex]);
+
+  const handleOpen = useCallback(
+    (entry: PokedexEntry) => {
+      setSelectedDexNumber(entry.dexNumber);
+      if (entry.seen) {
+        const obs = observed.find((o) => o.taxonId === entry.taxonId);
+        if (obs) setSelectedObserved(obs);
+      } else {
+        const miss = missing.find((m) => m.taxonId === entry.taxonId);
+        if (miss) setSelectedMissing(miss);
+      }
+    },
+    [observed, missing],
+  );
+
+  const handleClose = useCallback(() => {
+    setSelectedObserved(null);
+    setSelectedMissing(null);
+    setSelectedDexNumber(0);
+  }, []);
 
   return (
     <div className="min-h-screen">
-      <Header
-        observedCount={observedCount}
-        missingCount={missingCount}
-        tab={tab}
-        onTab={setTab}
-        isLoading={obsLoading || missLoading}
-      />
+      <PokedexHeader stats={stats} isLoading={isLoading} />
 
       <main className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
         <FilterBar
@@ -106,11 +207,12 @@ function FishdexPage() {
           onRarity={setRarityFilter}
           group={groupFilter}
           onGroup={setGroupFilter}
-          tab={tab}
+          seen={seenFilter}
+          onSeen={setSeenFilter}
         />
 
         <p className="mt-6 font-mono text-xs uppercase tracking-widest text-muted-foreground">
-          {filtered.length} of {display.length} species
+          {filtered.length} of {pokedex.length} species
         </p>
 
         {isLoading ? (
@@ -123,47 +225,39 @@ function FishdexPage() {
             ))}
           </div>
         ) : filtered.length === 0 ? (
-          <EmptyState tab={tab} />
+          <EmptyState />
         ) : (
           <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {filtered.map((s) =>
-              tab === "observed" ? (
-                <ObservedCard
-                  key={s.taxonId}
-                  species={s as ObservedSpecies}
-                  onOpen={() => setSelectedObserved(s as ObservedSpecies)}
-                />
-              ) : (
-                <MissingCard
-                  key={s.taxonId}
-                  species={s as CaribbeanSpecies}
-                  onOpen={() => setSelectedMissing(s as CaribbeanSpecies)}
-                />
-              ),
-            )}
+            {filtered.map((entry) => (
+              <PokedexCard key={entry.taxonId} entry={entry} onOpen={() => handleOpen(entry)} />
+            ))}
           </div>
         )}
       </main>
 
-      <ObservedDetailDialog species={selectedObserved} onClose={() => setSelectedObserved(null)} />
-      <MissingDetailDialog species={selectedMissing} onClose={() => setSelectedMissing(null)} />
+      <ObservedDetailDialog
+        species={selectedObserved}
+        dexNumber={selectedDexNumber}
+        onClose={handleClose}
+      />
+      <MissingDetailDialog
+        species={selectedMissing}
+        dexNumber={selectedDexNumber}
+        onClose={handleClose}
+      />
     </div>
   );
 }
 
-function Header({
-  observedCount,
-  missingCount,
-  tab,
-  onTab,
+function PokedexHeader({
+  stats,
   isLoading,
 }: {
-  observedCount: number;
-  missingCount: number;
-  tab: TabMode;
-  onTab: (t: TabMode) => void;
+  stats: { total: number; seen: number; byRarity: Record<string, { seen: number; total: number }> };
   isLoading: boolean;
 }) {
+  const rarityOrder = ["common", "uncommon", "rare", "legendary"];
+
   return (
     <header className="border-b border-border/50 bg-[oklch(0.14_0.06_245)]/60 backdrop-blur-xl">
       <div className="scanline">
@@ -181,42 +275,58 @@ function Header({
               </div>
             </div>
             <p className="mt-3 max-w-xl text-sm text-muted-foreground">
-              Caribbean reef fish. Track what you've seen and discover what's still out there.
+              Track your Caribbean sightings — {stats.total} species, how many can you find?
             </p>
           </div>
 
-          <div className="rounded-xl border border-border/60 bg-card/60 p-4 card-glow sm:min-w-[260px]">
-            <div className="flex gap-2">
-              <button
-                onClick={() => onTab("observed")}
-                className={cn(
-                  "flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 font-mono text-xs uppercase tracking-wider transition-colors",
-                  tab === "observed"
-                    ? "bg-primary/15 text-primary ring-1 ring-primary/30"
-                    : "text-muted-foreground hover:text-foreground",
-                )}
-              >
-                <Eye className="h-3.5 w-3.5" />
-                Seen
-                <span className="ml-1 rounded bg-[oklch(0.14_0.06_245)] px-1.5 py-0.5 text-[10px]">
-                  {isLoading ? "—" : observedCount}
+          <div className="rounded-xl border border-border/60 bg-card/60 p-4 card-glow sm:min-w-[320px]">
+            <div className="flex items-baseline justify-between">
+              <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+                Caught
+              </span>
+              <span className="text-2xl font-bold tabular-nums text-glow">
+                {isLoading ? "—" : stats.seen}
+                <span className="ml-1 text-base font-normal text-muted-foreground">
+                  / {isLoading ? "—" : stats.total}
                 </span>
-              </button>
-              <button
-                onClick={() => onTab("missing")}
-                className={cn(
-                  "flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 font-mono text-xs uppercase tracking-wider transition-colors",
-                  tab === "missing"
-                    ? "bg-accent/15 text-accent ring-1 ring-accent/30"
-                    : "text-muted-foreground hover:text-foreground",
-                )}
-              >
-                <Compass className="h-3.5 w-3.5" />
-                Find
-                <span className="ml-1 rounded bg-[oklch(0.14_0.06_245)] px-1.5 py-0.5 text-[10px]">
-                  {isLoading ? "—" : missingCount}
-                </span>
-              </button>
+              </span>
+            </div>
+
+            <div className="mt-3 space-y-2">
+              {rarityOrder.map((r) => {
+                const { seen, total } = stats.byRarity[r] ?? {
+                  seen: 0,
+                  total: 0,
+                };
+                const pct = total > 0 ? (seen / total) * 100 : 0;
+                const meta = RARITY_META[r];
+                return (
+                  <div key={r} className="flex items-center gap-2">
+                    <span className="w-[5.5rem] font-mono text-[10px] text-muted-foreground">
+                      {meta.label}
+                    </span>
+                    <div className="flex-1 h-1.5 rounded-full bg-[oklch(0.14_0.06_245)] overflow-hidden">
+                      <div
+                        className="h-full rounded-full transition-all"
+                        style={{
+                          width: `${pct}%`,
+                          backgroundColor:
+                            r === "common"
+                              ? "oklch(0.72 0.04 220)"
+                              : r === "uncommon"
+                                ? "oklch(0.65 0.15 155)"
+                                : r === "rare"
+                                  ? "oklch(0.78 0.18 195)"
+                                  : "oklch(0.72 0.19 55)",
+                        }}
+                      />
+                    </div>
+                    <span className="w-12 text-right font-mono text-[10px] tabular-nums text-muted-foreground">
+                      {seen}/{total}
+                    </span>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -232,7 +342,8 @@ function FilterBar(props: {
   onRarity: (v: string) => void;
   group: string;
   onGroup: (v: string) => void;
-  tab: TabMode;
+  seen: string;
+  onSeen: (v: string) => void;
 }) {
   return (
     <div className="mt-8 space-y-4">
@@ -241,10 +352,21 @@ function FilterBar(props: {
         <Input
           value={props.query}
           onChange={(e) => props.onQuery(e.target.value)}
-          placeholder={
-            props.tab === "observed" ? "Search observed species…" : "Search Caribbean species…"
-          }
+          placeholder="Search Caribbean species…"
           className="h-12 border-border/60 bg-card/50 pl-11 font-mono text-sm placeholder:text-muted-foreground/60"
+        />
+      </div>
+
+      <div className="flex flex-wrap items-center gap-2">
+        <ChipGroup
+          label="Seen"
+          value={props.seen}
+          onChange={props.onSeen}
+          options={[
+            { value: "all", label: "All" },
+            { value: "seen", label: "Caught" },
+            { value: "unseen", label: "Unseen" },
+          ]}
         />
       </div>
 
@@ -320,110 +442,96 @@ function ChipGroup({
   );
 }
 
-function ObservedCard({ species, onOpen }: { species: ObservedSpecies; onOpen: () => void }) {
-  const rarity = species.rarity !== "unknown" ? RARITY_META[species.rarity] : null;
+function PokedexCard({ entry, onOpen }: { entry: PokedexEntry; onOpen: () => void }) {
+  const rarity = RARITY_META[entry.rarity];
+
   return (
     <button
       onClick={onOpen}
-      className="group relative flex flex-col overflow-hidden rounded-2xl border border-accent/20 bg-card/60 p-5 text-left transition-all hover:-translate-y-0.5 hover:border-primary/40 card-glow-observed"
+      className={cn(
+        "group relative flex flex-col overflow-hidden rounded-2xl border p-5 text-left transition-all hover:-translate-y-0.5",
+        entry.seen
+          ? "border-accent/20 bg-card/60 card-glow-observed"
+          : "border-border/40 bg-card/60 card-glow hover:border-accent/40",
+      )}
     >
       <div className="flex items-start justify-between">
-        <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-          {species.caribbeanObsCount > 0
-            ? `${species.caribbeanObsCount.toLocaleString()} Caribbean`
-            : `${species.taxonRank} rank`}
-        </span>
-        {rarity && (
-          <Badge className={cn("border-0 text-[10px] uppercase tracking-wider", rarity.className)}>
-            {rarity.label}
-          </Badge>
-        )}
-      </div>
-
-      <div className="mt-6 flex h-40 items-center justify-center overflow-hidden rounded-xl border border-border/30 bg-gradient-to-br from-[oklch(0.14_0.06_245)] to-[oklch(0.20_0.07_240)]">
-        {species.photoUrl ? (
-          <img
-            src={species.photoUrl}
-            alt={species.commonName}
-            className="h-full w-full object-cover transition-transform group-hover:scale-105"
-            loading="lazy"
-          />
-        ) : (
-          <Fish className="h-12 w-12 text-muted-foreground/30" />
-        )}
-      </div>
-
-      <div className="mt-5 flex-1">
-        <h3 className="text-lg font-semibold leading-tight">{species.commonName}</h3>
-        <p className="mt-1 font-mono text-xs italic text-muted-foreground/80">
-          {species.scientificName}
-        </p>
-      </div>
-
-      <div className="mt-4 flex items-center justify-between text-xs text-muted-foreground">
-        <span className="flex items-center gap-1">
-          <MapPin className="h-3 w-3" />
-          {species.latestPlaceGuess}
-        </span>
-        <span className="rounded-full bg-accent/20 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-accent">
-          {species.userObsCount}x
-        </span>
-      </div>
-    </button>
-  );
-}
-
-function MissingCard({ species, onOpen }: { species: CaribbeanSpecies; onOpen: () => void }) {
-  const rarity = RARITY_META[species.rarity];
-  return (
-    <button
-      onClick={onOpen}
-      className="group relative flex flex-col overflow-hidden rounded-2xl border border-border/40 bg-card/60 p-5 text-left transition-all hover:-translate-y-0.5 hover:border-accent/40 card-glow"
-    >
-      <div className="flex items-start justify-between">
-        <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-          {species.caribbeanObsCount.toLocaleString()} Caribbean
+        <span className="rounded bg-[oklch(0.14_0.06_245)] px-2 py-0.5 font-mono text-[10px] tracking-widest text-accent/80">
+          #{String(entry.dexNumber).padStart(3, "0")}
         </span>
         <Badge className={cn("border-0 text-[10px] uppercase tracking-wider", rarity.className)}>
           {rarity.label}
         </Badge>
       </div>
 
-      <div className="mt-6 flex h-40 items-center justify-center overflow-hidden rounded-xl border border-border/30 bg-gradient-to-br from-[oklch(0.14_0.06_245)] to-[oklch(0.20_0.07_240)]">
-        {species.photoUrl ? (
+      <div className="mt-3 flex h-40 items-center justify-center overflow-hidden rounded-xl border border-border/30 bg-gradient-to-br from-[oklch(0.14_0.06_245)] to-[oklch(0.20_0.07_240)]">
+        {entry.photoUrl ? (
           <img
-            src={species.photoUrl}
-            alt={species.commonName}
-            className="h-full w-full object-cover opacity-70 transition-all group-hover:scale-105 group-hover:opacity-100"
+            src={entry.photoUrl}
+            alt={entry.commonName}
+            className={cn(
+              "h-full w-full object-cover transition-all",
+              entry.seen
+                ? "group-hover:scale-105"
+                : "opacity-25 grayscale group-hover:opacity-40 group-hover:scale-105",
+            )}
             loading="lazy"
           />
         ) : (
-          <Fish className="h-12 w-12 text-muted-foreground/20" />
+          <EyeOff
+            className={cn(
+              "transition-opacity",
+              entry.seen
+                ? "h-12 w-12 text-muted-foreground/30"
+                : "h-12 w-12 text-muted-foreground/15",
+            )}
+          />
         )}
       </div>
 
       <div className="mt-5 flex-1">
-        <h3 className="text-lg font-semibold leading-tight">{species.commonName}</h3>
+        <h3 className="text-lg font-semibold leading-tight">
+          {entry.commonName || entry.scientificName}
+        </h3>
         <p className="mt-1 font-mono text-xs italic text-muted-foreground/80">
-          {species.scientificName}
+          {entry.scientificName}
         </p>
       </div>
 
-      <div className="mt-4 flex items-center justify-end">
-        <span className="rounded-full bg-accent/10 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-accent/70">
-          to find
-        </span>
+      <div className="mt-4 flex items-center justify-between text-xs text-muted-foreground">
+        {entry.seen ? (
+          <>
+            <span className="flex items-center gap-1 truncate">
+              <MapPin className="h-3 w-3 flex-shrink-0" />
+              <span className="truncate">{entry.latestPlaceGuess}</span>
+            </span>
+            <span className="flex-shrink-0 rounded-full bg-[oklch(0.72_0.19_55)]/20 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-accent">
+              {entry.userObsCount}x
+            </span>
+          </>
+        ) : (
+          <>
+            <span className="flex items-center gap-1">
+              <span className="font-mono text-[10px] text-muted-foreground/50">
+                {entry.caribbeanObsCount.toLocaleString()} sightings
+              </span>
+            </span>
+            <span className="rounded-full bg-accent/10 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-accent/70">
+              unseen
+            </span>
+          </>
+        )}
       </div>
     </button>
   );
 }
 
-function EmptyState({ tab }: { tab: TabMode }) {
+function EmptyState() {
   return (
     <div className="mt-12 rounded-2xl border border-dashed border-border/50 bg-card/30 p-12 text-center">
       <Fish className="mx-auto h-10 w-10 text-muted-foreground/40" />
       <p className="mt-4 font-mono text-sm uppercase tracking-widest text-muted-foreground">
-        {tab === "observed" ? "No species match" : "No species to find"}
+        No species match
       </p>
     </div>
   );
@@ -431,9 +539,11 @@ function EmptyState({ tab }: { tab: TabMode }) {
 
 function ObservedDetailDialog({
   species,
+  dexNumber,
   onClose,
 }: {
   species: ObservedSpecies | null;
+  dexNumber: number;
   onClose: () => void;
 }) {
   const { data: observations = [], isLoading: obsLoading } = useSpeciesObservations(
@@ -449,10 +559,8 @@ function ObservedDetailDialog({
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent/80">
-                    Observed ·{" "}
-                    {species.caribbeanObsCount > 0
-                      ? `${species.caribbeanObsCount.toLocaleString()} Caribbean sightings`
-                      : `${species.taxonRank} rank`}
+                    #{String(dexNumber).padStart(3, "0")} · Caught ·{" "}
+                    {species.caribbeanObsCount.toLocaleString()} Caribbean sightings
                   </p>
                   <DialogHeader className="mt-2">
                     <DialogTitle className="text-2xl font-bold text-glow">
@@ -477,17 +585,10 @@ function ObservedDetailDialog({
               </div>
 
               <div className="mt-4 flex flex-wrap gap-2">
-                {species.rarity !== "unknown" && (
-                  <Badge className={cn("border-0", RARITY_META[species.rarity].className)}>
-                    {RARITY_META[species.rarity].label} ·{" "}
-                    {species.caribbeanObsCount.toLocaleString()} Caribbean
-                  </Badge>
-                )}
-                {species.rarity === "unknown" && (
-                  <Badge variant="outline" className="border-border/60 bg-transparent">
-                    {species.taxonRank} rank
-                  </Badge>
-                )}
+                <Badge className={cn("border-0", RARITY_META[species.rarity].className)}>
+                  {RARITY_META[species.rarity].label} · {species.caribbeanObsCount.toLocaleString()}{" "}
+                  Caribbean
+                </Badge>
                 <Badge variant="outline" className="border-border/60 bg-transparent">
                   You: {species.userObsCount}x
                 </Badge>
@@ -540,9 +641,11 @@ function ObservedDetailDialog({
 
 function MissingDetailDialog({
   species,
+  dexNumber,
   onClose,
 }: {
   species: CaribbeanSpecies | null;
+  dexNumber: number;
   onClose: () => void;
 }) {
   return (
@@ -554,7 +657,8 @@ function MissingDetailDialog({
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent/80">
-                    To Find · {species.caribbeanObsCount.toLocaleString()} Caribbean
+                    #{String(dexNumber).padStart(3, "0")} · Unseen ·{" "}
+                    {species.caribbeanObsCount.toLocaleString()} Caribbean
                   </p>
                   <DialogHeader className="mt-2">
                     <DialogTitle className="text-2xl font-bold text-glow">

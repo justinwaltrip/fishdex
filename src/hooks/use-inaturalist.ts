@@ -10,9 +10,7 @@ import {
 
 const USER_LOGIN = "jwaltrip";
 
-function groupObservations(
-  obs: UserObservation[],
-): Map<
+function groupObservations(obs: UserObservation[]): Map<
   number,
   {
     obs: UserObservation[];
