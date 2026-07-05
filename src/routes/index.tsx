@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { Fish, MapPin, Search, ExternalLink, Compass, Eye } from "lucide-react";
+import { Fish, MapPin, Search, ExternalLink, Compass, Eye, Layers } from "lucide-react";
 
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
@@ -16,7 +16,11 @@ import {
   useMissingSpecies,
   useSpeciesObservations,
 } from "@/hooks/use-inaturalist";
-import { type ObservedSpecies, type CaribbeanSpecies, type INaturalistObservation } from "@/lib/inaturalist";
+import {
+  type ObservedSpecies,
+  type CaribbeanSpecies,
+  type INaturalistObservation,
+} from "@/lib/inaturalist";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/")({
@@ -41,9 +45,21 @@ type TabMode = "observed" | "missing";
 
 const RARITY_META: Record<string, { label: string; className: string }> = {
   common: { label: "Common", className: "bg-muted text-muted-foreground" },
-  uncommon: { label: "Uncommon", className: "bg-[oklch(0.65_0.15_155)] text-[oklch(0.15_0.05_240)]" },
+  uncommon: {
+    label: "Uncommon",
+    className: "bg-[oklch(0.65_0.15_155)] text-[oklch(0.15_0.05_240)]",
+  },
   rare: { label: "Rare", className: "bg-primary text-primary-foreground" },
   legendary: { label: "Legendary", className: "bg-accent text-accent-foreground" },
+};
+
+const GROUP_LABELS: Record<string, string> = {
+  fish: "Fish",
+  crustacean: "Crustaceans",
+  elasmobranch: "Sharks & Rays",
+  turtle: "Turtles",
+  cephalopod: "Cephalopods",
+  gastropod: "Gastropods",
 };
 
 function FishdexPage() {
@@ -52,6 +68,7 @@ function FishdexPage() {
   const [tab, setTab] = useState<TabMode>("observed");
   const [query, setQuery] = useState("");
   const [rarityFilter, setRarityFilter] = useState<string>("all");
+  const [groupFilter, setGroupFilter] = useState<string>("all");
   const [selectedObserved, setSelectedObserved] = useState<ObservedSpecies | null>(null);
   const [selectedMissing, setSelectedMissing] = useState<CaribbeanSpecies | null>(null);
 
@@ -62,23 +79,35 @@ function FishdexPage() {
     const q = query.trim().toLowerCase();
     return display.filter((s) => {
       if (rarityFilter !== "all" && s.rarity !== rarityFilter) return false;
+      if (groupFilter !== "all" && s.group !== groupFilter) return false;
       if (!q) return true;
-      return (
-        s.commonName.toLowerCase().includes(q) ||
-        s.scientificName.toLowerCase().includes(q)
-      );
+      return s.commonName.toLowerCase().includes(q) || s.scientificName.toLowerCase().includes(q);
     });
-  }, [query, rarityFilter, display]);
+  }, [query, rarityFilter, groupFilter, display]);
 
   const observedCount = observed.length;
   const missingCount = missing.length;
 
   return (
     <div className="min-h-screen">
-      <Header observedCount={observedCount} missingCount={missingCount} tab={tab} onTab={setTab} isLoading={obsLoading || missLoading} />
+      <Header
+        observedCount={observedCount}
+        missingCount={missingCount}
+        tab={tab}
+        onTab={setTab}
+        isLoading={obsLoading || missLoading}
+      />
 
       <main className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
-        <FilterBar query={query} onQuery={setQuery} rarity={rarityFilter} onRarity={setRarityFilter} tab={tab} />
+        <FilterBar
+          query={query}
+          onQuery={setQuery}
+          rarity={rarityFilter}
+          onRarity={setRarityFilter}
+          group={groupFilter}
+          onGroup={setGroupFilter}
+          tab={tab}
+        />
 
         <p className="mt-6 font-mono text-xs uppercase tracking-widest text-muted-foreground">
           {filtered.length} of {display.length} species
@@ -87,7 +116,10 @@ function FishdexPage() {
         {isLoading ? (
           <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {Array.from({ length: 8 }).map((_, i) => (
-              <div key={i} className="h-72 animate-pulse rounded-2xl border border-border/40 bg-card/40" />
+              <div
+                key={i}
+                className="h-72 animate-pulse rounded-2xl border border-border/40 bg-card/40"
+              />
             ))}
           </div>
         ) : filtered.length === 0 ? (
@@ -198,6 +230,8 @@ function FilterBar(props: {
   onQuery: (v: string) => void;
   rarity: string;
   onRarity: (v: string) => void;
+  group: string;
+  onGroup: (v: string) => void;
   tab: TabMode;
 }) {
   return (
@@ -207,7 +241,9 @@ function FilterBar(props: {
         <Input
           value={props.query}
           onChange={(e) => props.onQuery(e.target.value)}
-          placeholder={props.tab === "observed" ? "Search observed species…" : "Search Caribbean species…"}
+          placeholder={
+            props.tab === "observed" ? "Search observed species…" : "Search Caribbean species…"
+          }
           className="h-12 border-border/60 bg-card/50 pl-11 font-mono text-sm placeholder:text-muted-foreground/60"
         />
       </div>
@@ -222,6 +258,21 @@ function FilterBar(props: {
             ...Object.entries(RARITY_META).map(([k, m]) => ({
               value: k,
               label: m.label,
+            })),
+          ]}
+        />
+      </div>
+
+      <div className="flex flex-wrap items-center gap-2">
+        <ChipGroup
+          label="Group"
+          value={props.group}
+          onChange={props.onGroup}
+          options={[
+            { value: "all", label: "All" },
+            ...Object.entries(GROUP_LABELS).map(([k, label]) => ({
+              value: k,
+              label,
             })),
           ]}
         />
@@ -269,13 +320,7 @@ function ChipGroup({
   );
 }
 
-function ObservedCard({
-  species,
-  onOpen,
-}: {
-  species: ObservedSpecies;
-  onOpen: () => void;
-}) {
+function ObservedCard({ species, onOpen }: { species: ObservedSpecies; onOpen: () => void }) {
   const rarity = species.rarity !== "unknown" ? RARITY_META[species.rarity] : null;
   return (
     <button
@@ -328,13 +373,7 @@ function ObservedCard({
   );
 }
 
-function MissingCard({
-  species,
-  onOpen,
-}: {
-  species: CaribbeanSpecies;
-  onOpen: () => void;
-}) {
+function MissingCard({ species, onOpen }: { species: CaribbeanSpecies; onOpen: () => void }) {
   const rarity = RARITY_META[species.rarity];
   return (
     <button
@@ -410,7 +449,8 @@ function ObservedDetailDialog({
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent/80">
-                    Observed · {species.caribbeanObsCount > 0
+                    Observed ·{" "}
+                    {species.caribbeanObsCount > 0
                       ? `${species.caribbeanObsCount.toLocaleString()} Caribbean sightings`
                       : `${species.taxonRank} rank`}
                   </p>
@@ -439,7 +479,8 @@ function ObservedDetailDialog({
               <div className="mt-4 flex flex-wrap gap-2">
                 {species.rarity !== "unknown" && (
                   <Badge className={cn("border-0", RARITY_META[species.rarity].className)}>
-                    {RARITY_META[species.rarity].label} · {species.caribbeanObsCount.toLocaleString()} Caribbean
+                    {RARITY_META[species.rarity].label} ·{" "}
+                    {species.caribbeanObsCount.toLocaleString()} Caribbean
                   </Badge>
                 )}
                 {species.rarity === "unknown" && (
@@ -458,7 +499,10 @@ function ObservedDetailDialog({
                 {obsLoading ? (
                   <div className="space-y-3">
                     {Array.from({ length: 2 }).map((_, i) => (
-                      <div key={i} className="flex animate-pulse items-center gap-3 rounded-lg border border-border/40 bg-[oklch(0.14_0.06_245)]/30 px-3 py-3">
+                      <div
+                        key={i}
+                        className="flex animate-pulse items-center gap-3 rounded-lg border border-border/40 bg-[oklch(0.14_0.06_245)]/30 px-3 py-3"
+                      >
                         <div className="h-10 w-10 rounded-md bg-primary/10" />
                         <div className="flex-1 space-y-1.5">
                           <div className="h-3 w-2/3 rounded bg-primary/10" />
@@ -547,7 +591,9 @@ function MissingDetailDialog({
             <div className="space-y-6 px-6 py-8">
               <p className="text-sm text-muted-foreground">
                 You haven't logged this species on iNaturalist yet. It's been observed{" "}
-                <span className="text-foreground">{species.caribbeanObsCount.toLocaleString()} times</span>{" "}
+                <span className="text-foreground">
+                  {species.caribbeanObsCount.toLocaleString()} times
+                </span>{" "}
                 in the Caribbean — keep an eye out on your next dive.
               </p>
 

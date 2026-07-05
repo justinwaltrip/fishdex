@@ -6,21 +6,21 @@ iNaturalist-powered dashboard for tracking Caribbean reef fish observations.
 
 Only **one live API call** per page load: fetching `jwaltrip`'s observations. All other data is git-tracked and loaded from a static JSON file at build time.
 
-| File | Source | Live API? |
-|---|---|---|
-| `src/data/caribbean-species.json` | iNaturalist species_counts (research-grade, 1,892 Caribbean marine species across 6 groups) | No |
-| User observations | `GET /v1/observations?user_login=jwaltrip` | Yes |
+| File                              | Source                                                                                      | Live API? |
+| --------------------------------- | ------------------------------------------------------------------------------------------- | --------- |
+| `src/data/caribbean-species.json` | iNaturalist species_counts (research-grade, 1,892 Caribbean marine species across 6 groups) | No        |
+| User observations                 | `GET /v1/observations?user_login=jwaltrip`                                                  | Yes       |
 
 ## Rarity
 
 Rarity is **percentile-based** on Caribbean observation counts — reflecting how often a species is seen in the Caribbean:
 
-| Tier | Percentile | Description |
-|---|---|---|
-| Common | Top 20% | Most frequently observed |
-| Uncommon | 20–50% | Regularly observed |
-| Rare | 50–80% | Infrequently observed |
-| Legendary | Bottom 20% | Very rarely observed |
+| Tier      | Percentile | Description              |
+| --------- | ---------- | ------------------------ |
+| Common    | Top 20%    | Most frequently observed |
+| Uncommon  | 20–50%     | Regularly observed       |
+| Rare      | 50–80%     | Infrequently observed    |
+| Legendary | Bottom 20% | Very rarely observed     |
 
 ## Refreshing
 

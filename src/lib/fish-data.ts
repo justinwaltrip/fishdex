@@ -236,7 +236,10 @@ export const FISH_SPECIES: FishSpecies[] = [
 
 export const RARITY_META: Record<Rarity, { label: string; className: string }> = {
   common: { label: "Common", className: "bg-muted text-muted-foreground" },
-  uncommon: { label: "Uncommon", className: "bg-[oklch(0.65_0.15_155)] text-[oklch(0.15_0.05_240)]" },
+  uncommon: {
+    label: "Uncommon",
+    className: "bg-[oklch(0.65_0.15_155)] text-[oklch(0.15_0.05_240)]",
+  },
   rare: { label: "Rare", className: "bg-primary text-primary-foreground" },
   legendary: { label: "Legendary", className: "bg-accent text-accent-foreground" },
 };

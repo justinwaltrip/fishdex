@@ -12,8 +12,26 @@ const USER_LOGIN = "jwaltrip";
 
 function groupObservations(
   obs: UserObservation[],
-): Map<number, { obs: UserObservation[]; name: string; commonName: string; rank: string; bestPhoto: string | null }> {
-  const groups = new Map<number, { obs: UserObservation[]; name: string; commonName: string; rank: string; bestPhoto: string | null }>();
+): Map<
+  number,
+  {
+    obs: UserObservation[];
+    name: string;
+    commonName: string;
+    rank: string;
+    bestPhoto: string | null;
+  }
+> {
+  const groups = new Map<
+    number,
+    {
+      obs: UserObservation[];
+      name: string;
+      commonName: string;
+      rank: string;
+      bestPhoto: string | null;
+    }
+  >();
 
   for (const o of obs) {
     const existing = groups.get(o.taxonId);
@@ -36,7 +54,9 @@ function groupObservations(
   return groups;
 }
 
-async function loadSpeciesLookup(): Promise<Map<number, { caribbeanObsCount: number; rarity: string; group: string }>> {
+async function loadSpeciesLookup(): Promise<
+  Map<number, { caribbeanObsCount: number; rarity: string; group: string }>
+> {
   const map = new Map<number, { caribbeanObsCount: number; rarity: string; group: string }>();
   try {
     const mod = await import("@/data/caribbean-species.json");
@@ -53,7 +73,9 @@ async function loadSpeciesLookup(): Promise<Map<number, { caribbeanObsCount: num
         group: s.group,
       });
     }
-  } catch { /* JSON not found */ }
+  } catch {
+    /* JSON not found */
+  }
   return map;
 }
 
@@ -105,6 +127,7 @@ export function useObservedSpecies() {
             userObsCount: g.obs.length,
             caribbeanObsCount: info?.caribbeanObsCount ?? 0,
             rarity: (info?.rarity ?? "unknown") as ObservedSpecies["rarity"],
+            group: info?.group ?? "unknown",
             taxonRank: g.rank,
             latestObservedAt: latest.observedAt,
             latestPlaceGuess: latest.placeGuess,
@@ -112,7 +135,9 @@ export function useObservedSpecies() {
           };
         })
         .filter((s) => s.rarity !== "unknown")
-        .sort((a, b) => b.userObsCount - a.userObsCount || b.caribbeanObsCount - a.caribbeanObsCount);
+        .sort(
+          (a, b) => b.userObsCount - a.userObsCount || b.caribbeanObsCount - a.caribbeanObsCount,
+        );
     },
     staleTime: 1000 * 60 * 5,
   });

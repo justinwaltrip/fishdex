@@ -80,7 +80,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Fishdex" },
       { name: "description", content: "A pokedex-style log for the fish species you've observed." },
       { property: "og:title", content: "Fishdex" },
-      { property: "og:description", content: "A pokedex-style log for the fish species you've observed." },
+      {
+        property: "og:description",
+        content: "A pokedex-style log for the fish species you've observed.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

@@ -81,6 +81,7 @@ export interface ObservedSpecies {
   userObsCount: number;
   caribbeanObsCount: number;
   rarity: "common" | "uncommon" | "rare" | "legendary" | "unknown";
+  group: string;
   taxonRank: string;
   latestObservedAt: string;
   latestPlaceGuess: string;
@@ -143,9 +144,7 @@ function mapTaxonResult(t: INaturalistTaxonResult): TaxonSearchResult {
   };
 }
 
-export async function fetchAllUserObservations(
-  userLogin: string,
-): Promise<UserObservation[]> {
+export async function fetchAllUserObservations(userLogin: string): Promise<UserObservation[]> {
   const all: UserObservation[] = [];
   let page = 1;
   const perPage = 200;
@@ -171,7 +170,7 @@ export async function fetchAllUserObservations(
         id: obs.id,
         observedAt: obs.time_observed_at ?? obs.observed_on ?? "",
         placeGuess: obs.place_guess ?? "Unknown location",
-        photoUrl: photo ? photo.square_url ?? photo.url : null,
+        photoUrl: photo ? (photo.square_url ?? photo.url) : null,
         taxonId: obs.taxon.id,
         taxonName: obs.taxon.name,
         taxonRank: obs.taxon.default_photo ? "species" : "unknown",
@@ -189,9 +188,7 @@ export async function fetchAllUserObservations(
   return all;
 }
 
-export async function fetchTaxonPhoto(
-  taxonId: number,
-): Promise<INaturalistTaxonPhoto | null> {
+export async function fetchTaxonPhoto(taxonId: number): Promise<INaturalistTaxonPhoto | null> {
   const res = await fetch(`${BASE}/taxa/${taxonId}`);
   if (!res.ok) return null;
   const data = await res.json();
@@ -246,7 +243,9 @@ export async function fetchUserObservations(
   return results.map(mapObservation);
 }
 
-async function fetchObservationsPage(params: URLSearchParams): Promise<INaturalistObservationResult[]> {
+async function fetchObservationsPage(
+  params: URLSearchParams,
+): Promise<INaturalistObservationResult[]> {
   const res = await fetch(`${BASE}/observations?${params}`);
   if (!res.ok) return [];
   const data = await res.json();
@@ -259,7 +258,7 @@ function mapObservation(obs: INaturalistObservationResult): INaturalistObservati
     id: obs.id,
     observedAt: obs.time_observed_at ?? obs.observed_on ?? "",
     placeGuess: obs.place_guess ?? "Unknown location",
-    photoUrl: photo ? photo.square_url ?? photo.url : null,
+    photoUrl: photo ? (photo.square_url ?? photo.url) : null,
     userLogin: obs.user.login,
     speciesGuess: obs.species_guess,
     description: obs.description,
@@ -277,6 +276,3 @@ function parseCoords(location: string | undefined): [number, number] | null {
   if (Number.isNaN(lat) || Number.isNaN(lng)) return null;
   return [lat, lng];
 }
-
-
-
