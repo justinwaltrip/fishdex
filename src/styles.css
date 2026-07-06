@@ -137,3 +137,17 @@
 @utility animate-float {
   animation: float-slow 4s ease-in-out infinite;
 }
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 4px oklch(0.72 0.19 55 / 0.3), 0 0 8px oklch(0.72 0.19 55 / 0.15);
+  }
+  50% {
+    box-shadow: 0 0 12px oklch(0.72 0.19 55 / 0.5), 0 0 24px oklch(0.72 0.19 55 / 0.25);
+  }
+}
+
+@utility animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
