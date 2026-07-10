@@ -2,11 +2,12 @@
 """
 Refresh caribbean-species.json from iNaturalist API.
 
-Uses two stitched bounding boxes to cover the Caribbean Sea while
-avoiding Pacific spillover through the narrow Central American isthmus:
+Uses four tight bounding boxes around specific dive locations:
 
-  Box North: 23.5°N–13°N, -88°W–-60°W  (Cozumel, Belize, Roatán, Caymans, Greater Antilles)
-  Box South: 13°N–8°N,  -82°W–-60°W  (Panama, Colombia, Venezuela, ABC islands)
+  Cozumel:       20.65°N–20.22°N, 87.07°W–86.65°W
+  Aruba:         12.87°N–12.22°N, 70.30°W–69.60°W
+  Cayman Islands: 20.00°N–19.02°N, 81.70°W–79.45°W
+  Isla Mujeres:  21.35°N–21.10°N, 86.85°W–86.65°W
 
 Rarity thresholds are based on raw observation frequency:
 
@@ -19,9 +20,13 @@ import json, urllib.request, urllib.parse, time, os
 
 OUT = os.path.join(os.path.dirname(__file__), "..", "src", "data", "caribbean-species.json")
 
+# Verified against Nominatim (OpenStreetMap) bounding boxes — each box is
+# slightly larger than the actual landmass to include surrounding reefs.
 CARIBBEAN_BOXES = [
-    {"nelat": 23.5, "nelng": -60, "swlat": 13, "swlng": -88},
-    {"nelat": 13,   "nelng": -60, "swlat": 8,  "swlng": -82},
+    {"nelat": 20.65, "nelng": -86.65, "swlat": 20.22, "swlng": -87.07},  # Cozumel
+    {"nelat": 12.87, "nelng": -69.60, "swlat": 12.22, "swlng": -70.30},  # Aruba
+    {"nelat": 20.00, "nelng": -79.45, "swlat": 19.02, "swlng": -81.70},  # Cayman Islands
+    {"nelat": 21.35, "nelng": -86.65, "swlat": 21.10, "swlng": -86.85},  # Isla Mujeres
 ]
 
 PER_PAGE = 500
@@ -91,10 +96,10 @@ def main():
     for taxon_id, group, label in GROUPS:
         print(f"Fetching {label}...")
 
+        BOX_NAMES = ["Cozumel", "Aruba", "Cayman Islands", "Isla Mujeres"]
         group_species = {}
         for i, bbox in enumerate(CARIBBEAN_BOXES):
-            box_label = "North" if i == 0 else "South"
-            print(f"  Box {box_label}: {bbox['swlat']}°N–{bbox['nelat']}°N, {bbox['swlng']}°W–{bbox['nelng']}°W")
+            print(f"  {BOX_NAMES[i]}: {bbox['swlat']}°N–{bbox['nelat']}°N, {bbox['swlng']}°W–{bbox['nelng']}°W")
             box_result = fetch_box(taxon_id, bbox)
 
             for tid, sp in box_result.items():
