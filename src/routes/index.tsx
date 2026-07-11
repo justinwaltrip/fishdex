@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState, useCallback } from "react";
-import { Fish, MapPin, Search, ExternalLink, Eye, EyeOff } from "lucide-react";
+import { Fish, MapPin, Search, ExternalLink, Eye, EyeOff, Ruler, User } from "lucide-react";
 
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
@@ -93,6 +93,7 @@ interface PokedexEntry {
   seen: boolean;
   userObsCount: number;
   latestPlaceGuess: string;
+  maxLengthCm?: number;
 }
 
 function FishdexPage() {
@@ -130,6 +131,7 @@ function FishdexPage() {
         seen: true,
         userObsCount: s.userObsCount,
         latestPlaceGuess: s.latestPlaceGuess,
+        maxLengthCm: s.maxLengthCm,
       });
     }
 
@@ -147,6 +149,7 @@ function FishdexPage() {
         seen: false,
         userObsCount: 0,
         latestPlaceGuess: "",
+        maxLengthCm: s.maxLengthCm,
       });
     }
 
@@ -744,6 +747,7 @@ function ObservedDetailDialog({
             </div>
 
             <div className="max-h-[60vh] space-y-6 overflow-y-auto px-6 py-6">
+              <SizeComparison maxLengthCm={species.maxLengthCm} />
               <Section label="Your Sightings">
                 {obsLoading ? (
                   <div className="space-y-3">
@@ -841,6 +845,7 @@ function MissingDetailDialog({
             </div>
 
             <div className="space-y-6 px-6 py-8">
+              <SizeComparison maxLengthCm={species.maxLengthCm} />
               <p className="text-sm text-muted-foreground">
                 You haven't logged this species on iNaturalist yet. It's been observed{" "}
                 <span className="text-foreground">
@@ -913,5 +918,91 @@ function ObservationRow({ obs }: { obs: INaturalistObservation }) {
         {new Date(obs.observedAt).toLocaleDateString()}
       </span>
     </a>
+  );
+}
+
+function SizeComparison({ maxLengthCm }: { maxLengthCm?: number }) {
+  const DIVER_CM = 180;
+  const DIVER_PX = 140;
+  const MAX_FISH_PX = 280;
+
+  if (maxLengthCm == null || maxLengthCm <= 0) {
+    return (
+      <Section label="Size Comparison">
+        <div className="flex h-48 items-center justify-center rounded-xl border border-dashed border-border/40 bg-[oklch(0.14_0.06_245)]/30">
+          <div className="text-center">
+            <Ruler className="mx-auto h-8 w-8 text-muted-foreground/25" />
+            <p className="mt-2 font-mono text-[11px] text-muted-foreground/50">
+              Size data not available
+            </p>
+          </div>
+        </div>
+      </Section>
+    );
+  }
+
+  const scale = DIVER_PX / DIVER_CM;
+  const fishPx = maxLengthCm * scale;
+  const isClipped = fishPx > MAX_FISH_PX;
+  const displayPx = Math.min(fishPx, MAX_FISH_PX);
+
+  const formatSize = (cm: number) =>
+    cm < 100 ? `${cm} cm` : `${(cm / 100).toFixed(1)} m`;
+
+  return (
+    <Section label="Size Comparison">
+      <div className="rounded-xl border border-border/40 bg-[oklch(0.14_0.06_245)]/30 p-6">
+        <div
+          className="flex items-end justify-center gap-10 sm:gap-20"
+          style={{ minHeight: Math.max(DIVER_PX, displayPx) + 60 }}
+        >
+          <div className="flex flex-col items-center gap-2">
+            <div className="flex flex-col items-center" style={{ minHeight: DIVER_PX + 8 }}>
+              <div
+                className="w-12 rounded-t-lg border-2 border-b-0 border-border/50 bg-[oklch(0.18_0.06_245)]/80"
+                style={{ height: DIVER_PX }}
+              />
+              <div className="mt-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-primary/10 ring-1 ring-primary/30">
+                <User className="h-3 w-3 text-primary/60" />
+              </div>
+            </div>
+            <span className="font-mono text-[10px] leading-tight text-center text-muted-foreground">
+              Diver
+              <br />
+              1.8 m
+            </span>
+          </div>
+
+          <div className="flex flex-col items-center gap-2">
+            <div className="flex flex-col items-center" style={{ minHeight: displayPx + 8 }}>
+              {isClipped && (
+                <div className="flex items-center gap-1 text-[9px] text-accent/50 mb-0.5">
+                  <span className="font-mono">{formatSize(maxLengthCm)}</span>
+                </div>
+              )}
+              <div
+                className={cn(
+                  "w-12 rounded-t-lg border-2 border-b-0 bg-gradient-to-t from-accent/15 to-accent/30",
+                  "border-accent/30",
+                )}
+                style={{ height: displayPx }}
+              />
+              <div className="mt-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-accent/10 ring-1 ring-accent/30">
+                <Fish className="h-3 w-3 text-accent/60" />
+              </div>
+            </div>
+            <span className="font-mono text-[10px] leading-tight text-center text-accent">
+              {formatSize(maxLengthCm)}
+              {isClipped && (
+                <>
+                  <br />
+                  <span className="text-accent/50">(scaled)</span>
+                </>
+              )}
+            </span>
+          </div>
+        </div>
+      </div>
+    </Section>
   );
 }

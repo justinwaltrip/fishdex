@@ -53,9 +53,9 @@ function groupObservations(obs: UserObservation[]): Map<
 }
 
 async function loadSpeciesLookup(): Promise<
-  Map<number, { caribbeanObsCount: number; rarity: string; group: string }>
+  Map<number, { caribbeanObsCount: number; rarity: string; group: string; maxLengthCm?: number }>
 > {
-  const map = new Map<number, { caribbeanObsCount: number; rarity: string; group: string }>();
+  const map = new Map<number, { caribbeanObsCount: number; rarity: string; group: string; maxLengthCm?: number }>();
   try {
     const mod = await import("@/data/caribbean-species.json");
     const raw = mod.default as {
@@ -63,12 +63,14 @@ async function loadSpeciesLookup(): Promise<
       caribbeanObsCount: number;
       rarity: string;
       group: string;
+      maxLengthCm?: number;
     }[];
     for (const s of raw) {
       map.set(s.taxonId, {
         caribbeanObsCount: s.caribbeanObsCount,
         rarity: s.rarity,
         group: s.group,
+        maxLengthCm: s.maxLengthCm,
       });
     }
   } catch {
@@ -88,6 +90,7 @@ async function loadCaribbeanSpecies(): Promise<CaribbeanSpecies[]> {
       rarity: string;
       group: string;
       photoUrl: string | null;
+      maxLengthCm?: number;
     }[];
     return raw.map((r) => ({
       taxonId: r.taxonId,
@@ -97,6 +100,7 @@ async function loadCaribbeanSpecies(): Promise<CaribbeanSpecies[]> {
       caribbeanObsCount: r.caribbeanObsCount,
       rarity: r.rarity as CaribbeanSpecies["rarity"],
       group: r.group,
+      maxLengthCm: r.maxLengthCm,
     }));
   } catch {
     return [];
@@ -130,6 +134,7 @@ export function useObservedSpecies() {
             latestObservedAt: latest.observedAt,
             latestPlaceGuess: latest.placeGuess,
             latestObservationId: latest.id,
+            maxLengthCm: info?.maxLengthCm,
           };
         })
         .filter((s) => s.rarity !== "unknown")

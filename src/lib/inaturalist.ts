@@ -86,6 +86,7 @@ export interface ObservedSpecies {
   latestObservedAt: string;
   latestPlaceGuess: string;
   latestObservationId: number;
+  maxLengthCm?: number;
 }
 
 export interface CaribbeanSpecies {
@@ -96,6 +97,7 @@ export interface CaribbeanSpecies {
   caribbeanObsCount: number;
   rarity: "common" | "uncommon" | "rare" | "legendary";
   group: string;
+  maxLengthCm?: number;
 }
 
 export interface INaturalistTaxonPhoto {

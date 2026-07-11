@@ -6,7 +6,8 @@
     "caribbeanObsCount": 1228,
     "rarity": "common",
     "group": "fish",
-    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/201212504/square.jpg"
+    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/201212504/square.jpg",
+    "maxLengthCm": 22.9
   },
   {
     "taxonId": 121196,
@@ -15,7 +16,8 @@
     "caribbeanObsCount": 1092,
     "rarity": "common",
     "group": "fish",
-    "photoUrl": "https://static.inaturalist.org/photos/54043219/square.jpg"
+    "photoUrl": "https://static.inaturalist.org/photos/54043219/square.jpg",
+    "maxLengthCm": 39
   },
   {
     "taxonId": 49257,
@@ -60,7 +62,8 @@
     "caribbeanObsCount": 732,
     "rarity": "common",
     "group": "crustacean",
-    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/30862642/square.jpg"
+    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/30862642/square.jpg",
+    "maxLengthCm": 60
   },
   {
     "taxonId": 62600,
@@ -69,7 +72,8 @@
     "caribbeanObsCount": 727,
     "rarity": "common",
     "group": "fish",
-    "photoUrl": "https://static.inaturalist.org/photos/54301844/square.jpg"
+    "photoUrl": "https://static.inaturalist.org/photos/54301844/square.jpg",
+    "maxLengthCm": 30
   },
   {
     "taxonId": 47251,
@@ -87,7 +91,8 @@
     "caribbeanObsCount": 684,
     "rarity": "common",
     "group": "fish",
-    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/48690384/square.jpg"
+    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/48690384/square.jpg",
+    "maxLengthCm": 64
   },
   {
     "taxonId": 49199,
@@ -105,7 +110,8 @@
     "caribbeanObsCount": 671,
     "rarity": "common",
     "group": "fish",
-    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/415486737/square.jpg"
+    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/415486737/square.jpg",
+    "maxLengthCm": 79
   },
   {
     "taxonId": 133675,
@@ -141,7 +147,8 @@
     "caribbeanObsCount": 601,
     "rarity": "common",
     "group": "fish",
-    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/177394061/square.jpg"
+    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/177394061/square.jpg",
+    "maxLengthCm": 69
   },
   {
     "taxonId": 55295,
@@ -186,7 +193,8 @@
     "caribbeanObsCount": 471,
     "rarity": "uncommon",
     "group": "fish",
-    "photoUrl": "https://static.inaturalist.org/photos/8872309/square.jpeg"
+    "photoUrl": "https://static.inaturalist.org/photos/8872309/square.jpeg",
+    "maxLengthCm": 45
   },
   {
     "taxonId": 39659,
@@ -195,7 +203,8 @@
     "caribbeanObsCount": 457,
     "rarity": "uncommon",
     "group": "turtle",
-    "photoUrl": "https://static.inaturalist.org/photos/245365502/square.jpg"
+    "photoUrl": "https://static.inaturalist.org/photos/245365502/square.jpg",
+    "maxLengthCm": 110
   },
   {
     "taxonId": 49964,
@@ -204,7 +213,8 @@
     "caribbeanObsCount": 442,
     "rarity": "uncommon",
     "group": "elasmobranch",
-    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/55987882/square.jpg"
+    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/55987882/square.jpg",
+    "maxLengthCm": 430
   },
   {
     "taxonId": 39672,
@@ -213,7 +223,8 @@
     "caribbeanObsCount": 439,
     "rarity": "uncommon",
     "group": "turtle",
-    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/308087101/square.jpeg"
+    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/308087101/square.jpeg",
+    "maxLengthCm": 90
   },
   {
     "taxonId": 49272,
@@ -474,7 +485,8 @@
     "caribbeanObsCount": 235,
     "rarity": "uncommon",
     "group": "elasmobranch",
-    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/195315918/square.jpg"
+    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/195315918/square.jpg",
+    "maxLengthCm": 330
   },
   {
     "taxonId": 49273,
@@ -501,7 +513,8 @@
     "caribbeanObsCount": 229,
     "rarity": "uncommon",
     "group": "crustacean",
-    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/277105988/square.jpg"
+    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/277105988/square.jpg",
+    "maxLengthCm": 6
   },
   {
     "taxonId": 49942,
@@ -591,7 +604,8 @@
     "caribbeanObsCount": 202,
     "rarity": "uncommon",
     "group": "cephalopod",
-    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/63623021/square.jpg"
+    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/63623021/square.jpg",
+    "maxLengthCm": 40
   },
   {
     "taxonId": 112169,
@@ -843,7 +857,8 @@
     "caribbeanObsCount": 144,
     "rarity": "uncommon",
     "group": "fish",
-    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/178657934/square.jpg"
+    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/178657934/square.jpg",
+    "maxLengthCm": 60
   },
   {
     "taxonId": 49432,
@@ -852,7 +867,8 @@
     "caribbeanObsCount": 143,
     "rarity": "uncommon",
     "group": "fish",
-    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/124637/square.jpg"
+    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/124637/square.jpg",
+    "maxLengthCm": 91
   },
   {
     "taxonId": 1439789,
@@ -1023,7 +1039,8 @@
     "caribbeanObsCount": 113,
     "rarity": "uncommon",
     "group": "fish",
-    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/59818540/square.jpg"
+    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/59818540/square.jpg",
+    "maxLengthCm": 120
   },
   {
     "taxonId": 699869,
