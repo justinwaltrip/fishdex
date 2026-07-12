@@ -65,6 +65,8 @@ export interface UserObservation {
   speciesGuess?: string;
   description?: string;
   iconicTaxonId: number;
+  latitude: number | null;
+  longitude: number | null;
 }
 
 export interface ObservedSpecies {
@@ -126,6 +128,7 @@ async function rateLimitedFetch(url: string): Promise<Response> {
 
 function mapUserObservation(obs: INaturalistObservationResult): UserObservation {
   const photo = obs.photos?.[0];
+  const coords = parseCoords(obs.location);
   return {
     id: obs.id,
     observedAt: obs.time_observed_at ?? obs.observed_on ?? "",
@@ -138,6 +141,8 @@ function mapUserObservation(obs: INaturalistObservationResult): UserObservation 
     speciesGuess: obs.species_guess,
     description: obs.description,
     iconicTaxonId: obs.taxon.iconic_taxon_id ?? 0,
+    latitude: coords?.[0] ?? null,
+    longitude: coords?.[1] ?? null,
   };
 }
 

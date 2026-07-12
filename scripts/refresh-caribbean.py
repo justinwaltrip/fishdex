@@ -27,7 +27,7 @@ PER_PAGE = 500
 GROUPS = [
     (47178, "fish", "Ray-finned fish"),
     (47273, "elasmobranch", "Sharks & rays"),
-    (39533, "turtle", "Sea turtles (Cheloniidae)"),
+    (39657, "turtle", "Sea turtles (Cheloniidae)"),
     (39576, "turtle", "Sea turtles (Dermochelyidae)"),
     (47186, "crustacean", "Crabs, lobsters & shrimp"),
     (47459, "cephalopod", "Octopus & squid"),

@@ -46,5 +46,9 @@ devenv.local.yaml
 __pycache__/
 scripts/boxes.json
 
+# Generated data (depends on user's location config)
+src/data/caribbean-species.json
+src/data/fishbase-sizes.json
+
 # pre-commit
 .pre-commit-config.yaml

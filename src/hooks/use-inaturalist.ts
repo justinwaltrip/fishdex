@@ -109,9 +109,9 @@ async function loadCaribbeanSpecies(): Promise<CaribbeanSpecies[]> {
   }
 }
 
-function useAllUserObservations() {
+export function useAllUserObservations() {
   return useQuery({
-    queryKey: ["inaturalist", "all-observations", USER_LOGIN],
+    queryKey: ["inaturalist", "v2", "all-observations", USER_LOGIN],
     queryFn: () => fetchAllUserObservations(USER_LOGIN),
     staleTime: 1000 * 60 * 5,
     gcTime: 1000 * 60 * 60 * 24,
@@ -122,7 +122,7 @@ export function useObservedSpecies() {
   const { data: allObs } = useAllUserObservations();
 
   return useQuery<ObservedSpecies[]>({
-    queryKey: ["inaturalist", "observed-species", USER_LOGIN],
+    queryKey: ["inaturalist", "v2", "observed-species", USER_LOGIN],
     queryFn: async () => {
       const lookup = await loadSpeciesLookup();
       const groups = groupObservations(allObs ?? []);
@@ -161,7 +161,7 @@ export function useMissingSpecies() {
   const { data: allObs } = useAllUserObservations();
 
   return useQuery<CaribbeanSpecies[]>({
-    queryKey: ["inaturalist", "missing-species", USER_LOGIN],
+    queryKey: ["inaturalist", "v2", "missing-species", USER_LOGIN],
     queryFn: async () => {
       const caribbeanSpecies = await loadCaribbeanSpecies();
       const observedIds = new Set((allObs ?? []).map((o) => o.taxonId));
@@ -178,7 +178,7 @@ export function useMissingSpecies() {
 
 export function useSpeciesObservations(taxonId: number | undefined) {
   return useQuery<INaturalistObservation[]>({
-    queryKey: ["inaturalist", "species-observations", USER_LOGIN, taxonId],
+    queryKey: ["inaturalist", "v2", "species-observations", USER_LOGIN, taxonId],
     queryFn: () => fetchUserObservations(taxonId!, USER_LOGIN, 20),
     enabled: typeof taxonId === "number" && taxonId > 0,
     staleTime: 1000 * 60 * 15,

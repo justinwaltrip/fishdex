@@ -11,6 +11,7 @@ import {
   Loader2,
 } from "lucide-react";
 import fishbaseSizes from "@/data/fishbase-sizes.json";
+import { LOCATIONS, isInBBox } from "@/data/locations";
 
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
@@ -25,6 +26,7 @@ import {
   useObservedSpecies,
   useMissingSpecies,
   useSpeciesObservations,
+  useAllUserObservations,
 } from "@/hooks/use-inaturalist";
 import {
   type ObservedSpecies,
@@ -130,6 +132,7 @@ interface PokedexEntry {
 }
 
 function FishdexPage() {
+  const { data: allObs = [] } = useAllUserObservations();
   const { data: observed = [], isLoading: obsLoading } = useObservedSpecies();
   const { data: missing = [], isLoading: missLoading } = useMissingSpecies();
   const [query, setQuery] = useState("");
@@ -137,12 +140,54 @@ function FishdexPage() {
   const [groupFilter, setGroupFilter] = useState<string>("all");
   const [seenFilter, setSeenFilter] = useState<string>("all");
   const [sizeFilter, setSizeFilter] = useState<string>("all");
+  const [locationFilter, setLocationFilter] = useState<string>("all");
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(true);
   const [selectedObserved, setSelectedObserved] = useState<ObservedSpecies | null>(null);
   const [selectedMissing, setSelectedMissing] = useState<CaribbeanSpecies | null>(null);
   const [selectedDexNumber, setSelectedDexNumber] = useState<number>(0);
 
   const isLoading = obsLoading || missLoading;
+
+  const locationSeenIds = useMemo(() => {
+    if (locationFilter === "all") return null;
+    const bbox = LOCATIONS.find((l) => l.name === locationFilter);
+    if (!bbox) return null;
+    const ids = new Set<number>();
+    for (const obs of allObs) {
+      if (isInBBox(obs.latitude, obs.longitude, bbox)) {
+        ids.add(obs.taxonId);
+      }
+    }
+    return ids;
+  }, [allObs, locationFilter]);
+
+  const locationStats = useMemo(() => {
+    if (locationFilter === "all") return null;
+    const bbox = LOCATIONS.find((l) => l.name === locationFilter);
+    if (!bbox) return null;
+    const stats = new Map<
+      number,
+      { count: number; latestPlaceGuess: string; latestObservedAt: string }
+    >();
+    for (const obs of allObs) {
+      if (!isInBBox(obs.latitude, obs.longitude, bbox)) continue;
+      const existing = stats.get(obs.taxonId);
+      if (existing) {
+        existing.count++;
+        if (obs.observedAt > existing.latestObservedAt) {
+          existing.latestObservedAt = obs.observedAt;
+          existing.latestPlaceGuess = obs.placeGuess;
+        }
+      } else {
+        stats.set(obs.taxonId, {
+          count: 1,
+          latestPlaceGuess: obs.placeGuess,
+          latestObservedAt: obs.observedAt,
+        });
+      }
+    }
+    return stats;
+  }, [allObs, locationFilter]);
 
   const pokedex = useMemo(() => {
     const seenMap = new Map<number, ObservedSpecies>();
@@ -155,6 +200,8 @@ function FishdexPage() {
     for (const s of observed) {
       if (s.rarity === "unknown") continue;
       const sizeInfo = getSizeInfo(s.taxonId);
+      const seen = locationSeenIds ? locationSeenIds.has(s.taxonId) : true;
+      const locStat = locationStats?.get(s.taxonId);
       entries.push({
         taxonId: s.taxonId,
         dexNumber: 0,
@@ -164,9 +211,9 @@ function FishdexPage() {
         caribbeanObsCount: s.caribbeanObsCount,
         rarity: s.rarity,
         group: s.group,
-        seen: true,
-        userObsCount: s.userObsCount,
-        latestPlaceGuess: s.latestPlaceGuess,
+        seen,
+        userObsCount: locStat ? locStat.count : s.userObsCount,
+        latestPlaceGuess: locStat ? locStat.latestPlaceGuess : s.latestPlaceGuess,
         maxLengthCm: sizeInfo?.maxLengthCm,
         sizeTier: sizeInfo?.sizeTier,
       });
@@ -202,7 +249,7 @@ function FishdexPage() {
     });
 
     return entries;
-  }, [observed, missing]);
+  }, [observed, missing, locationSeenIds, locationStats]);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -243,7 +290,22 @@ function FishdexPage() {
         if (obs) setSelectedObserved(obs);
       } else {
         const miss = missing.find((m) => m.taxonId === entry.taxonId);
-        if (miss) setSelectedMissing(miss);
+        if (miss) {
+          setSelectedMissing(miss);
+        } else {
+          const globalObs = observed.find((o) => o.taxonId === entry.taxonId);
+          if (globalObs) {
+            setSelectedMissing({
+              taxonId: globalObs.taxonId,
+              scientificName: globalObs.scientificName,
+              commonName: globalObs.commonName,
+              photoUrl: globalObs.photoUrl,
+              caribbeanObsCount: globalObs.caribbeanObsCount,
+              rarity: globalObs.rarity as "common" | "uncommon" | "rare" | "legendary",
+              group: globalObs.group,
+            });
+          }
+        }
       }
     },
     [observed, missing],
@@ -268,6 +330,8 @@ function FishdexPage() {
         onSeen={setSeenFilter}
         size={sizeFilter}
         onSize={setSizeFilter}
+        location={locationFilter}
+        onLocation={setLocationFilter}
         open={sidebarOpen}
         onToggle={() => setSidebarOpen((o) => !o)}
       />
@@ -278,7 +342,7 @@ function FishdexPage() {
           sidebarOpen && "ml-72",
         )}
       >
-        <PokedexHeader total={total} matrix={filteredStats} />
+        <PokedexHeader total={total} matrix={filteredStats} location={locationFilter} />
 
         <main className="mx-auto w-full max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
           <p className="mt-6 font-mono text-xs uppercase tracking-widest text-muted-foreground">
@@ -316,9 +380,11 @@ function FishdexPage() {
 function PokedexHeader({
   total,
   matrix,
+  location,
 }: {
   total: number;
   matrix: Record<string, Record<string, { seen: number; total: number }>>;
+  location: string;
 }) {
   return (
     <header className="border-b border-border/50 bg-[oklch(0.14_0.06_245)]/60 backdrop-blur-xl">
@@ -330,13 +396,14 @@ function PokedexHeader({
             </div>
             <div>
               <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-primary/80">
-                Caribbean · iNaturalist
+                Caribbean · iNaturalist{location !== "all" && ` · ${location}`}
               </p>
               <h1 className="text-3xl font-bold text-glow sm:text-4xl">Fishdex</h1>
             </div>
           </div>
           <p className="mt-3 max-w-xl text-sm text-muted-foreground">
             Track your Caribbean sightings — {total} species, how many can you find?
+            {location !== "all" && ` (filtered to ${location})`}
           </p>
 
           <FilteredDetailMatrix matrix={matrix} />
@@ -621,6 +688,8 @@ function FilterSidebar(props: {
   onSeen: (v: string) => void;
   size: string;
   onSize: (v: string) => void;
+  location: string;
+  onLocation: (v: string) => void;
   open: boolean;
   onToggle: () => void;
 }) {
@@ -703,6 +772,21 @@ function FilterSidebar(props: {
                   ...SIZE_TIERS.map((t) => ({
                     value: t.label,
                     label: t.label,
+                  })),
+                ]}
+              />
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <ChipGroup
+                label="Location"
+                value={props.location}
+                onChange={props.onLocation}
+                options={[
+                  { value: "all", label: "All" },
+                  ...LOCATIONS.map((l) => ({
+                    value: l.name,
+                    label: l.name,
                   })),
                 ]}
               />
