@@ -49,15 +49,6 @@ LAND_CRAB_COMMON = {
     "nipper",
 }
 
-LAND_CRAB_TAXON_IDS = {
-    # Coenobitidae — land hermit crabs
-    51718,
-    # Gecarcinidae — true land crabs (Cardisoma, Gecarcinus, etc.)
-    53508,
-    # Ocypodidae — ghost crabs, fiddler crabs
-    51838,
-}
-
 
 def is_land_crab(species):
     """Return True if the species is a land/terrestrial crab."""

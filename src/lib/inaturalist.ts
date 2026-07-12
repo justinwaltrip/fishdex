@@ -24,18 +24,6 @@ interface INaturalistPhoto {
   license_code: string;
 }
 
-interface INaturalistTaxonResult {
-  id: number;
-  name: string;
-  rank: string;
-  preferred_common_name?: string;
-  default_photo?: INaturalistPhoto & {
-    original_dimensions?: { height: number; width: number };
-  };
-  taxon_photos?: { photo: INaturalistPhoto }[];
-  ancestors?: { id: number; name: string; rank: string }[];
-}
-
 interface INaturalistUser {
   login: string;
   name?: string;
@@ -60,18 +48,6 @@ interface INaturalistObservationResult {
       original_dimensions?: { height: number; width: number };
     };
   };
-}
-
-export interface TaxonSearchResult {
-  id: number;
-  name: string;
-  rank: string;
-  commonName?: string;
-  photoUrl?: string;
-  mediumPhotoUrl?: string;
-  largePhotoUrl?: string;
-  attribution?: string;
-  licenseCode?: string;
 }
 
 export interface UserObservation {
@@ -113,16 +89,6 @@ export interface CaribbeanSpecies {
   group: string;
 }
 
-export interface INaturalistTaxonPhoto {
-  url: string;
-  mediumUrl: string;
-  largeUrl: string;
-  attribution: string;
-  licenseCode: string;
-  commonName?: string;
-  scientificName: string;
-}
-
 export interface INaturalistObservation {
   id: number;
   observedAt: string;
@@ -133,30 +99,6 @@ export interface INaturalistObservation {
   description?: string;
   latitude?: number;
   longitude?: number;
-}
-
-export async function searchTaxa(query: string): Promise<TaxonSearchResult[]> {
-  const params = new URLSearchParams({ q: query, per_page: "5" });
-  const res = await apiFetch(`${BASE}/taxa?${params}`);
-  if (!res.ok) return [];
-  const data = await res.json();
-  const results: INaturalistTaxonResult[] = data.results ?? [];
-  return results.map(mapTaxonResult);
-}
-
-function mapTaxonResult(t: INaturalistTaxonResult): TaxonSearchResult {
-  const photo = t.default_photo;
-  return {
-    id: t.id,
-    name: t.name,
-    rank: t.rank,
-    commonName: t.preferred_common_name,
-    photoUrl: photo?.square_url ?? photo?.url,
-    mediumPhotoUrl: photo?.medium_url ?? photo?.url,
-    largePhotoUrl: photo?.large_url ?? photo?.url,
-    attribution: photo?.attribution,
-    licenseCode: photo?.license_code,
-  };
 }
 
 export async function fetchAllUserObservations(userLogin: string): Promise<UserObservation[]> {
@@ -204,44 +146,6 @@ export async function fetchAllUserObservations(userLogin: string): Promise<UserO
   return all;
 }
 
-export async function fetchTaxonPhoto(taxonId: number): Promise<INaturalistTaxonPhoto | null> {
-  const res = await apiFetch(`${BASE}/taxa/${taxonId}`);
-  if (!res.ok) return null;
-  const data = await res.json();
-  const taxon: INaturalistTaxonResult | undefined = data.results?.[0];
-  if (!taxon) return null;
-
-  const photo = taxon.default_photo;
-  if (!photo) return null;
-
-  return {
-    url: photo.square_url ?? photo.url,
-    mediumUrl: photo.medium_url ?? photo.url,
-    largeUrl: photo.large_url ?? photo.url,
-    attribution: photo.attribution,
-    licenseCode: photo.license_code,
-    commonName: taxon.preferred_common_name,
-    scientificName: taxon.name,
-  };
-}
-
-export async function fetchRecentObservations(
-  taxonId: number,
-  limit = 5,
-): Promise<INaturalistObservation[]> {
-  const params = new URLSearchParams({
-    taxon_id: String(taxonId),
-    per_page: String(limit),
-    order: "desc",
-    order_by: "observed_on",
-    photos: "true",
-    verifiable: "true",
-  });
-
-  const results = await fetchObservationsPage(params);
-  return results.map(mapObservation);
-}
-
 export async function fetchUserObservations(
   taxonId: number,
   userLogin: string,
@@ -262,7 +166,7 @@ export async function fetchUserObservations(
 async function fetchObservationsPage(
   params: URLSearchParams,
 ): Promise<INaturalistObservationResult[]> {
-  const res = await fetch(`${BASE}/observations?${params}`);
+  const res = await apiFetch(`${BASE}/observations?${params}`);
   if (!res.ok) return [];
   const data = await res.json();
   return data.results ?? [];

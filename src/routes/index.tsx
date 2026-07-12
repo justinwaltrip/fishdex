@@ -5,7 +5,6 @@ import {
   MapPin,
   Search,
   ExternalLink,
-  Eye,
   EyeOff,
   PanelLeftClose,
   PanelLeft,
@@ -217,30 +216,7 @@ function FishdexPage() {
     });
   }, [query, rarityFilter, groupFilter, seenFilter, sizeFilter, pokedex]);
 
-  const stats = useMemo(() => {
-    const total = pokedex.length;
-    const seen = pokedex.filter((s) => s.seen).length;
-    const byRarity: Record<string, { seen: number; total: number }> = {};
-    const matrix: Record<string, Record<string, { seen: number; total: number }>> = {};
-    for (const r of Object.keys(RARITY_META)) {
-      const all = pokedex.filter((s) => s.rarity === r);
-      byRarity[r] = { seen: all.filter((s) => s.seen).length, total: all.length };
-      matrix[r] = {};
-      for (const g of Object.keys(GROUP_LABELS)) {
-        const allRG = all.filter((s) => s.group === g);
-        matrix[r][g] = {
-          seen: allRG.filter((s) => s.seen).length,
-          total: allRG.length,
-        };
-      }
-    }
-    const byGroup: Record<string, { seen: number; total: number }> = {};
-    for (const g of Object.keys(GROUP_LABELS)) {
-      const all = pokedex.filter((s) => s.group === g);
-      byGroup[g] = { seen: all.filter((s) => s.seen).length, total: all.length };
-    }
-    return { total, seen, byRarity, byGroup, matrix };
-  }, [pokedex]);
+  const total = pokedex.length;
 
   const filteredStats = useMemo(() => {
     const m: Record<string, Record<string, { seen: number; total: number }>> = {};
@@ -301,7 +277,7 @@ function FishdexPage() {
           sidebarOpen && "ml-72",
         )}
       >
-        <PokedexHeader total={stats.total} matrix={filteredStats} />
+        <PokedexHeader total={total} matrix={filteredStats} />
 
         <main className="mx-auto w-full max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
           <p className="mt-6 font-mono text-xs uppercase tracking-widest text-muted-foreground">
