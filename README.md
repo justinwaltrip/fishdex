@@ -5,6 +5,7 @@ iNaturalist-powered dashboard for tracking Caribbean reef fish observations.
 ## Setup
 
 1. Copy `.env.example` to `.env` and set your iNaturalist username:
+
    ```bash
    cp .env.example .env
    # Edit .env to set VITE_INATURALIST_USERNAME=your_inaturalist_username
@@ -20,10 +21,10 @@ iNaturalist-powered dashboard for tracking Caribbean reef fish observations.
 
 Only **one live API call** per page load: fetching the configured user's observations. All other data is git-tracked and loaded from a static JSON file at build time.
 
-| File                              | Source                                                                                      | Live API? |
-| --------------------------------- | ------------------------------------------------------------------------------------------- | --------- |
+| File                              | Source                                                                                       | Live API? |
+| --------------------------------- | -------------------------------------------------------------------------------------------- | --------- |
 | `src/data/caribbean-species.json` | iNaturalist species_counts (research-grade, Caribbean marine species across multiple groups) | No        |
-| User observations                 | `GET /v1/observations?user_login={VITE_INATURALIST_USERNAME}`                               | Yes       |
+| User observations                 | `GET /v1/observations?user_login={VITE_INATURALIST_USERNAME}`                                | Yes       |
 
 ## Rarity
 

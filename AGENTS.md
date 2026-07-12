@@ -33,19 +33,19 @@ A Pokédex-style dashboard for Caribbean reef fish observations. Pulls live obse
 
 ## Key Files
 
-| Path                                 | Purpose                                                               |
-| ------------------------------------ | --------------------------------------------------------------------- |
-| `src/routes/index.tsx` | Main dashboard: grid, filters, species detail dialogs                 |
-| `src/routes/__root.tsx`              | Root route with HTML shell, 404, error boundaries                     |
-| `src/lib/inaturalist.ts`             | iNaturalist API client (types, fetch helpers, pagination)             |
-| `src/hooks/use-inaturalist.ts`       | React Query hooks for observed/missing species                        |
-| `src/hooks/use-observed-fish.ts`     | Legacy localStorage-based observation tracking                        |
-| `src/data/caribbean-species.json`    | Caribbean marine species with metadata                         |
-| `src/data/fishbase-sizes.json`       | Max length (cm) from FishBase scraper                                 |
-| `src/server.ts`                      | SSR entry with h3 error capture                                       |
-| `scripts/refresh-caribbean.py`       | Main data pipeline: fetches species counts from iNaturalist           |
-| `scripts/boxes.json`                 | Configurable bounding boxes (copy from `.example`)                    |
-| `vite.config.ts`                     | Vite config — do NOT add plugins manually (handled by Lovable config) |
+| Path                              | Purpose                                                               |
+| --------------------------------- | --------------------------------------------------------------------- |
+| `src/routes/index.tsx`            | Main dashboard: grid, filters, species detail dialogs                 |
+| `src/routes/__root.tsx`           | Root route with HTML shell, 404, error boundaries                     |
+| `src/lib/inaturalist.ts`          | iNaturalist API client (types, fetch helpers, pagination)             |
+| `src/hooks/use-inaturalist.ts`    | React Query hooks for observed/missing species                        |
+| `src/hooks/use-observed-fish.ts`  | Legacy localStorage-based observation tracking                        |
+| `src/data/caribbean-species.json` | Caribbean marine species with metadata                                |
+| `src/data/fishbase-sizes.json`    | Max length (cm) from FishBase scraper                                 |
+| `src/server.ts`                   | SSR entry with h3 error capture                                       |
+| `scripts/refresh-caribbean.py`    | Main data pipeline: fetches species counts from iNaturalist           |
+| `scripts/boxes.json`              | Configurable bounding boxes (copy from `.example`)                    |
+| `vite.config.ts`                  | Vite config — do NOT add plugins manually (handled by Lovable config) |
 
 ## Commands
 
