@@ -295,7 +295,12 @@ function FishdexPage() {
         onToggle={() => setSidebarOpen((o) => !o)}
       />
 
-      <div className="flex min-w-0 flex-1 flex-col">
+      <div
+        className={cn(
+          "flex min-w-0 flex-1 flex-col transition-[margin] duration-300 ease-in-out",
+          sidebarOpen && "ml-72",
+        )}
+      >
         <PokedexHeader total={stats.total} matrix={filteredStats} />
 
         <main className="mx-auto w-full max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
@@ -650,95 +655,97 @@ function FilterSidebar(props: {
   onToggle: () => void;
 }) {
   return (
-    <div className="relative z-10 flex-shrink-0 self-start">
-      <aside
+    <div className="fixed left-0 top-0 z-10 h-screen">
+      <div
         className={cn(
-          "sticky top-0 flex h-screen flex-col overflow-hidden border-r border-border/50 bg-[oklch(0.14_0.06_245)]/40 transition-[width] duration-300 ease-in-out",
-          props.open ? "w-72" : "w-0 border-r-0",
+          "h-full overflow-hidden transition-[width] duration-300 ease-in-out",
+          props.open ? "w-72" : "w-0",
         )}
       >
-        <div className="flex shrink-0 items-center border-b border-border/30 py-4 pl-4 pr-4">
-          <h2 className="whitespace-nowrap font-mono text-[11px] uppercase tracking-[0.3em] text-primary/80">
-            Filters
-          </h2>
-        </div>
-
-        <div className="flex min-w-72 flex-shrink-0 flex-1 flex-col space-y-4 overflow-y-auto px-4 py-4">
-          <div className="relative">
-            <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-            <Input
-              value={props.query}
-              onChange={(e) => props.onQuery(e.target.value)}
-              placeholder="Search species…"
-              className="h-10 border-border/60 bg-card/50 pl-9 font-mono text-sm placeholder:text-muted-foreground/60"
-            />
+        <aside className="flex h-full w-72 flex-col border-r border-border/50 bg-[oklch(0.14_0.06_245)]/40">
+          <div className="flex shrink-0 items-center border-b border-border/30 py-4 pl-4 pr-4">
+            <h2 className="whitespace-nowrap font-mono text-[11px] uppercase tracking-[0.3em] text-primary/80">
+              Filters
+            </h2>
           </div>
 
-          <div className="flex flex-col gap-2">
-            <ChipGroup
-              label="Seen"
-              value={props.seen}
-              onChange={props.onSeen}
-              options={[
-                { value: "all", label: "All" },
-                { value: "seen", label: "Seen" },
-                { value: "unseen", label: "Unseen" },
-              ]}
-            />
-          </div>
+          <div className="flex min-w-72 flex-shrink-0 flex-1 flex-col space-y-4 overflow-y-auto px-4 py-4">
+            <div className="relative">
+              <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+              <Input
+                value={props.query}
+                onChange={(e) => props.onQuery(e.target.value)}
+                placeholder="Search species…"
+                className="h-10 border-border/60 bg-card/50 pl-9 font-mono text-sm placeholder:text-muted-foreground/60"
+              />
+            </div>
 
-          <div className="flex flex-col gap-2">
-            <ChipGroup
-              label="Rarity"
-              value={props.rarity}
-              onChange={props.onRarity}
-              options={[
-                { value: "all", label: "All" },
-                ...Object.entries(RARITY_META).map(([k, m]) => ({
-                  value: k,
-                  label: m.label,
-                })),
-              ]}
-            />
-          </div>
+            <div className="flex flex-col gap-2">
+              <ChipGroup
+                label="Seen"
+                value={props.seen}
+                onChange={props.onSeen}
+                options={[
+                  { value: "all", label: "All" },
+                  { value: "seen", label: "Seen" },
+                  { value: "unseen", label: "Unseen" },
+                ]}
+              />
+            </div>
 
-          <div className="flex flex-col gap-2">
-            <ChipGroup
-              label="Group"
-              value={props.group}
-              onChange={props.onGroup}
-              options={[
-                { value: "all", label: "All" },
-                ...Object.entries(GROUP_LABELS).map(([k, label]) => ({
-                  value: k,
-                  label,
-                })),
-              ]}
-            />
-          </div>
+            <div className="flex flex-col gap-2">
+              <ChipGroup
+                label="Rarity"
+                value={props.rarity}
+                onChange={props.onRarity}
+                options={[
+                  { value: "all", label: "All" },
+                  ...Object.entries(RARITY_META).map(([k, m]) => ({
+                    value: k,
+                    label: m.label,
+                  })),
+                ]}
+              />
+            </div>
 
-          <div className="flex flex-col gap-2">
-            <ChipGroup
-              label="Size"
-              value={props.size}
-              onChange={props.onSize}
-              options={[
-                { value: "all", label: "All" },
-                ...SIZE_TIERS.map((t) => ({
-                  value: t.label,
-                  label: t.label,
-                })),
-              ]}
-            />
+            <div className="flex flex-col gap-2">
+              <ChipGroup
+                label="Group"
+                value={props.group}
+                onChange={props.onGroup}
+                options={[
+                  { value: "all", label: "All" },
+                  ...Object.entries(GROUP_LABELS).map(([k, label]) => ({
+                    value: k,
+                    label,
+                  })),
+                ]}
+              />
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <ChipGroup
+                label="Size"
+                value={props.size}
+                onChange={props.onSize}
+                options={[
+                  { value: "all", label: "All" },
+                  ...SIZE_TIERS.map((t) => ({
+                    value: t.label,
+                    label: t.label,
+                  })),
+                ]}
+              />
+            </div>
           </div>
-        </div>
-      </aside>
+        </aside>
+      </div>
 
       <button
         onClick={props.onToggle}
         className={cn(
           "absolute top-2.5 flex h-8 w-8 items-center justify-center rounded-lg border border-border/50 bg-card/80 text-muted-foreground transition-all duration-300 ease-in-out hover:border-primary/40 hover:text-primary",
-          props.open ? "right-4" : "-right-10",
+          props.open ? "right-4" : "left-2",
         )}
       >
         {props.open ? <PanelLeftClose className="h-4 w-4" /> : <PanelLeft className="h-4 w-4" />}
