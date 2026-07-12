@@ -791,7 +791,7 @@ function Fishspan({ maxLengthCm }: { maxLengthCm: number }) {
   const idx = SIZE_TIERS.indexOf(tier);
 
   return (
-    <div className="flex flex-1 items-center gap-px">
+    <div className="flex items-center gap-px">
       {SIZE_TIERS.map((_, i) => (
         <Fish
           key={i}
@@ -859,12 +859,12 @@ function PokedexCard({ entry, onOpen }: { entry: PokedexEntry; onOpen: () => voi
           {entry.scientificName}
         </p>
         {entry.maxLengthCm != null && entry.sizeTier && (
-          <div className="mt-2 flex items-end gap-1.5">
-            <span className="font-mono text-[9px] text-muted-foreground/40 leading-none pb-px tabular-nums">
-              {entry.maxLengthCm}
+<div className="mt-2 flex items-center gap-1.5">
+            <span className="font-mono text-[9px] text-muted-foreground/40 leading-none tabular-nums">
+              {entry.maxLengthCm} cm
             </span>
             <Fishspan maxLengthCm={entry.maxLengthCm} />
-            <span className="font-mono text-[9px] uppercase tracking-wider text-muted-foreground/40 leading-none pb-px">
+            <span className="font-mono text-[9px] uppercase tracking-wider text-muted-foreground/40 leading-none">
               {entry.sizeTier.label}
             </span>
           </div>
