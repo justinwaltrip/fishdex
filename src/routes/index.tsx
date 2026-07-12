@@ -1,6 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState, useCallback } from "react";
-import { Fish, MapPin, Search, ExternalLink, Eye, EyeOff } from "lucide-react";
+import {
+  Fish,
+  MapPin,
+  Search,
+  ExternalLink,
+  Eye,
+  EyeOff,
+  PanelLeftClose,
+  PanelLeft,
+} from "lucide-react";
 import fishbaseSizes from "@/data/fishbase-sizes.json";
 
 import { Input } from "@/components/ui/input";
@@ -127,6 +136,8 @@ function FishdexPage() {
   const [rarityFilter, setRarityFilter] = useState<string>("all");
   const [groupFilter, setGroupFilter] = useState<string>("all");
   const [seenFilter, setSeenFilter] = useState<string>("all");
+  const [sizeFilter, setSizeFilter] = useState<string>("all");
+  const [sidebarOpen, setSidebarOpen] = useState<boolean>(true);
   const [selectedObserved, setSelectedObserved] = useState<ObservedSpecies | null>(null);
   const [selectedMissing, setSelectedMissing] = useState<CaribbeanSpecies | null>(null);
   const [selectedDexNumber, setSelectedDexNumber] = useState<number>(0);
@@ -200,10 +211,11 @@ function FishdexPage() {
       if (groupFilter !== "all" && s.group !== groupFilter) return false;
       if (seenFilter === "seen" && !s.seen) return false;
       if (seenFilter === "unseen" && s.seen) return false;
+      if (sizeFilter !== "all" && (!s.sizeTier || s.sizeTier.label !== sizeFilter)) return false;
       if (!q) return true;
       return s.commonName.toLowerCase().includes(q) || s.scientificName.toLowerCase().includes(q);
     });
-  }, [query, rarityFilter, groupFilter, seenFilter, pokedex]);
+  }, [query, rarityFilter, groupFilter, seenFilter, sizeFilter, pokedex]);
 
   const stats = useMemo(() => {
     const total = pokedex.length;
@@ -267,44 +279,50 @@ function FishdexPage() {
   }, []);
 
   return (
-    <div className="min-h-screen">
-      <PokedexHeader total={stats.total} matrix={filteredStats} />
+    <div className="min-h-screen flex">
+      <FilterSidebar
+        query={query}
+        onQuery={setQuery}
+        rarity={rarityFilter}
+        onRarity={setRarityFilter}
+        group={groupFilter}
+        onGroup={setGroupFilter}
+        seen={seenFilter}
+        onSeen={setSeenFilter}
+        size={sizeFilter}
+        onSize={setSizeFilter}
+        open={sidebarOpen}
+        onToggle={() => setSidebarOpen((o) => !o)}
+      />
 
-      <main className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
-        <FilterBar
-          query={query}
-          onQuery={setQuery}
-          rarity={rarityFilter}
-          onRarity={setRarityFilter}
-          group={groupFilter}
-          onGroup={setGroupFilter}
-          seen={seenFilter}
-          onSeen={setSeenFilter}
-        />
+      <div className="flex min-w-0 flex-1 flex-col">
+        <PokedexHeader total={stats.total} matrix={filteredStats} />
 
-        <p className="mt-6 font-mono text-xs uppercase tracking-widest text-muted-foreground">
-          {filtered.length} of {pokedex.length} species
-        </p>
+        <main className="mx-auto w-full max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
+          <p className="mt-6 font-mono text-xs uppercase tracking-widest text-muted-foreground">
+            {filtered.length} of {pokedex.length} species
+          </p>
 
-        {isLoading ? (
-          <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {Array.from({ length: 8 }).map((_, i) => (
-              <div
-                key={i}
-                className="h-72 animate-pulse rounded-2xl border border-border/40 bg-card/40"
-              />
-            ))}
-          </div>
-        ) : filtered.length === 0 ? (
-          <EmptyState />
-        ) : (
-          <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {filtered.map((entry) => (
-              <PokedexCard key={entry.taxonId} entry={entry} onOpen={() => handleOpen(entry)} />
-            ))}
-          </div>
-        )}
-      </main>
+          {isLoading ? (
+            <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {Array.from({ length: 8 }).map((_, i) => (
+                <div
+                  key={i}
+                  className="h-72 animate-pulse rounded-2xl border border-border/40 bg-card/40"
+                />
+              ))}
+            </div>
+          ) : filtered.length === 0 ? (
+            <EmptyState />
+          ) : (
+            <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {filtered.map((entry) => (
+                <PokedexCard key={entry.taxonId} entry={entry} onOpen={() => handleOpen(entry)} />
+              ))}
+            </div>
+          )}
+        </main>
+      </div>
 
       <ObservedDetailDialog
         species={selectedObserved}
@@ -606,9 +624,7 @@ function FilteredDetailMatrix({
                     </span>
                   </div>
                 ) : (
-                  <span className="text-[10px] text-muted-foreground/30 block text-center">
-                    —
-                  </span>
+                  <span className="text-[10px] text-muted-foreground/30 block text-center">—</span>
                 )}
               </td>
             </tr>
@@ -619,7 +635,7 @@ function FilteredDetailMatrix({
   );
 }
 
-function FilterBar(props: {
+function FilterSidebar(props: {
   query: string;
   onQuery: (v: string) => void;
   rarity: string;
@@ -628,61 +644,105 @@ function FilterBar(props: {
   onGroup: (v: string) => void;
   seen: string;
   onSeen: (v: string) => void;
+  size: string;
+  onSize: (v: string) => void;
+  open: boolean;
+  onToggle: () => void;
 }) {
   return (
-    <div className="mt-8 space-y-4">
-      <div className="relative">
-        <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-        <Input
-          value={props.query}
-          onChange={(e) => props.onQuery(e.target.value)}
-          placeholder="Search Caribbean species…"
-          className="h-12 border-border/60 bg-card/50 pl-11 font-mono text-sm placeholder:text-muted-foreground/60"
-        />
-      </div>
+    <div className="relative z-10 flex-shrink-0">
+      <aside
+        className={cn(
+          "flex h-screen flex-col overflow-hidden border-r border-border/50 bg-[oklch(0.14_0.06_245)]/40 transition-[width] duration-300 ease-in-out",
+          props.open ? "w-72" : "w-0 border-r-0",
+        )}
+      >
+        <div className="flex-shrink-0 border-b border-border/30 py-4 pl-4 pr-12">
+          <h2 className="whitespace-nowrap font-mono text-[11px] uppercase tracking-[0.3em] text-primary/80">
+            Filters
+          </h2>
+        </div>
 
-      <div className="flex flex-wrap items-center gap-2">
-        <ChipGroup
-          label="Seen"
-          value={props.seen}
-          onChange={props.onSeen}
-          options={[
-            { value: "all", label: "All" },
-            { value: "seen", label: "Seen" },
-            { value: "unseen", label: "Unseen" },
-          ]}
-        />
-      </div>
+        <div className="flex min-w-72 flex-shrink-0 flex-1 flex-col space-y-4 overflow-y-auto px-4 py-4">
+          <div className="relative">
+            <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+            <Input
+              value={props.query}
+              onChange={(e) => props.onQuery(e.target.value)}
+              placeholder="Search species…"
+              className="h-10 border-border/60 bg-card/50 pl-9 font-mono text-sm placeholder:text-muted-foreground/60"
+            />
+          </div>
 
-      <div className="flex flex-wrap items-center gap-2">
-        <ChipGroup
-          label="Rarity"
-          value={props.rarity}
-          onChange={props.onRarity}
-          options={[
-            { value: "all", label: "All" },
-            ...Object.entries(RARITY_META).map(([k, m]) => ({
-              value: k,
-              label: m.label,
-            })),
-          ]}
-        />
-      </div>
+          <div className="flex flex-col gap-2">
+            <ChipGroup
+              label="Seen"
+              value={props.seen}
+              onChange={props.onSeen}
+              options={[
+                { value: "all", label: "All" },
+                { value: "seen", label: "Seen" },
+                { value: "unseen", label: "Unseen" },
+              ]}
+            />
+          </div>
 
-      <div className="flex flex-wrap items-center gap-2">
-        <ChipGroup
-          label="Group"
-          value={props.group}
-          onChange={props.onGroup}
-          options={[
-            { value: "all", label: "All" },
-            ...Object.entries(GROUP_LABELS).map(([k, label]) => ({
-              value: k,
-              label,
-            })),
-          ]}
-        />
-      </div>
+          <div className="flex flex-col gap-2">
+            <ChipGroup
+              label="Rarity"
+              value={props.rarity}
+              onChange={props.onRarity}
+              options={[
+                { value: "all", label: "All" },
+                ...Object.entries(RARITY_META).map(([k, m]) => ({
+                  value: k,
+                  label: m.label,
+                })),
+              ]}
+            />
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <ChipGroup
+              label="Group"
+              value={props.group}
+              onChange={props.onGroup}
+              options={[
+                { value: "all", label: "All" },
+                ...Object.entries(GROUP_LABELS).map(([k, label]) => ({
+                  value: k,
+                  label,
+                })),
+              ]}
+            />
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <ChipGroup
+              label="Size"
+              value={props.size}
+              onChange={props.onSize}
+              options={[
+                { value: "all", label: "All" },
+                ...SIZE_TIERS.map((t) => ({
+                  value: t.label,
+                  label: t.label,
+                })),
+              ]}
+            />
+          </div>
+        </div>
+      </aside>
+
+      <button
+        onClick={props.onToggle}
+        className={cn(
+          "absolute top-4 flex h-8 w-8 items-center justify-center rounded-lg border border-border/50 bg-card/80 text-muted-foreground transition-all duration-300 ease-in-out hover:border-primary/40 hover:text-primary",
+          props.open ? "right-2" : "-right-10",
+        )}
+      >
+        {props.open ? <PanelLeftClose className="h-4 w-4" /> : <PanelLeft className="h-4 w-4" />}
+      </button>
     </div>
   );
 }
@@ -699,7 +759,7 @@ function ChipGroup({
   options: { value: string; label: string }[];
 }) {
   return (
-    <div className="flex items-center gap-1.5">
+    <div className="flex flex-col gap-1.5">
       <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground/80">
         {label}
       </span>
@@ -735,9 +795,7 @@ function Fishspan({ maxLengthCm }: { maxLengthCm: number }) {
       {SIZE_TIERS.map((_, i) => (
         <Fish
           key={i}
-          className={cn(
-            i <= idx ? "text-muted-foreground/50" : "text-muted-foreground/10",
-          )}
+          className={cn(i <= idx ? "text-muted-foreground/50" : "text-muted-foreground/10")}
           style={{ width: `${10 + i * 3}px`, height: `${10 + i * 3}px` }}
           strokeWidth={i <= idx ? 1.5 : 2}
         />
