@@ -22,7 +22,7 @@ Only **one live API call** per page load: fetching the configured user's observa
 
 | File                              | Source                                                                                      | Live API? |
 | --------------------------------- | ------------------------------------------------------------------------------------------- | --------- |
-| `src/data/caribbean-species.json` | iNaturalist species_counts (research-grade, 1,892 Caribbean marine species across 6 groups) | No        |
+| `src/data/caribbean-species.json` | iNaturalist species_counts (research-grade, Caribbean marine species across multiple groups) | No        |
 | User observations                 | `GET /v1/observations?user_login={VITE_INATURALIST_USERNAME}`                               | Yes       |
 
 ## Rarity
@@ -44,6 +44,8 @@ python3 scripts/refresh-caribbean.py
 
 Fetches all Caribbean fish species from iNaturalist and assigns percentile-based rarity. Takes ~30 seconds.
 
+Edit `scripts/boxes.json` to customize which geographic regions are queried. Copy `scripts/boxes.example.json` to `scripts/boxes.json` to get started. Each entry needs `name`, `nelat`, `nelng`, `swlat`, `swlng`. The script merges species counts across all boxes.
+
 After running:
 
 ```bash
@@ -57,5 +59,6 @@ Run monthly to keep rarity percentiles current.
 - **`src/lib/inaturalist.ts`** — API client (types, fetch helpers)
 - **`src/hooks/use-inaturalist.ts`** — React Query hooks, loads JSON at build time
 - **`src/routes/index.tsx`** — Dashboard UI with Seen / Find tabs
-- **`src/data/caribbean-species.json`** — All 1,703 Caribbean fish species
+- **`src/data/caribbean-species.json`** — All Caribbean marine species
 - **`scripts/refresh-caribbean.py`** — Regenerate species data
+- **`scripts/boxes.json`** — Geographic bounding boxes for species queries

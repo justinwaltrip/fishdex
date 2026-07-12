@@ -42,5 +42,9 @@ devenv.local.yaml
 # direnv
 .direnv
 
+# Python
+__pycache__/
+scripts/boxes.json
+
 # pre-commit
 .pre-commit-config.yaml

@@ -2,12 +2,12 @@
 """
 Refresh caribbean-species.json from iNaturalist API.
 
-Uses four tight bounding boxes around specific dive locations:
+Bounding boxes are loaded from scripts/boxes.json (copy boxes.example.json
+to boxes.json to get started). Each entry should have:
+  name, nelat, nelng, swlat, swlng
 
-  Cozumel:       20.65°N–20.22°N, 87.07°W–86.65°W
-  Aruba:         12.87°N–12.22°N, 70.30°W–69.60°W
-  Cayman Islands: 20.00°N–19.02°N, 81.70°W–79.45°W
-  Isla Mujeres:  21.35°N–21.10°N, 86.85°W–86.65°W
+Edit boxes.json to add or remove regions. The script merges counts across
+all boxes for each species.
 
 Rarity thresholds are based on raw observation frequency:
 
@@ -19,15 +19,8 @@ Rarity thresholds are based on raw observation frequency:
 import json, urllib.request, urllib.parse, time, os
 
 OUT = os.path.join(os.path.dirname(__file__), "..", "src", "data", "caribbean-species.json")
-
-# Verified against Nominatim (OpenStreetMap) bounding boxes — each box is
-# slightly larger than the actual landmass to include surrounding reefs.
-CARIBBEAN_BOXES = [
-    {"nelat": 20.65, "nelng": -86.65, "swlat": 20.22, "swlng": -87.07},  # Cozumel
-    {"nelat": 12.87, "nelng": -69.60, "swlat": 12.22, "swlng": -70.30},  # Aruba
-    {"nelat": 20.00, "nelng": -79.45, "swlat": 19.02, "swlng": -81.70},  # Cayman Islands
-    {"nelat": 21.35, "nelng": -86.65, "swlat": 21.10, "swlng": -86.85},  # Isla Mujeres
-]
+BOXES_PATH = os.path.join(os.path.dirname(__file__), "boxes.json")
+BOXES_EXAMPLE_PATH = os.path.join(os.path.dirname(__file__), "boxes.example.json")
 
 PER_PAGE = 500
 
@@ -134,15 +127,18 @@ def assign_rarity(species_list):
 
 
 def main():
+    boxes_path = BOXES_PATH if os.path.exists(BOXES_PATH) else BOXES_EXAMPLE_PATH
+    with open(boxes_path) as f:
+        boxes = json.load(f)
+
     merged = {}
 
     for taxon_id, group, label in GROUPS:
         print(f"Fetching {label}...")
 
-        BOX_NAMES = ["Cozumel", "Aruba", "Cayman Islands", "Isla Mujeres"]
         group_species = {}
-        for i, bbox in enumerate(CARIBBEAN_BOXES):
-            print(f"  {BOX_NAMES[i]}: {bbox['swlat']}°N–{bbox['nelat']}°N, {bbox['swlng']}°W–{bbox['nelng']}°W")
+        for bbox in boxes:
+            print(f"  {bbox['name']}: {bbox['swlat']}°N–{bbox['nelat']}°N, {bbox['swlng']}°W–{bbox['nelng']}°W")
             box_result = fetch_box(taxon_id, bbox)
 
             for tid, sp in box_result.items():
