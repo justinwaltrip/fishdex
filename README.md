@@ -2,6 +2,9 @@
 
 iNaturalist-powered dashboard for tracking Caribbean reef fish observations.
 
+![Fishdex Dashboard](public/screenshot.png)
+![Fishdex Cards](public/screenshot-cards.png)
+
 ## Setup
 
 1. Copy `.env.example` to `.env` and set your iNaturalist username:
@@ -30,12 +33,12 @@ Only **one live API call** per page load: fetching the configured user's observa
 
 Rarity is based on Caribbean observation count thresholds:
 
-| Tier      | Threshold   | Description              |
-| --------- | ----------- | ------------------------ |
-| Common    | >= 500 obs  | Most frequently observed |
-| Uncommon  | >= 50 obs   | Regularly observed       |
-| Rare      | >= 5 obs    | Infrequently observed    |
-| Legendary | < 5 obs     | Very rarely observed     |
+| Tier      | Threshold  | Description              |
+| --------- | ---------- | ------------------------ |
+| Common    | >= 500 obs | Most frequently observed |
+| Uncommon  | >= 50 obs  | Regularly observed       |
+| Rare      | >= 5 obs   | Infrequently observed    |
+| Legendary | < 5 obs    | Very rarely observed     |
 
 ## Refreshing
 

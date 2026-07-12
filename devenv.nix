@@ -5,6 +5,7 @@
     pkgs.git
     pkgs.bun
     pkgs.nodejs_22
+    pkgs.chromium
   ];
 
   languages.javascript = {
