@@ -74,16 +74,15 @@ const RARITY_ORDER: Record<string, number> = {
 interface SizeTier {
   label: string;
   maxCm: number;
-  scale: number;
 }
 
 const SIZE_TIERS: SizeTier[] = [
-  { label: "XS", maxCm: 5, scale: 0.45 },
-  { label: "S", maxCm: 15, scale: 0.6 },
-  { label: "M", maxCm: 40, scale: 0.8 },
-  { label: "L", maxCm: 100, scale: 1.05 },
-  { label: "XL", maxCm: 200, scale: 1.35 },
-  { label: "XXL", maxCm: Infinity, scale: 1.7 },
+  { label: "XS", maxCm: 5 },
+  { label: "S", maxCm: 15 },
+  { label: "M", maxCm: 40 },
+  { label: "L", maxCm: 100 },
+  { label: "XL", maxCm: 200 },
+  { label: "XXL", maxCm: Infinity },
 ];
 
 function getSizeInfo(taxonId: number): { maxLengthCm: number; sizeTier: SizeTier } | null {
@@ -622,6 +621,26 @@ function ChipGroup({
   );
 }
 
+function Fishspan({ maxLengthCm }: { maxLengthCm: number }) {
+  const tier = SIZE_TIERS.find((t) => maxLengthCm < t.maxCm) ?? SIZE_TIERS[SIZE_TIERS.length - 1];
+  const idx = SIZE_TIERS.indexOf(tier);
+
+  return (
+    <div className="flex flex-1 items-center gap-px">
+      {SIZE_TIERS.map((_, i) => (
+        <Fish
+          key={i}
+          className={cn(
+            i <= idx ? "text-muted-foreground/50" : "text-muted-foreground/10",
+          )}
+          style={{ width: `${10 + i * 3}px`, height: `${10 + i * 3}px` }}
+          strokeWidth={i <= idx ? 1.5 : 2}
+        />
+      ))}
+    </div>
+  );
+}
+
 function PokedexCard({ entry, onOpen }: { entry: PokedexEntry; onOpen: () => void }) {
   const rarity = RARITY_META[entry.rarity];
 
@@ -636,20 +655,9 @@ function PokedexCard({ entry, onOpen }: { entry: PokedexEntry; onOpen: () => voi
       )}
     >
       <div className="flex items-start justify-between">
-        <div className="flex items-center gap-2">
-          <span className="rounded bg-[oklch(0.14_0.06_245)] px-2 py-0.5 font-mono text-[10px] tracking-widest text-accent/80">
-            #{String(entry.dexNumber).padStart(3, "0")}
-          </span>
-          {entry.sizeTier && (
-            <span
-              className="inline-flex items-center gap-0.5 text-muted-foreground/60"
-              title={entry.maxLengthCm != null ? `${entry.maxLengthCm} cm` : undefined}
-              style={{ transform: `scale(${entry.sizeTier.scale})`, transformOrigin: "center" }}
-            >
-              <Fish className="h-4 w-4" strokeWidth={1.5} />
-            </span>
-          )}
-        </div>
+        <span className="rounded bg-[oklch(0.14_0.06_245)] px-2 py-0.5 font-mono text-[10px] tracking-widest text-accent/80">
+          #{String(entry.dexNumber).padStart(3, "0")}
+        </span>
         <Badge className={cn("border-0 text-[10px] uppercase tracking-wider", rarity.className)}>
           {rarity.label}
         </Badge>
@@ -687,10 +695,16 @@ function PokedexCard({ entry, onOpen }: { entry: PokedexEntry; onOpen: () => voi
         <p className="mt-1 font-mono text-xs italic text-muted-foreground/80">
           {entry.scientificName}
         </p>
-        {entry.maxLengthCm != null && (
-          <p className="mt-1 font-mono text-[10px] text-muted-foreground/50 tracking-wider uppercase">
-            {entry.sizeTier?.label} — {entry.maxLengthCm} cm
-          </p>
+        {entry.maxLengthCm != null && entry.sizeTier && (
+          <div className="mt-2 flex items-end gap-1.5">
+            <span className="font-mono text-[9px] text-muted-foreground/40 leading-none pb-px tabular-nums">
+              {entry.maxLengthCm}
+            </span>
+            <Fishspan maxLengthCm={entry.maxLengthCm} />
+            <span className="font-mono text-[9px] uppercase tracking-wider text-muted-foreground/40 leading-none pb-px">
+              {entry.sizeTier.label}
+            </span>
+          </div>
         )}
       </div>
 
