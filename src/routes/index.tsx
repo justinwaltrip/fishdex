@@ -268,7 +268,7 @@ function FishdexPage() {
 
   return (
     <div className="min-h-screen">
-      <PokedexHeader stats={stats} isLoading={isLoading} />
+      <PokedexHeader total={stats.total} matrix={filteredStats} />
 
       <main className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
         <FilterBar
@@ -281,8 +281,6 @@ function FishdexPage() {
           seen={seenFilter}
           onSeen={setSeenFilter}
         />
-
-        <FilteredDetailMatrix matrix={filteredStats} />
 
         <p className="mt-6 font-mono text-xs uppercase tracking-widest text-muted-foreground">
           {filtered.length} of {pokedex.length} species
@@ -323,100 +321,32 @@ function FishdexPage() {
 }
 
 function PokedexHeader({
-  stats,
-  isLoading,
+  total,
+  matrix,
 }: {
-  stats: {
-    total: number;
-    seen: number;
-    byRarity: Record<string, { seen: number; total: number }>;
-    byGroup: Record<string, { seen: number; total: number }>;
-    matrix: Record<string, Record<string, { seen: number; total: number }>>;
-  };
-  isLoading: boolean;
+  total: number;
+  matrix: Record<string, Record<string, { seen: number; total: number }>>;
 }) {
   return (
     <header className="border-b border-border/50 bg-[oklch(0.14_0.06_245)]/60 backdrop-blur-xl">
       <div className="scanline">
-        <div className="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-8 sm:flex-row sm:items-end sm:justify-between sm:px-6 lg:px-8">
-          <div>
-            <div className="flex items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-primary/15 ring-1 ring-primary/40 animate-float">
-                <Fish className="h-6 w-6 text-primary" />
-              </div>
-              <div>
-                <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-primary/80">
-                  Caribbean · iNaturalist
-                </p>
-                <h1 className="text-3xl font-bold text-glow sm:text-4xl">Fishdex</h1>
-              </div>
+        <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-3">
+            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-primary/15 ring-1 ring-primary/40 animate-float">
+              <Fish className="h-6 w-6 text-primary" />
             </div>
-            <p className="mt-3 max-w-xl text-sm text-muted-foreground">
-              Track your Caribbean sightings — {stats.total} species, how many can you find?
-            </p>
-          </div>
-
-          <div className="rounded-xl border border-border/60 bg-card/60 p-4 card-glow sm:min-w-[320px]">
-            <div className="flex items-baseline justify-between">
-              <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-                Seen
-              </span>
-              <span className="text-2xl font-bold tabular-nums text-glow">
-                {isLoading ? "—" : stats.seen}
-                <span className="ml-1 text-base font-normal text-muted-foreground">
-                  / {isLoading ? "—" : stats.total}
-                </span>
-              </span>
-            </div>
-
-            <div className="mt-3 space-y-2">
-              {RARITIES.map((r) => {
-                const { seen, total } = stats.byRarity[r] ?? { seen: 0, total: 0 };
-                const pct = total > 0 ? (seen / total) * 100 : 0;
-                const meta = RARITY_META[r];
-                return (
-                  <div key={r} className="flex items-center gap-2">
-                    <span className="w-[5.5rem] font-mono text-[10px] text-muted-foreground">
-                      {meta.label}
-                    </span>
-                    <div className="flex-1 h-1.5 rounded-full bg-[oklch(0.14_0.06_245)] overflow-hidden">
-                      <div
-                        className="h-full rounded-full transition-all"
-                        style={{
-                          width: `${pct}%`,
-                          backgroundColor:
-                            r === "common"
-                              ? "oklch(0.72 0.04 220)"
-                              : r === "uncommon"
-                                ? "oklch(0.65 0.15 155)"
-                                : r === "rare"
-                                  ? "oklch(0.78 0.18 195)"
-                                  : "oklch(0.72 0.19 55)",
-                        }}
-                      />
-                    </div>
-                    <span className="w-12 text-right font-mono text-[10px] tabular-nums text-muted-foreground">
-                      {seen}/{total}
-                    </span>
-                  </div>
-                );
-              })}
-            </div>
-
-            <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1 border-t border-border/30 pt-3">
-              {GROUPS.map((g) => {
-                const { seen, total } = stats.byGroup[g] ?? { seen: 0, total: 0 };
-                return (
-                  <span
-                    key={g}
-                    className="font-mono text-[10px] tabular-nums text-muted-foreground"
-                  >
-                    <span className="text-foreground/70">{GROUP_LABELS[g]}</span> {seen}/{total}
-                  </span>
-                );
-              })}
+            <div>
+              <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-primary/80">
+                Caribbean · iNaturalist
+              </p>
+              <h1 className="text-3xl font-bold text-glow sm:text-4xl">Fishdex</h1>
             </div>
           </div>
+          <p className="mt-3 max-w-xl text-sm text-muted-foreground">
+            Track your Caribbean sightings — {total} species, how many can you find?
+          </p>
+
+          <FilteredDetailMatrix matrix={matrix} />
         </div>
       </div>
     </header>
@@ -428,6 +358,34 @@ function FilteredDetailMatrix({
 }: {
   matrix: Record<string, Record<string, { seen: number; total: number }>>;
 }) {
+  const rowTotals: Record<string, { seen: number; total: number }> = {};
+  for (const r of RARITIES) {
+    let seen = 0;
+    let total = 0;
+    for (const g of GROUPS) {
+      const c = matrix[r]?.[g] ?? { seen: 0, total: 0 };
+      seen += c.seen;
+      total += c.total;
+    }
+    rowTotals[r] = { seen, total };
+  }
+
+  const colTotals: Record<string, { seen: number; total: number }> = {};
+  let grandSeen = 0;
+  let grandTotal = 0;
+  for (const g of GROUPS) {
+    let seen = 0;
+    let total = 0;
+    for (const r of RARITIES) {
+      const c = matrix[r]?.[g] ?? { seen: 0, total: 0 };
+      seen += c.seen;
+      total += c.total;
+    }
+    colTotals[g] = { seen, total };
+    grandSeen += seen;
+    grandTotal += total;
+  }
+
   return (
     <div className="mt-6 rounded-2xl border border-border/50 bg-card/40 p-5">
       <p className="mb-3 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
@@ -446,68 +404,215 @@ function FilteredDetailMatrix({
                   {GROUP_ABBR[g]}
                 </th>
               ))}
+              <th className="px-2 pb-2 text-center text-[10px] font-normal text-muted-foreground">
+                Total
+              </th>
             </tr>
           </thead>
           <tbody>
-            {RARITIES.map((r) => (
-              <tr key={r} className="border-b border-border/10">
-                <td className="pr-3 py-2 text-left text-[10px] text-muted-foreground">
-                  {RARITY_META[r].label}
-                </td>
-                {GROUPS.map((g) => {
-                  const cell = matrix[r]?.[g] ?? { seen: 0, total: 0 };
-                  const pct = cell.total > 0 ? Math.round((cell.seen / cell.total) * 100) : 0;
-                  const isFull = cell.seen === cell.total && cell.total > 0;
-                  const hasSome = cell.seen > 0 && cell.total > 0;
-                  return (
-                    <td key={g} className="px-1 py-1.5">
-                      {cell.total > 0 ? (
-                        <div
+            {RARITIES.map((r) => {
+              const rt = rowTotals[r];
+              return (
+                <tr key={r} className="border-b border-border/10">
+                  <td className="pr-3 py-2 text-left text-[10px] text-muted-foreground">
+                    {RARITY_META[r].label}
+                  </td>
+                  {GROUPS.map((g) => {
+                    const cell = matrix[r]?.[g] ?? { seen: 0, total: 0 };
+                    const pct = cell.total > 0 ? Math.round((cell.seen / cell.total) * 100) : 0;
+                    const isFull = cell.seen === cell.total && cell.total > 0;
+                    const hasSome = cell.seen > 0 && cell.total > 0;
+                    return (
+                      <td key={g} className="px-1 py-1.5">
+                        {cell.total > 0 ? (
+                          <div
+                            className={cn(
+                              "flex flex-col items-center justify-center rounded-lg px-2 py-1.5 min-w-[4rem]",
+                              isFull
+                                ? "bg-accent/20 border border-accent/30 animate-pulse-glow"
+                                : hasSome
+                                  ? "bg-primary/10 border border-primary/20"
+                                  : "bg-muted/20 border border-border/10",
+                            )}
+                          >
+                            <span
+                              className={cn(
+                                "text-[10px]",
+                                isFull
+                                  ? "text-accent"
+                                  : hasSome
+                                    ? "text-primary"
+                                    : "text-muted-foreground/50",
+                              )}
+                            >
+                              {cell.seen}/{cell.total}
+                            </span>
+                            <span
+                              className={cn(
+                                "text-sm font-semibold",
+                                isFull
+                                  ? "text-accent"
+                                  : hasSome
+                                    ? "text-primary/80"
+                                    : "text-muted-foreground/40",
+                              )}
+                            >
+                              {pct}%
+                            </span>
+                          </div>
+                        ) : (
+                          <span className="text-[10px] text-muted-foreground/30 block text-center">
+                            —
+                          </span>
+                        )}
+                      </td>
+                    );
+                  })}
+                  <td className="px-1 py-1.5">
+                    {rt.total > 0 ? (
+                      <div
+                        className={cn(
+                          "flex flex-col items-center justify-center rounded-lg px-2 py-1.5 min-w-[4rem]",
+                          rt.seen === rt.total
+                            ? "bg-accent/20 border border-accent/30 animate-pulse-glow"
+                            : rt.seen > 0
+                              ? "bg-primary/10 border border-primary/20"
+                              : "bg-muted/20 border border-border/10",
+                        )}
+                      >
+                        <span
                           className={cn(
-                            "flex flex-col items-center justify-center rounded-lg px-2 py-1.5 min-w-[4rem]",
-                            isFull
-                              ? "bg-accent/20 border border-accent/30 animate-pulse-glow"
-                              : hasSome
-                                ? "bg-primary/10 border border-primary/20"
-                                : "bg-muted/20 border border-border/10",
+                            "text-[10px]",
+                            rt.seen === rt.total
+                              ? "text-accent"
+                              : rt.seen > 0
+                                ? "text-primary"
+                                : "text-muted-foreground/50",
                           )}
                         >
-                          <span
-                            className={cn(
-                              "text-[10px]",
-                              isFull
-                                ? "text-accent"
-                                : hasSome
-                                  ? "text-primary"
-                                  : "text-muted-foreground/50",
-                            )}
-                          >
-                            {cell.seen}/{cell.total}
-                          </span>
-                          <span
-                            className={cn(
-                              "text-sm font-semibold",
-                              isFull
-                                ? "text-accent"
-                                : hasSome
-                                  ? "text-primary/80"
-                                  : "text-muted-foreground/40",
-                            )}
-                          >
-                            {pct}%
-                          </span>
-                        </div>
-                      ) : (
-                        <span className="text-[10px] text-muted-foreground/30 block text-center">
-                          —
+                          {rt.seen}/{rt.total}
                         </span>
-                      )}
-                    </td>
-                  );
-                })}
-              </tr>
-            ))}
+                        <span
+                          className={cn(
+                            "text-sm font-semibold",
+                            rt.seen === rt.total
+                              ? "text-accent"
+                              : rt.seen > 0
+                                ? "text-primary/80"
+                                : "text-muted-foreground/40",
+                          )}
+                        >
+                          {Math.round((rt.seen / rt.total) * 100)}%
+                        </span>
+                      </div>
+                    ) : (
+                      <span className="text-[10px] text-muted-foreground/30 block text-center">
+                        —
+                      </span>
+                    )}
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
+          <tfoot>
+            <tr className="border-t border-border/30">
+              <td className="pr-3 py-2 text-left text-[10px] text-muted-foreground font-medium">
+                Total
+              </td>
+              {GROUPS.map((g) => {
+                const ct = colTotals[g];
+                return (
+                  <td key={g} className="px-1 py-1.5">
+                    {ct.total > 0 ? (
+                      <div
+                        className={cn(
+                          "flex flex-col items-center justify-center rounded-lg px-2 py-1.5 min-w-[4rem]",
+                          ct.seen === ct.total
+                            ? "bg-accent/20 border border-accent/30 animate-pulse-glow"
+                            : ct.seen > 0
+                              ? "bg-primary/10 border border-primary/20"
+                              : "bg-muted/20 border border-border/10",
+                        )}
+                      >
+                        <span
+                          className={cn(
+                            "text-[10px]",
+                            ct.seen === ct.total
+                              ? "text-accent"
+                              : ct.seen > 0
+                                ? "text-primary"
+                                : "text-muted-foreground/50",
+                          )}
+                        >
+                          {ct.seen}/{ct.total}
+                        </span>
+                        <span
+                          className={cn(
+                            "text-sm font-semibold",
+                            ct.seen === ct.total
+                              ? "text-accent"
+                              : ct.seen > 0
+                                ? "text-primary/80"
+                                : "text-muted-foreground/40",
+                          )}
+                        >
+                          {Math.round((ct.seen / ct.total) * 100)}%
+                        </span>
+                      </div>
+                    ) : (
+                      <span className="text-[10px] text-muted-foreground/30 block text-center">
+                        —
+                      </span>
+                    )}
+                  </td>
+                );
+              })}
+              <td className="px-1 py-1.5">
+                {grandTotal > 0 ? (
+                  <div
+                    className={cn(
+                      "flex flex-col items-center justify-center rounded-lg px-2 py-1.5 min-w-[4rem]",
+                      grandSeen === grandTotal
+                        ? "bg-accent/20 border border-accent/30 animate-pulse-glow"
+                        : grandSeen > 0
+                          ? "bg-primary/10 border border-primary/20"
+                          : "bg-muted/20 border border-border/10",
+                    )}
+                  >
+                    <span
+                      className={cn(
+                        "text-[10px]",
+                        grandSeen === grandTotal
+                          ? "text-accent"
+                          : grandSeen > 0
+                            ? "text-primary"
+                            : "text-muted-foreground/50",
+                      )}
+                    >
+                      {grandSeen}/{grandTotal}
+                    </span>
+                    <span
+                      className={cn(
+                        "text-sm font-semibold",
+                        grandSeen === grandTotal
+                          ? "text-accent"
+                          : grandSeen > 0
+                            ? "text-primary/80"
+                            : "text-muted-foreground/40",
+                      )}
+                    >
+                      {Math.round((grandSeen / grandTotal) * 100)}%
+                    </span>
+                  </div>
+                ) : (
+                  <span className="text-[10px] text-muted-foreground/30 block text-center">
+                    —
+                  </span>
+                )}
+              </td>
+            </tr>
+          </tfoot>
         </table>
       </div>
     </div>
