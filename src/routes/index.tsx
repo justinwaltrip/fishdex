@@ -650,14 +650,14 @@ function FilterSidebar(props: {
   onToggle: () => void;
 }) {
   return (
-    <div className="relative z-10 flex-shrink-0">
+    <div className="relative z-10 flex-shrink-0 self-start">
       <aside
         className={cn(
-          "flex h-screen flex-col overflow-hidden border-r border-border/50 bg-[oklch(0.14_0.06_245)]/40 transition-[width] duration-300 ease-in-out",
+          "sticky top-0 flex h-screen flex-col overflow-hidden border-r border-border/50 bg-[oklch(0.14_0.06_245)]/40 transition-[width] duration-300 ease-in-out",
           props.open ? "w-72" : "w-0 border-r-0",
         )}
       >
-        <div className="flex-shrink-0 border-b border-border/30 py-4 pl-4 pr-12">
+        <div className="flex shrink-0 items-center border-b border-border/30 py-4 pl-4 pr-4">
           <h2 className="whitespace-nowrap font-mono text-[11px] uppercase tracking-[0.3em] text-primary/80">
             Filters
           </h2>
@@ -737,8 +737,8 @@ function FilterSidebar(props: {
       <button
         onClick={props.onToggle}
         className={cn(
-          "absolute top-4 flex h-8 w-8 items-center justify-center rounded-lg border border-border/50 bg-card/80 text-muted-foreground transition-all duration-300 ease-in-out hover:border-primary/40 hover:text-primary",
-          props.open ? "right-2" : "-right-10",
+          "absolute top-2.5 flex h-8 w-8 items-center justify-center rounded-lg border border-border/50 bg-card/80 text-muted-foreground transition-all duration-300 ease-in-out hover:border-primary/40 hover:text-primary",
+          props.open ? "right-4" : "-right-10",
         )}
       >
         {props.open ? <PanelLeftClose className="h-4 w-4" /> : <PanelLeft className="h-4 w-4" />}
@@ -859,7 +859,7 @@ function PokedexCard({ entry, onOpen }: { entry: PokedexEntry; onOpen: () => voi
           {entry.scientificName}
         </p>
         {entry.maxLengthCm != null && entry.sizeTier && (
-<div className="mt-2 flex items-center gap-1.5">
+          <div className="mt-2 flex items-center gap-1.5">
             <span className="font-mono text-[9px] text-muted-foreground/40 leading-none tabular-nums">
               {entry.maxLengthCm} cm
             </span>
