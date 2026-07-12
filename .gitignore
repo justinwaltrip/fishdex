@@ -45,6 +45,7 @@ devenv.local.yaml
 # Python
 __pycache__/
 scripts/boxes.json
+scripts/fishbase-pages/
 
 # Generated data (depends on user's location config)
 src/data/caribbean-species.json

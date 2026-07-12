@@ -2,8 +2,9 @@
 """
 FishBase scraper: extract max length (cm) for Caribbean fish/elasmobranch species.
 
-- Caches results to JSON (safe to interrupt/resume)
-- Deterministic HTML regex — no fuzzy parsing
+- Caches structured results to JSON (safe to interrupt/resume)
+- Saves full HTML pages to scripts/fishbase-pages/ for future data mining
+- On re-runs, skips network fetch if cached JSON entry OR HTML file exists
 - URL pattern: https://fishbase.de/summary/{Genus}-{species}.html
 """
 import json
@@ -15,6 +16,7 @@ from pathlib import Path
 
 CARIBBEAN_JSON = Path(__file__).parent.parent / "src" / "data" / "caribbean-species.json"
 CACHE_FILE = Path(__file__).parent.parent / "src" / "data" / "fishbase-sizes.json"
+PAGES_DIR = Path(__file__).parent / "fishbase-pages"
 HEADERS = {"User-Agent": "Fishdex/1.0"}
 FISHBASE_BASE = "https://fishbase.de/summary"
 MAX_LEN_RE = re.compile(r"Max length\s*:\s*(\d+\.?\d*)\s*cm", re.IGNORECASE)
@@ -41,17 +43,35 @@ def url_for_name(name):
     return f"{FISHBASE_BASE}/{parts[0]}-{parts[1]}.html"
 
 
-def fetch_max_length(name):
+def fetch_html(name, taxon_id):
+    html_path = PAGES_DIR / f"{taxon_id}.html"
+
+    if html_path.exists():
+        with open(html_path) as f:
+            return f.read()
+
     url = url_for_name(name)
     req = urllib.request.Request(url, headers=HEADERS)
     try:
         with urllib.request.urlopen(req, timeout=15) as resp:
             html = resp.read().decode("utf-8", errors="replace")
-        match = MAX_LEN_RE.search(html)
-        if match:
-            return float(match.group(1))
     except Exception:
-        pass
+        return None
+
+    PAGES_DIR.mkdir(parents=True, exist_ok=True)
+    with open(html_path, "w") as f:
+        f.write(html)
+
+    return html
+
+
+def fetch_max_length(name, taxon_id):
+    html = fetch_html(name, taxon_id)
+    if not html:
+        return None
+    match = MAX_LEN_RE.search(html)
+    if match:
+        return float(match.group(1))
     return None
 
 
@@ -80,7 +100,7 @@ def main():
         if tid in cache:
             continue
 
-        length = fetch_max_length(name)
+        length = fetch_max_length(name, tid)
         fetched += 1
 
         if length is not None:
