@@ -108,15 +108,6 @@
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/415486737/square.jpg"
   },
   {
-    "taxonId": 133675,
-    "scientificName": "Coenobita clypeatus",
-    "commonName": "Caribbean Land Hermit Crab",
-    "caribbeanObsCount": 642,
-    "rarity": "common",
-    "group": "crustacean",
-    "photoUrl": "https://static.inaturalist.org/photos/103971475/square.jpg"
-  },
-  {
     "taxonId": 49262,
     "scientificName": "Haemulon sciurus",
     "commonName": "Bluestriped Grunt",
@@ -351,15 +342,6 @@
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/151931476/square.jpg"
   },
   {
-    "taxonId": 54952,
-    "scientificName": "Cardisoma guanhumi",
-    "commonName": "Blue Land Crab",
-    "caribbeanObsCount": 310,
-    "rarity": "uncommon",
-    "group": "crustacean",
-    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/42468932/square.jpg"
-  },
-  {
     "taxonId": 49244,
     "scientificName": "Scorpaena plumieri",
     "commonName": "Spotted Scorpionfish",
@@ -430,15 +412,6 @@
     "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/161072731/square.jpg"
-  },
-  {
-    "taxonId": 39941,
-    "scientificName": "Rhinoclemmys areolata",
-    "commonName": "Furrowed Wood Turtle",
-    "caribbeanObsCount": 262,
-    "rarity": "uncommon",
-    "group": "turtle",
-    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/2648305/square.jpg"
   },
   {
     "taxonId": 97202,
@@ -576,15 +549,6 @@
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/413518733/square.jpg"
   },
   {
-    "taxonId": 53875,
-    "scientificName": "Ocypode quadrata",
-    "commonName": "Atlantic Ghost Crab",
-    "caribbeanObsCount": 202,
-    "rarity": "uncommon",
-    "group": "crustacean",
-    "photoUrl": "https://static.inaturalist.org/photos/59799843/square.jpg"
-  },
-  {
     "taxonId": 49440,
     "scientificName": "Sepioteuthis sepioidea",
     "commonName": "Caribbean Reef Squid",
@@ -682,15 +646,6 @@
     "rarity": "uncommon",
     "group": "cephalopod",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/115230022/square.jpg"
-  },
-  {
-    "taxonId": 1632514,
-    "scientificName": "Hartnollius lateralis",
-    "commonName": "Blackback Land Crab",
-    "caribbeanObsCount": 175,
-    "rarity": "uncommon",
-    "group": "crustacean",
-    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/58786663/square.jpg"
   },
   {
     "taxonId": 121195,
@@ -882,15 +837,6 @@
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/229031504/square.jpg"
   },
   {
-    "taxonId": 114268,
-    "scientificName": "Trachemys decussata",
-    "commonName": "Cuban Slider",
-    "caribbeanObsCount": 137,
-    "rarity": "uncommon",
-    "group": "turtle",
-    "photoUrl": "https://static.inaturalist.org/photos/57336945/square.jpeg"
-  },
-  {
     "taxonId": 131523,
     "scientificName": "Kyphosus sectatrix",
     "commonName": "Bermuda Chub",
@@ -898,15 +844,6 @@
     "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/997798/square.jpg"
-  },
-  {
-    "taxonId": 39783,
-    "scientificName": "Trachemys venusta",
-    "commonName": "Mesoamerican Slider",
-    "caribbeanObsCount": 133,
-    "rarity": "uncommon",
-    "group": "turtle",
-    "photoUrl": "https://static.inaturalist.org/photos/424317276/square.jpg"
   },
   {
     "taxonId": 52460,
@@ -1107,15 +1044,6 @@
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/30510266/square.jpg"
   },
   {
-    "taxonId": 39782,
-    "scientificName": "Trachemys scripta",
-    "commonName": "Pond Slider",
-    "caribbeanObsCount": 90,
-    "rarity": "uncommon",
-    "group": "turtle",
-    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/120834277/square.jpg"
-  },
-  {
     "taxonId": 180708,
     "scientificName": "Stegastes leucostictus",
     "commonName": "Beaugregory",
@@ -1177,15 +1105,6 @@
     "rarity": "uncommon",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/573306251/square.jpg"
-  },
-  {
-    "taxonId": 135203,
-    "scientificName": "Gecarcinus ruricola",
-    "commonName": "Zombie Crab",
-    "caribbeanObsCount": 83,
-    "rarity": "uncommon",
-    "group": "crustacean",
-    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/17620366/square.jpg"
   },
   {
     "taxonId": 131514,
@@ -1447,15 +1366,6 @@
     "rarity": "uncommon",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/55128488/square.jpg"
-  },
-  {
-    "taxonId": 318102,
-    "scientificName": "Kinosternon cruentatum",
-    "commonName": "Red-cheeked Mud Turtle",
-    "caribbeanObsCount": 53,
-    "rarity": "uncommon",
-    "group": "turtle",
-    "photoUrl": "https://static.inaturalist.org/photos/455927291/square.jpg"
   },
   {
     "taxonId": 49632,
@@ -2142,15 +2052,6 @@
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/189526306/square.jpg"
   },
   {
-    "taxonId": 84965,
-    "scientificName": "Aratus pisonii",
-    "commonName": "Mangrove Tree Crab",
-    "caribbeanObsCount": 17,
-    "rarity": "rare",
-    "group": "crustacean",
-    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/58860814/square.jpg"
-  },
-  {
     "taxonId": 254657,
     "scientificName": "Aliger gallus",
     "commonName": "Rooster-tail Conch",
@@ -2203,15 +2104,6 @@
     "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/147257997/square.jpg"
-  },
-  {
-    "taxonId": 220537,
-    "scientificName": "Goniopsis cruentata",
-    "commonName": "Mangrove Root Crab",
-    "caribbeanObsCount": 16,
-    "rarity": "rare",
-    "group": "crustacean",
-    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/25864916/square.jpeg"
   },
   {
     "taxonId": 295163,
@@ -2745,15 +2637,6 @@
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/3159411/square.jpg"
   },
   {
-    "taxonId": 295346,
-    "scientificName": "Geograpsus lividus",
-    "commonName": "American Nipper",
-    "caribbeanObsCount": 9,
-    "rarity": "rare",
-    "group": "crustacean",
-    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/111393742/square.png"
-  },
-  {
     "taxonId": 859108,
     "scientificName": "Alpheus immaculatus",
     "commonName": "Spotless Snapping Shrimp",
@@ -2833,15 +2716,6 @@
     "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/341683922/square.jpeg"
-  },
-  {
-    "taxonId": 39731,
-    "scientificName": "Kinosternon leucostomum",
-    "commonName": "White-lipped Mud Turtle",
-    "caribbeanObsCount": 8,
-    "rarity": "rare",
-    "group": "turtle",
-    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/355903416/square.jpeg"
   },
   {
     "taxonId": 195179,
@@ -3040,15 +2914,6 @@
     "rarity": "rare",
     "group": "fish",
     "photoUrl": "https://static.inaturalist.org/photos/46309002/square.jpeg"
-  },
-  {
-    "taxonId": 39748,
-    "scientificName": "Kinosternon creaseri",
-    "commonName": "Creaser's Mud Turtle",
-    "caribbeanObsCount": 6,
-    "rarity": "rare",
-    "group": "turtle",
-    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/4662439/square.jpeg"
   },
   {
     "taxonId": 107677,
@@ -3636,15 +3501,6 @@
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/158453914/square.jpg"
   },
   {
-    "taxonId": 555976,
-    "scientificName": "Minuca rapax",
-    "commonName": "Mudflat Fiddler Crab",
-    "caribbeanObsCount": 3,
-    "rarity": "legendary",
-    "group": "crustacean",
-    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/226019146/square.jpg"
-  },
-  {
     "taxonId": 49504,
     "scientificName": "Callinectes sapidus",
     "commonName": "Atlantic Blue Crab",
@@ -3942,24 +3798,6 @@
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/477653797/square.jpg"
   },
   {
-    "taxonId": 539039,
-    "scientificName": "Chelonoidis carbonarius",
-    "commonName": "Red-footed Tortoise",
-    "caribbeanObsCount": 2,
-    "rarity": "legendary",
-    "group": "turtle",
-    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/14368564/square.jpeg"
-  },
-  {
-    "taxonId": 1367273,
-    "scientificName": "Trachemys callirostris",
-    "commonName": "South American slider",
-    "caribbeanObsCount": 2,
-    "rarity": "legendary",
-    "group": "turtle",
-    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/265118551/square.jpg"
-  },
-  {
     "taxonId": 143945,
     "scientificName": "Dardanus megistos",
     "commonName": "White-spotted Hermit Crab",
@@ -4120,15 +3958,6 @@
     "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/1162489/square.jpg"
-  },
-  {
-    "taxonId": 295362,
-    "scientificName": "Ucides cordatus",
-    "commonName": "Atlantic Mangrove Ghost Crab",
-    "caribbeanObsCount": 2,
-    "rarity": "legendary",
-    "group": "crustacean",
-    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/227804427/square.jpeg"
   },
   {
     "taxonId": 253668,
@@ -4923,24 +4752,6 @@
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/402952401/square.jpg"
   },
   {
-    "taxonId": 260784,
-    "scientificName": "Albunea paretii",
-    "commonName": "Beach Mole Crab",
-    "caribbeanObsCount": 1,
-    "rarity": "legendary",
-    "group": "crustacean",
-    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/49374458/square.png"
-  },
-  {
-    "taxonId": 739161,
-    "scientificName": "Leptuca leptodactyla",
-    "commonName": "Thin-fingered Fiddler Crab",
-    "caribbeanObsCount": 1,
-    "rarity": "legendary",
-    "group": "crustacean",
-    "photoUrl": "https://static.inaturalist.org/photos/320085308/square.jpg"
-  },
-  {
     "taxonId": 259860,
     "scientificName": "Ebalia cariosa",
     "commonName": "",
@@ -4966,15 +4777,6 @@
     "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/3046040/square.jpg"
-  },
-  {
-    "taxonId": 260432,
-    "scientificName": "Armases ricordi",
-    "commonName": "Humic Marsh Crab",
-    "caribbeanObsCount": 1,
-    "rarity": "legendary",
-    "group": "crustacean",
-    "photoUrl": "https://static.inaturalist.org/photos/185450805/square.jpg"
   },
   {
     "taxonId": 295254,
@@ -5040,15 +4842,6 @@
     "photoUrl": "https://static.inaturalist.org/photos/172464545/square.png"
   },
   {
-    "taxonId": 1288510,
-    "scientificName": "Hippa testudinaria",
-    "commonName": "",
-    "caribbeanObsCount": 1,
-    "rarity": "legendary",
-    "group": "crustacean",
-    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/84652442/square.jpeg"
-  },
-  {
     "taxonId": 1363103,
     "scientificName": "Tozeuma serratum",
     "commonName": "Serrate Arrow Shrimp",
@@ -5074,15 +4867,6 @@
     "rarity": "legendary",
     "group": "crustacean",
     "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/471646279/square.jpg"
-  },
-  {
-    "taxonId": 47182,
-    "scientificName": "Emerita talpoida",
-    "commonName": "Atlantic Sand Crab",
-    "caribbeanObsCount": 1,
-    "rarity": "legendary",
-    "group": "crustacean",
-    "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/4473949/square.jpeg"
   },
   {
     "taxonId": 295215,

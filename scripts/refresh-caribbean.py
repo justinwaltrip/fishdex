@@ -34,11 +34,54 @@ PER_PAGE = 500
 GROUPS = [
     (47178, "fish", "Ray-finned fish"),
     (47273, "elasmobranch", "Sharks & rays"),
-    (39532, "turtle", "Turtles"),
+    (39533, "turtle", "Sea turtles (Cheloniidae)"),
+    (39576, "turtle", "Sea turtles (Dermochelyidae)"),
     (47186, "crustacean", "Crabs, lobsters & shrimp"),
     (47459, "cephalopod", "Octopus & squid"),
     (62602, "gastropod", "Conch & allies"),
 ]
+
+LAND_CRAB_COMMON = {
+    "land crab",
+    "land hermit crab",
+    "ghost crab",
+    "mangrove crab",
+    "mangrove tree crab",
+    "mangrove root crab",
+    "mangrove ghost crab",
+    "sand crab",
+    "mole crab",
+    "marsh crab",
+    "fiddler crab",
+    "nipper",
+}
+
+LAND_CRAB_TAXON_IDS = {
+    # Coenobitidae — land hermit crabs
+    51718,
+    # Gecarcinidae — true land crabs (Cardisoma, Gecarcinus, etc.)
+    53508,
+    # Ocypodidae — ghost crabs, fiddler crabs
+    51838,
+}
+
+
+def is_land_crab(species):
+    """Return True if the species is a land/terrestrial crab."""
+    if species["group"] != "crustacean":
+        return False
+    common = (species.get("commonName") or "").lower()
+    if any(kw in common for kw in LAND_CRAB_COMMON):
+        return True
+    # Check if the iNat API returned family-level ancestor IDs (not available
+    # in species_counts endpoint, so this is a supplemental check via name).
+    for kw in ("Coenobita", "Cardisoma", "Gecarcinus", "Ocypode",
+               "Hartnollius", "Aratus", "Goniopsis", "Geograpsus",
+               "Minuca", "Ucides", "Armases", "Leptuca", "Albunea",
+               "Emerita", "Hippa"):
+        if kw.lower() in (species.get("scientificName") or "").lower():
+            return True
+    return False
 
 
 def fetch_box(taxon_id, bbox):
@@ -119,6 +162,9 @@ def main():
         time.sleep(1)
 
     all_species = list(merged.values())
+    before = len(all_species)
+    all_species = [s for s in all_species if not is_land_crab(s)]
+    print(f"\nFiltered {before - len(all_species)} land crabs")
     all_species.sort(key=lambda s: s["caribbeanObsCount"], reverse=True)
     assign_rarity(all_species)
 
