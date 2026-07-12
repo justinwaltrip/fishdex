@@ -28,14 +28,14 @@ Only **one live API call** per page load: fetching the configured user's observa
 
 ## Rarity
 
-Rarity is **percentile-based** on Caribbean observation counts — reflecting how often a species is seen in the Caribbean:
+Rarity is based on Caribbean observation count thresholds:
 
-| Tier      | Percentile | Description              |
-| --------- | ---------- | ------------------------ |
-| Common    | Top 20%    | Most frequently observed |
-| Uncommon  | 20–50%     | Regularly observed       |
-| Rare      | 50–80%     | Infrequently observed    |
-| Legendary | Bottom 20% | Very rarely observed     |
+| Tier      | Threshold   | Description              |
+| --------- | ----------- | ------------------------ |
+| Common    | >= 500 obs  | Most frequently observed |
+| Uncommon  | >= 50 obs   | Regularly observed       |
+| Rare      | >= 5 obs    | Infrequently observed    |
+| Legendary | < 5 obs     | Very rarely observed     |
 
 ## Refreshing
 
