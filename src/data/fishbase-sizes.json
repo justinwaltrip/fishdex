@@ -1,0 +1,2471 @@
+{
+  "49402": {
+    "scientificName": "Abudefduf saxatilis",
+    "commonName": "Atlantic Sergeant Major",
+    "maxLengthCm": 22.9,
+    "group": "fish"
+  },
+  "121196": {
+    "scientificName": "Acanthurus coeruleus",
+    "commonName": "Atlantic Blue Tang",
+    "maxLengthCm": 39.0,
+    "group": "fish"
+  },
+  "49257": {
+    "scientificName": "Pomacanthus paru",
+    "commonName": "French Angelfish",
+    "maxLengthCm": 41.1,
+    "group": "fish"
+  },
+  "49491": {
+    "scientificName": "Thalassoma bifasciatum",
+    "commonName": "Caribbean Bluehead Wrasse",
+    "maxLengthCm": 25.0,
+    "group": "fish"
+  },
+  "623850": {
+    "scientificName": "Hypanus americanus",
+    "commonName": "Southern Stingray",
+    "maxLengthCm": 200.0,
+    "group": "elasmobranch"
+  },
+  "47280": {
+    "scientificName": "Pterois volitans",
+    "commonName": "Common Lionfish",
+    "maxLengthCm": 45.7,
+    "group": "fish"
+  },
+  "62600": {
+    "scientificName": "Haemulon flavolineatum",
+    "commonName": "French Grunt",
+    "maxLengthCm": 30.0,
+    "group": "fish"
+  },
+  "47251": {
+    "scientificName": "Sphyraena barracuda",
+    "commonName": "Great Barracuda",
+    "maxLengthCm": 200.0,
+    "group": "fish"
+  },
+  "112867": {
+    "scientificName": "Sparisoma viride",
+    "commonName": "Stoplight Parrotfish",
+    "maxLengthCm": 64.0,
+    "group": "fish"
+  },
+  "49199": {
+    "scientificName": "Urobatis jamaicensis",
+    "commonName": "Yellow Stingray",
+    "maxLengthCm": 76.0,
+    "group": "elasmobranch"
+  },
+  "_updated": "2026-07-12T00:56:19Z",
+  "81989": {
+    "scientificName": "Lutjanus apodus",
+    "commonName": "Schoolmaster Snapper",
+    "maxLengthCm": 79.1,
+    "group": "fish"
+  },
+  "49262": {
+    "scientificName": "Haemulon sciurus",
+    "commonName": "Bluestriped Grunt",
+    "maxLengthCm": 46.0,
+    "group": "fish"
+  },
+  "577603": {
+    "scientificName": "Lactophrys triqueter",
+    "commonName": "Smooth Trunkfish",
+    "maxLengthCm": 47.0,
+    "group": "fish"
+  },
+  "82330": {
+    "scientificName": "Caranx ruber",
+    "commonName": "Bar Jack",
+    "maxLengthCm": 73.0,
+    "group": "fish"
+  },
+  "871060": {
+    "scientificName": "Acanthurus tractus",
+    "commonName": "Caribbean Ocean Surgeonfish",
+    "maxLengthCm": 38.1,
+    "group": "fish"
+  },
+  "52956": {
+    "scientificName": "Chaetodon capistratus",
+    "commonName": "Four-eyed Butterflyfish",
+    "maxLengthCm": 15.0,
+    "group": "fish"
+  },
+  "47235": {
+    "scientificName": "Holacanthus ciliaris",
+    "commonName": "Queen Angelfish",
+    "maxLengthCm": 45.0,
+    "group": "fish"
+  },
+  "49964": {
+    "scientificName": "Ginglymostoma cirratum",
+    "commonName": "Nurse Shark",
+    "maxLengthCm": 430.0,
+    "group": "elasmobranch"
+  },
+  "49272": {
+    "scientificName": "Halichoeres bivittatus",
+    "commonName": "Slippery Dick",
+    "maxLengthCm": 35.0,
+    "group": "fish"
+  },
+  "52313": {
+    "scientificName": "Diodon hystrix",
+    "commonName": "Spotted Porcupinefish",
+    "maxLengthCm": 91.0,
+    "group": "fish"
+  },
+  "47238": {
+    "scientificName": "Aulostomus maculatus",
+    "commonName": "Western Atlantic Trumpetfish",
+    "maxLengthCm": 100.0,
+    "group": "fish"
+  },
+  "49753": {
+    "scientificName": "Microspathodon chrysurus",
+    "commonName": "Yellowtail Damselfish",
+    "maxLengthCm": 21.0,
+    "group": "fish"
+  },
+  "128105": {
+    "scientificName": "Gymnothorax moringa",
+    "commonName": "Spotted Moray",
+    "maxLengthCm": 200.0,
+    "group": "fish"
+  },
+  "49946": {
+    "scientificName": "Halichoeres garnoti",
+    "commonName": "Yellowhead Wrasse",
+    "maxLengthCm": 19.3,
+    "group": "fish"
+  },
+  "120125": {
+    "scientificName": "Gymnothorax funebris",
+    "commonName": "Green Moray",
+    "maxLengthCm": 250.0,
+    "group": "fish"
+  },
+  "49427": {
+    "scientificName": "Pomacanthus arcuatus",
+    "commonName": "Grey Angelfish",
+    "maxLengthCm": 60.0,
+    "group": "fish"
+  },
+  "52464": {
+    "scientificName": "Melichthys niger",
+    "commonName": "Black Triggerfish",
+    "maxLengthCm": 50.0,
+    "group": "fish"
+  },
+  "129656": {
+    "scientificName": "Cantherhines macrocerus",
+    "commonName": "Whitespotted Filefish",
+    "maxLengthCm": 46.0,
+    "group": "fish"
+  },
+  "49625": {
+    "scientificName": "Holocentrus rufus",
+    "commonName": "Longspine Squirrelfish",
+    "maxLengthCm": 35.0,
+    "group": "fish"
+  },
+  "1315935": {
+    "scientificName": "Azurina cyanea",
+    "commonName": "Blue Chromis",
+    "maxLengthCm": 15.0,
+    "group": "fish"
+  },
+  "1315642": {
+    "scientificName": "Acanthostracion polygonium",
+    "commonName": "Honeycomb Cowfish",
+    "maxLengthCm": 50.0,
+    "group": "fish"
+  },
+  "47292": {
+    "scientificName": "Ocyurus chrysurus",
+    "commonName": "Yellowtail Snapper",
+    "maxLengthCm": 86.3,
+    "group": "fish"
+  },
+  "49244": {
+    "scientificName": "Scorpaena plumieri",
+    "commonName": "Spotted Scorpionfish",
+    "maxLengthCm": 45.0,
+    "group": "fish"
+  },
+  "104853": {
+    "scientificName": "Lutjanus analis",
+    "commonName": "Mutton Snapper",
+    "maxLengthCm": 94.0,
+    "group": "fish"
+  },
+  "131526": {
+    "scientificName": "Canthidermis sufflamen",
+    "commonName": "Oceanic Triggerfish",
+    "maxLengthCm": 65.0,
+    "group": "fish"
+  },
+  "112858": {
+    "scientificName": "Sparisoma aurofrenatum",
+    "commonName": "Redband Parrotfish",
+    "maxLengthCm": 28.0,
+    "group": "fish"
+  },
+  "96991": {
+    "scientificName": "Cephalopholis cruentata",
+    "commonName": "Graysby",
+    "maxLengthCm": 42.6,
+    "group": "fish"
+  },
+  "112864": {
+    "scientificName": "Sparisoma rubripinne",
+    "commonName": "Yellowtail Parrotfish",
+    "maxLengthCm": 47.8,
+    "group": "fish"
+  },
+  "128853": {
+    "scientificName": "Bothus lunatus",
+    "commonName": "Atlantic Peacock Flounder",
+    "maxLengthCm": 46.0,
+    "group": "fish"
+  },
+  "128857": {
+    "scientificName": "Canthigaster rostrata",
+    "commonName": "Caribbean Sharpnose Puffer",
+    "maxLengthCm": 12.0,
+    "group": "fish"
+  },
+  "97202": {
+    "scientificName": "Chaetodon striatus",
+    "commonName": "Banded Butterflyfish",
+    "maxLengthCm": 16.0,
+    "group": "fish"
+  },
+  "49498": {
+    "scientificName": "Aluterus scriptus",
+    "commonName": "Scrawled Filefish",
+    "maxLengthCm": 110.0,
+    "group": "fish"
+  },
+  "49951": {
+    "scientificName": "Haemulon plumierii",
+    "commonName": "White Grunt",
+    "maxLengthCm": 53.0,
+    "group": "fish"
+  },
+  "49297": {
+    "scientificName": "Aetobatus narinari",
+    "commonName": "Spotted Eagle Ray",
+    "maxLengthCm": 230.0,
+    "group": "elasmobranch"
+  },
+  "49273": {
+    "scientificName": "Chaetodon ocellatus",
+    "commonName": "Spotfin Butterflyfish",
+    "maxLengthCm": 20.0,
+    "group": "fish"
+  },
+  "49495": {
+    "scientificName": "Holacanthus tricolor",
+    "commonName": "Rock Beauty",
+    "maxLengthCm": 35.0,
+    "group": "fish"
+  },
+  "49942": {
+    "scientificName": "Halichoeres radiatus",
+    "commonName": "Puddingwife Wrasse",
+    "maxLengthCm": 51.0,
+    "group": "fish"
+  },
+  "49269": {
+    "scientificName": "Diodon holocanthus",
+    "commonName": "Longspined Porcupinefish",
+    "maxLengthCm": 50.0,
+    "group": "fish"
+  },
+  "102831": {
+    "scientificName": "Hippocampus reidi",
+    "commonName": "Longsnout Seahorse",
+    "maxLengthCm": 17.5,
+    "group": "fish"
+  },
+  "101420": {
+    "scientificName": "Gerres cinereus",
+    "commonName": "Yellowfin Mojarra",
+    "maxLengthCm": 41.0,
+    "group": "fish"
+  },
+  "49947": {
+    "scientificName": "Anisotremus virginicus",
+    "commonName": "Porkfish",
+    "maxLengthCm": 40.6,
+    "group": "fish"
+  },
+  "128183": {
+    "scientificName": "Stegastes partitus",
+    "commonName": "Bicolor Damselfish",
+    "maxLengthCm": 10.0,
+    "group": "fish"
+  },
+  "49746": {
+    "scientificName": "Epinephelus striatus",
+    "commonName": "Nassau Grouper",
+    "maxLengthCm": 122.0,
+    "group": "fish"
+  },
+  "49509": {
+    "scientificName": "Lutjanus griseus",
+    "commonName": "Gray Snapper",
+    "maxLengthCm": 89.0,
+    "group": "fish"
+  },
+  "112169": {
+    "scientificName": "Scarus vetula",
+    "commonName": "Queen Parrotfish",
+    "maxLengthCm": 61.0,
+    "group": "fish"
+  },
+  "120129": {
+    "scientificName": "Lactophrys bicaudalis",
+    "commonName": "Spotted Trunkfish",
+    "maxLengthCm": 48.0,
+    "group": "fish"
+  },
+  "210173": {
+    "scientificName": "Kyphosus vaigiensis",
+    "commonName": "Brassy Drummer",
+    "maxLengthCm": 70.0,
+    "group": "fish"
+  },
+  "51402": {
+    "scientificName": "Megalops atlanticus",
+    "commonName": "Atlantic Tarpon",
+    "maxLengthCm": 250.0,
+    "group": "fish"
+  },
+  "128172": {
+    "scientificName": "Mulloidichthys martinicus",
+    "commonName": "Yellow Goatfish",
+    "maxLengthCm": 44.8,
+    "group": "fish"
+  },
+  "47227": {
+    "scientificName": "Caranx latus",
+    "commonName": "Horse-eye Jack",
+    "maxLengthCm": 101.0,
+    "group": "fish"
+  },
+  "62606": {
+    "scientificName": "Malacoctenus triangulatus",
+    "commonName": "Saddled Blenny",
+    "maxLengthCm": 7.5,
+    "group": "fish"
+  },
+  "128185": {
+    "scientificName": "Stegastes diencaeus",
+    "commonName": "Longfin Damselfish",
+    "maxLengthCm": 12.5,
+    "group": "fish"
+  },
+  "121195": {
+    "scientificName": "Acanthurus chirurgus",
+    "commonName": "Doctorfish",
+    "maxLengthCm": 39.0,
+    "group": "fish"
+  },
+  "49690": {
+    "scientificName": "Scarus iseri",
+    "commonName": "Striped Parrotfish",
+    "maxLengthCm": 35.0,
+    "group": "fish"
+  },
+  "49428": {
+    "scientificName": "Bodianus rufus",
+    "commonName": "Spanish Hogfish",
+    "maxLengthCm": 40.0,
+    "group": "fish"
+  },
+  "49747": {
+    "scientificName": "Serranus tigrinus",
+    "commonName": "Harlequin Bass",
+    "maxLengthCm": 29.0,
+    "group": "fish"
+  },
+  "130054": {
+    "scientificName": "Haemulon carbonarium",
+    "commonName": "Caesar Grunt",
+    "maxLengthCm": 36.0,
+    "group": "fish"
+  },
+  "179445": {
+    "scientificName": "Trachinotus falcatus",
+    "commonName": "Permit",
+    "maxLengthCm": 122.0,
+    "group": "fish"
+  },
+  "49304": {
+    "scientificName": "Stegastes planifrons",
+    "commonName": "Threespot Damselfish",
+    "maxLengthCm": 13.0,
+    "group": "fish"
+  },
+  "1316037": {
+    "scientificName": "Eques punctatus",
+    "commonName": "Spotted Drum",
+    "maxLengthCm": 27.0,
+    "group": "fish"
+  },
+  "96993": {
+    "scientificName": "Cephalopholis fulva",
+    "commonName": "Coney",
+    "maxLengthCm": 44.0,
+    "group": "fish"
+  },
+  "49256": {
+    "scientificName": "Gymnothorax miliaris",
+    "commonName": "Goldentail Moray",
+    "maxLengthCm": 70.0,
+    "group": "fish"
+  },
+  "112166": {
+    "scientificName": "Scarus taeniopterus",
+    "commonName": "Princess Parrotfish",
+    "maxLengthCm": 35.0,
+    "group": "fish"
+  },
+  "49626": {
+    "scientificName": "Holocentrus adscensionis",
+    "commonName": "Squirrelfish",
+    "maxLengthCm": 61.0,
+    "group": "fish"
+  },
+  "131387": {
+    "scientificName": "Lutjanus mahogoni",
+    "commonName": "Mahogany Snapper",
+    "maxLengthCm": 48.0,
+    "group": "fish"
+  },
+  "131385": {
+    "scientificName": "Pseudupeneus maculatus",
+    "commonName": "Spotted Goatfish",
+    "maxLengthCm": 30.0,
+    "group": "fish"
+  },
+  "49929": {
+    "scientificName": "Sparisoma chrysopterum",
+    "commonName": "Redtail Parrotfish",
+    "maxLengthCm": 46.0,
+    "group": "fish"
+  },
+  "95066": {
+    "scientificName": "Balistes vetula",
+    "commonName": "Queen Triggerfish",
+    "maxLengthCm": 60.0,
+    "group": "fish"
+  },
+  "49432": {
+    "scientificName": "Lachnolaimus maximus",
+    "commonName": "Hogfish",
+    "maxLengthCm": 91.0,
+    "group": "fish"
+  },
+  "1439789": {
+    "scientificName": "Bodianus parrae",
+    "commonName": "Creole Wrasse",
+    "maxLengthCm": 30.0,
+    "group": "fish"
+  },
+  "49404": {
+    "scientificName": "Synodus intermedius",
+    "commonName": "Sand Diver",
+    "maxLengthCm": 46.0,
+    "group": "fish"
+  },
+  "49953": {
+    "scientificName": "Haemulon album",
+    "commonName": "White Margate",
+    "maxLengthCm": 79.0,
+    "group": "fish"
+  },
+  "131523": {
+    "scientificName": "Kyphosus sectatrix",
+    "commonName": "Bermuda Chub",
+    "maxLengthCm": 76.0,
+    "group": "fish"
+  },
+  "52460": {
+    "scientificName": "Tylosurus crocodilus",
+    "commonName": "Houndfish",
+    "maxLengthCm": 150.0,
+    "group": "fish"
+  },
+  "153471": {
+    "scientificName": "Echidna catenata",
+    "commonName": "Chain Moray",
+    "maxLengthCm": 165.0,
+    "group": "fish"
+  },
+  "188767": {
+    "scientificName": "Carcharhinus perezii",
+    "commonName": "Caribbean Reef Shark",
+    "maxLengthCm": 300.0,
+    "group": "elasmobranch"
+  },
+  "1316786": {
+    "scientificName": "Brachygenys chrysargyrea",
+    "commonName": "Smallmouth Grunt",
+    "maxLengthCm": 23.0,
+    "group": "fish"
+  },
+  "128186": {
+    "scientificName": "Gramma loreto",
+    "commonName": "Royal Gramma",
+    "maxLengthCm": 8.0,
+    "group": "fish"
+  },
+  "129665": {
+    "scientificName": "Malacanthus plumieri",
+    "commonName": "Sand Tilefish",
+    "maxLengthCm": 70.0,
+    "group": "fish"
+  },
+  "131388": {
+    "scientificName": "Haemulon melanurum",
+    "commonName": "Cottonwick",
+    "maxLengthCm": 33.0,
+    "group": "fish"
+  },
+  "112035": {
+    "scientificName": "Sanopus splendidus",
+    "commonName": "Splendid Toadfish",
+    "maxLengthCm": 24.0,
+    "group": "fish"
+  },
+  "317131": {
+    "scientificName": "Haemulon parra",
+    "commonName": "Sailor's Choice",
+    "maxLengthCm": 41.2,
+    "group": "fish"
+  },
+  "1315932": {
+    "scientificName": "Azurina multilineata",
+    "commonName": "Brown Chromis",
+    "maxLengthCm": 20.0,
+    "group": "fish"
+  },
+  "192654": {
+    "scientificName": "Acanthemblemaria spinosa",
+    "commonName": "Spinyhead Blenny",
+    "maxLengthCm": 3.1,
+    "group": "fish"
+  },
+  "112148": {
+    "scientificName": "Scarus guacamaia",
+    "commonName": "Rainbow Parrotfish",
+    "maxLengthCm": 120.0,
+    "group": "fish"
+  },
+  "49275": {
+    "scientificName": "Cantherhines pullus",
+    "commonName": "Orangespotted Filefish",
+    "maxLengthCm": 20.0,
+    "group": "fish"
+  },
+  "49925": {
+    "scientificName": "Acanthostracion quadricornis",
+    "commonName": "Scrawled Cowfish",
+    "maxLengthCm": 55.0,
+    "group": "fish"
+  },
+  "49248": {
+    "scientificName": "Myrichthys breviceps",
+    "commonName": "Sharptail Eel",
+    "maxLengthCm": 102.0,
+    "group": "fish"
+  },
+  "131510": {
+    "scientificName": "Acanthemblemaria aspera",
+    "commonName": "Roughhead Blenny",
+    "maxLengthCm": 4.0,
+    "group": "fish"
+  },
+  "1630712": null,
+  "52166": {
+    "scientificName": "Rypticus saponaceus",
+    "commonName": "Greater Soapfish",
+    "maxLengthCm": 35.0,
+    "group": "fish"
+  },
+  "130051": {
+    "scientificName": "Hypoplectrus puella",
+    "commonName": "Barred Hamlet",
+    "maxLengthCm": 15.2,
+    "group": "fish"
+  },
+  "129567": {
+    "scientificName": "Opistognathus aurifrons",
+    "commonName": "Yellowhead Jawfish",
+    "maxLengthCm": 10.0,
+    "group": "fish"
+  },
+  "180708": {
+    "scientificName": "Stegastes leucostictus",
+    "commonName": "Beaugregory",
+    "maxLengthCm": 10.0,
+    "group": "fish"
+  },
+  "64470": {
+    "scientificName": "Mycteroperca tigris",
+    "commonName": "Tiger Grouper",
+    "maxLengthCm": 101.0,
+    "group": "fish"
+  },
+  "1316792": {
+    "scientificName": "Caranx bartholomaei",
+    "commonName": "Yellow Jack",
+    "maxLengthCm": 100.0,
+    "group": "fish"
+  },
+  "52293": {
+    "scientificName": "Pareques acuminatus",
+    "commonName": "Highhat",
+    "maxLengthCm": 23.0,
+    "group": "fish"
+  },
+  "47761": {
+    "scientificName": "Mycteroperca bonaci",
+    "commonName": "Black Grouper",
+    "maxLengthCm": 150.0,
+    "group": "fish"
+  },
+  "131514": {
+    "scientificName": "Monacanthus tuckeri",
+    "commonName": "Slender Filefish",
+    "maxLengthCm": 10.0,
+    "group": "fish"
+  },
+  "131509": {
+    "scientificName": "Emblemaria pandionis",
+    "commonName": "Sailfin Blenny",
+    "maxLengthCm": 6.0,
+    "group": "fish"
+  },
+  "55016": {
+    "scientificName": "Dactylopterus volitans",
+    "commonName": "Flying Gurnard",
+    "maxLengthCm": 50.0,
+    "group": "fish"
+  },
+  "49950": {
+    "scientificName": "Haemulon aurolineatum",
+    "commonName": "Tomtate",
+    "maxLengthCm": 28.0,
+    "group": "fish"
+  },
+  "182608": {
+    "scientificName": "Lutjanus jocu",
+    "commonName": "Dog Snapper",
+    "maxLengthCm": 128.0,
+    "group": "fish"
+  },
+  "498400": {
+    "scientificName": "Elacatinus cayman",
+    "commonName": "Cayman Cleaner Goby",
+    "maxLengthCm": 2.3,
+    "group": "fish"
+  },
+  "52188": null,
+  "131484": {
+    "scientificName": "Serranus tabacarius",
+    "commonName": "Tobaccofish",
+    "maxLengthCm": 22.0,
+    "group": "fish"
+  },
+  "49923": {
+    "scientificName": "Stegastes adustus",
+    "commonName": "Dusky Damselfish",
+    "maxLengthCm": 15.0,
+    "group": "fish"
+  },
+  "131518": {
+    "scientificName": "Xanthichthys ringens",
+    "commonName": "Sargassum Triggerfish",
+    "maxLengthCm": 25.0,
+    "group": "fish"
+  },
+  "96740": {
+    "scientificName": "Caranx crysos",
+    "commonName": "Blue Runner",
+    "maxLengthCm": 70.0,
+    "group": "fish"
+  },
+  "114269": {
+    "scientificName": "Trachinotus goodei",
+    "commonName": "Palometa",
+    "maxLengthCm": 50.0,
+    "group": "fish"
+  },
+  "49300": {
+    "scientificName": "Pempheris schomburgkii",
+    "commonName": "Glassy Sweeper",
+    "maxLengthCm": 15.0,
+    "group": "fish"
+  },
+  "115194": {
+    "scientificName": "Xyrichtys splendens",
+    "commonName": "Green Razorfish",
+    "maxLengthCm": 17.5,
+    "group": "fish"
+  },
+  "49617": {
+    "scientificName": "Scomberomorus regalis",
+    "commonName": "Cero",
+    "maxLengthCm": 183.0,
+    "group": "fish"
+  },
+  "130053": {
+    "scientificName": "Ophioblennius macclurei",
+    "commonName": "Caribbean Redlip Blenny",
+    "maxLengthCm": 12.2,
+    "group": "fish"
+  },
+  "57338": {
+    "scientificName": "Abudefduf taurus",
+    "commonName": "Night Sergeant",
+    "maxLengthCm": 25.0,
+    "group": "fish"
+  },
+  "63415": {
+    "scientificName": "Heteropriacanthus cruentatus",
+    "commonName": "Glasseye",
+    "maxLengthCm": 50.7,
+    "group": "fish"
+  },
+  "131500": {
+    "scientificName": "Gnatholepis thompsoni",
+    "commonName": "Goldspot Goby",
+    "maxLengthCm": 8.2,
+    "group": "fish"
+  },
+  "102053": {
+    "scientificName": "Halichoeres maculipinna",
+    "commonName": "Clown Wrasse",
+    "maxLengthCm": 18.0,
+    "group": "fish"
+  },
+  "49265": {
+    "scientificName": "Sphoeroides spengleri",
+    "commonName": "Bandtail Puffer",
+    "maxLengthCm": 30.0,
+    "group": "fish"
+  },
+  "131513": {
+    "scientificName": "Lactophrys trigonus",
+    "commonName": "Buffalo Trunkfish",
+    "maxLengthCm": 55.0,
+    "group": "fish"
+  },
+  "131483": {
+    "scientificName": "Serranus tortugarum",
+    "commonName": "Chalk Bass",
+    "maxLengthCm": 8.0,
+    "group": "fish"
+  },
+  "48844": {
+    "scientificName": "Echeneis naucrates",
+    "commonName": "Sharksucker",
+    "maxLengthCm": 110.0,
+    "group": "fish"
+  },
+  "49624": {
+    "scientificName": "Myripristis jacobus",
+    "commonName": "Blackbar Soldierfish",
+    "maxLengthCm": 25.0,
+    "group": "fish"
+  },
+  "49632": {
+    "scientificName": "Holacanthus bermudensis",
+    "commonName": "Blue Angelfish",
+    "maxLengthCm": 45.0,
+    "group": "fish"
+  },
+  "51356": {
+    "scientificName": "Kyphosus cinerascens",
+    "commonName": "Highfin Chub",
+    "maxLengthCm": 53.0,
+    "group": "fish"
+  },
+  "127706": {
+    "scientificName": "Heteroconger longissimus",
+    "commonName": "Brown Garden Eel",
+    "maxLengthCm": 51.0,
+    "group": "fish"
+  },
+  "115185": {
+    "scientificName": "Xyrichtys martinicensis",
+    "commonName": "Rosy Razorfish",
+    "maxLengthCm": 19.3,
+    "group": "fish"
+  },
+  "129563": {
+    "scientificName": "Calamus bajonado",
+    "commonName": "Jolthead Porgy",
+    "maxLengthCm": 76.0,
+    "group": "fish"
+  },
+  "100104": {
+    "scientificName": "Epinephelus guttatus",
+    "commonName": "Red Hind",
+    "maxLengthCm": 76.0,
+    "group": "fish"
+  },
+  "883882": {
+    "scientificName": "Styracura schmardae",
+    "commonName": "Caribbean Whiptail Stingray",
+    "maxLengthCm": 200.0,
+    "group": "elasmobranch"
+  },
+  "112135": {
+    "scientificName": "Scarus coelestinus",
+    "commonName": "Midnight Parrotfish",
+    "maxLengthCm": 77.0,
+    "group": "fish"
+  },
+  "317382": {
+    "scientificName": "Sphoeroides testudineus",
+    "commonName": "Checkered Puffer",
+    "maxLengthCm": 38.8,
+    "group": "fish"
+  },
+  "445753": {
+    "scientificName": "Chaenopsis limbaughi",
+    "commonName": "Yellowface Pikeblenny",
+    "maxLengthCm": 8.5,
+    "group": "fish"
+  },
+  "130052": {
+    "scientificName": "Hypoplectrus unicolor",
+    "commonName": "Butter Hamlet",
+    "maxLengthCm": 12.7,
+    "group": "fish"
+  },
+  "623746": {
+    "scientificName": "Mayaheros urophthalmus",
+    "commonName": "Mayan Cichlid",
+    "maxLengthCm": 39.4,
+    "group": "fish"
+  },
+  "131530": {
+    "scientificName": "Lutjanus synagris",
+    "commonName": "Lane Snapper",
+    "maxLengthCm": 60.0,
+    "group": "fish"
+  },
+  "52296": {
+    "scientificName": "Anisotremus surinamensis",
+    "commonName": "Black Margate",
+    "maxLengthCm": 76.0,
+    "group": "fish"
+  },
+  "131487": {
+    "scientificName": "Apogon maculatus",
+    "commonName": "Flamefish",
+    "maxLengthCm": 11.1,
+    "group": "fish"
+  },
+  "619700": {
+    "scientificName": "Stegastes xanthurus",
+    "commonName": "Caribbean Cocoa Damselfish",
+    "maxLengthCm": 7.4,
+    "group": "fish"
+  },
+  "63418": {
+    "scientificName": "Lutjanus cyanopterus",
+    "commonName": "Cubera Snapper",
+    "maxLengthCm": 160.0,
+    "group": "fish"
+  },
+  "112136": {
+    "scientificName": "Scarus coeruleus",
+    "commonName": "Blue Parrotfish",
+    "maxLengthCm": 120.0,
+    "group": "fish"
+  },
+  "64476": {
+    "scientificName": "Mycteroperca venenosa",
+    "commonName": "Yellowfin Grouper",
+    "maxLengthCm": 100.0,
+    "group": "fish"
+  },
+  "131522": {
+    "scientificName": "Amblycirrhitus pinos",
+    "commonName": "Redspotted Hawkfish",
+    "maxLengthCm": 9.5,
+    "group": "fish"
+  },
+  "614971": {
+    "scientificName": "Tigrigobius dilepis",
+    "commonName": "Orangesided Goby",
+    "maxLengthCm": 2.5,
+    "group": "fish"
+  },
+  "84996": {
+    "scientificName": "Carcharhinus leucas",
+    "commonName": "Bull Shark",
+    "maxLengthCm": 360.0,
+    "group": "elasmobranch"
+  },
+  "98553": {
+    "scientificName": "Cosmocampus elucens",
+    "commonName": "Shortfin Pipefish",
+    "maxLengthCm": 15.3,
+    "group": "fish"
+  },
+  "112857": {
+    "scientificName": "Sparisoma atomarium",
+    "commonName": "Greenblotch Parrotfish",
+    "maxLengthCm": 25.0,
+    "group": "fish"
+  },
+  "131389": {
+    "scientificName": "Serranus baldwini",
+    "commonName": "Lantern Bass",
+    "maxLengthCm": 12.0,
+    "group": "fish"
+  },
+  "317005": {
+    "scientificName": "Bothus maculiferus",
+    "commonName": "Mottled Flounder",
+    "maxLengthCm": 25.0,
+    "group": "fish"
+  },
+  "128191": {
+    "scientificName": "Neoniphon marianus",
+    "commonName": "Caribbean Longjaw Squirrelfish",
+    "maxLengthCm": 18.0,
+    "group": "fish"
+  },
+  "103146": null,
+  "106603": {
+    "scientificName": "Narcine bancroftii",
+    "commonName": "Caribbean Electric Ray",
+    "maxLengthCm": 65.0,
+    "group": "elasmobranch"
+  },
+  "49316": {
+    "scientificName": "Chaetodipterus faber",
+    "commonName": "Atlantic Spadefish",
+    "maxLengthCm": 91.0,
+    "group": "fish"
+  },
+  "621421": {
+    "scientificName": "Amphelikturus dendriticus",
+    "commonName": "Pipehorse",
+    "maxLengthCm": 7.5,
+    "group": "fish"
+  },
+  "63718": {
+    "scientificName": "Albula vulpes",
+    "commonName": "Common Bonefish",
+    "maxLengthCm": 104.0,
+    "group": "fish"
+  },
+  "180709": {
+    "scientificName": "Hypoplectrus indigo",
+    "commonName": "Indigo Hamlet",
+    "maxLengthCm": 14.3,
+    "group": "fish"
+  },
+  "499293": {
+    "scientificName": "Tigrigobius harveyi",
+    "commonName": "Cayman greenbanded goby",
+    "maxLengthCm": 2.1,
+    "group": "fish"
+  },
+  "107889": {
+    "scientificName": "Oreochromis mossambicus",
+    "commonName": "Mozambique Tilapia",
+    "maxLengthCm": 39.0,
+    "group": "fish"
+  },
+  "102041": {
+    "scientificName": "Halichoeres cyanocephalus",
+    "commonName": "Yellowcheek Wrasse",
+    "maxLengthCm": 30.0,
+    "group": "fish"
+  },
+  "49606": {
+    "scientificName": "Balistes capriscus",
+    "commonName": "Grey Triggerfish",
+    "maxLengthCm": 66.0,
+    "group": "fish"
+  },
+  "180710": {
+    "scientificName": "Hypoplectrus guttavarius",
+    "commonName": "Shy Hamlet",
+    "maxLengthCm": 13.0,
+    "group": "fish"
+  },
+  "98531": {
+    "scientificName": "Coryphaena hippurus",
+    "commonName": "Common Dolphinfish",
+    "maxLengthCm": 210.0,
+    "group": "fish"
+  },
+  "120614": {
+    "scientificName": "Euthynnus alletteratus",
+    "commonName": "Little Tunny",
+    "maxLengthCm": 122.0,
+    "group": "fish"
+  },
+  "500328": {
+    "scientificName": "Coryphopterus venezuelae",
+    "commonName": "Sand-canyon Goby",
+    "maxLengthCm": 7.5,
+    "group": "fish"
+  },
+  "105114": {
+    "scientificName": "Malacoctenus macropus",
+    "commonName": "Rosy Blenny",
+    "maxLengthCm": 5.5,
+    "group": "fish"
+  },
+  "131512": {
+    "scientificName": "Chilomycterus antillarum",
+    "commonName": "Web Burrfish",
+    "maxLengthCm": 30.0,
+    "group": "fish"
+  },
+  "96936": {
+    "scientificName": "Centropyge argi",
+    "commonName": "Cherubfish",
+    "maxLengthCm": 8.0,
+    "group": "fish"
+  },
+  "131395": {
+    "scientificName": "Enchelycore nigricans",
+    "commonName": "Viper Moray",
+    "maxLengthCm": 100.0,
+    "group": "fish"
+  },
+  "128199": {
+    "scientificName": "Apogon townsendi",
+    "commonName": "Belted Cardinalfish",
+    "maxLengthCm": 6.5,
+    "group": "fish"
+  },
+  "131525": {
+    "scientificName": "Calamus calamus",
+    "commonName": "Saucereye Porgy",
+    "maxLengthCm": 56.0,
+    "group": "fish"
+  },
+  "317092": {
+    "scientificName": "Entomacrodus nigricans",
+    "commonName": "Pearl Blenny",
+    "maxLengthCm": 10.0,
+    "group": "fish"
+  },
+  "498406": {
+    "scientificName": "Elacatinus centralis",
+    "commonName": "Cayman Sponge Goby",
+    "maxLengthCm": 3.8,
+    "group": "fish"
+  },
+  "110594": {
+    "scientificName": "Prognathodes aculeatus",
+    "commonName": "Longsnout Butterflyfish",
+    "maxLengthCm": 10.0,
+    "group": "fish"
+  },
+  "51549": {
+    "scientificName": "Seriola dumerili",
+    "commonName": "Greater Amberjack",
+    "maxLengthCm": 190.0,
+    "group": "fish"
+  },
+  "317206": {
+    "scientificName": "Malacoctenus aurolineatus",
+    "commonName": "Goldline Blenny",
+    "maxLengthCm": 6.0,
+    "group": "fish"
+  },
+  "131402": {
+    "scientificName": "Myrichthys ocellatus",
+    "commonName": "Goldspotted Eel",
+    "maxLengthCm": 110.0,
+    "group": "fish"
+  },
+  "316925": {
+    "scientificName": "Acyrtops beryllinus",
+    "commonName": "Emerald Clingfish",
+    "maxLengthCm": 2.5,
+    "group": "fish"
+  },
+  "106650": {
+    "scientificName": "Negaprion brevirostris",
+    "commonName": "Lemon Shark",
+    "maxLengthCm": 340.0,
+    "group": "elasmobranch"
+  },
+  "147106": {
+    "scientificName": "Chromis insolata",
+    "commonName": "Sunshinefish",
+    "maxLengthCm": 16.0,
+    "group": "fish"
+  },
+  "47230": {
+    "scientificName": "Caranx hippos",
+    "commonName": "Atlantic Crevalle Jack",
+    "maxLengthCm": 124.0,
+    "group": "fish"
+  },
+  "69775": {
+    "scientificName": "Caranx lugubris",
+    "commonName": "Black Trevally",
+    "maxLengthCm": 100.0,
+    "group": "fish"
+  },
+  "179896": {
+    "scientificName": "Gramma melacara",
+    "commonName": "Blackcap Basslet",
+    "maxLengthCm": 10.0,
+    "group": "fish"
+  },
+  "131531": {
+    "scientificName": "Lutjanus buccanella",
+    "commonName": "Blackfin Snapper",
+    "maxLengthCm": 75.0,
+    "group": "fish"
+  },
+  "64466": {
+    "scientificName": "Mycteroperca interstitialis",
+    "commonName": "Yellowmouth Grouper",
+    "maxLengthCm": 84.0,
+    "group": "fish"
+  },
+  "128157": {
+    "scientificName": "Antennarius pauciradiatus",
+    "commonName": "Dwarf Frogfish",
+    "maxLengthCm": 6.3,
+    "group": "fish"
+  },
+  "85249": {
+    "scientificName": "Scorpaena inermis",
+    "commonName": "Mushroom Scorpionfish",
+    "maxLengthCm": 11.0,
+    "group": "fish"
+  },
+  "194209": {
+    "scientificName": "Poecilia velifera",
+    "commonName": "Yucat\u00e1n Molly",
+    "maxLengthCm": 15.0,
+    "group": "fish"
+  },
+  "127142": {
+    "scientificName": "Gymnothorax vicinus",
+    "commonName": "Purplemouth Moray",
+    "maxLengthCm": 132.0,
+    "group": "fish"
+  },
+  "131506": {
+    "scientificName": "Coryphopterus eidolon",
+    "commonName": "Pallid Goby",
+    "maxLengthCm": 6.0,
+    "group": "fish"
+  },
+  "131521": {
+    "scientificName": "Bothus ocellatus",
+    "commonName": "Eyed Flounder",
+    "maxLengthCm": 18.0,
+    "group": "fish"
+  },
+  "317111": {
+    "scientificName": "Gambusia yucatana",
+    "commonName": "Yucatan Gambusia",
+    "maxLengthCm": 5.5,
+    "group": "fish"
+  },
+  "56766": {
+    "scientificName": "Sphyrna mokarran",
+    "commonName": "Great Hammerhead",
+    "maxLengthCm": 610.0,
+    "group": "elasmobranch"
+  },
+  "193885": {
+    "scientificName": "Elacatinus illecebrosus",
+    "commonName": "Barsnout Goby",
+    "maxLengthCm": 4.0,
+    "group": "fish"
+  },
+  "131507": {
+    "scientificName": "Coryphopterus dicrus",
+    "commonName": "Colon Goby",
+    "maxLengthCm": 5.0,
+    "group": "fish"
+  },
+  "179467": {
+    "scientificName": "Strongylura notata",
+    "commonName": "Redfin Needlefish",
+    "maxLengthCm": 61.0,
+    "group": "fish"
+  },
+  "131494": {
+    "scientificName": "Astrapogon puncticulatus",
+    "commonName": "Blackfin Cardinalfish",
+    "maxLengthCm": 8.0,
+    "group": "fish"
+  },
+  "107717": {
+    "scientificName": "Opistognathus maxillosus",
+    "commonName": "Mottled Jawfish",
+    "maxLengthCm": 13.0,
+    "group": "fish"
+  },
+  "317428": {
+    "scientificName": "Tomicodon rupestris",
+    "commonName": "Surge Clingfish",
+    "maxLengthCm": 2.7,
+    "group": "fish"
+  },
+  "52295": {
+    "scientificName": "Haemulon macrostoma",
+    "commonName": "Spanish Grunt",
+    "maxLengthCm": 43.0,
+    "group": "fish"
+  },
+  "1316038": {
+    "scientificName": "Eques lanceolatus",
+    "commonName": "Jackknife Fish",
+    "maxLengthCm": 25.0,
+    "group": "fish"
+  },
+  "131428": {
+    "scientificName": "Synodus synodus",
+    "commonName": "Red Lizardfish",
+    "maxLengthCm": 43.0,
+    "group": "fish"
+  },
+  "131475": {
+    "scientificName": "Hypoplectrus nigricans",
+    "commonName": "Black Hamlet",
+    "maxLengthCm": 15.2,
+    "group": "fish"
+  },
+  "179427": {
+    "scientificName": "Aluterus schoepfii",
+    "commonName": "Orange Filefish",
+    "maxLengthCm": 61.0,
+    "group": "fish"
+  },
+  "147135": {
+    "scientificName": "Lucayablennius zingaro",
+    "commonName": "Arrow Blenny",
+    "maxLengthCm": 5.0,
+    "group": "fish"
+  },
+  "112863": {
+    "scientificName": "Sparisoma radians",
+    "commonName": "Bucktooth Parrotfish",
+    "maxLengthCm": 20.0,
+    "group": "fish"
+  },
+  "179572": {
+    "scientificName": "Hemiramphus brasiliensis",
+    "commonName": "Ballyhoo",
+    "maxLengthCm": 55.0,
+    "group": "fish"
+  },
+  "179595": {
+    "scientificName": "Floridichthys polyommus",
+    "commonName": "Ocellated Killifish",
+    "maxLengthCm": 19.5,
+    "group": "fish"
+  },
+  "614339": {
+    "scientificName": "Bathygobius antilliensis",
+    "commonName": "Antilles Frillfin",
+    "maxLengthCm": 9.4,
+    "group": "fish"
+  },
+  "47242": {
+    "scientificName": "Fistularia tabacaria",
+    "commonName": "Atlantic Bluespotted Cornetfish",
+    "maxLengthCm": 200.0,
+    "group": "fish"
+  },
+  "131496": {
+    "scientificName": "Priolepis hipoliti",
+    "commonName": "Rusty Goby",
+    "maxLengthCm": 4.6,
+    "group": "fish"
+  },
+  "317161": {
+    "scientificName": "Hypoplectrus aberrans",
+    "commonName": "Yellowbelly Hamlet",
+    "maxLengthCm": 13.0,
+    "group": "fish"
+  },
+  "147120": {
+    "scientificName": "Gobiesox punctulatus",
+    "commonName": "Stippled Clingfish",
+    "maxLengthCm": 6.3,
+    "group": "fish"
+  },
+  "1635826": {
+    "scientificName": "Mobula yarae",
+    "commonName": "Atlantic manta ray",
+    "maxLengthCm": 24.8,
+    "group": "elasmobranch"
+  },
+  "96458": {
+    "scientificName": "Callionymus bairdi",
+    "commonName": "Lancer Dragonet",
+    "maxLengthCm": 11.4,
+    "group": "fish"
+  },
+  "317134": {
+    "scientificName": "Harengula humeralis",
+    "commonName": "Redear Herring",
+    "maxLengthCm": 22.0,
+    "group": "fish"
+  },
+  "1316822": {
+    "scientificName": "Halicampus crinitus",
+    "commonName": "Harlequin Pipefish",
+    "maxLengthCm": 15.0,
+    "group": "fish"
+  },
+  "122033": {
+    "scientificName": "Elagatis bipinnulata",
+    "commonName": "Rainbow Runner",
+    "maxLengthCm": 180.0,
+    "group": "fish"
+  },
+  "495478": {
+    "scientificName": "Haemulon vittatum",
+    "commonName": "Boga",
+    "maxLengthCm": 23.0,
+    "group": "fish"
+  },
+  "179865": {
+    "scientificName": "Acanthemblemaria maria",
+    "commonName": "Secretary Blenny",
+    "maxLengthCm": 5.1,
+    "group": "fish"
+  },
+  "619543": {
+    "scientificName": "Poecilia vandepolli",
+    "commonName": "Vandepoll's Molly",
+    "maxLengthCm": 4.5,
+    "group": "fish"
+  },
+  "196857": {
+    "scientificName": "Chilomycterus antennatus",
+    "commonName": "Bridled Burrfish",
+    "maxLengthCm": 38.0,
+    "group": "fish"
+  },
+  "445925": {
+    "scientificName": "Emblemariopsis leptocirris",
+    "commonName": "Blackfin Glass Blenny",
+    "maxLengthCm": 2.2,
+    "group": "fish"
+  },
+  "446049": {
+    "scientificName": "Gobioclinus gobio",
+    "commonName": "Palehead Blenny",
+    "maxLengthCm": 6.5,
+    "group": "fish"
+  },
+  "179526": {
+    "scientificName": "Ogcocephalus cubifrons",
+    "commonName": "Polka-dot Batfish",
+    "maxLengthCm": 38.0,
+    "group": "fish"
+  },
+  "49437": {
+    "scientificName": "Centropomus undecimalis",
+    "commonName": "Common Snook",
+    "maxLengthCm": 140.0,
+    "group": "fish"
+  },
+  "127711": {
+    "scientificName": "Histrio histrio",
+    "commonName": "Sargassumfish",
+    "maxLengthCm": 20.0,
+    "group": "fish"
+  },
+  "49927": {
+    "scientificName": "Chilomycterus reticulatus",
+    "commonName": "Spotfin Burrfish",
+    "maxLengthCm": 69.7,
+    "group": "fish"
+  },
+  "1630713": null,
+  "113308": {
+    "scientificName": "Strongylura marina",
+    "commonName": "Atlantic Needlefish",
+    "maxLengthCm": 111.0,
+    "group": "fish"
+  },
+  "445928": {
+    "scientificName": "Emblemariopsis ruetzleri",
+    "commonName": "Bluegold Glass Blenny",
+    "maxLengthCm": 2.0,
+    "group": "fish"
+  },
+  "619439": {
+    "scientificName": "Gambusia xanthosoma",
+    "commonName": "Cayman gambusia",
+    "maxLengthCm": 3.4,
+    "group": "fish"
+  },
+  "98731": {
+    "scientificName": "Cryptotomus roseus",
+    "commonName": "Bluelip Parrotfish",
+    "maxLengthCm": 13.0,
+    "group": "fish"
+  },
+  "131505": {
+    "scientificName": "Coryphopterus personatus",
+    "commonName": "Masked Goby",
+    "maxLengthCm": 4.0,
+    "group": "fish"
+  },
+  "133990": {
+    "scientificName": "Echeneis neucratoides",
+    "commonName": "Whitefin Sharksucker",
+    "maxLengthCm": 75.0,
+    "group": "fish"
+  },
+  "317207": {
+    "scientificName": "Malacoctenus erdmani",
+    "commonName": "Imitator Blenny",
+    "maxLengthCm": 3.8,
+    "group": "fish"
+  },
+  "100110": {
+    "scientificName": "Epinephelus itajara",
+    "commonName": "Atlantic Goliath Grouper",
+    "maxLengthCm": 250.0,
+    "group": "fish"
+  },
+  "179661": {
+    "scientificName": "Eugerres plumieri",
+    "commonName": "Striped Mojarra",
+    "maxLengthCm": 40.0,
+    "group": "fish"
+  },
+  "102072": {
+    "scientificName": "Halichoeres pictus",
+    "commonName": "Rainbow Wrasse",
+    "maxLengthCm": 13.0,
+    "group": "fish"
+  },
+  "47252": {
+    "scientificName": "Sphyraena borealis",
+    "commonName": "Northern Sennet",
+    "maxLengthCm": 47.5,
+    "group": "fish"
+  },
+  "120694": {
+    "scientificName": "Lobotes surinamensis",
+    "commonName": "Atlantic Tripletail",
+    "maxLengthCm": 110.0,
+    "group": "fish"
+  },
+  "128893": {
+    "scientificName": "Elacatinus horsti",
+    "commonName": "Yellowline Goby",
+    "maxLengthCm": 5.0,
+    "group": "fish"
+  },
+  "94800": {
+    "scientificName": "Atherinomorus stipes",
+    "commonName": "Hardhead Silverside",
+    "maxLengthCm": 10.0,
+    "group": "fish"
+  },
+  "179551": {
+    "scientificName": "Labrisomus nuchipinnis",
+    "commonName": "Hairy Blenny",
+    "maxLengthCm": 23.0,
+    "group": "fish"
+  },
+  "114123": {
+    "scientificName": "Thunnus atlanticus",
+    "commonName": "Blackfin Tuna",
+    "maxLengthCm": 108.0,
+    "group": "fish"
+  },
+  "98541": {
+    "scientificName": "Coryphopterus hyalinus",
+    "commonName": "Glass Goby",
+    "maxLengthCm": 2.5,
+    "group": "fish"
+  },
+  "131466": {
+    "scientificName": "Malacoctenus boehlkei",
+    "commonName": "Diamond Blenny",
+    "maxLengthCm": 6.4,
+    "group": "fish"
+  },
+  "316926": {
+    "scientificName": "Acyrtus rubiginosus",
+    "commonName": "Red Clingfish",
+    "maxLengthCm": 3.5,
+    "group": "fish"
+  },
+  "446046": {
+    "scientificName": "Gobioclinus bucciferus",
+    "commonName": "Puffcheek Blenny",
+    "maxLengthCm": 9.0,
+    "group": "fish"
+  },
+  "317017": {
+    "scientificName": "Calamus pennatula",
+    "commonName": "Pluma Porgy",
+    "maxLengthCm": 37.0,
+    "group": "fish"
+  },
+  "107677": null,
+  "131488": {
+    "scientificName": "Apogon binotatus",
+    "commonName": "Barred Cardinalfish",
+    "maxLengthCm": 13.0,
+    "group": "fish"
+  },
+  "131493": {
+    "scientificName": "Phaeoptyx conklini",
+    "commonName": "Freckled Cardinalfish",
+    "maxLengthCm": 9.0,
+    "group": "fish"
+  },
+  "115188": {
+    "scientificName": "Xyrichtys novacula",
+    "commonName": "Pearly Razorfish",
+    "maxLengthCm": 38.0,
+    "group": "fish"
+  },
+  "187316": {
+    "scientificName": "Cyprinus rubrofuscus",
+    "commonName": "Amur Carp",
+    "maxLengthCm": 28.0,
+    "group": "fish"
+  },
+  "120708": {
+    "scientificName": "Scartella cristata",
+    "commonName": "Molly Miller",
+    "maxLengthCm": 12.0,
+    "group": "fish"
+  },
+  "131477": {
+    "scientificName": "Liopropoma rubre",
+    "commonName": "Peppermint Basslet",
+    "maxLengthCm": 10.0,
+    "group": "fish"
+  },
+  "179537": {
+    "scientificName": "Mugil curema",
+    "commonName": "White Mullet",
+    "maxLengthCm": 91.0,
+    "group": "fish"
+  },
+  "317261": {
+    "scientificName": "Opistognathus macrognathus",
+    "commonName": "Banded Jawfish",
+    "maxLengthCm": 20.0,
+    "group": "fish"
+  },
+  "229304": {
+    "scientificName": "Ptereleotris helenae",
+    "commonName": "Hovering Goby",
+    "maxLengthCm": 12.0,
+    "group": "fish"
+  },
+  "317070": {
+    "scientificName": "Cyprinodon artifrons",
+    "commonName": "Yucatan Pupfish",
+    "maxLengthCm": 6.0,
+    "group": "fish"
+  },
+  "446050": {
+    "scientificName": "Gobioclinus guppyi",
+    "commonName": "Mimic Blenny",
+    "maxLengthCm": 11.5,
+    "group": "fish"
+  },
+  "106304": {
+    "scientificName": "Mycteroperca acutirostris",
+    "commonName": "Comb Grouper",
+    "maxLengthCm": 80.0,
+    "group": "fish"
+  },
+  "132522": {
+    "scientificName": "Lophogobius cyprinoides",
+    "commonName": "Crested Goby",
+    "maxLengthCm": 10.0,
+    "group": "fish"
+  },
+  "317090": {
+    "scientificName": "Emblemariopsis bahamensis",
+    "commonName": "Smoothhead Glass Blenny",
+    "maxLengthCm": 2.6,
+    "group": "fish"
+  },
+  "341201": {
+    "scientificName": "Gambusia puncticulata",
+    "commonName": "Caribbean Gambusia",
+    "maxLengthCm": 3.6,
+    "group": "fish"
+  },
+  "614450": {
+    "scientificName": "Cryptopsilotris batrachodes",
+    "commonName": "Toadfish Goby",
+    "maxLengthCm": 1.9,
+    "group": "fish"
+  },
+  "132531": {
+    "scientificName": "Archosargus rhomboidalis",
+    "commonName": "Western Atlantic Seabream",
+    "maxLengthCm": 33.0,
+    "group": "fish"
+  },
+  "131491": {
+    "scientificName": "Rachycentron canadum",
+    "commonName": "Cobia",
+    "maxLengthCm": 200.0,
+    "group": "fish"
+  },
+  "131515": {
+    "scientificName": "Monacanthus ciliatus",
+    "commonName": "Fringed Filefish",
+    "maxLengthCm": 20.0,
+    "group": "fish"
+  },
+  "194215": {
+    "scientificName": "Cosmocampus albirostris",
+    "commonName": "Whitenose Pipefish",
+    "maxLengthCm": 20.0,
+    "group": "fish"
+  },
+  "614344": {
+    "scientificName": "Bathygobius lacertus",
+    "commonName": "Checkerboard Frillfin",
+    "maxLengthCm": 7.7,
+    "group": "fish"
+  },
+  "47257": {
+    "scientificName": "Acanthocybium solandri",
+    "commonName": "Wahoo",
+    "maxLengthCm": 250.0,
+    "group": "fish"
+  },
+  "93641": {
+    "scientificName": "Alectis ciliaris",
+    "commonName": "African Pompano",
+    "maxLengthCm": 150.0,
+    "group": "fish"
+  },
+  "102074": {
+    "scientificName": "Halichoeres poeyi",
+    "commonName": "Blackear Wrasse",
+    "maxLengthCm": 20.0,
+    "group": "fish"
+  },
+  "317275": {
+    "scientificName": "Paraclinus nigripinnis",
+    "commonName": "Blackfin Blenny",
+    "maxLengthCm": 6.5,
+    "group": "fish"
+  },
+  "54540": {
+    "scientificName": "Hippocampus erectus",
+    "commonName": "Northern Seahorse",
+    "maxLengthCm": 17.8,
+    "group": "fish"
+  },
+  "131479": {
+    "scientificName": "Rypticus subbifrenatus",
+    "commonName": "Spotted Soapfish",
+    "maxLengthCm": 18.0,
+    "group": "fish"
+  },
+  "132526": {
+    "scientificName": "Stephanolepis hispida",
+    "commonName": "Planehead Filefish",
+    "maxLengthCm": 36.9,
+    "group": "fish"
+  },
+  "317172": {
+    "scientificName": "Jordanella pulchra",
+    "commonName": "Progreso Flagfish",
+    "maxLengthCm": 4.0,
+    "group": "fish"
+  },
+  "1316865": {
+    "scientificName": "Poecilia caymanensis",
+    "commonName": "Grand Cayman Molly",
+    "maxLengthCm": 2.8,
+    "group": "fish"
+  },
+  "119719": {
+    "scientificName": "Istiophorus platypterus",
+    "commonName": "Sailfish",
+    "maxLengthCm": 348.0,
+    "group": "fish"
+  },
+  "226272": {
+    "scientificName": "Ogcocephalus nasutus",
+    "commonName": "Shortnose Batfish",
+    "maxLengthCm": 38.0,
+    "group": "fish"
+  },
+  "317047": {
+    "scientificName": "Cheilopogon melanurus",
+    "commonName": "Atlantic Flyingfish",
+    "maxLengthCm": 32.0,
+    "group": "fish"
+  },
+  "1316905": {
+    "scientificName": "Typhlias pearsei",
+    "commonName": "Mexican Blind Brotula",
+    "maxLengthCm": 9.7,
+    "group": "fish"
+  },
+  "63411": {
+    "scientificName": "Chaetodon sedentarius",
+    "commonName": "Reef Butterflyfish",
+    "maxLengthCm": 15.0,
+    "group": "fish"
+  },
+  "179478": {
+    "scientificName": "Priacanthus arenatus",
+    "commonName": "Atlantic Bigeye",
+    "maxLengthCm": 50.0,
+    "group": "fish"
+  },
+  "49496": {
+    "scientificName": "Epinephelus adscensionis",
+    "commonName": "Rock Hind",
+    "maxLengthCm": 65.0,
+    "group": "fish"
+  },
+  "56943": {
+    "scientificName": "Katsuwonus pelamis",
+    "commonName": "Skipjack Tuna",
+    "maxLengthCm": 110.0,
+    "group": "fish"
+  },
+  "82264": {
+    "scientificName": "Chilomycterus schoepfii",
+    "commonName": "Striped Burrfish",
+    "maxLengthCm": 27.9,
+    "group": "fish"
+  },
+  "109633": {
+    "scientificName": "Platybelone argalus",
+    "commonName": "Keeltail Needlefish",
+    "maxLengthCm": 50.0,
+    "group": "fish"
+  },
+  "121302": {
+    "scientificName": "Oreochromis aureus",
+    "commonName": "Blue Tilapia",
+    "maxLengthCm": 45.7,
+    "group": "fish"
+  },
+  "131446": {
+    "scientificName": "Scorpaenodes caribbaeus",
+    "commonName": "Reef Scorpionfish",
+    "maxLengthCm": 12.0,
+    "group": "fish"
+  },
+  "317088": {
+    "scientificName": "Elacatinus prochilos",
+    "commonName": "Broadstripe Goby",
+    "maxLengthCm": 4.0,
+    "group": "fish"
+  },
+  "317126": {
+    "scientificName": "Gymnachirus nudus",
+    "commonName": "Zebra Sole",
+    "maxLengthCm": 17.5,
+    "group": "fish"
+  },
+  "91566": null,
+  "317208": {
+    "scientificName": "Malacoctenus gilli",
+    "commonName": "Dusky Blenny",
+    "maxLengthCm": 7.6,
+    "group": "fish"
+  },
+  "131460": {
+    "scientificName": "Risor ruber",
+    "commonName": "Tusked Goby",
+    "maxLengthCm": 2.5,
+    "group": "fish"
+  },
+  "131473": {
+    "scientificName": "Enneanectes atrorus",
+    "commonName": "Redeye Triplefin",
+    "maxLengthCm": 3.3,
+    "group": "fish"
+  },
+  "316953": {
+    "scientificName": "Apogon lachneri",
+    "commonName": "Whitestar Cardinalfish",
+    "maxLengthCm": 6.5,
+    "group": "fish"
+  },
+  "317087": {
+    "scientificName": "Elacatinus louisae",
+    "commonName": "Spotlight Goby",
+    "maxLengthCm": 3.8,
+    "group": "fish"
+  },
+  "614269": {
+    "scientificName": "Tomicodon cryptus",
+    "commonName": "Cryptic Clingfish",
+    "maxLengthCm": 1.9,
+    "group": "fish"
+  },
+  "614978": {
+    "scientificName": "Tigrigobius pallens",
+    "commonName": "Semiscaled Goby",
+    "maxLengthCm": 1.9,
+    "group": "fish"
+  },
+  "121324": {
+    "scientificName": "Oreochromis niloticus",
+    "commonName": "Nile Tilapia",
+    "maxLengthCm": 60.0,
+    "group": "fish"
+  },
+  "179516": {
+    "scientificName": "Belonesox belizanus",
+    "commonName": "Pike Topminnow",
+    "maxLengthCm": 20.0,
+    "group": "fish"
+  },
+  "131458": {
+    "scientificName": "Diplectrum bivittatum",
+    "commonName": "Dwarf Sand Perch",
+    "maxLengthCm": 25.0,
+    "group": "fish"
+  },
+  "179598": {
+    "scientificName": "Eucinostomus gula",
+    "commonName": "Silver Jenny",
+    "maxLengthCm": 25.5,
+    "group": "fish"
+  },
+  "206834": {
+    "scientificName": "Rhamdia guatemalensis",
+    "commonName": "Pale Catfish",
+    "maxLengthCm": 25.1,
+    "group": "fish"
+  },
+  "317343": null,
+  "611998": {
+    "scientificName": "Heteroconger camelopardalis",
+    "commonName": "Giraffe Garden Eel",
+    "maxLengthCm": 50.1,
+    "group": "fish"
+  },
+  "47229": {
+    "scientificName": "Selar crumenophthalmus",
+    "commonName": "Bigeye Scad",
+    "maxLengthCm": 70.0,
+    "group": "fish"
+  },
+  "52164": {
+    "scientificName": "Stephanolepis setifer",
+    "commonName": "Pygmy Filefish",
+    "maxLengthCm": 20.0,
+    "group": "fish"
+  },
+  "121225": {
+    "scientificName": "Decapterus macarellus",
+    "commonName": "Mackerel Scad",
+    "maxLengthCm": 46.0,
+    "group": "fish"
+  },
+  "128777": {
+    "scientificName": "Prionotus ophryas",
+    "commonName": "Bandtail Searobin",
+    "maxLengthCm": 27.0,
+    "group": "fish"
+  },
+  "316955": {
+    "scientificName": "Apogon planifrons",
+    "commonName": "Pale Cardinalfish",
+    "maxLengthCm": 10.5,
+    "group": "fish"
+  },
+  "317016": {
+    "scientificName": "Calamus penna",
+    "commonName": "Sheepshead Porgy",
+    "maxLengthCm": 46.0,
+    "group": "fish"
+  },
+  "131476": {
+    "scientificName": "Hypoplectrus chlorurus",
+    "commonName": "Yellowtail Hamlet",
+    "maxLengthCm": 15.0,
+    "group": "fish"
+  },
+  "179448": {
+    "scientificName": "Umbrina coroides",
+    "commonName": "Sand Drum",
+    "maxLengthCm": 35.0,
+    "group": "fish"
+  },
+  "208885": {
+    "scientificName": "Astronotus ocellatus",
+    "commonName": "Oscar",
+    "maxLengthCm": 45.7,
+    "group": "fish"
+  },
+  "192655": {
+    "scientificName": "Coryphopterus lipernes",
+    "commonName": "Peppermint Goby",
+    "maxLengthCm": 3.0,
+    "group": "fish"
+  },
+  "614212": {
+    "scientificName": "Acyrtus lanthanum",
+    "commonName": "Orange-spotted Clingfish",
+    "maxLengthCm": 2.4,
+    "group": "fish"
+  },
+  "620590": {
+    "scientificName": "Hypoplectrus randallorum",
+    "commonName": "Tan Hamlet",
+    "maxLengthCm": 8.1,
+    "group": "fish"
+  },
+  "620611": {
+    "scientificName": "Liopropoma mowbrayi",
+    "commonName": "cave bass",
+    "maxLengthCm": 9.0,
+    "group": "fish"
+  },
+  "1360073": {
+    "scientificName": "Hypoplectrus affinis",
+    "commonName": "Bluelip Hamlet",
+    "maxLengthCm": 9.1,
+    "group": "fish"
+  },
+  "56937": {
+    "scientificName": "Oligoplites saurus",
+    "commonName": "Leather Jack",
+    "maxLengthCm": 35.0,
+    "group": "fish"
+  },
+  "106222": {
+    "scientificName": "Mugil cephalus",
+    "commonName": "Sea Mullet",
+    "maxLengthCm": 100.0,
+    "group": "fish"
+  },
+  "220056": {
+    "scientificName": "Atractosteus tropicus",
+    "commonName": "Tropical Gar",
+    "maxLengthCm": 125.0,
+    "group": "fish"
+  },
+  "105926": {
+    "scientificName": "Mobula tarapacana",
+    "commonName": "Sicklefin Devil Ray",
+    "maxLengthCm": 328.0,
+    "group": "elasmobranch"
+  },
+  "53583": {
+    "scientificName": "Carcharhinus plumbeus",
+    "commonName": "Sandbar Shark",
+    "maxLengthCm": 300.0,
+    "group": "elasmobranch"
+  },
+  "55529": {
+    "scientificName": "Carcharhinus limbatus",
+    "commonName": "Common Blacktip Shark",
+    "maxLengthCm": 286.0,
+    "group": "elasmobranch"
+  },
+  "49694": {
+    "scientificName": "Mobula hypostoma",
+    "commonName": "Atlantic Pygmy Devil Ray",
+    "maxLengthCm": 230.0,
+    "group": "elasmobranch"
+  },
+  "96754": {
+    "scientificName": "Carcharhinus falciformis",
+    "commonName": "Silky Shark",
+    "maxLengthCm": 350.0,
+    "group": "elasmobranch"
+  },
+  "54680": {
+    "scientificName": "Ophichthus ophis",
+    "commonName": "Spotted Snake Eel",
+    "maxLengthCm": 210.0,
+    "group": "fish"
+  },
+  "94765": {
+    "scientificName": "Astyanax mexicanus",
+    "commonName": "Mexican Tetra",
+    "maxLengthCm": 12.0,
+    "group": "fish"
+  },
+  "95920": {
+    "scientificName": "Bothus mancus",
+    "commonName": "Pacific Peacock Flounder",
+    "maxLengthCm": 51.0,
+    "group": "fish"
+  },
+  "108614": {
+    "scientificName": "Paranthias furcifer",
+    "commonName": "Atlantic Creolefish",
+    "maxLengthCm": 30.0,
+    "group": "fish"
+  },
+  "109885": {
+    "scientificName": "Poecilia latipinna",
+    "commonName": "Sailfin Molly",
+    "maxLengthCm": 15.0,
+    "group": "fish"
+  },
+  "115167": {
+    "scientificName": "Xiphias gladius",
+    "commonName": "Broadbill Swordfish",
+    "maxLengthCm": 455.0,
+    "group": "fish"
+  },
+  "118609": {
+    "scientificName": "Zu cristatus",
+    "commonName": "Scalloped Ribbonfish",
+    "maxLengthCm": 118.0,
+    "group": "fish"
+  },
+  "127647": {
+    "scientificName": "Ahlia egmontis",
+    "commonName": "Key Worm Eel",
+    "maxLengthCm": 43.0,
+    "group": "fish"
+  },
+  "131443": {
+    "scientificName": "Cypselurus comatus",
+    "commonName": "Clearwing Flyingfish",
+    "maxLengthCm": 30.0,
+    "group": "fish"
+  },
+  "131528": {
+    "scientificName": "Lutjanus vivanus",
+    "commonName": "Silk Snapper",
+    "maxLengthCm": 83.0,
+    "group": "fish"
+  },
+  "173412": {
+    "scientificName": "Poecilia reticulata",
+    "commonName": "Guppy",
+    "maxLengthCm": 5.0,
+    "group": "fish"
+  },
+  "179470": {
+    "scientificName": "Scorpaena brasiliensis",
+    "commonName": "Barbfish",
+    "maxLengthCm": 35.0,
+    "group": "fish"
+  },
+  "179471": {
+    "scientificName": "Scomberomorus maculatus",
+    "commonName": "Atlantic Spanish Mackerel",
+    "maxLengthCm": 91.0,
+    "group": "fish"
+  },
+  "179610": {
+    "scientificName": "Diapterus auratus",
+    "commonName": "Irish Pompano",
+    "maxLengthCm": 42.8,
+    "group": "fish"
+  },
+  "196745": {
+    "scientificName": "Regalecus glesne",
+    "commonName": "Giant Oarfish",
+    "maxLengthCm": 800.0,
+    "group": "fish"
+  },
+  "316922": {
+    "scientificName": "Acanthemblemaria greenfieldi",
+    "commonName": "False Papillose Blenny",
+    "maxLengthCm": 3.6,
+    "group": "fish"
+  },
+  "317038": {
+    "scientificName": "Chaenopsis ocellata",
+    "commonName": "Bluethroat Pikeblenny",
+    "maxLengthCm": 12.5,
+    "group": "fish"
+  },
+  "317251": {
+    "scientificName": "Odontoscion dentex",
+    "commonName": "Reef Croaker",
+    "maxLengthCm": 30.0,
+    "group": "fish"
+  },
+  "317272": {
+    "scientificName": "Paraclinus fasciatus",
+    "commonName": "Banded Blenny",
+    "maxLengthCm": 6.5,
+    "group": "fish"
+  },
+  "317289": {
+    "scientificName": "Phaeoptyx xenus",
+    "commonName": "Sponge Cardinalfish",
+    "maxLengthCm": 7.5,
+    "group": "fish"
+  },
+  "446537": {
+    "scientificName": "Stathmonotus hemphillii",
+    "commonName": "Blackbelly Blenny",
+    "maxLengthCm": 5.0,
+    "group": "fish"
+  },
+  "614976": {
+    "scientificName": "Tigrigobius multifasciatus",
+    "commonName": "Greenband Goby",
+    "maxLengthCm": 5.0,
+    "group": "fish"
+  },
+  "615563": {
+    "scientificName": "Bathypterois bigelowi",
+    "commonName": "",
+    "maxLengthCm": 13.0,
+    "group": "fish"
+  },
+  "1316105": {
+    "scientificName": "Atherina harringtonensis",
+    "commonName": "Reef Silverside",
+    "maxLengthCm": 10.0,
+    "group": "fish"
+  },
+  "59115": {
+    "scientificName": "Gambusia affinis",
+    "commonName": "Western Mosquitofish",
+    "maxLengthCm": 5.1,
+    "group": "fish"
+  },
+  "62592": {
+    "scientificName": "Coryphopterus glaucofraenum",
+    "commonName": "Bridled Goby",
+    "maxLengthCm": 8.0,
+    "group": "fish"
+  },
+  "114122": {
+    "scientificName": "Thunnus alalunga",
+    "commonName": "Albacore",
+    "maxLengthCm": 140.0,
+    "group": "fish"
+  },
+  "128171": {
+    "scientificName": "Elacatinus randalli",
+    "commonName": "Yellownose Goby",
+    "maxLengthCm": 4.6,
+    "group": "fish"
+  },
+  "224123": {
+    "scientificName": "Lopholatilus chamaeleonticeps",
+    "commonName": "Great Northern Tilefish",
+    "maxLengthCm": 125.0,
+    "group": "fish"
+  },
+  "446141": {
+    "scientificName": "Labrisomus cricota",
+    "commonName": "Mock Blenny",
+    "maxLengthCm": 9.3,
+    "group": "fish"
+  },
+  "459327": {
+    "scientificName": "Argyropelecus aculeatus",
+    "commonName": "Atlantic Silver Hatchetfish",
+    "maxLengthCm": 8.3,
+    "group": "fish"
+  },
+  "49949": {
+    "scientificName": "Haemulon striatum",
+    "commonName": "Striped Grunt",
+    "maxLengthCm": 28.0,
+    "group": "fish"
+  },
+  "99532": {
+    "scientificName": "Doratonotus megalepis",
+    "commonName": "Dwarf Wrasse",
+    "maxLengthCm": 9.4,
+    "group": "fish"
+  },
+  "131393": {
+    "scientificName": "Enchelycore carychroa",
+    "commonName": "Chestnut Moray",
+    "maxLengthCm": 34.0,
+    "group": "fish"
+  },
+  "131499": {
+    "scientificName": "Lythrypnus elasson",
+    "commonName": "Dwarf Goby",
+    "maxLengthCm": 1.6,
+    "group": "fish"
+  },
+  "131504": {
+    "scientificName": "Coryphopterus thrix",
+    "commonName": "Bartail Goby",
+    "maxLengthCm": 5.0,
+    "group": "fish"
+  },
+  "147115": {
+    "scientificName": "Enneanectes boehlkei",
+    "commonName": "Roughhead Triplefin",
+    "maxLengthCm": 4.0,
+    "group": "fish"
+  },
+  "179446": {
+    "scientificName": "Trachinotus carolinus",
+    "commonName": "Florida Pompano",
+    "maxLengthCm": 64.0,
+    "group": "fish"
+  },
+  "194677": {
+    "scientificName": "Lepidocybium flavobrunneum",
+    "commonName": "Escolar",
+    "maxLengthCm": 200.0,
+    "group": "fish"
+  },
+  "217635": {
+    "scientificName": "Coryphopterus tortugae",
+    "commonName": "Patch-reef Goby",
+    "maxLengthCm": 4.1,
+    "group": "fish"
+  },
+  "231831": {
+    "scientificName": "Strongylura timucu",
+    "commonName": "Timucu Needlefish",
+    "maxLengthCm": 61.0,
+    "group": "fish"
+  },
+  "317019": {
+    "scientificName": "Callechelys bilinearis",
+    "commonName": "Twostripe Snake Eel",
+    "maxLengthCm": 170.0,
+    "group": "fish"
+  },
+  "317115": {
+    "scientificName": "Ginsburgellus novemlineatus",
+    "commonName": "Nineline Goby",
+    "maxLengthCm": 2.5,
+    "group": "fish"
+  },
+  "446123": {
+    "scientificName": "Hypsoblennius exstochilus",
+    "commonName": "Longhorn Blenny",
+    "maxLengthCm": 5.0,
+    "group": "fish"
+  },
+  "609397": {
+    "scientificName": "Eumegistus brevorti",
+    "commonName": "",
+    "maxLengthCm": 61.0,
+    "group": "fish"
+  },
+  "614423": {
+    "scientificName": "Coryphopterus kuna",
+    "commonName": "Kuna Goby",
+    "maxLengthCm": 1.7,
+    "group": "fish"
+  },
+  "615104": {
+    "scientificName": "Lipogramma trilineata",
+    "commonName": "Threeline basslet",
+    "maxLengthCm": 3.5,
+    "group": "fish"
+  },
+  "619057": {
+    "scientificName": "Pempheris poeyi",
+    "commonName": "Shortfin Sweeper",
+    "maxLengthCm": 15.0,
+    "group": "fish"
+  },
+  "1032194": {
+    "scientificName": "Starksia splendens",
+    "commonName": "",
+    "maxLengthCm": 1.9,
+    "group": "fish"
+  },
+  "1439788": {
+    "scientificName": "Evoxymetopon taeniatum",
+    "commonName": "Channel Scabbardfish",
+    "maxLengthCm": 200.0,
+    "group": "fish"
+  },
+  "49252": {
+    "scientificName": "Elacatinus oceanops",
+    "commonName": "Neon Goby",
+    "maxLengthCm": 5.0,
+    "group": "fish"
+  },
+  "49637": {
+    "scientificName": "Epinephelus morio",
+    "commonName": "Red Grouper",
+    "maxLengthCm": 125.0,
+    "group": "fish"
+  },
+  "49750": {
+    "scientificName": "Archosargus probatocephalus",
+    "commonName": "Sheepshead",
+    "maxLengthCm": 91.0,
+    "group": "fish"
+  },
+  "54440": {
+    "scientificName": "Synodus foetens",
+    "commonName": "Inshore Lizardfish",
+    "maxLengthCm": 53.8,
+    "group": "fish"
+  },
+  "57377": {
+    "scientificName": "Sphoeroides greeleyi",
+    "commonName": "Green Puffer",
+    "maxLengthCm": 22.6,
+    "group": "fish"
+  },
+  "58612": {
+    "scientificName": "Carassius auratus",
+    "commonName": "Goldfish",
+    "maxLengthCm": 48.0,
+    "group": "fish"
+  },
+  "111584": {
+    "scientificName": "Remora albescens",
+    "commonName": "White Suckerfish",
+    "maxLengthCm": 30.0,
+    "group": "fish"
+  },
+  "114126": {
+    "scientificName": "Thunnus thynnus",
+    "commonName": "Atlantic Bluefin Tuna",
+    "maxLengthCm": 458.0,
+    "group": "fish"
+  },
+  "128156": {
+    "scientificName": "Antennarius multiocellatus",
+    "commonName": "Longlure Frogfish",
+    "maxLengthCm": 20.0,
+    "group": "fish"
+  },
+  "131454": {
+    "scientificName": "Halieutichthys aculeatus",
+    "commonName": "Pancake Batfish",
+    "maxLengthCm": 10.0,
+    "group": "fish"
+  },
+  "132471": {
+    "scientificName": "Opsanus beta",
+    "commonName": "Gulf Toadfish",
+    "maxLengthCm": 33.0,
+    "group": "fish"
+  },
+  "135196": {
+    "scientificName": "Ablennes hians",
+    "commonName": "Flat Needlefish",
+    "maxLengthCm": 140.0,
+    "group": "fish"
+  },
+  "179469": {
+    "scientificName": "Selene vomer",
+    "commonName": "Lookdown",
+    "maxLengthCm": 48.3,
+    "group": "fish"
+  },
+  "179491": {
+    "scientificName": "Prionotus tribulus",
+    "commonName": "Bighead Searobin",
+    "maxLengthCm": 35.0,
+    "group": "fish"
+  },
+  "179506": {
+    "scientificName": "Pareques umbrosus",
+    "commonName": "Cubbyu",
+    "maxLengthCm": 25.0,
+    "group": "fish"
+  },
+  "179574": {
+    "scientificName": "Harengula clupeola",
+    "commonName": "False Herring",
+    "maxLengthCm": 31.3,
+    "group": "fish"
+  },
+  "317015": {
+    "scientificName": "Calamus nodosus",
+    "commonName": "Knobbed Porgy",
+    "maxLengthCm": 54.4,
+    "group": "fish"
+  },
+  "317266": {
+    "scientificName": "Opsanus dichrostomus",
+    "commonName": "Bicolor Toadfish",
+    "maxLengthCm": 12.6,
+    "group": "fish"
+  },
+  "322822": {
+    "scientificName": "Phractocephalus hemioliopterus",
+    "commonName": "Redtail Catfish",
+    "maxLengthCm": 135.0,
+    "group": "fish"
+  },
+  "56764": {
+    "scientificName": "Sphyrna lewini",
+    "commonName": "Scalloped Hammerhead",
+    "maxLengthCm": 430.0,
+    "group": "elasmobranch"
+  },
+  "113033": {
+    "scientificName": "Squalus cubensis",
+    "commonName": "Cuban Dogfish",
+    "maxLengthCm": 110.0,
+    "group": "elasmobranch"
+  },
+  "317033": {
+    "scientificName": "Centrophorus uyato",
+    "commonName": "Little Gulper Shark",
+    "maxLengthCm": 110.0,
+    "group": "elasmobranch"
+  },
+  "49966": null,
+  "52299": {
+    "scientificName": "Galeocerdo cuvier",
+    "commonName": "Tiger Shark",
+    "maxLengthCm": 750.0,
+    "group": "elasmobranch"
+  },
+  "111723": {
+    "scientificName": "Rhinoptera brasiliensis",
+    "commonName": "Brazilian Cownose Ray",
+    "maxLengthCm": 104.0,
+    "group": "elasmobranch"
+  },
+  "111750": {
+    "scientificName": "Rhizoprionodon porosus",
+    "commonName": "Caribbean Sharpnose Shark",
+    "maxLengthCm": 113.0,
+    "group": "elasmobranch"
+  },
+  "623856": {
+    "scientificName": "Hypanus say",
+    "commonName": "Bluntnose Stingray",
+    "maxLengthCm": 104.0,
+    "group": "elasmobranch"
+  }
+}

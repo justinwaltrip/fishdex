@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState, useCallback } from "react";
 import { Fish, MapPin, Search, ExternalLink, Eye, EyeOff } from "lucide-react";
+import fishbaseSizes from "@/data/fishbase-sizes.json";
 
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
@@ -70,6 +71,29 @@ const RARITY_ORDER: Record<string, number> = {
   legendary: 3,
 };
 
+interface SizeTier {
+  label: string;
+  maxCm: number;
+  scale: number;
+}
+
+const SIZE_TIERS: SizeTier[] = [
+  { label: "XS", maxCm: 5, scale: 0.45 },
+  { label: "S", maxCm: 15, scale: 0.6 },
+  { label: "M", maxCm: 40, scale: 0.8 },
+  { label: "L", maxCm: 100, scale: 1.05 },
+  { label: "XL", maxCm: 200, scale: 1.35 },
+  { label: "XXL", maxCm: Infinity, scale: 1.7 },
+];
+
+function getSizeInfo(taxonId: number): { maxLengthCm: number; sizeTier: SizeTier } | null {
+  const raw = (fishbaseSizes as Record<string, unknown>)[String(taxonId)];
+  if (!raw || typeof raw !== "object" || !("maxLengthCm" in raw)) return null;
+  const maxLengthCm = (raw as { maxLengthCm: number }).maxLengthCm;
+  const tier = SIZE_TIERS.find((t) => maxLengthCm < t.maxCm) ?? SIZE_TIERS[SIZE_TIERS.length - 1];
+  return { maxLengthCm, sizeTier: tier };
+}
+
 const RARITIES = ["common", "uncommon", "rare", "legendary"];
 const GROUPS = Object.keys(GROUP_LABELS);
 const GROUP_ABBR: Record<string, string> = {
@@ -93,6 +117,8 @@ interface PokedexEntry {
   seen: boolean;
   userObsCount: number;
   latestPlaceGuess: string;
+  maxLengthCm?: number;
+  sizeTier?: SizeTier;
 }
 
 function FishdexPage() {
@@ -118,6 +144,7 @@ function FishdexPage() {
 
     for (const s of observed) {
       if (s.rarity === "unknown") continue;
+      const sizeInfo = getSizeInfo(s.taxonId);
       entries.push({
         taxonId: s.taxonId,
         dexNumber: 0,
@@ -130,11 +157,14 @@ function FishdexPage() {
         seen: true,
         userObsCount: s.userObsCount,
         latestPlaceGuess: s.latestPlaceGuess,
+        maxLengthCm: sizeInfo?.maxLengthCm,
+        sizeTier: sizeInfo?.sizeTier,
       });
     }
 
     for (const s of missing) {
       if (seenMap.has(s.taxonId)) continue;
+      const sizeInfo = getSizeInfo(s.taxonId);
       entries.push({
         taxonId: s.taxonId,
         dexNumber: 0,
@@ -147,6 +177,8 @@ function FishdexPage() {
         seen: false,
         userObsCount: 0,
         latestPlaceGuess: "",
+        maxLengthCm: sizeInfo?.maxLengthCm,
+        sizeTier: sizeInfo?.sizeTier,
       });
     }
 
@@ -604,9 +636,20 @@ function PokedexCard({ entry, onOpen }: { entry: PokedexEntry; onOpen: () => voi
       )}
     >
       <div className="flex items-start justify-between">
-        <span className="rounded bg-[oklch(0.14_0.06_245)] px-2 py-0.5 font-mono text-[10px] tracking-widest text-accent/80">
-          #{String(entry.dexNumber).padStart(3, "0")}
-        </span>
+        <div className="flex items-center gap-2">
+          <span className="rounded bg-[oklch(0.14_0.06_245)] px-2 py-0.5 font-mono text-[10px] tracking-widest text-accent/80">
+            #{String(entry.dexNumber).padStart(3, "0")}
+          </span>
+          {entry.sizeTier && (
+            <span
+              className="inline-flex items-center gap-0.5 text-muted-foreground/60"
+              title={entry.maxLengthCm != null ? `${entry.maxLengthCm} cm` : undefined}
+              style={{ transform: `scale(${entry.sizeTier.scale})`, transformOrigin: "center" }}
+            >
+              <Fish className="h-4 w-4" strokeWidth={1.5} />
+            </span>
+          )}
+        </div>
         <Badge className={cn("border-0 text-[10px] uppercase tracking-wider", rarity.className)}>
           {rarity.label}
         </Badge>
@@ -644,6 +687,11 @@ function PokedexCard({ entry, onOpen }: { entry: PokedexEntry; onOpen: () => voi
         <p className="mt-1 font-mono text-xs italic text-muted-foreground/80">
           {entry.scientificName}
         </p>
+        {entry.maxLengthCm != null && (
+          <p className="mt-1 font-mono text-[10px] text-muted-foreground/50 tracking-wider uppercase">
+            {entry.sizeTier?.label} — {entry.maxLengthCm} cm
+          </p>
+        )}
       </div>
 
       <div className="mt-4 flex items-center justify-between text-xs text-muted-foreground">
@@ -740,6 +788,15 @@ function ObservedDetailDialog({
                 <Badge variant="outline" className="border-border/60 bg-transparent">
                   You: {species.userObsCount}x
                 </Badge>
+                {(() => {
+                  const sz = getSizeInfo(species.taxonId);
+                  if (!sz) return null;
+                  return (
+                    <Badge variant="outline" className="border-border/60 bg-transparent">
+                      <Fish className="mr-1 h-3 w-3" /> {sz.maxLengthCm} cm
+                    </Badge>
+                  );
+                })()}
               </div>
             </div>
 
@@ -837,6 +894,15 @@ function MissingDetailDialog({
                 <Badge variant="outline" className="border-border/60 bg-transparent">
                   {species.caribbeanObsCount.toLocaleString()} Caribbean sightings
                 </Badge>
+                {(() => {
+                  const sz = getSizeInfo(species.taxonId);
+                  if (!sz) return null;
+                  return (
+                    <Badge variant="outline" className="border-border/60 bg-transparent">
+                      <Fish className="mr-1 h-3 w-3" /> {sz.maxLengthCm} cm
+                    </Badge>
+                  );
+                })()}
               </div>
             </div>
 
