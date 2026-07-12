@@ -47,7 +47,7 @@ bun run format       # Prettier
 
 # Data pipeline (requires Python 3)
 python3 scripts/refresh-caribbean.py     # refresh species data (~30s)
-python3 scripts/fishbase_scraper_poc.py  # scrape max lengths from FishBase
+python3 scripts/fishbase_scraper.py  # scrape max lengths from FishBase
 ```
 
 ## Conventions
