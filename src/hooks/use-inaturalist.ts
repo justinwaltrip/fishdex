@@ -8,7 +8,13 @@ import {
   type CaribbeanSpecies,
 } from "@/lib/inaturalist";
 
-const USER_LOGIN = "jwaltrip";
+const USER_LOGIN = import.meta.env.VITE_INATURALIST_USERNAME;
+
+if (!USER_LOGIN) {
+  throw new Error(
+    "VITE_INATURALIST_USERNAME is not set. Create a .env file with VITE_INATURALIST_USERNAME=your_inaturalist_username",
+  );
+}
 
 function groupObservations(obs: UserObservation[]): Map<
   number,

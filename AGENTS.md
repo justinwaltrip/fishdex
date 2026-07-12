@@ -13,7 +13,7 @@
 
 # Fishdex (Reef Recall)
 
-A Pokédex-style dashboard for Caribbean reef fish observations. Pulls live observation data from the [iNaturalist API](https://api.inaturalist.org/) for user `jwaltrip` and presents a searchable, filterable grid of ~1,700 Caribbean marine species grouped by rarity tier (Common, Uncommon, Rare, Legendary based on observation counts) and taxonomic group.
+A Pokédex-style dashboard for Caribbean reef fish observations. Pulls live observation data from the [iNaturalist API](https://api.inaturalist.org/) and presents a searchable, filterable grid of ~1,700 Caribbean marine species grouped by rarity tier (Common, Uncommon, Rare, Legendary based on observation counts) and taxonomic group.
 
 ## Tech Stack
 

@@ -1,6 +1,9 @@
 {
-  "name": "tanstack_start_ts",
+  "name": "fishdex",
   "private": true,
+  "version": "1.0.0",
+  "description": "A Pokédex-style dashboard for Caribbean reef fish observations, powered by iNaturalist",
+  "license": "MIT",
   "sideEffects": false,
   "type": "module",
   "scripts": {

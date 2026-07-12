@@ -1012,7 +1012,7 @@ function ObservedDetailDialog({
                 )}
 
                 <a
-                  href={`https://www.inaturalist.org/observations?taxon_id=${species.taxonId}&user_id=jwaltrip`}
+                  href={`https://www.inaturalist.org/observations?taxon_id=${species.taxonId}&user_id=${import.meta.env.VITE_INATURALIST_USERNAME}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-2 inline-flex items-center gap-1 font-mono text-[11px] text-primary/70 hover:text-primary"

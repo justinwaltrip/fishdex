@@ -1,5 +1,20 @@
 const BASE = "https://api.inaturalist.org/v1";
 
+const USER_AGENT_CONTACT = import.meta.env.VITE_INATURALIST_USERAGENT_CONTACT
+  ? ` (${import.meta.env.VITE_INATURALIST_USERAGENT_CONTACT})`
+  : "";
+const USER_AGENT = `Fishdex/1.0${USER_AGENT_CONTACT}`;
+
+async function apiFetch(url: string, init?: RequestInit): Promise<Response> {
+  return fetch(url, {
+    ...init,
+    headers: {
+      "User-Agent": USER_AGENT,
+      ...init?.headers,
+    },
+  });
+}
+
 interface INaturalistPhoto {
   url: string;
   medium_url: string;
@@ -122,7 +137,7 @@ export interface INaturalistObservation {
 
 export async function searchTaxa(query: string): Promise<TaxonSearchResult[]> {
   const params = new URLSearchParams({ q: query, per_page: "5" });
-  const res = await fetch(`${BASE}/taxa?${params}`);
+  const res = await apiFetch(`${BASE}/taxa?${params}`);
   if (!res.ok) return [];
   const data = await res.json();
   const results: INaturalistTaxonResult[] = data.results ?? [];
@@ -158,7 +173,7 @@ export async function fetchAllUserObservations(userLogin: string): Promise<UserO
       order_by: "observed_on",
     });
 
-    const res = await fetch(`${BASE}/observations?${params}`);
+    const res = await apiFetch(`${BASE}/observations?${params}`);
     if (!res.ok) break;
 
     const data = await res.json();
@@ -183,13 +198,14 @@ export async function fetchAllUserObservations(userLogin: string): Promise<UserO
 
     if (results.length < perPage) break;
     page++;
+    await new Promise((r) => setTimeout(r, 200));
   }
 
   return all;
 }
 
 export async function fetchTaxonPhoto(taxonId: number): Promise<INaturalistTaxonPhoto | null> {
-  const res = await fetch(`${BASE}/taxa/${taxonId}`);
+  const res = await apiFetch(`${BASE}/taxa/${taxonId}`);
   if (!res.ok) return null;
   const data = await res.json();
   const taxon: INaturalistTaxonResult | undefined = data.results?.[0];
