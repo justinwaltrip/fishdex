@@ -8,6 +8,7 @@ import {
   EyeOff,
   PanelLeftClose,
   PanelLeft,
+  Loader2,
 } from "lucide-react";
 import fishbaseSizes from "@/data/fishbase-sizes.json";
 
@@ -285,14 +286,7 @@ function FishdexPage() {
           </p>
 
           {isLoading ? (
-            <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-              {Array.from({ length: 8 }).map((_, i) => (
-                <div
-                  key={i}
-                  className="h-72 animate-pulse rounded-2xl border border-border/40 bg-card/40"
-                />
-              ))}
-            </div>
+            <FishdexLoader />
           ) : filtered.length === 0 ? (
             <EmptyState />
           ) : (
@@ -882,6 +876,70 @@ function PokedexCard({ entry, onOpen }: { entry: PokedexEntry; onOpen: () => voi
   );
 }
 
+function FishdexLoader() {
+  return (
+    <div className="mt-12 flex flex-col items-center justify-center py-16">
+      <div className="relative">
+        <div className="absolute inset-0 animate-ping rounded-full border-2 border-primary/20" />
+        <div className="absolute inset-0 animate-pulse rounded-full border border-primary/30 [animation-delay:400ms]" />
+        <div
+          className="absolute inset-0 animate-pulse rounded-full border border-accent/20 [animation-delay:800ms]"
+          style={{ margin: "-12px" }}
+        />
+        <div className="relative flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-[oklch(0.20_0.07_240)] to-[oklch(0.14_0.06_245)] ring-1 ring-primary/30 shadow-lg shadow-primary/10">
+          <Fish className="h-10 w-10 animate-float text-primary/80" />
+        </div>
+      </div>
+
+      <div className="mt-8 flex flex-col items-center gap-3">
+        <div className="flex items-center gap-2">
+          <Loader2 className="h-4 w-4 animate-spin text-primary/60" />
+          <span className="font-mono text-sm tracking-wider text-primary/80">Loading Fishdex</span>
+        </div>
+        <p className="font-mono text-[11px] text-muted-foreground/60">
+          Fetching observation data from iNaturalist...
+        </p>
+      </div>
+
+      <div className="mt-10 flex items-center gap-2">
+        {[0, 1, 2].map((i) => (
+          <div
+            key={i}
+            className="h-1.5 w-1.5 animate-bounce rounded-full bg-primary/70"
+            style={{ animationDelay: `${i * 150}ms` }}
+          />
+        ))}
+      </div>
+
+      <div className="mt-8 flex gap-1.5">
+        {Array.from({ length: 5 }).map((_, i) => (
+          <div
+            key={i}
+            className="h-1 rounded-full bg-gradient-to-r from-primary/40 via-accent/30 to-primary/40 bg-[length:200%_100%]"
+            style={{
+              width: `${32 + i * 16}px`,
+              animation: `shimmer 2s ease-in-out ${i * 0.2}s infinite`,
+              opacity: 0.3 + i * 0.12,
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="mt-12 flex gap-6">
+        {[0, 1, 2].map((i) => (
+          <div
+            key={i}
+            className="h-1.5 w-1.5 rounded-full bg-accent/40"
+            style={{
+              animation: `bubble-rise 2s ease-out ${i * 0.6}s infinite`,
+            }}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function EmptyState() {
   return (
     <div className="mt-12 rounded-2xl border border-dashed border-border/50 bg-card/30 p-12 text-center">
@@ -963,19 +1021,11 @@ function ObservedDetailDialog({
             <div className="max-h-[60vh] space-y-6 overflow-y-auto px-6 py-6">
               <Section label="Your Sightings">
                 {obsLoading ? (
-                  <div className="space-y-3">
-                    {Array.from({ length: 2 }).map((_, i) => (
-                      <div
-                        key={i}
-                        className="flex animate-pulse items-center gap-3 rounded-lg border border-border/40 bg-[oklch(0.14_0.06_245)]/30 px-3 py-3"
-                      >
-                        <div className="h-10 w-10 rounded-md bg-primary/10" />
-                        <div className="flex-1 space-y-1.5">
-                          <div className="h-3 w-2/3 rounded bg-primary/10" />
-                          <div className="h-2.5 w-1/2 rounded bg-muted/30" />
-                        </div>
-                      </div>
-                    ))}
+                  <div className="flex flex-col items-center gap-3 py-6">
+                    <Loader2 className="h-5 w-5 animate-spin text-primary/60" />
+                    <p className="font-mono text-[11px] text-muted-foreground/70">
+                      Loading observations...
+                    </p>
                   </div>
                 ) : observations.length > 0 ? (
                   <div className="space-y-2">

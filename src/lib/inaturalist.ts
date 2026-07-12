@@ -1,4 +1,7 @@
+import { getCached, setCached } from "./cache";
+
 const BASE = "https://api.inaturalist.org/v1";
+const OBSERVATIONS_CACHE_TTL = 1000 * 60 * 60; /* 1 hour */
 
 const USER_AGENT_CONTACT = import.meta.env.VITE_INATURALIST_USERAGENT_CONTACT
   ? ` (${import.meta.env.VITE_INATURALIST_USERAGENT_CONTACT})`
@@ -101,10 +104,53 @@ export interface INaturalistObservation {
   longitude?: number;
 }
 
+function parseRateLimitRemaining(res: Response): number {
+  const raw = res.headers.get("X-RateLimit-Remaining");
+  if (raw === null) return 100; /* assume generous if header absent */
+  const n = Number.parseInt(raw, 10);
+  return Number.isNaN(n) ? 100 : n;
+}
+
+async function rateLimitedFetch(url: string): Promise<Response> {
+  let res = await apiFetch(url);
+
+  if (res.status === 429) {
+    const retryAfter = res.headers.get("Retry-After");
+    const delay = retryAfter ? Number.parseInt(retryAfter, 10) * 1000 : 5000;
+    await new Promise((r) => setTimeout(r, delay));
+    res = await apiFetch(url);
+  }
+
+  return res;
+}
+
+function mapUserObservation(obs: INaturalistObservationResult): UserObservation {
+  const photo = obs.photos?.[0];
+  return {
+    id: obs.id,
+    observedAt: obs.time_observed_at ?? obs.observed_on ?? "",
+    placeGuess: obs.place_guess ?? "Unknown location",
+    photoUrl: photo ? (photo.square_url ?? photo.url) : null,
+    taxonId: obs.taxon.id,
+    taxonName: obs.taxon.name,
+    taxonRank: obs.taxon.default_photo ? "species" : "unknown",
+    commonName: obs.taxon.preferred_common_name,
+    speciesGuess: obs.species_guess,
+    description: obs.description,
+    iconicTaxonId: obs.taxon.iconic_taxon_id ?? 0,
+  };
+}
+
 export async function fetchAllUserObservations(userLogin: string): Promise<UserObservation[]> {
+  const cacheKey = `all_obs_${userLogin}`;
+
+  const cached = getCached<UserObservation[]>(cacheKey, OBSERVATIONS_CACHE_TTL);
+  if (cached) return cached;
+
   const all: UserObservation[] = [];
   let page = 1;
   const perPage = 200;
+  let totalResults = 0;
 
   while (true) {
     const params = new URLSearchParams({
@@ -115,32 +161,27 @@ export async function fetchAllUserObservations(userLogin: string): Promise<UserO
       order_by: "observed_on",
     });
 
-    const res = await apiFetch(`${BASE}/observations?${params}`);
+    const res = await rateLimitedFetch(`${BASE}/observations?${params}`);
     if (!res.ok) break;
 
+    const rateRemaining = parseRateLimitRemaining(res);
     const data = await res.json();
     const results: INaturalistObservationResult[] = data.results ?? [];
+    totalResults = data.total_results ?? totalResults;
 
     for (const obs of results) {
-      const photo = obs.photos?.[0];
-      all.push({
-        id: obs.id,
-        observedAt: obs.time_observed_at ?? obs.observed_on ?? "",
-        placeGuess: obs.place_guess ?? "Unknown location",
-        photoUrl: photo ? (photo.square_url ?? photo.url) : null,
-        taxonId: obs.taxon.id,
-        taxonName: obs.taxon.name,
-        taxonRank: obs.taxon.default_photo ? "species" : "unknown",
-        commonName: obs.taxon.preferred_common_name,
-        speciesGuess: obs.species_guess,
-        description: obs.description,
-        iconicTaxonId: obs.taxon.iconic_taxon_id ?? 0,
-      });
+      all.push(mapUserObservation(obs));
     }
 
     if (results.length < perPage) break;
     page++;
-    await new Promise((r) => setTimeout(r, 200));
+
+    const delay = rateRemaining < 10 ? 1000 : 200;
+    await new Promise((r) => setTimeout(r, delay));
+  }
+
+  if (all.length > 0) {
+    setCached(cacheKey, all, totalResults);
   }
 
   return all;
@@ -166,7 +207,7 @@ export async function fetchUserObservations(
 async function fetchObservationsPage(
   params: URLSearchParams,
 ): Promise<INaturalistObservationResult[]> {
-  const res = await apiFetch(`${BASE}/observations?${params}`);
+  const res = await rateLimitedFetch(`${BASE}/observations?${params}`);
   if (!res.ok) return [];
   const data = await res.json();
   return data.results ?? [];

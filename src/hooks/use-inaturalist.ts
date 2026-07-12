@@ -109,15 +109,23 @@ async function loadCaribbeanSpecies(): Promise<CaribbeanSpecies[]> {
   }
 }
 
+function useAllUserObservations() {
+  return useQuery({
+    queryKey: ["inaturalist", "all-observations", USER_LOGIN],
+    queryFn: () => fetchAllUserObservations(USER_LOGIN),
+    staleTime: 1000 * 60 * 5,
+    gcTime: 1000 * 60 * 60 * 24,
+  });
+}
+
 export function useObservedSpecies() {
+  const { data: allObs } = useAllUserObservations();
+
   return useQuery<ObservedSpecies[]>({
     queryKey: ["inaturalist", "observed-species", USER_LOGIN],
     queryFn: async () => {
-      const [allObs, lookup] = await Promise.all([
-        fetchAllUserObservations(USER_LOGIN),
-        loadSpeciesLookup(),
-      ]);
-      const groups = groupObservations(allObs);
+      const lookup = await loadSpeciesLookup();
+      const groups = groupObservations(allObs ?? []);
 
       return Array.from(groups.entries())
         .map(([taxonId, g]) => {
@@ -143,26 +151,28 @@ export function useObservedSpecies() {
           (a, b) => b.userObsCount - a.userObsCount || b.caribbeanObsCount - a.caribbeanObsCount,
         );
     },
+    enabled: !!allObs,
     staleTime: 1000 * 60 * 5,
+    gcTime: 1000 * 60 * 60 * 24,
   });
 }
 
 export function useMissingSpecies() {
+  const { data: allObs } = useAllUserObservations();
+
   return useQuery<CaribbeanSpecies[]>({
     queryKey: ["inaturalist", "missing-species", USER_LOGIN],
     queryFn: async () => {
-      const [allObs, caribbeanSpecies] = await Promise.all([
-        fetchAllUserObservations(USER_LOGIN),
-        loadCaribbeanSpecies(),
-      ]);
-
-      const observedIds = new Set(allObs.map((o) => o.taxonId));
+      const caribbeanSpecies = await loadCaribbeanSpecies();
+      const observedIds = new Set((allObs ?? []).map((o) => o.taxonId));
 
       return caribbeanSpecies
         .filter((s) => !observedIds.has(s.taxonId))
         .sort((a, b) => b.caribbeanObsCount - a.caribbeanObsCount);
     },
+    enabled: !!allObs,
     staleTime: 1000 * 60 * 30,
+    gcTime: 1000 * 60 * 60 * 24,
   });
 }
 
@@ -172,5 +182,6 @@ export function useSpeciesObservations(taxonId: number | undefined) {
     queryFn: () => fetchUserObservations(taxonId!, USER_LOGIN, 20),
     enabled: typeof taxonId === "number" && taxonId > 0,
     staleTime: 1000 * 60 * 15,
+    gcTime: 1000 * 60 * 60 * 24,
   });
 }
