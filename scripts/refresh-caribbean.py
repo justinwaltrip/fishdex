@@ -32,6 +32,7 @@ GROUPS = [
     (47186, "crustacean", "Crabs, lobsters & shrimp"),
     (47459, "cephalopod", "Octopus & squid"),
     (62602, "gastropod", "Conch & allies"),
+    (49260, "gastropod", "Ovulidae (egg cowries)"),
 ]
 
 LAND_CRAB_COMMON = {
@@ -75,7 +76,7 @@ def fetch_box(taxon_id, bbox):
         params = urllib.parse.urlencode({
             "nelat": bbox["nelat"], "nelng": bbox["nelng"],
             "swlat": bbox["swlat"], "swlng": bbox["swlng"],
-            "taxon_id": taxon_id, "quality_grade": "research",
+            "taxon_id": taxon_id,
             "per_page": PER_PAGE, "page": page,
         })
         url = f"https://api.inaturalist.org/v1/observations/species_counts?{params}"
@@ -84,7 +85,7 @@ def fetch_box(taxon_id, bbox):
 
         for r in data["results"]:
             t = r["taxon"]
-            photo = t.get("default_photo", {})
+            photo = t.get("default_photo") or {}
             species[t["id"]] = {
                 "taxonId": t["id"],
                 "scientificName": t["name"],
