@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState, useCallback } from "react";
+import { useQueryClient } from "@tanstack/react-query";
 import {
   Fish,
   MapPin,
@@ -9,6 +10,7 @@ import {
   PanelLeftClose,
   PanelLeft,
   Loader2,
+  RefreshCw,
 } from "lucide-react";
 import fishbaseSizes from "@/data/fishbase-sizes.json";
 import { LOCATIONS, isInBBox } from "@/data/locations";
@@ -34,6 +36,7 @@ import {
   type INaturalistObservation,
 } from "@/lib/inaturalist";
 import { cn } from "@/lib/utils";
+import { invalidateCache } from "@/lib/cache";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -132,7 +135,7 @@ interface PokedexEntry {
 }
 
 function FishdexPage() {
-  const { data: allObs = [] } = useAllUserObservations();
+  const { data: allObs = [], isFetching } = useAllUserObservations();
   const { data: observed = [], isLoading: obsLoading } = useObservedSpecies();
   const { data: missing = [], isLoading: missLoading } = useMissingSpecies();
   const [query, setQuery] = useState("");
@@ -147,6 +150,13 @@ function FishdexPage() {
   const [selectedDexNumber, setSelectedDexNumber] = useState<number>(0);
 
   const isLoading = obsLoading || missLoading;
+
+  const queryClient = useQueryClient();
+
+  const handleRefreshCache = useCallback(() => {
+    invalidateCache(`all_obs_${import.meta.env.VITE_INATURALIST_USERNAME}`);
+    queryClient.invalidateQueries({ queryKey: ["inaturalist", "v2"] });
+  }, [queryClient]);
 
   const locationSeenIds = useMemo(() => {
     if (locationFilter === "all") return null;
@@ -342,7 +352,13 @@ function FishdexPage() {
           sidebarOpen && "ml-72",
         )}
       >
-        <PokedexHeader total={total} matrix={filteredStats} location={locationFilter} />
+        <PokedexHeader
+          total={total}
+          matrix={filteredStats}
+          location={locationFilter}
+          onRefresh={handleRefreshCache}
+          isRefreshing={isFetching}
+        />
 
         <main className="mx-auto w-full max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
           <p className="mt-6 font-mono text-xs uppercase tracking-widest text-muted-foreground">
@@ -381,10 +397,14 @@ function PokedexHeader({
   total,
   matrix,
   location,
+  onRefresh,
+  isRefreshing,
 }: {
   total: number;
   matrix: Record<string, Record<string, { seen: number; total: number }>>;
   location: string;
+  onRefresh: () => void;
+  isRefreshing: boolean;
 }) {
   return (
     <header className="border-b border-border/50 bg-[oklch(0.14_0.06_245)]/60 backdrop-blur-xl">
@@ -394,12 +414,21 @@ function PokedexHeader({
             <div className="flex h-11 w-11 items-center justify-center rounded-full bg-primary/15 ring-1 ring-primary/40 animate-float">
               <Fish className="h-6 w-6 text-primary" />
             </div>
-            <div>
+            <div className="flex-1">
               <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-primary/80">
                 Caribbean · iNaturalist{location !== "all" && ` · ${location}`}
               </p>
               <h1 className="text-3xl font-bold text-glow sm:text-4xl">Fishdex</h1>
             </div>
+            <button
+              onClick={onRefresh}
+              disabled={isRefreshing}
+              className="inline-flex h-9 items-center gap-2 rounded-md border border-border/50 bg-background/50 px-3 text-xs font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-foreground disabled:opacity-50"
+              title="Clear cache and refresh all data from iNaturalist"
+            >
+              <RefreshCw className={cn("h-3.5 w-3.5", isRefreshing && "animate-spin")} />
+              {isRefreshing ? "Refreshing…" : "Refresh"}
+            </button>
           </div>
           <p className="mt-3 max-w-xl text-sm text-muted-foreground">
             Track your Caribbean sightings — {total} species, how many can you find?
