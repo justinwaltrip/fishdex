@@ -10,6 +10,7 @@
     "dev": "vite dev",
     "build": "vite build",
     "build:dev": "vite build --mode development",
+    "build:gh-pages": "BUILD_TARGET=gh-pages vite build && bun run scripts/generate-gh-pages-html.ts",
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write .",
