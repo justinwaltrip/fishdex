@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState, useCallback } from "react";
 import { useQueryClient } from "@tanstack/react-query";
+import { format } from "date-fns";
 import {
   Fish,
   MapPin,
@@ -11,12 +12,17 @@ import {
   PanelLeft,
   Loader2,
   RefreshCw,
+  CalendarDays,
+  X,
 } from "lucide-react";
 import fishbaseSizes from "@/data/fishbase-sizes.json";
 import { LOCATIONS, isInBBox } from "@/data/locations";
 
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Calendar } from "@/components/ui/calendar";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import {
   Dialog,
   DialogContent,
@@ -144,6 +150,8 @@ function FishdexPage() {
   const [seenFilter, setSeenFilter] = useState<string>("all");
   const [sizeFilter, setSizeFilter] = useState<string>("all");
   const [locationFilter, setLocationFilter] = useState<string>("all");
+  const [dateFilter, setDateFilter] = useState<string>("all");
+  const [dayFilter, setDayFilter] = useState<string>("");
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(true);
   const [selectedObserved, setSelectedObserved] = useState<ObservedSpecies | null>(null);
   const [selectedMissing, setSelectedMissing] = useState<CaribbeanSpecies | null>(null);
@@ -153,34 +161,58 @@ function FishdexPage() {
 
   const queryClient = useQueryClient();
 
+  const availableYears = useMemo(() => {
+    const years = new Set<number>();
+    for (const obs of allObs) {
+      if (obs.observedAt) {
+        const year = new Date(obs.observedAt).getFullYear();
+        if (!Number.isNaN(year)) years.add(year);
+      }
+    }
+    return Array.from(years).sort((a, b) => b - a);
+  }, [allObs]);
+
   const handleRefreshCache = useCallback(() => {
     invalidateCache(`all_obs_${import.meta.env.VITE_INATURALIST_USERNAME}`);
     queryClient.invalidateQueries({ queryKey: ["inaturalist", "v2"] });
   }, [queryClient]);
 
-  const locationSeenIds = useMemo(() => {
-    if (locationFilter === "all") return null;
-    const bbox = LOCATIONS.find((l) => l.name === locationFilter);
-    if (!bbox) return null;
+  const dateFilteredAllObs = useMemo(() => {
+    let result = allObs;
+    if (dateFilter !== "all") {
+      const year = Number.parseInt(dateFilter, 10);
+      result = result.filter((o) => new Date(o.observedAt).getFullYear() === year);
+    }
+    if (dayFilter) {
+      result = result.filter((o) => o.observedAt.slice(0, 10) === dayFilter);
+    }
+    return result;
+  }, [allObs, dateFilter, dayFilter]);
+
+  const isAnyFilterActive = dateFilter !== "all" || dayFilter !== "" || locationFilter !== "all";
+
+  const filterSeenIds = useMemo(() => {
+    if (!isAnyFilterActive) return null;
+    const bbox =
+      locationFilter !== "all" ? LOCATIONS.find((l) => l.name === locationFilter) : undefined;
     const ids = new Set<number>();
-    for (const obs of allObs) {
-      if (isInBBox(obs.latitude, obs.longitude, bbox)) {
-        ids.add(obs.taxonId);
-      }
+    for (const obs of dateFilteredAllObs) {
+      if (bbox && !isInBBox(obs.latitude, obs.longitude, bbox)) continue;
+      ids.add(obs.taxonId);
     }
     return ids;
-  }, [allObs, locationFilter]);
+  }, [dateFilteredAllObs, locationFilter, isAnyFilterActive]);
 
-  const locationStats = useMemo(() => {
-    if (locationFilter === "all") return null;
-    const bbox = LOCATIONS.find((l) => l.name === locationFilter);
-    if (!bbox) return null;
+  const filterStats = useMemo(() => {
+    if (!isAnyFilterActive) return null;
+    const bbox =
+      locationFilter !== "all" ? LOCATIONS.find((l) => l.name === locationFilter) : undefined;
     const stats = new Map<
       number,
       { count: number; latestPlaceGuess: string; latestObservedAt: string }
     >();
-    for (const obs of allObs) {
-      if (!isInBBox(obs.latitude, obs.longitude, bbox)) continue;
+    for (const obs of dateFilteredAllObs) {
+      if (bbox && !isInBBox(obs.latitude, obs.longitude, bbox)) continue;
       const existing = stats.get(obs.taxonId);
       if (existing) {
         existing.count++;
@@ -197,7 +229,7 @@ function FishdexPage() {
       }
     }
     return stats;
-  }, [allObs, locationFilter]);
+  }, [dateFilteredAllObs, locationFilter, isAnyFilterActive]);
 
   const pokedex = useMemo(() => {
     const seenMap = new Map<number, ObservedSpecies>();
@@ -210,8 +242,8 @@ function FishdexPage() {
     for (const s of observed) {
       if (s.rarity === "unknown") continue;
       const sizeInfo = getSizeInfo(s.taxonId);
-      const seen = locationSeenIds ? locationSeenIds.has(s.taxonId) : true;
-      const locStat = locationStats?.get(s.taxonId);
+      const seen = filterSeenIds ? filterSeenIds.has(s.taxonId) : true;
+      const stat = filterStats?.get(s.taxonId);
       entries.push({
         taxonId: s.taxonId,
         dexNumber: 0,
@@ -222,8 +254,8 @@ function FishdexPage() {
         rarity: s.rarity,
         group: s.group,
         seen,
-        userObsCount: locStat ? locStat.count : s.userObsCount,
-        latestPlaceGuess: locStat ? locStat.latestPlaceGuess : s.latestPlaceGuess,
+        userObsCount: stat ? stat.count : s.userObsCount,
+        latestPlaceGuess: stat ? stat.latestPlaceGuess : s.latestPlaceGuess,
         maxLengthCm: sizeInfo?.maxLengthCm,
         sizeTier: sizeInfo?.sizeTier,
       });
@@ -259,7 +291,7 @@ function FishdexPage() {
     });
 
     return entries;
-  }, [observed, missing, locationSeenIds, locationStats]);
+  }, [observed, missing, filterSeenIds, filterStats]);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -342,6 +374,11 @@ function FishdexPage() {
         onSize={setSizeFilter}
         location={locationFilter}
         onLocation={setLocationFilter}
+        date={dateFilter}
+        onDate={setDateFilter}
+        day={dayFilter}
+        onDay={setDayFilter}
+        years={availableYears}
         open={sidebarOpen}
         onToggle={() => setSidebarOpen((o) => !o)}
       />
@@ -356,6 +393,8 @@ function FishdexPage() {
           total={total}
           matrix={filteredStats}
           location={locationFilter}
+          year={dateFilter}
+          day={dayFilter}
           onRefresh={handleRefreshCache}
           isRefreshing={isFetching}
         />
@@ -397,15 +436,22 @@ function PokedexHeader({
   total,
   matrix,
   location,
+  year,
+  day,
   onRefresh,
   isRefreshing,
 }: {
   total: number;
   matrix: Record<string, Record<string, { seen: number; total: number }>>;
   location: string;
+  year: string;
+  day: string;
   onRefresh: () => void;
   isRefreshing: boolean;
 }) {
+  const dateLabel = day
+    ? new Date(day + "T00:00:00").toLocaleDateString(undefined, { month: "short", day: "numeric" })
+    : null;
   return (
     <header className="border-b border-border/50 bg-[oklch(0.14_0.06_245)]/60 backdrop-blur-xl">
       <div className="scanline">
@@ -416,7 +462,10 @@ function PokedexHeader({
             </div>
             <div className="flex-1">
               <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-primary/80">
-                Caribbean · iNaturalist{location !== "all" && ` · ${location}`}
+                Caribbean · iNaturalist
+                {location !== "all" && ` · ${location}`}
+                {year !== "all" && ` · ${year}`}
+                {dateLabel && ` · ${dateLabel}`}
               </p>
               <h1 className="text-3xl font-bold text-glow sm:text-4xl">Fishdex</h1>
             </div>
@@ -433,6 +482,8 @@ function PokedexHeader({
           <p className="mt-3 max-w-xl text-sm text-muted-foreground">
             Track your Caribbean sightings — {total} species, how many can you find?
             {location !== "all" && ` (filtered to ${location})`}
+            {year !== "all" && !dateLabel && ` (in ${year})`}
+            {dateLabel && ` (on ${dateLabel})`}
           </p>
 
           <FilteredDetailMatrix matrix={matrix} />
@@ -719,6 +770,11 @@ function FilterSidebar(props: {
   onSize: (v: string) => void;
   location: string;
   onLocation: (v: string) => void;
+  date: string;
+  onDate: (v: string) => void;
+  day: string;
+  onDay: (v: string) => void;
+  years: number[];
   open: boolean;
   onToggle: () => void;
 }) {
@@ -819,6 +875,66 @@ function FilterSidebar(props: {
                   })),
                 ]}
               />
+            </div>
+
+            {props.years.length > 0 && (
+              <div className="flex flex-col gap-2">
+                <ChipGroup
+                  label="Year"
+                  value={props.date}
+                  onChange={props.onDate}
+                  options={[
+                    { value: "all", label: "All" },
+                    ...props.years.map((y) => ({
+                      value: String(y),
+                      label: String(y),
+                    })),
+                  ]}
+                />
+              </div>
+            )}
+
+            <div className="flex flex-col gap-1.5">
+              <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground/80">
+                Day
+              </span>
+              <div className="flex items-center gap-2">
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <Button
+                      variant="outline"
+                      className={cn(
+                        "h-10 flex-1 justify-start border-border/60 bg-card/50 font-mono text-sm font-normal",
+                        !props.day && "text-muted-foreground",
+                      )}
+                    >
+                      <CalendarDays className="mr-2 h-4 w-4 text-muted-foreground" />
+                      {props.day
+                        ? format(new Date(props.day + "T00:00:00"), "MMM d, yyyy")
+                        : "Pick a day"}
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-auto border-border/60 bg-card p-0" align="start">
+                    <Calendar
+                      mode="single"
+                      selected={props.day ? new Date(props.day + "T00:00:00") : undefined}
+                      onSelect={(date) => props.onDay(date ? format(date, "yyyy-MM-dd") : "")}
+                      initialFocus
+                      buttonVariant="ghost"
+                    />
+                  </PopoverContent>
+                </Popover>
+                {props.day && (
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={() => props.onDay("")}
+                    className="h-10 w-10 flex-shrink-0 text-muted-foreground hover:text-foreground"
+                  >
+                    <X className="h-4 w-4" />
+                  </Button>
+                )}
+              </div>
             </div>
           </div>
         </aside>
