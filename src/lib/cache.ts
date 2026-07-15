@@ -1,4 +1,4 @@
-const KEY_PREFIX = "fishdex_v2_obs_";
+const KEY_PREFIX = "reef_recall_v2_obs_";
 
 interface CacheEntry<T> {
   data: T;

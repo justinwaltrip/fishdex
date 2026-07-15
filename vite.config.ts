@@ -7,6 +7,7 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 const isGhPages = process.env.BUILD_TARGET === "gh-pages";
+const repo = process.env.GH_PAGES_REPO || "";
 
 export default defineConfig({
   tanstackStart: {
@@ -17,8 +18,18 @@ export default defineConfig({
   ...(isGhPages
     ? {
         vite: {
-          base: "/reef-recall/",
+          base: repo ? `/${repo}/` : "/",
         },
+        plugins: [
+          {
+            name: "fix-gh-pages-basepath",
+            config: () => ({
+              define: {
+                "process.env.TSS_ROUTER_BASEPATH": JSON.stringify(repo ? `/${repo}/` : "/"),
+              },
+            }),
+          },
+        ],
       }
     : {}),
 });
