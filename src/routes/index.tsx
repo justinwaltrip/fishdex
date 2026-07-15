@@ -101,7 +101,7 @@ const SIZE_TIERS: SizeTier[] = [
   { label: "S", maxCm: 15 },
   { label: "M", maxCm: 40 },
   { label: "L", maxCm: 100 },
-  { label: "XL", maxCm: 200 },
+  { label: "XL", maxCm: 400 },
   { label: "XXL", maxCm: Infinity },
 ];
 

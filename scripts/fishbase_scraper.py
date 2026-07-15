@@ -19,7 +19,7 @@ CACHE_FILE = Path(__file__).parent.parent / "src" / "data" / "fishbase-sizes.jso
 PAGES_DIR = Path(__file__).parent / "fishbase-pages"
 HEADERS = {"User-Agent": "Fishdex/1.0"}
 FISHBASE_BASE = "https://fishbase.de/summary"
-MAX_LEN_RE = re.compile(r"Max length\s*:\s*(\d+\.?\d*)\s*cm", re.IGNORECASE)
+MAX_LEN_RE = re.compile(r"Max length\s*:\s*([\d,]+\.?\d*)\s*cm", re.IGNORECASE)
 DELAY_S = 0.35
 
 
@@ -71,7 +71,7 @@ def fetch_max_length(name, taxon_id):
         return None
     match = MAX_LEN_RE.search(html)
     if match:
-        return float(match.group(1))
+        return float(match.group(1).replace(",", ""))
     return None
 
 
