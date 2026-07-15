@@ -29,10 +29,18 @@ GROUPS = [
     (47273, "elasmobranch", "Sharks & rays"),
     (39657, "turtle", "Sea turtles (Cheloniidae)"),
     (39576, "turtle", "Sea turtles (Dermochelyidae)"),
+    (152871, "marine_mammal", "Dolphins & whales"),
+    (49090, "marine_mammal", "Manatees"),
     (47186, "crustacean", "Crabs, lobsters & shrimp"),
     (47459, "cephalopod", "Octopus & squid"),
     (62602, "gastropod", "Conch & allies"),
     (49260, "gastropod", "Ovulidae (egg cowries)"),
+    (47549, "echinoderm", "Starfish & sea urchins"),
+    (48332, "cnidarian", "True jellyfish"),
+    (68095, "cnidarian", "Box jellyfish"),
+    (48921, "cnidarian", "Hydrozoans"),
+    (51018, "cnidarian", "Stalked jellyfish"),
+    (47584, "bivalve", "Clams, oysters & scallops"),
 ]
 
 LAND_CRAB_COMMON = {
@@ -64,10 +72,33 @@ def is_land_crab(species):
     for kw in ("Coenobita", "Cardisoma", "Gecarcinus", "Ocypode",
                "Hartnollius", "Aratus", "Goniopsis", "Geograpsus",
                "Minuca", "Ucides", "Armases", "Leptuca", "Albunea",
-               "Emerita", "Hippa"):
+               "Emerita", "Hippa", "Grapsus"):
         if kw.lower() in (species.get("scientificName") or "").lower():
             return True
     return False
+
+
+def is_fire_coral(species):
+    """Return True if the species is a hydrocoral (fire coral, lace coral)."""
+    name = species.get("scientificName") or ""
+    for genus in ("Millepora", "Stylaster"):
+        if genus in name:
+            return True
+    return False
+
+
+def fetch_url(url, retries=3):
+    for attempt in range(retries):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Fishdex/1.0"})
+            return json.loads(urllib.request.urlopen(req).read())
+        except urllib.error.HTTPError as e:
+            if e.code == 429 and attempt < retries - 1:
+                wait = (attempt + 1) * 5
+                print(f"    Rate limited, waiting {wait}s...")
+                time.sleep(wait)
+                continue
+            raise
 
 
 def fetch_box(taxon_id, bbox):
@@ -81,8 +112,7 @@ def fetch_box(taxon_id, bbox):
             "per_page": PER_PAGE, "page": page,
         })
         url = f"https://api.inaturalist.org/v1/observations/species_counts?{params}"
-        req = urllib.request.Request(url, headers={"User-Agent": "Fishdex/1.0"})
-        data = json.loads(urllib.request.urlopen(req).read())
+        data = fetch_url(url)
 
         for r in data["results"]:
             t = r["taxon"]
@@ -133,6 +163,7 @@ def main():
         for bbox in boxes:
             print(f"  {bbox['name']}: {bbox['swlat']}°N–{bbox['nelat']}°N, {bbox['swlng']}°W–{bbox['nelng']}°W")
             box_result = fetch_box(taxon_id, bbox)
+            time.sleep(0.5)
 
             for tid, sp in box_result.items():
                 if tid in group_species:
@@ -154,6 +185,9 @@ def main():
     before = len(all_species)
     all_species = [s for s in all_species if not is_land_crab(s)]
     print(f"\nFiltered {before - len(all_species)} land crabs")
+    before = len(all_species)
+    all_species = [s for s in all_species if not is_fire_coral(s)]
+    print(f"Filtered {before - len(all_species)} fire corals")
     all_species.sort(key=lambda s: s["caribbeanObsCount"], reverse=True)
     assign_rarity(all_species)
 
@@ -163,8 +197,10 @@ def main():
     print(f"\nDone. Wrote {len(all_species)} species to {OUT}")
     print("Rarity (obs-count thresholds):")
     for g_label, g_key in [("fish", "fish"), ("elasmobranch", "elasmobranch"),
-                            ("turtle", "turtle"), ("crustacean", "crustacean"),
-                            ("cephalopod", "cephalopod"), ("gastropod", "gastropod")]:
+                            ("turtle", "turtle"), ("marine_mammal", "marine_mammal"),
+                            ("crustacean", "crustacean"), ("cephalopod", "cephalopod"),
+                            ("gastropod", "gastropod"), ("echinoderm", "echinoderm"),
+                            ("cnidarian", "cnidarian"), ("bivalve", "bivalve")]:
         gs = [s for s in all_species if s["group"] == g_key]
         counts = {}
         for s in gs:

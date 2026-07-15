@@ -80,9 +80,13 @@ const GROUP_LABELS: Record<string, string> = {
   fish: "Fish",
   crustacean: "Crustaceans",
   elasmobranch: "Sharks & Rays",
+  marine_mammal: "Marine Mammals",
   turtle: "Turtles",
   cephalopod: "Cephalopods",
   gastropod: "Gastropods",
+  echinoderm: "Echinoderms",
+  cnidarian: "Cnidarians",
+  bivalve: "Bivalves",
 };
 
 const RARITY_ORDER: Record<string, number> = {
@@ -133,9 +137,13 @@ const GROUP_ABBR: Record<string, string> = {
   fish: "Fish",
   crustacean: "Crust.",
   elasmobranch: "Sharks",
+  marine_mammal: "Mammals",
   turtle: "Turtles",
   cephalopod: "Ceph.",
   gastropod: "Gastro.",
+  echinoderm: "Echino.",
+  cnidarian: "Cnidar.",
+  bivalve: "Bivalves",
 };
 
 interface PokedexEntry {
