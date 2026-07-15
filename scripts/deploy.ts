@@ -6,6 +6,15 @@ import { join } from "path";
 const OUT_DIR = ".output/public";
 const DEPLOY_DIR = ".gh-pages-deploy";
 
+const originUrl = (await $`git remote get-url origin`.text()).trim();
+const match = originUrl.match(/github\.com[:/](.+)\/(.+)\.git/);
+if (!match) {
+  console.error("Could not parse GitHub owner/repo from origin URL:", originUrl);
+  process.exit(1);
+}
+const owner = match[1];
+const repo = match[2];
+
 console.log("Building for GitHub Pages...");
 await $`BUILD_TARGET=gh-pages GH_PAGES_REPO=${repo} vite build && bun run scripts/generate-gh-pages-html.ts`;
 
@@ -20,16 +29,6 @@ cpSync(OUT_DIR, DEPLOY_DIR, { recursive: true });
 
 const cwd = process.cwd();
 process.chdir(DEPLOY_DIR);
-
-const originUrl = (await $`git remote get-url origin`.text()).trim();
-
-const match = originUrl.match(/github\.com[:/](.+)\/(.+)\.git/);
-if (!match) {
-  console.error("Could not parse GitHub owner/repo from origin URL:", originUrl);
-  process.exit(1);
-}
-const owner = match[1];
-const repo = match[2];
 
 await $`git init`;
 await $`git checkout -b gh-pages`;
