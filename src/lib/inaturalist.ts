@@ -84,6 +84,14 @@ export interface ObservedSpecies {
   latestObservationId: number;
 }
 
+export interface ConservationStatus {
+  authority: string;
+  iucn: number;
+  status: string;
+  statusName: string;
+  url: string;
+}
+
 export interface CaribbeanSpecies {
   taxonId: number;
   scientificName: string;

@@ -1,0 +1,555 @@
+{
+  "39665": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "39672": {
+    "authority": "IUCN Red List",
+    "iucn": 50,
+    "status": "cr",
+    "statusName": "critically endangered",
+    "url": ""
+  },
+  "47761": {
+    "authority": "IUCN Red List",
+    "iucn": 20,
+    "status": "nt",
+    "statusName": "near threatened",
+    "url": ""
+  },
+  "49297": {
+    "authority": "IUCN Red List",
+    "iucn": 40,
+    "status": "en",
+    "statusName": "endangered",
+    "url": ""
+  },
+  "49432": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "49601": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "49606": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "49637": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "49694": {
+    "authority": "IUCN Red List",
+    "iucn": 40,
+    "status": "en",
+    "statusName": "endangered",
+    "url": ""
+  },
+  "49746": {
+    "authority": "IUCN Red List",
+    "iucn": 50,
+    "status": "cr",
+    "statusName": "critically endangered",
+    "url": ""
+  },
+  "49962": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "49964": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "50984": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "51402": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "52188": {
+    "authority": "IUCN Red List",
+    "iucn": 40,
+    "status": "en",
+    "statusName": "endangered",
+    "url": ""
+  },
+  "52299": {
+    "authority": "IUCN Red List",
+    "iucn": 20,
+    "status": "nt",
+    "statusName": "near threatened",
+    "url": ""
+  },
+  "53583": {
+    "authority": "IUCN Red List",
+    "iucn": 40,
+    "status": "en",
+    "statusName": "endangered",
+    "url": ""
+  },
+  "54540": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "55529": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "56764": {
+    "authority": "IUCN Red List",
+    "iucn": 50,
+    "status": "cr",
+    "statusName": "critically endangered",
+    "url": ""
+  },
+  "56766": {
+    "authority": "IUCN Red List",
+    "iucn": 50,
+    "status": "cr",
+    "statusName": "critically endangered",
+    "url": ""
+  },
+  "63418": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "63718": {
+    "authority": "IUCN Red List",
+    "iucn": 20,
+    "status": "nt",
+    "statusName": "near threatened",
+    "url": ""
+  },
+  "64466": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "64476": {
+    "authority": "IUCN Red List",
+    "iucn": 20,
+    "status": "nt",
+    "statusName": "near threatened",
+    "url": ""
+  },
+  "69677": {
+    "authority": "IUCN Red List",
+    "iucn": 40,
+    "status": "en",
+    "statusName": "endangered",
+    "url": ""
+  },
+  "73844": {
+    "authority": "IUCN Red List",
+    "iucn": 50,
+    "status": "cr",
+    "statusName": "critically endangered",
+    "url": ""
+  },
+  "84996": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "95066": {
+    "authority": "IUCN Red List",
+    "iucn": 20,
+    "status": "nt",
+    "statusName": "near threatened",
+    "url": ""
+  },
+  "95115": {
+    "authority": "IUCN Red List",
+    "iucn": 50,
+    "status": "cr",
+    "statusName": "critically endangered",
+    "url": ""
+  },
+  "95748": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "96745": {
+    "authority": "IUCN Red List",
+    "iucn": 40,
+    "status": "en",
+    "statusName": "endangered",
+    "url": ""
+  },
+  "96754": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "96768": {
+    "authority": "IUCN Red List",
+    "iucn": 50,
+    "status": "cr",
+    "statusName": "critically endangered",
+    "url": ""
+  },
+  "98541": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "100110": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "102831": {
+    "authority": "IUCN Red List",
+    "iucn": 20,
+    "status": "nt",
+    "statusName": "near threatened",
+    "url": ""
+  },
+  "102838": {
+    "authority": "IUCN Red List",
+    "iucn": 40,
+    "status": "en",
+    "statusName": "endangered",
+    "url": ""
+  },
+  "104853": {
+    "authority": "IUCN Red List",
+    "iucn": 20,
+    "status": "nt",
+    "statusName": "near threatened",
+    "url": ""
+  },
+  "105926": {
+    "authority": "IUCN Red List",
+    "iucn": 50,
+    "status": "cr",
+    "statusName": "critically endangered",
+    "url": ""
+  },
+  "106308": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "106323": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "106650": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "107677": {
+    "authority": "IUCN Red List",
+    "iucn": 40,
+    "status": "en",
+    "statusName": "endangered",
+    "url": ""
+  },
+  "107889": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "108332": {
+    "authority": "IUCN Red List",
+    "iucn": 40,
+    "status": "en",
+    "statusName": "endangered",
+    "url": ""
+  },
+  "110379": {
+    "authority": "IUCN Red List",
+    "iucn": 50,
+    "status": "cr",
+    "statusName": "critically endangered",
+    "url": ""
+  },
+  "111185": {
+    "authority": "IUCN Red List",
+    "iucn": 40,
+    "status": "en",
+    "statusName": "endangered",
+    "url": ""
+  },
+  "111723": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "111750": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "112035": {
+    "authority": "IUCN Red List",
+    "iucn": 40,
+    "status": "en",
+    "statusName": "endangered",
+    "url": ""
+  },
+  "112148": {
+    "authority": "IUCN Red List",
+    "iucn": 20,
+    "status": "nt",
+    "statusName": "near threatened",
+    "url": ""
+  },
+  "112960": {
+    "authority": "IUCN Red List",
+    "iucn": 40,
+    "status": "en",
+    "statusName": "endangered",
+    "url": ""
+  },
+  "115167": {
+    "authority": "IUCN Red List",
+    "iucn": 20,
+    "status": "nt",
+    "statusName": "near threatened",
+    "url": ""
+  },
+  "119719": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "121738": {
+    "authority": "IUCN Red List",
+    "iucn": 40,
+    "status": "en",
+    "statusName": "endangered",
+    "url": ""
+  },
+  "131504": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "131505": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "131506": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "131530": {
+    "authority": "IUCN Red List",
+    "iucn": 20,
+    "status": "nt",
+    "statusName": "near threatened",
+    "url": ""
+  },
+  "147455": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "188767": {
+    "authority": "IUCN Red List",
+    "iucn": 40,
+    "status": "en",
+    "statusName": "endangered",
+    "url": ""
+  },
+  "192655": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "194209": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "217635": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "224123": {
+    "authority": "IUCN Red List",
+    "iucn": 40,
+    "status": "en",
+    "statusName": "endangered",
+    "url": ""
+  },
+  "317033": {
+    "authority": "IUCN Red List",
+    "iucn": 40,
+    "status": "en",
+    "statusName": "endangered",
+    "url": ""
+  },
+  "317088": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "498400": {
+    "authority": "IUCN Red List",
+    "iucn": 40,
+    "status": "en",
+    "statusName": "endangered",
+    "url": ""
+  },
+  "498406": {
+    "authority": "IUCN Red List",
+    "iucn": 40,
+    "status": "en",
+    "statusName": "endangered",
+    "url": ""
+  },
+  "499293": {
+    "authority": "IUCN Red List",
+    "iucn": 40,
+    "status": "en",
+    "statusName": "endangered",
+    "url": ""
+  },
+  "500328": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  },
+  "619439": {
+    "authority": "IUCN Red List",
+    "iucn": 40,
+    "status": "en",
+    "statusName": "endangered",
+    "url": ""
+  },
+  "623850": {
+    "authority": "IUCN Red List",
+    "iucn": 20,
+    "status": "nt",
+    "statusName": "near threatened",
+    "url": ""
+  },
+  "623856": {
+    "authority": "IUCN Red List",
+    "iucn": 20,
+    "status": "nt",
+    "statusName": "near threatened",
+    "url": ""
+  },
+  "883882": {
+    "authority": "IUCN Red List",
+    "iucn": 40,
+    "status": "en",
+    "statusName": "endangered",
+    "url": ""
+  },
+  "1099504": {
+    "authority": "IUCN Red List",
+    "iucn": 20,
+    "status": "nt",
+    "statusName": "near threatened",
+    "url": ""
+  },
+  "1316905": {
+    "authority": "IUCN Red List",
+    "iucn": 20,
+    "status": "nt",
+    "statusName": "near threatened",
+    "url": ""
+  },
+  "1556595": {
+    "authority": "IUCN Red List",
+    "iucn": 30,
+    "status": "vu",
+    "statusName": "vulnerable",
+    "url": ""
+  }
+}

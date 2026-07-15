@@ -16,6 +16,7 @@ import {
   X,
 } from "lucide-react";
 import fishbaseSizes from "@/data/fishbase-sizes.json";
+import conservationStatuses from "@/data/conservation-status.json";
 import { LOCATIONS, isInBBox } from "@/data/locations";
 
 import { Input } from "@/components/ui/input";
@@ -113,6 +114,19 @@ function getSizeInfo(taxonId: number): { maxLengthCm: number; sizeTier: SizeTier
   return { maxLengthCm, sizeTier: tier };
 }
 
+function formatConservationStatus(taxonId: number): string | undefined {
+  const cs = (conservationStatuses as Record<string, { status: string }>)[String(taxonId)];
+  return cs?.status;
+}
+
+const CONSERVATION_META: Record<string, { label: string; className: string }> = {
+  cr: { label: "CR", className: "bg-[oklch(0.45_0.22_25)] text-white" },
+  en: { label: "EN", className: "bg-[oklch(0.55_0.18_55)] text-white" },
+  vu: { label: "VU", className: "bg-[oklch(0.65_0.15_85)] text-[oklch(0.15_0.05_240)]" },
+  nt: { label: "NT", className: "bg-[oklch(0.55_0.10_200)] text-white" },
+};
+const CONSERVATION_ORDER: Record<string, number> = { cr: 0, en: 1, vu: 2, nt: 3 };
+
 const RARITIES = ["common", "uncommon", "rare", "legendary"];
 const GROUPS = Object.keys(GROUP_LABELS);
 const GROUP_ABBR: Record<string, string> = {
@@ -138,6 +152,7 @@ interface PokedexEntry {
   latestPlaceGuess: string;
   maxLengthCm?: number;
   sizeTier?: SizeTier;
+  conservationStatus?: string;
 }
 
 function FishdexPage() {
@@ -152,6 +167,7 @@ function FishdexPage() {
   const [locationFilter, setLocationFilter] = useState<string>("all");
   const [dateFilter, setDateFilter] = useState<string>("all");
   const [dayFilter, setDayFilter] = useState<string>("");
+  const [conservationFilter, setConservationFilter] = useState<string>("all");
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(true);
   const [selectedObserved, setSelectedObserved] = useState<ObservedSpecies | null>(null);
   const [selectedMissing, setSelectedMissing] = useState<CaribbeanSpecies | null>(null);
@@ -258,6 +274,7 @@ function FishdexPage() {
         latestPlaceGuess: stat ? stat.latestPlaceGuess : s.latestPlaceGuess,
         maxLengthCm: sizeInfo?.maxLengthCm,
         sizeTier: sizeInfo?.sizeTier,
+        conservationStatus: formatConservationStatus(s.taxonId),
       });
     }
 
@@ -278,6 +295,7 @@ function FishdexPage() {
         latestPlaceGuess: "",
         maxLengthCm: sizeInfo?.maxLengthCm,
         sizeTier: sizeInfo?.sizeTier,
+        conservationStatus: formatConservationStatus(s.taxonId),
       });
     }
 
@@ -301,10 +319,17 @@ function FishdexPage() {
       if (seenFilter === "seen" && !s.seen) return false;
       if (seenFilter === "unseen" && s.seen) return false;
       if (sizeFilter !== "all" && (!s.sizeTier || s.sizeTier.label !== sizeFilter)) return false;
+      if (conservationFilter !== "all") {
+        if (conservationFilter === "none") {
+          if (s.conservationStatus) return false;
+        } else {
+          if (s.conservationStatus !== conservationFilter) return false;
+        }
+      }
       if (!q) return true;
       return s.commonName.toLowerCase().includes(q) || s.scientificName.toLowerCase().includes(q);
     });
-  }, [query, rarityFilter, groupFilter, seenFilter, sizeFilter, pokedex]);
+  }, [query, rarityFilter, groupFilter, seenFilter, sizeFilter, conservationFilter, pokedex]);
 
   const total = pokedex.length;
 
@@ -378,6 +403,8 @@ function FishdexPage() {
         onDate={setDateFilter}
         day={dayFilter}
         onDay={setDayFilter}
+        conservation={conservationFilter}
+        onConservation={setConservationFilter}
         years={availableYears}
         open={sidebarOpen}
         onToggle={() => setSidebarOpen((o) => !o)}
@@ -774,6 +801,8 @@ function FilterSidebar(props: {
   onDate: (v: string) => void;
   day: string;
   onDay: (v: string) => void;
+  conservation: string;
+  onConservation: (v: string) => void;
   years: number[];
   open: boolean;
   onToggle: () => void;
@@ -857,6 +886,22 @@ function FilterSidebar(props: {
                   ...SIZE_TIERS.map((t) => ({
                     value: t.label,
                     label: t.label,
+                  })),
+                ]}
+              />
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <ChipGroup
+                label="IUCN"
+                value={props.conservation}
+                onChange={props.onConservation}
+                options={[
+                  { value: "all", label: "All" },
+                  { value: "none", label: "None" },
+                  ...Object.entries(CONSERVATION_META).map(([k, m]) => ({
+                    value: k,
+                    label: m.label,
                   })),
                 ]}
               />
@@ -1012,24 +1057,37 @@ function Fishspan({ maxLengthCm }: { maxLengthCm: number }) {
 
 function PokedexCard({ entry, onOpen }: { entry: PokedexEntry; onOpen: () => void }) {
   const rarity = RARITY_META[entry.rarity];
+  const conservation = entry.conservationStatus && CONSERVATION_META[entry.conservationStatus];
+  const isThreatened = entry.conservationStatus === "cr" || entry.conservationStatus === "en";
 
   return (
     <button
       onClick={onOpen}
       className={cn(
         "group relative flex flex-col overflow-hidden rounded-2xl border p-5 text-left transition-all hover:-translate-y-0.5",
-        entry.seen
-          ? "border-accent/20 bg-card/60 card-glow-observed"
-          : "border-border/40 bg-card/60 card-glow hover:border-accent/40",
+        isThreatened && !entry.seen
+          ? "border-[oklch(0.50_0.20_25)]/50 bg-card/60 card-glow-threatened hover:border-[oklch(0.50_0.20_25)]/70"
+          : entry.seen
+            ? "border-accent/20 bg-card/60 card-glow-observed"
+            : "border-border/40 bg-card/60 card-glow hover:border-accent/40",
       )}
     >
       <div className="flex items-start justify-between">
         <span className="rounded bg-[oklch(0.14_0.06_245)] px-2 py-0.5 font-mono text-[10px] tracking-widest text-accent/80">
           #{String(entry.dexNumber).padStart(3, "0")}
         </span>
-        <Badge className={cn("border-0 text-[10px] uppercase tracking-wider", rarity.className)}>
-          {rarity.label}
-        </Badge>
+        <div className="flex items-center gap-1.5">
+          {conservation && (
+            <Badge
+              className={cn("border-0 text-[9px] uppercase tracking-wider", conservation.className)}
+            >
+              {conservation.label}
+            </Badge>
+          )}
+          <Badge className={cn("border-0 text-[10px] uppercase tracking-wider", rarity.className)}>
+            {rarity.label}
+          </Badge>
+        </div>
       </div>
 
       <div className="mt-3 flex h-40 items-center justify-center overflow-hidden rounded-xl border border-border/30 bg-gradient-to-br from-[oklch(0.14_0.06_245)] to-[oklch(0.20_0.07_240)]">
@@ -1232,6 +1290,18 @@ function ObservedDetailDialog({
                   {RARITY_META[species.rarity].label} · {species.caribbeanObsCount.toLocaleString()}{" "}
                   Caribbean
                 </Badge>
+                {(() => {
+                  const csStatus = formatConservationStatus(species.taxonId);
+                  const cs = csStatus && CONSERVATION_META[csStatus];
+                  if (!cs) return null;
+                  return (
+                    <Badge
+                      className={cn("border-0 text-[10px] uppercase tracking-wider", cs.className)}
+                    >
+                      IUCN {cs.label}
+                    </Badge>
+                  );
+                })()}
                 <Badge variant="outline" className="border-border/60 bg-transparent">
                   You: {species.userObsCount}x
                 </Badge>
@@ -1330,6 +1400,18 @@ function MissingDetailDialog({
                 <Badge className={cn("border-0", RARITY_META[species.rarity].className)}>
                   {RARITY_META[species.rarity].label}
                 </Badge>
+                {(() => {
+                  const csStatus = formatConservationStatus(species.taxonId);
+                  const cs = csStatus && CONSERVATION_META[csStatus];
+                  if (!cs) return null;
+                  return (
+                    <Badge
+                      className={cn("border-0 text-[10px] uppercase tracking-wider", cs.className)}
+                    >
+                      IUCN {cs.label}
+                    </Badge>
+                  );
+                })()}
                 <Badge variant="outline" className="border-border/60 bg-transparent">
                   {species.caribbeanObsCount.toLocaleString()} Caribbean sightings
                 </Badge>
