@@ -829,8 +829,16 @@ function FilterSidebar(props: {
                 value={props.query}
                 onChange={(e) => props.onQuery(e.target.value)}
                 placeholder="Search species…"
-                className="h-10 border-border/60 bg-card/50 pl-9 font-mono text-sm placeholder:text-muted-foreground/60"
+                className="h-10 border-border/60 bg-card/50 pl-9 pr-9 font-mono text-sm placeholder:text-muted-foreground/60"
               />
+              {props.query && (
+                <button
+                  onClick={() => props.onQuery("")}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 rounded p-0.5 text-muted-foreground hover:text-foreground"
+                >
+                  <X className="h-4 w-4" />
+                </button>
+              )}
             </div>
 
             <div className="flex flex-col gap-2">
