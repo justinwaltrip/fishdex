@@ -48,6 +48,7 @@ LAND_CRAB_COMMON = {
     "marsh crab",
     "fiddler crab",
     "nipper",
+    "shore crab",
 }
 
 
