@@ -26,21 +26,23 @@ PER_PAGE = 500
 
 GROUPS = [
     (47178, "fish", "Ray-finned fish"),
-    (47273, "elasmobranch", "Sharks & rays"),
-    (39657, "turtle", "Sea turtles (Cheloniidae)"),
-    (39576, "turtle", "Sea turtles (Dermochelyidae)"),
-    (152871, "marine_mammal", "Dolphins & whales"),
-    (49090, "marine_mammal", "Manatees"),
+    (47273, "fish", "Sharks & rays"),
+    (39657, "tetrapod", "Sea turtles (Cheloniidae)"),
+    (39576, "tetrapod", "Sea turtles (Dermochelyidae)"),
+    (152871, "tetrapod", "Dolphins & whales"),
+    (49090, "tetrapod", "Manatees"),
     (47186, "crustacean", "Crabs, lobsters & shrimp"),
     (47459, "cephalopod", "Octopus & squid"),
     (62602, "gastropod", "Conch & allies"),
     (49260, "gastropod", "Ovulidae (egg cowries)"),
     (47549, "echinoderm", "Starfish & sea urchins"),
-    (48332, "cnidarian", "True jellyfish"),
-    (68095, "cnidarian", "Box jellyfish"),
-    (48921, "cnidarian", "Hydrozoans"),
-    (51018, "cnidarian", "Stalked jellyfish"),
+    (48332, "jellyfish", "True jellyfish"),
+    (68095, "jellyfish", "Box jellyfish"),
+    (48921, "jellyfish", "Hydrozoans"),
+    (51018, "jellyfish", "Stalked jellyfish"),
     (47584, "bivalve", "Clams, oysters & scallops"),
+    (128130, "gastropod", "Helmet snails (Cassidae)"),
+    (51508, "jellyfish", "Comb jellies (Ctenophora)"),
 ]
 
 LAND_CRAB_COMMON = {
@@ -196,11 +198,11 @@ def main():
 
     print(f"\nDone. Wrote {len(all_species)} species to {OUT}")
     print("Rarity (obs-count thresholds):")
-    for g_label, g_key in [("fish", "fish"), ("elasmobranch", "elasmobranch"),
-                            ("turtle", "turtle"), ("marine_mammal", "marine_mammal"),
-                            ("crustacean", "crustacean"), ("cephalopod", "cephalopod"),
-                            ("gastropod", "gastropod"), ("echinoderm", "echinoderm"),
-                            ("cnidarian", "cnidarian"), ("bivalve", "bivalve")]:
+    for g_label, g_key in [("fish", "fish"),
+                             ("tetrapod", "tetrapod"),
+                             ("crustacean", "crustacean"), ("cephalopod", "cephalopod"),
+                             ("gastropod", "gastropod"), ("echinoderm", "echinoderm"),
+                             ("jellyfish", "jellyfish"), ("bivalve", "bivalve")]:
         gs = [s for s in all_species if s["group"] == g_key]
         counts = {}
         for s in gs:

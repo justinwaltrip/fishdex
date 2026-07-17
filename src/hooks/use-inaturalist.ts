@@ -131,6 +131,7 @@ export function useObservedSpecies() {
         .map(([taxonId, g]) => {
           const info = lookup.get(taxonId);
           const latest = g.obs[0];
+          const earliest = g.obs[g.obs.length - 1];
           return {
             taxonId,
             scientificName: g.name,
@@ -141,6 +142,7 @@ export function useObservedSpecies() {
             rarity: (info?.rarity ?? "unknown") as ObservedSpecies["rarity"],
             group: info?.group ?? "unknown",
             taxonRank: g.rank,
+            earliestObservedAt: earliest.observedAt,
             latestObservedAt: latest.observedAt,
             latestPlaceGuess: latest.placeGuess,
             latestObservationId: latest.id,

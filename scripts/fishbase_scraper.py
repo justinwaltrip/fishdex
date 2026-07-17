@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-FishBase scraper: extract max length (cm) for Caribbean fish/elasmobranch species.
+FishBase scraper: extract max length (cm) for Caribbean fish species.
 
 - Caches structured results to JSON (safe to interrupt/resume)
 - Saves full HTML pages to scripts/fishbase-pages/ for future data mining
@@ -80,7 +80,7 @@ def main():
         all_species = json.load(f)
 
     cache = load_cache()
-    target = [s for s in all_species if s["group"] in ("fish", "elasmobranch")]
+    target = [s for s in all_species if s["group"] == "fish"]
     total = len(target)
 
     # Count already-cached

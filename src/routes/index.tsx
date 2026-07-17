@@ -79,13 +79,11 @@ const RARITY_META: Record<string, { label: string; className: string }> = {
 const GROUP_LABELS: Record<string, string> = {
   fish: "Fish",
   crustacean: "Crustaceans",
-  elasmobranch: "Sharks & Rays",
-  marine_mammal: "Marine Mammals",
-  turtle: "Turtles",
+  tetrapod: "Sea Turtles & Mammals",
   cephalopod: "Cephalopods",
   gastropod: "Gastropods",
   echinoderm: "Echinoderms",
-  cnidarian: "Cnidarians",
+  jellyfish: "Jellies",
   bivalve: "Bivalves",
 };
 
@@ -136,13 +134,11 @@ const GROUPS = Object.keys(GROUP_LABELS);
 const GROUP_ABBR: Record<string, string> = {
   fish: "Fish",
   crustacean: "Crust.",
-  elasmobranch: "Sharks",
-  marine_mammal: "Mammals",
-  turtle: "Turtles",
+  tetrapod: "Turt./Mam.",
   cephalopod: "Ceph.",
   gastropod: "Gastro.",
   echinoderm: "Echino.",
-  cnidarian: "Cnidar.",
+  jellyfish: "Jellies",
   bivalve: "Bivalves",
 };
 
@@ -156,6 +152,7 @@ interface PokedexEntry {
   rarity: string;
   group: string;
   seen: boolean;
+  isNew: boolean;
   userObsCount: number;
   latestPlaceGuess: string;
   maxLengthCm?: number;
@@ -176,6 +173,7 @@ function FishdexPage() {
   const [dateFilter, setDateFilter] = useState<string>("all");
   const [dayFilter, setDayFilter] = useState<string>("");
   const [conservationFilter, setConservationFilter] = useState<string>("all");
+  const [newFilter, setNewFilter] = useState<string>("all");
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(true);
   const [selectedObserved, setSelectedObserved] = useState<ObservedSpecies | null>(null);
   const [selectedMissing, setSelectedMissing] = useState<CaribbeanSpecies | null>(null);
@@ -195,6 +193,22 @@ function FishdexPage() {
     }
     return Array.from(years).sort((a, b) => b - a);
   }, [allObs]);
+
+  const newTaxonIds = useMemo(() => {
+    if (observed.length === 0) return new Set<number>();
+    let mostRecentDay = "";
+    for (const sp of observed) {
+      const day = sp.latestObservedAt.slice(0, 10);
+      if (day > mostRecentDay) mostRecentDay = day;
+    }
+    const ids = new Set<number>();
+    for (const sp of observed) {
+      if (sp.earliestObservedAt.slice(0, 10) === mostRecentDay) {
+        ids.add(sp.taxonId);
+      }
+    }
+    return ids;
+  }, [observed]);
 
   const handleRefreshCache = useCallback(() => {
     invalidateCache(`all_obs_${import.meta.env.VITE_INATURALIST_USERNAME}`);
@@ -278,6 +292,7 @@ function FishdexPage() {
         rarity: s.rarity,
         group: s.group,
         seen,
+        isNew: newTaxonIds.has(s.taxonId),
         userObsCount: stat ? stat.count : s.userObsCount,
         latestPlaceGuess: stat ? stat.latestPlaceGuess : s.latestPlaceGuess,
         maxLengthCm: sizeInfo?.maxLengthCm,
@@ -299,6 +314,7 @@ function FishdexPage() {
         rarity: s.rarity,
         group: s.group,
         seen: false,
+        isNew: false,
         userObsCount: 0,
         latestPlaceGuess: "",
         maxLengthCm: sizeInfo?.maxLengthCm,
@@ -317,7 +333,7 @@ function FishdexPage() {
     });
 
     return entries;
-  }, [observed, missing, filterSeenIds, filterStats]);
+  }, [observed, missing, filterSeenIds, filterStats, newTaxonIds]);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -326,6 +342,7 @@ function FishdexPage() {
       if (groupFilter !== "all" && s.group !== groupFilter) return false;
       if (seenFilter === "seen" && !s.seen) return false;
       if (seenFilter === "unseen" && s.seen) return false;
+      if (newFilter === "new" && !s.isNew) return false;
       if (sizeFilter !== "all" && (!s.sizeTier || s.sizeTier.label !== sizeFilter)) return false;
       if (conservationFilter !== "all") {
         if (conservationFilter === "none") {
@@ -337,7 +354,16 @@ function FishdexPage() {
       if (!q) return true;
       return s.commonName.toLowerCase().includes(q) || s.scientificName.toLowerCase().includes(q);
     });
-  }, [query, rarityFilter, groupFilter, seenFilter, sizeFilter, conservationFilter, pokedex]);
+  }, [
+    query,
+    rarityFilter,
+    groupFilter,
+    seenFilter,
+    newFilter,
+    sizeFilter,
+    conservationFilter,
+    pokedex,
+  ]);
 
   const total = pokedex.length;
 
@@ -403,6 +429,8 @@ function FishdexPage() {
         onGroup={setGroupFilter}
         seen={seenFilter}
         onSeen={setSeenFilter}
+        newFilter={newFilter}
+        onNew={setNewFilter}
         size={sizeFilter}
         onSize={setSizeFilter}
         location={locationFilter}
@@ -457,6 +485,7 @@ function FishdexPage() {
         species={selectedObserved}
         dexNumber={selectedDexNumber}
         onClose={handleClose}
+        isNew={selectedObserved ? newTaxonIds.has(selectedObserved.taxonId) : false}
       />
       <MissingDetailDialog
         species={selectedMissing}
@@ -801,6 +830,8 @@ function FilterSidebar(props: {
   onGroup: (v: string) => void;
   seen: string;
   onSeen: (v: string) => void;
+  newFilter: string;
+  onNew: (v: string) => void;
   size: string;
   onSize: (v: string) => void;
   location: string;
@@ -858,6 +889,15 @@ function FilterSidebar(props: {
                   { value: "all", label: "All" },
                   { value: "seen", label: "Seen" },
                   { value: "unseen", label: "Unseen" },
+                ]}
+              />
+              <ChipGroup
+                label="Recent"
+                value={props.newFilter}
+                onChange={props.onNew}
+                options={[
+                  { value: "all", label: "All" },
+                  { value: "new", label: "New" },
                 ]}
               />
             </div>
@@ -1093,6 +1133,11 @@ function PokedexCard({ entry, onOpen }: { entry: PokedexEntry; onOpen: () => voi
           #{String(entry.dexNumber).padStart(3, "0")}
         </span>
         <div className="flex items-center gap-1.5">
+          {entry.isNew && (
+            <Badge className="border-0 bg-[oklch(0.72_0.19_55)]/20 text-[oklch(0.72_0.19_55)] text-[10px] uppercase tracking-wider">
+              New
+            </Badge>
+          )}
           {conservation && (
             <Badge
               className={cn("border-0 text-[9px] uppercase tracking-wider", conservation.className)}
@@ -1258,10 +1303,12 @@ function ObservedDetailDialog({
   species,
   dexNumber,
   onClose,
+  isNew,
 }: {
   species: ObservedSpecies | null;
   dexNumber: number;
   onClose: () => void;
+  isNew: boolean;
 }) {
   const { data: observations = [], isLoading: obsLoading } = useSpeciesObservations(
     species?.taxonId,
@@ -1306,6 +1353,11 @@ function ObservedDetailDialog({
                   {RARITY_META[species.rarity].label} · {species.caribbeanObsCount.toLocaleString()}{" "}
                   Caribbean
                 </Badge>
+                {isNew && (
+                  <Badge className="border-0 bg-[oklch(0.72_0.19_55)]/20 text-[oklch(0.72_0.19_55)] text-[10px] uppercase tracking-wider">
+                    New
+                  </Badge>
+                )}
                 {(() => {
                   const csStatus = formatConservationStatus(species.taxonId);
                   const cs = csStatus && CONSERVATION_META[csStatus];

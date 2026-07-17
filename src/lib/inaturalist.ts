@@ -79,6 +79,7 @@ export interface ObservedSpecies {
   rarity: "common" | "uncommon" | "rare" | "legendary" | "unknown";
   group: string;
   taxonRank: string;
+  earliestObservedAt: string;
   latestObservedAt: string;
   latestPlaceGuess: string;
   latestObservationId: number;
