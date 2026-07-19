@@ -1,5 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, useRouter } from "@tanstack/react-router";
 import { useMemo, useState, useCallback } from "react";
+import { z } from "zod";
 import { useQueryClient } from "@tanstack/react-query";
 import { format } from "date-fns";
 import {
@@ -45,7 +46,21 @@ import {
 import { cn } from "@/lib/utils";
 import { invalidateCache } from "@/lib/cache";
 
+const searchSchema = z.object({
+  q: z.string().catch(""),
+  rarity: z.string().catch("all"),
+  group: z.string().catch("all"),
+  seen: z.string().catch("all"),
+  size: z.string().catch("all"),
+  location: z.string().catch("all"),
+  date: z.string().catch("all"),
+  day: z.string().catch(""),
+  conservation: z.string().catch("all"),
+  new: z.string().catch("all"),
+});
+
 export const Route = createFileRoute("/")({
+  validateSearch: searchSchema,
   head: () => ({
     meta: [
       { title: "Fishdex — Caribbean Fish Dashboard" },
@@ -164,16 +179,50 @@ function FishdexPage() {
   const { data: allObs = [], isFetching } = useAllUserObservations();
   const { data: observed = [], isLoading: obsLoading } = useObservedSpecies();
   const { data: missing = [], isLoading: missLoading } = useMissingSpecies();
-  const [query, setQuery] = useState("");
-  const [rarityFilter, setRarityFilter] = useState<string>("all");
-  const [groupFilter, setGroupFilter] = useState<string>("all");
-  const [seenFilter, setSeenFilter] = useState<string>("all");
-  const [sizeFilter, setSizeFilter] = useState<string>("all");
-  const [locationFilter, setLocationFilter] = useState<string>("all");
-  const [dateFilter, setDateFilter] = useState<string>("all");
-  const [dayFilter, setDayFilter] = useState<string>("");
-  const [conservationFilter, setConservationFilter] = useState<string>("all");
-  const [newFilter, setNewFilter] = useState<string>("all");
+  const search = Route.useSearch();
+  const router = useRouter();
+
+  const query = search.q;
+  const rarityFilter = search.rarity;
+  const groupFilter = search.group;
+  const seenFilter = search.seen;
+  const sizeFilter = search.size;
+  const locationFilter = search.location;
+  const dateFilter = search.date;
+  const dayFilter = search.day;
+  const conservationFilter = search.conservation;
+  const newFilter = search.new;
+
+  const navigateSearch = useCallback(
+    (update: Partial<typeof search>) => {
+      router.navigate({
+        search: (prev) => ({ ...prev, ...update }),
+        replace: true,
+      });
+    },
+    [router],
+  );
+
+  const setQuery = useCallback((v: string) => navigateSearch({ q: v }), [navigateSearch]);
+  const setRarityFilter = useCallback(
+    (v: string) => navigateSearch({ rarity: v }),
+    [navigateSearch],
+  );
+  const setGroupFilter = useCallback((v: string) => navigateSearch({ group: v }), [navigateSearch]);
+  const setSeenFilter = useCallback((v: string) => navigateSearch({ seen: v }), [navigateSearch]);
+  const setSizeFilter = useCallback((v: string) => navigateSearch({ size: v }), [navigateSearch]);
+  const setLocationFilter = useCallback(
+    (v: string) => navigateSearch({ location: v }),
+    [navigateSearch],
+  );
+  const setDateFilter = useCallback((v: string) => navigateSearch({ date: v }), [navigateSearch]);
+  const setDayFilter = useCallback((v: string) => navigateSearch({ day: v }), [navigateSearch]);
+  const setConservationFilter = useCallback(
+    (v: string) => navigateSearch({ conservation: v }),
+    [navigateSearch],
+  );
+  const setNewFilter = useCallback((v: string) => navigateSearch({ new: v }), [navigateSearch]);
+
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(true);
   const [selectedObserved, setSelectedObserved] = useState<ObservedSpecies | null>(null);
   const [selectedMissing, setSelectedMissing] = useState<CaribbeanSpecies | null>(null);
