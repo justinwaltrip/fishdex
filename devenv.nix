@@ -5,8 +5,7 @@
     pkgs.git
     pkgs.bun
     pkgs.nodejs_22
-    pkgs.chromium
-  ];
+  ] ++ lib.optional pkgs.stdenv.isLinux pkgs.chromium;
 
   languages.javascript = {
     enable = true;
